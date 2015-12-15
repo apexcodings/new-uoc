@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  resource :session
   resources :users
   resources :pages
   root 'pages#home'
+  get 'dashboard' => 'pages#dashboard'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
