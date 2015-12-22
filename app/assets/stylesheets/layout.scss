@@ -1,8 +1,14 @@
 @import 'colors';
 
-.site-header, .top-links, .site-navigation {
+.site-header, .top-links, .site-navigation, .site-content {
   max-width: 58.75em;  // 940/16
   margin: auto;
+}
+
+.site {
+  background-image: image-url("man.jpg"), image-url("woman.jpg"), -webkit-linear-gradient(white, $site-gradient-gray);
+  background-position: 0% 100px, 100% 100px, 0 0;
+  background-repeat: no-repeat;
 }
 
 .top-links-outer {
@@ -52,8 +58,58 @@
   }
 }
 
-//        &:after:not(:last-child) { content: " | "; }
 
+.site-content {
+  margin-top: 1em;
+  background: -webkit-linear-gradient(white, $main-content-gradient-gray);
+}
+
+.side-navigation {
+  //max-width: 23.404255319149%;
+  width: 220px;
+  float: left;
+  background-color: $dark-blue;
+  background-image: image-url("pentagon.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  h2 {
+    color: white;
+    font-size: 1.625em;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 35px;
+  }
+
+  ul {
+    list-style: none;
+    padding-bottom: 1em;
+
+    li {
+      padding: .5em .75em;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.80em;
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+}
+
+.main-content {
+  max-width: 71.276595744681%;
+  float: right;
+  margin-right: 1.5em;
+
+  h1 {
+    color: white;
+    font-size: 2em;
+    background-color: $dark-blue;
+    padding: .1em .5em;
+  }
+}
 
 // FLASHES 
 .flash {
@@ -71,4 +127,11 @@
     background-color: $flash-alert-color;
   }
 }
+
+
+.group:before, .group:after {
+  content: " ";
+  display: table;
+}
+.group:after { clear: both; }
 
