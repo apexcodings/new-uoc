@@ -1,0 +1,19 @@
+@import 'colors';
+
+// FLASHES 
+.flash {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  
+  &.notice {
+    background-color: $flash-notice-color;
+  }
+
+  &.alert {
+    background-color: $flash-alert-color;
+  }
+}
+

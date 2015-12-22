@@ -1,0 +1,73 @@
+<footer class="site-footer">
+
+  <ul>
+    <li>Navigation</li>
+    <li><%= link_to "Specialties", "" %></li>
+    <li><%= link_to "Services", "" %></li>
+    <li><%= link_to "Our Experts", "" %></li>
+    <li><%= link_to "News", "" %></li>
+    <li><%= link_to "Contact Us", "" %></li>
+    <li><%= link_to "About", "" %></li>
+    <li><%= link_to "Patient Resources", "" %></li>
+    <li><%= link_to "Careers", "" %></li>
+  </ul>
+
+
+  <ul>
+    <li>Main Office</li>
+    <li>University Orthopedics</li>
+    <li>Altoona Office</li>
+    <li>3000 Fairway Drive</li>
+    <li>Altoona, PA 16602</li>
+    <li>Phone: (814) 942-1166</li>
+    <li>Fax: (814) 942-6222</li>
+  </ul>
+
+
+  <ul>
+    <li>Other Locations</li>
+    <li>View Other Locations</li>
+  </ul>
+
+  <ul>
+    <li>Phone Numbers</li>
+    <li>Appointments</li>
+    <li>(814) 942-1166</li>
+  </ul>
+
+  <ul>
+    <li>Patient Accounts</li>
+    <li>Appointments</li>
+    <li>(814) 942-1166 ext.217</li>
+  </ul>
+
+  <ul>
+    <li>Medical Records</li>
+    <li>(814) 942-1186</li>
+  </ul>
+
+  <ul>
+    <li>Physical Therapy</li>
+    <li>(814) 943-6997</li>
+  </ul>
+
+  <ul><li>Connect with us</li></ul>
+
+  <ul>
+    <li>Online Tools</li>
+    <li>Patient Portal</li>
+    <li>Pay Bill Online</li>
+    <li>Request an Appointment</li>
+    <li>Refer a Patient</li>
+  </ul>
+
+
+
+
+
+  <% if current_user %>
+    <%= link_to 'Sign Out', session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Sign In', new_session_path %>
+  <% end %>
+</footer>

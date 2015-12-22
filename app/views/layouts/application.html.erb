@@ -2,33 +2,100 @@
 <html>
 <head>
   <title>Uoc</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<% if flash[:notice] %>
-  <p>
-    <%= flash[:notice] %>
-  </p>
-<% end %>
+<div class="site">
+ <%= render "layouts/flashes" %>
+ <%= render "layouts/top_links" %>
 
-<% if flash[:alert] %>
-  <p>
-    <%= flash[:alert] %>
-  </p>
-<% end %>
+
+  <header class="site-header">
+    <%= image_tag "logo.png" %>
+  </header>
+
+  <nav class="site-navigation"> 
+    <ul>
+      <li><%= link_to "Specialties", page_path("specialties") %></li>
+      <li><%= link_to "Services", page_path("services") %></li>
+      <li><%= link_to "Our Experts", page_path("our-experts") %></li>
+      <li><%= link_to "News", page_path("news") %></li>
+      <li><%= link_to "Contact Us", page_path("contact-us") %></li>
+      <li><%= link_to "Patient Portal", "" %></li>
+    </ul>
+  </nav>
+
+  <section class="site-content">
+    <nav class="side-navigation">
+      <ul>
+        <li><%= link_to "Outpatient Surgical Centers", "" %></li>
+        <li><%= link_to "Urgent Orthopedic Care", "" %></li>
+        <li><%= link_to "Physical/Occupational Therapy", "" %></li>
+        <li><%= link_to "Sports Medicine", "" %></li>
+        <li><%= link_to "Clinical Research", "" %></li>
+        <li><%= link_to "Worker's Compensation", "" %></li>
+        <li><%= link_to "MRI", "" %></li>
+        <li><%= link_to "Durable Medical Equipment", "" %></li>
+        <li><%= link_to "Uni-Dose Pharmacy", "" %></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+
+      <h1>Sports Medicine</h1>
+
+      <p>
+        Sit similique molestias modi perferendis quos fugit corporis vero est odio! Iste facere labore dolore suscipit nemo cupiditate iure. Minus eligendi fuga libero nulla laboriosam? Libero ut fuga alias vitae!
+      </p>
+
+      <p>
+        Amet quisquam alias optio magni hic mollitia ipsam. Impedit doloribus exercitationem suscipit fugit illo voluptas. Eligendi modi deleniti eius a dolorum doloribus quisquam quae! Itaque harum odit voluptas aperiam ex.
+      </p>
+
+      <p>
+        Sit dolore sapiente officia natus quasi! Neque aut quisquam voluptate sint doloribus, possimus! Est minima eligendi quod impedit iure! Amet nesciunt neque vitae nostrum commodi. Odio necessitatibus provident natus pariatur.
+      </p>
+
+      <p>
+        Ipsum voluptatum libero incidunt nemo libero? Nobis ipsa enim doloribus delectus voluptas saepe. Dolorem ad eaque itaque eaque ab natus! Deleniti vel nobis fuga tempora sit molestiae molestiae. A sint.
+      </p>
+
+      <p>
+        Adipisicing expedita esse aliquam omnis veniam porro repellendus nulla. Iusto illo alias magni consequatur suscipit ducimus similique? Dignissimos ratione obcaecati adipisci repudiandae cupiditate rerum aut unde temporibus ipsam dolorem accusantium.
+      </p>
+
+      <p>
+        Ipsum eaque cupiditate quibusdam ratione maxime adipisci sed laboriosam amet eveniet amet alias quisquam at, vitae voluptatum! Tenetur facere consequuntur possimus sapiente quisquam. Unde eveniet et in repellat quaerat. Vel.
+      </p>
+
+      <p>
+        Adipisicing voluptatibus assumenda libero quos aperiam magnam eum repellat. Quibusdam quaerat hic animi ea minima commodi. Neque doloribus nam sequi sed laborum sapiente adipisci explicabo. Repudiandae natus ad explicabo saepe?
+      </p>
+
+      <p>
+        Adipisicing eius illum adipisicing deleniti aspernatur velit nulla ex ratione! Corporis excepturi deserunt expedita porro aliquam tenetur tempore assumenda! Quibusdam ad consectetur esse qui repellendus deserunt error quia dolorum! Distinctio.
+      </p>
+
+      <p>
+        Elit minima incidunt quae asperiores ut temporibus aliquam. Suscipit voluptate ad dolor possimus amet impedit perspiciatis neque vero consectetur harum aut perferendis laboriosam? Vel autem rerum enim est eum dicta.
+      </p>
+
+
+    
+    </div>
+  
+  </section>
+
 
 <%= yield %>
 
-<footer class="site-footer">
-  <% if current_user %>
-    <%= link_to 'Sign Out', session_path, method: :delete %>
-  <% else %>
-    <%= link_to 'Sign In', new_session_path %>
-  <% end %>
-</footer>
+<%= render "layouts/footer" %>
+
+</div>
 
 </body>
 </html>
