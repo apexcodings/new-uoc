@@ -1,5 +1,60 @@
 @import 'colors';
 
+.site-header, .top-links, .site-navigation {
+  max-width: 58.75em;  // 940/16
+  margin: auto;
+}
+
+.top-links-outer {
+  background-color: $dark-blue;
+}
+
+.top-links {
+  font-size: .8em;
+  ul {
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      margin: .4em .4em .4em .1em;
+      color: white;
+      a {
+        color: white;
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+}
+
+.site-header {
+  margin-top: .75em;
+}
+
+.site-navigation {
+  background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  margin-top: 1em;
+
+  ul {
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      padding: 0.75em 0;
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 0.75em 1.875em;
+        &:hover { background-color: $active-link; }
+      }
+    }
+  }
+}
+
+//        &:after:not(:last-child) { content: " | "; }
+
+
 // FLASHES 
 .flash {
   border-bottom: 1px solid gray;
