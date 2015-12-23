@@ -50,3 +50,4 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
+gem 'ancestry', '2.1.0'

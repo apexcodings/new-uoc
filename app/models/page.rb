@@ -4,6 +4,8 @@ class Page < ActiveRecord::Base
 
   before_validation :generate_slug
 
+  has_ancestry
+
   def generate_slug
     self.slug ||= title.parameterize if title
   end
