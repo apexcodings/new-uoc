@@ -1,12 +1,12 @@
 @import 'colors';
 
-.site-header, .top-links, .site-navigation, .site-content {
+.site-header, .top-links, .site-navigation, .site-content, .site-footer {
   max-width: 58.75em;  // 940/16
   margin: auto;
 }
 
 .site {
-  background-image: image-url("man.jpg"), image-url("woman.jpg"), -webkit-linear-gradient(white, $site-gradient-gray);
+  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -webkit-linear-gradient(white, $site-gradient-gray);
   background-position: 0% 100px, 100% 100px, 0 0;
   background-repeat: no-repeat;
 }
@@ -35,6 +35,51 @@
 
 .site-header {
   margin-top: .75em;
+  overflow: hidden;
+
+  .logo { float: left; }
+
+  .tagline {
+    float: left;
+    margin-top: 30px;
+    margin-left: 60px;
+    color: $tagline-gray;
+    font-style: italic;
+    line-height: 1.4em;
+
+    .second-line {
+      display: inline-block;
+      margin-left: 4em;
+    }
+  }
+
+  .call {
+    float: right;
+    margin-top: 20px;
+
+    h3 {
+      font-size: 2em;
+      color: $dark-blue;
+    }
+
+    a {
+      display: inline-block;
+      height: 23px;
+      color: $dark-blue;
+      font-size: .9em;
+      padding-left: 2em;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+
+    a.make-appt {
+      background-image: image-url("appt.png");
+    }
+    a.pay-bill {
+      background-image: image-url("pay.png");
+      margin-left: 1em;
+    }
+  }
 }
 
 .site-navigation {
@@ -69,7 +114,7 @@
   width: 220px;
   float: left;
   background-color: $dark-blue;
-  background-image: image-url("pentagon.png");
+  background-image: image-url("pentagon_small.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 
@@ -110,6 +155,61 @@
     padding: .1em .5em;
   }
 }
+
+
+.footer-outer {
+  background-color: $dark-blue;
+}
+
+.site-footer {
+  color: $footer-font;
+  overflow: hidden;
+  padding-top: 1em;
+
+  .footer-col { 
+    float: left;
+    width: 25%;
+    padding-left: 1em;
+  }
+
+  ul {
+    list-style: none;
+    margin-bottom: 1em;
+
+    li.header {
+      font-size: 1.2em;
+      text-transform: uppercase;
+      margin-bottom: .5em;
+    }
+
+    li {
+      font-size: .8em;
+      margin-bottom: .5em;
+      a {
+        text-decoration: none;
+        color: $footer-font;
+        &:hover { text-decoration: underline; }
+      }
+
+      img { margin-right: .70em; }
+    }
+  }
+}
+
+.credits {
+  color: $footer-font;
+  background-color: $credits-blue;
+  text-align: center;
+  padding: .5em;
+  font-size: .8em;
+
+  a {
+    color: $footer-font;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
 
 // FLASHES 
 .flash {
