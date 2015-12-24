@@ -116,6 +116,12 @@
 
 // HOME PAGE
 
+.feature {
+  width: 940px;
+  height: 356px;
+  margin-bottom: 18px;
+}
+
 .home-col {
   width: 301px;
   float: left;
@@ -222,7 +228,7 @@
 
 
 .site-content {
-  margin-top: 1em;
+  margin-top: 10px;
   background: -webkit-linear-gradient(white, $main-content-gradient-gray);
   background: -o-linear-gradient(white, $main-content-gradient-gray);
   background: -moz-linear-gradient(white, $main-content-gradient-gray);
