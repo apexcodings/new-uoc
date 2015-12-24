@@ -7,6 +7,13 @@
 
 .site {
   background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -webkit-linear-gradient(white, $site-gradient-gray);
+
+  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -o-linear-gradient(white, $site-gradient-gray);
+
+  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -moz-linear-gradient(white, $site-gradient-gray);
+
+  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), linear-gradient(white, $site-gradient-gray);
+
   background-position: 0% 100px, 100% 100px, 0 0;
   background-repeat: no-repeat;
 }
@@ -84,6 +91,9 @@
 
 .site-navigation {
   background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
   margin-top: 1em;
 
   ul {
@@ -104,9 +114,119 @@
 }
 
 
+// HOME PAGE
+
+.home-col {
+  width: 301px;
+  float: left;
+  margin-right: 18px;
+  background-color: $dark-blue;
+  background-image: image-url("pentagon_large.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &:last-child { 
+    margin-right: 0; 
+    float: right;
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  ul.hurts {
+    list-style: none;
+    float: left;
+    width: 50%;
+    padding: .2em;
+
+    li {
+      display: block;
+      padding: .4em;
+
+      a {
+        display: block;
+        padding: .5em;
+        color: white;
+        text-decoration: none;
+        background-color: $light-blue;
+        &:hover { background-color: $gold; }
+      }
+    }
+
+  }
+}
+
+.box-with-photo {
+  height: 332px;
+  position: relative;
+  background-image: image-url("pentagon_large.png"), image-url("sports_med_home.jpg") ;
+  background-repeat: no-repeat;
+  background-position: 0 0, 0 30px;
+
+  a {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    display: inline-block;
+  }
+}
+
+.box-empty {
+  background: none;
+}
+
+.home-box {
+  background-color: $dark-blue;
+  margin-bottom: .5em;
+
+  h2 {
+    margin-bottom: .5em;
+  }
+
+  fieldset {
+    width: 90%;
+    margin: 0 auto;
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      margin-bottom: .5em;
+      display: block;
+    }
+    input[type="submit"] {
+      display: block;
+      margin: 0 auto 1em;
+    }
+  }
+
+  p {
+    color: white;
+    font-size: .9em;
+    padding: 0 2em 1em;
+  }
+}
+
+.green-link {
+  color: white;
+  text-decoration: none;
+  padding: .3em .5em;
+  background-color: $green-link;
+  border: 1px solid white;
+  &:hover { background-color: $dark-blue; }
+}
+
+
+
+
 .site-content {
   margin-top: 1em;
   background: -webkit-linear-gradient(white, $main-content-gradient-gray);
+  background: -o-linear-gradient(white, $main-content-gradient-gray);
+  background: -moz-linear-gradient(white, $main-content-gradient-gray);
+  background: linear-gradient(white, $main-content-gradient-gray);
 }
 
 .side-navigation {

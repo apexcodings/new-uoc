@@ -1,5 +1,48 @@
-<h1>Home page</h1>
+<div style="margin-bottom: 2em; overflow: hidden;">
+  <div class="home-col">
+    <h2 class="roboto">Where does it hurt?</h2>
+    <ul class="hurts">
+      <li><%= link_to "Neck", page_path("specialties") %></li>
+      <li><%= link_to "Back", page_path("specialties") %></li>
+      <li><%= link_to "Shoulder", page_path("specialties") %></li>
+      <li><%= link_to "Elbow", page_path("specialties") %></li>
+      <li><%= link_to "Hands", page_path("specialties") %></li>
+    </ul>
 
-<p>
-  This is the home page at app/views/pages/home.html.erb
-</p>
+    <ul class="hurts">
+      <li><%= link_to "Hips", page_path("specialties") %></li>
+      <li><%= link_to "Knee", page_path("specialties") %></li>
+      <li><%= link_to "Ankle", page_path("specialties") %></li>
+      <li><%= link_to "Feet", page_path("specialties") %></li>
+      <li><%= link_to "Other", page_path("specialties") %></li>
+    </ul>
+  </div>
+
+  <div class="home-col box-with-photo">
+    <h2 class="roboto">Sports Medicine</h2>
+    <%= link_to "Read More", page_path("sports-medicine"), class: "green-link" %>
+  </div>
+
+
+  <div class="home-col box-empty">
+    <div class="home-box">
+      <h2 class="roboto">Patient Portal</h2>
+      <%= form_tag "" do %>
+        <fieldset>
+          <%= text_field_tag :username, nil, placeholder: "Username or Email Address" %>
+          <%= password_field_tag :password, nil, placeholder: "Password" %>
+          <%= submit_tag "Login", class: "green-link" %>
+        </fieldset>
+      <% end %>
+    </div>
+
+    <div class="home-box">
+      <h2 class="roboto">Patient Experience</h2>
+      <p>
+        Elit at voluptates ullam minima quam autem, corporis deleniti vel facere, placeat veniam ullam minima quam autem.
+      </p>
+    </div>
+  </div>
+
+</div>
+
