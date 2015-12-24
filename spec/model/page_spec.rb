@@ -32,4 +32,12 @@ describe Page do
     page2.valid?
     expect(page2.errors[:slug].first).to eq("has already been taken")
   end
+
+  it "may have sub-pages" do
+    page1 = Page.create!(page_attributes(title: "Parent"))
+    sub_page = page1.children.create!(page_attributes(title: "Child"))
+
+    expect(page1.children).to include(sub_page)
+    expect(sub_page.parent).to eq(page1)
+  end
 end
