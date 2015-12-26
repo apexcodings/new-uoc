@@ -13,4 +13,8 @@ class Page < ActiveRecord::Base
   def to_param
     slug
   end
+
+  def side_nav
+    root.children
+  end
 end

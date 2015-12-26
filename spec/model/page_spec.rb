@@ -40,4 +40,12 @@ describe Page do
     expect(page1.children).to include(sub_page)
     expect(sub_page.parent).to eq(page1)
   end
+
+  it "knows its side navigation" do
+    page1 = Page.create!(page_attributes(title: "Parent"))
+    sub_page1 = page1.children.create!(page_attributes(title: "Child 1"))
+    sub_page2 = page1.children.create!(page_attributes(title: "Child 2"))
+
+    expect(sub_page1.side_nav).to include(sub_page2)
+  end
 end

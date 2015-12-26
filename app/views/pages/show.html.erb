@@ -1,16 +1,6 @@
 <nav class="side-navigation">
   <h2 class="roboto"><%= @page.root.title %></h2>
-  <ul>
-    <li><%= link_to "Outpatient Surgical Centers", "" %></li>
-    <li><%= link_to "Urgent Orthopedic Care", "" %></li>
-    <li><%= link_to "Physical/Occupational Therapy", "" %></li>
-    <li><%= link_to "Sports Medicine", "" %></li>
-    <li><%= link_to "Clinical Research", "" %></li>
-    <li><%= link_to "Worker's Compensation", "" %></li>
-    <li><%= link_to "MRI", "" %></li>
-    <li><%= link_to "Durable Medical Equipment", "" %></li>
-    <li><%= link_to "Uni-Dose Pharmacy", "" %></li>
-  </ul>
+  <%= side_links_for @page %>
 </nav>
 
 <div class="main-content">
