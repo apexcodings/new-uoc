@@ -15,6 +15,6 @@ class Page < ActiveRecord::Base
   end
 
   def side_nav
-    root.children
+    root.children.order(:position)
   end
 end

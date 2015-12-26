@@ -48,4 +48,15 @@ describe Page do
 
     expect(sub_page1.side_nav).to include(sub_page2)
   end
+
+  it "orders its side navigation by position" do
+    page1 = Page.create!(page_attributes(title: "Parent"))
+    sub_page2 = page1.children.create!(page_attributes(title: "Child 2", position: 2))
+    sub_page1 = page1.children.create!(page_attributes(title: "Child 1", position: 1))
+    sub_page3 = page1.children.create!(page_attributes(title: "Child 3", position: 3))
+
+    expected_side_nav = [sub_page1, sub_page2, sub_page3]
+
+    expect(page1.side_nav).to eq(expected_side_nav)
+  end
 end
