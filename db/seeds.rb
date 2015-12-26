@@ -1,8 +1,10 @@
+Page.delete_all
+
 # ABOUT
-about = Page.create!(title: 'About')
-about.children.create!(title: "History", position: 1)
+about = Page.create!(title: 'About') #p
+about.children.create!(title: "History", position: 1) #p
 about.children.create!(title: "Refer a Patient", position: 2)
-about.children.create!(title: "Mission/Vision/Values", position: 3)
+about.children.create!(title: "Mission/Vision/Values", position: 3) #p
 about.children.create!(title: "Patient Reviews", position: 4)
 about.children.create!(title: "Hospital Affiliations", position: 5)
 about.children.create!(title: "Community Involvement", position: 6)
@@ -14,12 +16,12 @@ experts.children.create!(title: "Physicians Assistants", position: 2)
 experts.children.create!(title: "Physical Therapists", position: 3)
 experts.children.create!(title: "Clinical Researchers", position: 4)
 experts.children.create!(title: "Worker's Comp Rep", position: 5)
-experts.children.create!(title: "Athletic Trainers", position: 6)
+experts.children.create!(title: "Athletic Trainers Experts", position: 6)
 experts.children.create!(title: "Management", position: 7)
 
 # SPECIALTIES
 specialties = Page.create!(title: 'Specialties')
-specialties.children.create!(title: "Spine", position: 1)
+specialties.children.create!(title: "Spine", position: 1) #p
 specialties.children.create!(title: "Pain Management", position: 2)
 specialties.children.create!(title: "Chiropractic", position: 3)
 specialties.children.create!(title: "Joint Replacements", position: 4)
@@ -27,7 +29,6 @@ specialties.children.create!(title: "Sports Medicine", position: 5)
 specialties.children.create!(title: "Foot & Ankle", position: 6)
 specialties.children.create!(title: "Hand", position: 7)
 specialties.children.create!(title: "Gen Ortho", position: 8)
-specialties.children.create!(title: "Pain Management", position: 9)
 
 
 # SERVICES
@@ -38,7 +39,7 @@ outpatient.children.create!(title: "UOCSS", position: 1)
 outpatient.children.create!(title: "Adv Center for Surgery", position: 2)
 
 services.children.create!(title: "Urgent Ortho Care", position: 2)
-services.children.create!(title: "Physical/Occupational Therapy", position: 3)
+services.children.create!(title: "Physical/Occupational Therapy", position: 3) #p
 
 sports = services.children.create!(title: "Sports Medicine Services", position: 4)
 sports.children.create!(title: "Athletic Trainers", position: 1)
@@ -47,8 +48,8 @@ sports.children.create!(title: "Saturday Sports Clinic", position: 3)
 sports.children.create!(title: "Fellowships", position: 4)
 
 services.children.create!(title: "Clinical Research", position: 5)
-services.children.create!(title: "Worker’s Comp", position: 6)
-services.children.create!(title: "MRI", position: 7)
+services.children.create!(title: "Worker’s Comp", position: 6) #p
+services.children.create!(title: "MRI", position: 7)  #p
 services.children.create!(title: "Durable Medical Equipment", position: 8)
 services.children.create!(title: "Uni-Dose Pharmacy", position: 9)
 
@@ -85,47 +86,5 @@ resources.children.create!(title: "Privacy Policy", position: 7)
 resources.children.create!(title: "Health Grades", position: 8)
 
 # CAREERS
-careers = Page.create!(title: 'Careers')
+careers = Page.create!(title: 'Careers') #p
 
-
-# Old to remove
-
-Page.create!([
-  {
-    title: "Specialties", 
-    body: %{
-      Dolor repellendus incidunt praesentium quo odio. Quod sit sed eum
-      perspiciatis odit eaque nesciunt dolore veniam vitae provident. Quia officia
-      perferendis aliquid ipsam consectetur? Ullam officiis quas recusandae
-      perferendis soluta.
-    }.squish
-  },
-  {
-    title: "Services", 
-    body: %{
-      Dolor excepturi minima nam magni deleniti? In aliquid corporis est culpa
-      expedita error. Voluptatum pariatur doloremque dolore quia voluptates eius.
-      Totam cum suscipit vitae repellendus voluptates, cum expedita modi, eos.
-    }.squish
-  },
-  {
-    title: "Our Experts", 
-    body: %{
-      Dolor excepturi minima nam magni deleniti? In aliquid corporis est culpa
-      expedita error. Voluptatum pariatur doloremque dolore quia voluptates eius.
-      Totam cum suscipit vitae repellendus voluptates, cum expedita modi, eos.
-    }.squish
-  },
-  {
-    title: "News", 
-    body: %{
-      Dolor excepturi minima nam magni deleniti? In aliquid corporis est culpa
-      expedita error. Voluptatum pariatur doloremque dolore quia voluptates eius.
-      Totam cum suscipit vitae repellendus voluptates, cum expedita modi, eos.
-    }.squish
-  },
-  {
-    title: "Contact Us", 
-    body: "This is the contact page"
-  }
-])
