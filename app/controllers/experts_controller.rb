@@ -1,10 +1,7 @@
 class ExpertsController < ApplicationController
   def index
     if params[:category]
-      case params[:category]
-      when "physicians"
-        @experts = Expert.where(category: "physicians")
-      end
+      @experts = Expert.where(category: params[:category])
     else
       @experts = Expert.all
     end

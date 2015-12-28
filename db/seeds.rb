@@ -1,3 +1,7 @@
+# ===========================================================
+# PAGES
+# ===========================================================
+
 Page.delete_all
 
 # ABOUT
@@ -88,3 +92,95 @@ resources.children.create!(title: "Health Grades", position: 8)
 # CAREERS
 careers = Page.create!(title: 'Careers') #p
 
+
+# ===========================================================
+# EXPERTS
+# ===========================================================
+Expert.delete_all
+
+Expert.create!([
+  {
+    name: "Kenneth L. Cherry MD",
+    phone: "1-800-505-2101",
+    location: "State College and Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physicians",
+    image_url: "KennethCherry.jpg",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Douglas E.R. Roeshot MD",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physicians",
+    image_url: "DouglasRoeshot.jpg",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Edwin J. Rogusky MD",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physicians",
+    image_url: "EdwinRogusky.jpg",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Gregory M. Bailey DO",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physicians",
+    image_url: "GregoryBailey.jpg",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Brett J. Beech PA-C",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physicians_assistants",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Todd E. Brunermer PA-C",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physicians_assistants",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Elaine Barch PT, DPT, CHT, CEAS",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physical_therapists",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  },
+  {
+    name: "Joe Brescia MS, OTR/L, CHT",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "physical_therapists",
+    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+  }
+])

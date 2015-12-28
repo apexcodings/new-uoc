@@ -3,5 +3,10 @@
 <% @experts.each do |expert| %>
   <ul>
     <li><%= link_to expert.name, expert %></li>
+    <li><%= expert.phone %></li>
+    <li><%= expert.location %></li>
+    <li><%= expert.specialty %></li>
+    <li><%= expert.procedures %></li>
+    <li><%= expert.education %></li>
   </ul>
 <% end %>
