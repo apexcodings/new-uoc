@@ -1,0 +1,7 @@
+<h1>Experts</h1>
+
+<% @experts.each do |expert| %>
+  <ul>
+    <li><%= link_to expert.name, expert %></li>
+  </ul>
+<% end %>

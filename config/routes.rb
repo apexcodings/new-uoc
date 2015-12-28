@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :experts
   resource :session
   resources :users
   resources :pages
