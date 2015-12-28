@@ -6,4 +6,8 @@ class ExpertsController < ApplicationController
       @experts = Expert.all
     end
   end
+
+  def show
+    @expert = Expert.find(params[:id])
+  end
 end

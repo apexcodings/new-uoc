@@ -1,8 +1,8 @@
 class Expert < ActiveRecord::Base
   validates :name, :phone, :location, :specialty, :procedures, :education, :category, presence: true
 
-  CATEGORIES = %w(physicians physicians_assistants physical_therapists clinical_researchers workers_comp athletic_trainers management)
+  CATEGORIES = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Comp Rep", "Athletic Trainers", "Management"]
 
-  validates :category, inclusion: { in: CATEGORIES }
+  validates :category, inclusion: { in: CATEGORIES.map { |c| c.parameterize.underscore } }
 
 end

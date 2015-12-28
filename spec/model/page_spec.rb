@@ -59,4 +59,16 @@ describe Page do
 
     expect(page1.side_nav).to eq(expected_side_nav)
   end
+
+  it "knows when it's the 'Experts' page" do
+    our_experts = Page.create!(page_attributes(title: "Our Experts"))
+
+    expect(our_experts.experts?).to eq(true)
+  end
+
+  it "knows when it's not the 'Experts' page" do
+    about = Page.create!(page_attributes(title: "About Us"))
+
+    expect(about.experts?).to eq(false)
+  end
 end

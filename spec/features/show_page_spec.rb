@@ -43,4 +43,20 @@ describe "Showing a page" do
       end
     end
   end
+
+  context "when it's the 'Our Experts' page" do
+    it "shows all the Experts categories in the side navigation" do
+      our_experts = Page.create!(page_attributes(title: "Our Experts"))
+
+      visit page_url(our_experts.slug)
+
+      category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Comp Rep", "Athletic Trainers", "Management"]
+
+      within(".side-navigation ul") do
+        category_names.each do |name|
+          expect(page).to have_link name
+        end
+      end
+    end
+  end
 end

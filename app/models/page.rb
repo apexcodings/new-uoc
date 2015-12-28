@@ -17,4 +17,8 @@ class Page < ActiveRecord::Base
   def side_nav
     root.children.order(:position)
   end
+
+  def experts?
+    slug == "our-experts"
+  end
 end
