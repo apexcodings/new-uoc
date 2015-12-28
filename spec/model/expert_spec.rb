@@ -50,10 +50,18 @@ RSpec.describe Expert do
   end
 
   it "is valid when the category name is in the approved list" do
-    categories = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Comp Rep", "Athletic Trainers", "Management"]
+    #categories = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Comp Rep", "Athletic Trainers", "Management"]
 
-    categories.each do |category|
-      expert = Expert.new(category: category.parameterize.underscore)
+    categories = { physicians: "Physicians", 
+                 physicians_assistants: "Physicians Assistants", 
+                 physical_therapists: "Physical Therapists", 
+                 clinical_researchers: "Clinical Researchers", 
+                 workers_comp: "Worker's Comp Rep", 
+                 athletic_trainers: "Athletic Trainers", 
+                 management: "Management"}
+
+    categories.each_key do |key|
+      expert = Expert.new(category: key)
       expert.valid?
       expect(expert.errors[:category].any?).to eq(false)
     end

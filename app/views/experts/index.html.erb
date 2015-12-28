@@ -1,12 +1,28 @@
-<h1>Experts</h1>
+<div class="side-navigation">
+  <h2 class="roboto">Our Experts</h2>
+    <%= side_links_for_experts %>
+</div>
+
+<div class="experts-content">
+
+  <h1 class="roboto"><%= @category %></h1>
 
 <% @experts.each do |expert| %>
-  <ul>
-    <li><%= link_to expert.name, expert %></li>
-    <li><%= expert.phone %></li>
-    <li><%= expert.location %></li>
-    <li><%= expert.specialty %></li>
-    <li><%= expert.procedures %></li>
-    <li><%= expert.education %></li>
-  </ul>
+
+  <div class="expert-box">
+    <div class="group">
+      <%= link_to(image_tag(expert.image_url), expert) %>
+      <ul>
+        <li class="expert-name"><%= link_to expert.name, expert %></li>
+        <li class="expert-phone"><%= expert.phone %></li>
+        <li><%= expert.location %></li>
+        <li><%= expert.specialty %></li>
+        <li><%= expert.procedures %></li>
+        <li><%= expert.education %></li>
+      </ul>
+    </div>
+    <%= link_to "View Full Profile", expert, class: "to-profile roboto" %>
+  </div>
+
 <% end %>
+</div>

@@ -9,9 +9,15 @@ module PagesHelper
     end
   end
 
+  def side_links_for_experts
+    content_tag :ul do
+      links_for_experts
+    end
+  end
+
   def links_for_experts
-    Expert::CATEGORIES.map do |c|
-      concat(content_tag(:li, link_to(c, experts_path(category: c.parameterize.underscore))))
+    Expert::CATEGORIES.each do |key, value|
+      concat(content_tag(:li, link_to(value, experts_path(category: key.to_s))))
     end
   end
 
