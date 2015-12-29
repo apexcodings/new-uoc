@@ -118,6 +118,7 @@
         font-size: 1em;
         padding: 0.75em 1.875em;
         &:hover { background-color: $active-link; }
+        &.top-active { background-color: $active-link; }
       }
     }
   }
@@ -267,12 +268,14 @@
     padding-bottom: 1em;
 
     li {
-      padding: .5em .75em;
       a {
+        display: block;
+        padding: .5em .75em;
         color: white;
         text-decoration: none;
-        font-size: 0.80em;
-        &:hover { text-decoration: underline; }
+        font-size: .80em;
+        &:hover { background-color: $light-blue; }
+        &.side-active { background-color: $light-blue; }
       }
     }
   }

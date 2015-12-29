@@ -21,9 +21,32 @@ module PagesHelper
     end
   end
 
+#  def links_for_page(page)
+#    page.side_nav.each do |p|
+#      concat(content_tag(:li, link_to(p.title, page_path(p.slug))))
+#    end
+#  end
+
   def links_for_page(page)
     page.side_nav.each do |p|
-      concat(content_tag(:li, link_to(p.title, page_path(p.slug))))
+      concat(content_tag(:li, link(p)))
     end
   end
+
+  def link(page)
+    link_to_unless_current page.title, page_path(page.slug) do
+      link_to page.title, "#", class: "side-active"
+    end
+  end
+
+  def top_link_for(title, page)
+    if page && page.root.slug == title.parameterize
+      link_to title, page_path(title.parameterize), class: "top-active"
+    else
+      link_to_unless_current title, page_path(title.parameterize) do
+        link_to title, "#", class: "top-active"
+      end
+    end
+  end
+
 end

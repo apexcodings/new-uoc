@@ -1,10 +1,40 @@
 <nav class="site-navigation"> 
   <ul class="roboto">
-    <li><%= link_to "Specialties", page_path("specialties") %></li>
-    <li><%= link_to "Services", page_path("services") %></li>
-    <li><%= link_to "Our Experts", page_path("our-experts") %></li>
-    <li><%= link_to "News", page_path("news") %></li>
-    <li><%= link_to "Contact Us", page_path("contact-us") %></li>
+    <li>
+      <%= top_link_for("Specialties", @page) %>
+
+    <%# if @page && @page.root.slug == "specialties" %>
+      <%#= link_to "Specialties", page_path("specialties"), class: "top-active" %>
+    <%# else %>
+      <%#= link_to_unless_current "Specialties", page_path("specialties") do
+        link_to "Specialties", "#", class: "top-active"
+      end %>
+    <%# end %>
+
+    </li>
+    <li>
+      <%= top_link_for("Services", @page) %>
+    <%#= link_to_unless_current "Services", page_path("services") do
+      link_to "Services", "#", class: "top-active"
+    end %>
+    </li>
+    <li>
+      <%= top_link_for("Our Experts", @page) %>
+    <%#= link_to_unless_current "Our Experts", page_path("our-experts") do
+      link_to "Our Experts", "#", class: "top-active"
+    end %>
+    </li>
+    <li>
+    <%= link_to_unless_current "News", "#" do
+      link_to "News", "#", class: "top-active"
+    end %>
+    </li>
+    <li>
+      <%= top_link_for("Contact Us", @page) %>
+    <%#= link_to_unless_current "Contact Us", page_path("contact-us") do
+      link_to "Contact Us", "#", class: "top-active"
+    end %>
+    </li>
     <li><%= link_to "Patient Portal", "" %></li>
   </ul>
 </nav>
