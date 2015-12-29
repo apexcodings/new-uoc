@@ -55,9 +55,9 @@ RSpec.describe Expert do
     expect(expert.errors[:category].any?).to eq(true)
   end
 
-  it "returns the expert full name and suffix" do
+  it "returns the expert full name" do
     expert = Expert.new(expert_attributes)
-    expect(expert.name).to eq("#{expert.first_name} #{expert.last_name} #{expert.suffix}")
+    expect(expert.name).to eq("#{expert.first_name} #{expert.last_name}")
   end
 
   it "is valid when the category name is in the approved list" do

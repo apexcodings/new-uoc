@@ -10,7 +10,10 @@
     <div class="group">
       <%= image_tag @expert.image_url %>
       <ul>
-        <li class="expert-name roboto blue"><%= @expert.name %></li>
+        <li class="expert-name roboto blue">
+          <%= @expert.name %>
+          <span class="expert-suffix"><%= @expert.suffix %></span>
+        </li>
         <li class="expert-phone roboto blue"><%= @expert.phone %></li>
         <li><%= @expert.location %></li>
         <li><%= @expert.specialty %></li>

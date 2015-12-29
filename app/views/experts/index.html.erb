@@ -13,7 +13,10 @@
     <div class="group">
       <%= link_to(image_tag(expert.image_url), expert) %>
       <ul>
-        <li class="expert-name"><%= link_to expert.name, expert %></li>
+        <li class="expert-name">
+          <%= link_to expert.name, expert %>
+          <span class="expert-suffix"><%= expert.suffix %></span>
+        </li>
         <li class="expert-phone"><%= expert.phone %></li>
         <li><%= expert.location %></li>
         <li><%= expert.specialty %></li>

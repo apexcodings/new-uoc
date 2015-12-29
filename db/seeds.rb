@@ -136,7 +136,7 @@ Expert.create!([
     education: "University of California San Diego",
     category: "physicians",
     image_url: "EdwinRogusky.jpg",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/rogusky.html")
   },
   {
     first_name: "Gregory M.",
@@ -149,7 +149,7 @@ Expert.create!([
     education: "University of California San Diego",
     category: "physicians",
     image_url: "GregoryBailey.jpg",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/bailey.html")
   },
   {
     first_name: "Brett J.",
@@ -161,7 +161,7 @@ Expert.create!([
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physicians_assistants",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/beech.html")
   },
   {
     first_name: "Todd E.",
@@ -173,10 +173,10 @@ Expert.create!([
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physicians_assistants",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/brunermer.html")
   },
   {
-    first_name: "Elaine Barch PT, DPT, CHT, CEAS",
+    first_name: "Elaine",
     last_name: "Barch",
     suffix: "PT, DPT, CHT, CEAS",
     phone: "1-800-505-2101",
@@ -185,7 +185,7 @@ Expert.create!([
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physical_therapists",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/barch.html")
   },
   {
     first_name: "Joe",
@@ -197,6 +197,18 @@ Expert.create!([
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physical_therapists",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/brescia.html")
+  },
+  {
+    first_name: "John A.",
+    last_name: "Smaniotto",
+    suffix: "MS, LAT, ATC, OTC, CSCS",
+    phone: "1-800-505-2101",
+    location: "Altoona",
+    specialty: "Orthopedic Surgery, Emergency Surgery",
+    procedures: "Foot and Ankle Surgery",
+    education: "University of California San Diego",
+    category: "athletic_trainers",
+    body: File.read("db/experts/smaniotto.html")
   }
 ])

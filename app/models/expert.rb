@@ -12,7 +12,7 @@ class Expert < ActiveRecord::Base
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
   def name
-    "#{first_name} #{last_name} #{suffix}"
+    "#{first_name} #{last_name}"
   end
 
 end

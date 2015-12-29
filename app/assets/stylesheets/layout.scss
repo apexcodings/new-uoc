@@ -321,12 +321,20 @@
 
       li.expert-name {
         font-size: 2em;
+        line-height: 1em;
         a {
           text-decoration: none;
           color: black;
           &:hover { color: $light-blue; }
         }
       }
+
+      .expert-suffix {
+        display: block;
+        font-size: .6em;
+        font-family: "Open Sans", sans-serif;
+      }
+
       li.expert-phone {
         font-size: 1.5em;
         margin-bottom: .3em;
