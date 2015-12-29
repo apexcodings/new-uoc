@@ -392,6 +392,7 @@
 
     .info-section {
       margin-bottom: 1.5em;
+      display: none;
 
       ul {
         padding-left: 2em;
@@ -405,6 +406,9 @@
         margin: .1em 0 .5em;
       }
     }
+
+    .background { display: block; }
+
   }
 }
 

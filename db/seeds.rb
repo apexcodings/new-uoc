@@ -123,7 +123,7 @@ Expert.create!([
     education: "University of California San Diego",
     category: "physicians",
     image_url: "DouglasRoeshot.jpg",
-    body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
+    body: File.read("db/experts/roeshot.html")
   },
   {
     first_name: "Edwin J.",
