@@ -19,7 +19,9 @@ end
 
 def expert_attributes(overrides = {})
   {
-    name: "Kenneth L. Cherry MD",
+    first_name: "Kenneth L.",
+    last_name: "Cherry",
+    suffix: "MD",
     phone: "1-800-505-2101",
     location: "State College and Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",

@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151228123838) do
+ActiveRecord::Schema.define(version: 20151229151422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "experts", force: :cascade do |t|
-    t.string   "name"
     t.string   "phone"
     t.string   "location"
     t.string   "specialty"
@@ -28,6 +27,9 @@ ActiveRecord::Schema.define(version: 20151228123838) do
     t.string   "image_url",  default: "expert_default.png"
     t.datetime "created_at",                                null: false
     t.datetime "updated_at",                                null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "suffix"
   end
 
   create_table "pages", force: :cascade do |t|

@@ -7,10 +7,16 @@ RSpec.describe Expert do
     expect(expert.valid?).to eq(true)
   end
 
-  it "requires a name" do
-    expert = Expert.new(name: "")
+  it "requires a first name" do
+    expert = Expert.new(first_name: "")
     expert.valid?
-    expect(expert.errors[:name].any?).to eq(true)
+    expect(expert.errors[:first_name].any?).to eq(true)
+  end
+
+  it "requires a last name" do
+    expert = Expert.new(last_name: "")
+    expert.valid?
+    expect(expert.errors[:last_name].any?).to eq(true)
   end
 
   it "requires a phone" do
@@ -47,6 +53,11 @@ RSpec.describe Expert do
     expert = Expert.new(category: "")
     expert.valid?
     expect(expert.errors[:category].any?).to eq(true)
+  end
+
+  it "returns the expert full name and suffix" do
+    expert = Expert.new(expert_attributes)
+    expect(expert.name).to eq("#{expert.first_name} #{expert.last_name} #{expert.suffix}")
   end
 
   it "is valid when the category name is in the approved list" do

@@ -1,5 +1,5 @@
 class Expert < ActiveRecord::Base
-  validates :name, :phone, :location, :specialty, :procedures, :education, :category, presence: true
+  validates :first_name, :last_name, :phone, :location, :specialty, :procedures, :education, :category, presence: true
 
   CATEGORIES = { physicians: "Physicians", 
                  physicians_assistants: "Physicians Assistants", 
@@ -11,5 +11,8 @@ class Expert < ActiveRecord::Base
 
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
+  def name
+    "#{first_name} #{last_name} #{suffix}"
+  end
 
 end

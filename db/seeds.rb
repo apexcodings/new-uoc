@@ -100,7 +100,9 @@ Expert.delete_all
 
 Expert.create!([
   {
-    name: "Kenneth L. Cherry MD",
+    first_name: "Kenneth L.",
+    last_name: "Cherry",
+    suffix: "MD",
     phone: "1-800-505-2101",
     location: "State College and Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -111,7 +113,9 @@ Expert.create!([
     body: File.read("db/experts/cherry.html")
   },
   {
-    name: "Douglas E.R. Roeshot MD",
+    first_name: "Douglas E.R.",
+    last_name: "Roeshot",
+    suffix: "MD",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -122,7 +126,9 @@ Expert.create!([
     body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
   },
   {
-    name: "Edwin J. Rogusky MD",
+    first_name: "Edwin J.",
+    last_name: "Rogusky",
+    suffix: "MD",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -133,7 +139,9 @@ Expert.create!([
     body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
   },
   {
-    name: "Gregory M. Bailey DO",
+    first_name: "Gregory M.",
+    last_name: "Bailey",
+    suffix: "DO",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -144,7 +152,9 @@ Expert.create!([
     body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
   },
   {
-    name: "Brett J. Beech PA-C",
+    first_name: "Brett J.",
+    last_name: "Beech",
+    suffix: "PA-C",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -154,7 +164,9 @@ Expert.create!([
     body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
   },
   {
-    name: "Todd E. Brunermer PA-C",
+    first_name: "Todd E.",
+    last_name: "Brunermer",
+    suffix: "PA-C",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -164,7 +176,9 @@ Expert.create!([
     body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
   },
   {
-    name: "Elaine Barch PT, DPT, CHT, CEAS",
+    first_name: "Elaine Barch PT, DPT, CHT, CEAS",
+    last_name: "Barch",
+    suffix: "PT, DPT, CHT, CEAS",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",
@@ -174,7 +188,9 @@ Expert.create!([
     body: "<p>Sit necessitatibus voluptatum quidem quae a officia consectetur. Natus repellendus reprehenderit excepturi a totam consequatur reprehenderit. Quae sed dolorem nemo ea necessitatibus placeat ipsa ratione similique ea nostrum ea, facilis.</p>"
   },
   {
-    name: "Joe Brescia MS, OTR/L, CHT",
+    first_name: "Joe",
+    last_name: "Brescia",
+    suffix: "MS, OTR/L, CHT",
     phone: "1-800-505-2101",
     location: "Altoona",
     specialty: "Orthopedic Surgery, Emergency Surgery",

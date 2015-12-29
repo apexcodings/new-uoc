@@ -4,13 +4,13 @@ require 'support/attributes'
 RSpec.describe "Listing Experts" do
 
   before do
-    @physician1 = Expert.create!(expert_attributes(name: "Edwin J. Rogusky MD", category: "physicians"))
+    @physician1 = Expert.create!(expert_attributes(first_name: "Edwin", last_name: "Rogusky MD", category: "physicians"))
 
-    @physician2 = Expert.create!(expert_attributes(name: "Douglas E.R. Roeshot MD", category: "physicians"))
+    @physician2 = Expert.create!(expert_attributes(first_name: "Douglas E.R.", last_name: "Roeshot MD", category: "physicians"))
 
-    @therapist = Expert.create!(expert_attributes(name: "Joe Brescia MS, OTR/L, CHT", category: "physical_therapists"))
+    @therapist = Expert.create!(expert_attributes(first_name: "Joe", last_name: "Brescia MS, OTR/L, CHT", category: "physical_therapists"))
 
-    @trainer = Expert.create!(expert_attributes(name: "Samantha Debias MS, LAT, ATC", category: "athletic_trainers"))
+    @trainer = Expert.create!(expert_attributes(first_name: "Samantha", last_name: "Debias MS, LAT, ATC", category: "athletic_trainers"))
   end
 
   it "shows details for each expert" do
