@@ -22,7 +22,7 @@ module PagesHelper
   end
 
   def links_for_page(page)
-    page.side_nav.map do |p|
+    page.side_nav.each do |p|
       concat(content_tag(:li, link_to(p.title, page_path(p.slug))))
     end
   end
