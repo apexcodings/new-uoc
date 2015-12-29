@@ -1,5 +1,15 @@
 @import 'colors';
 
+@mixin gradient-background {
+  background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  &:hover { background: $active-link;}
+}
+
+
+
 .site-header, .top-links, .site-navigation, .site-content, .site-footer {
   max-width: 58.75em;  // 940/16
   margin: auto;
@@ -321,6 +331,8 @@
         font-size: 1.5em;
         margin-bottom: .3em;
       }
+
+      .blue { color: $dark-blue; }
     }
 
     .to-profile {
@@ -336,6 +348,62 @@
       background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
       background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
       &:hover { background: $active-link;}
+    }
+  }
+
+  .expert-details {
+    font-size: .9em;
+
+    h3 {
+      font-size: 1.5em;
+      color: white;
+      //@include gradient-background;
+
+      background: image-url("down_arrow.png"), -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: image-url("down_arrow.png"), -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: image-url("down_arrow.png"), -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: image-url("down_arrow.png"), linear-gradient($nav-gradient-light, $nav-gradient-dark);
+
+      background-repeat: no-repeat;
+      background-position: 98% 50%, 0 0;
+
+      &:hover { 
+        background-color: $active-link;
+        background-image: image-url("down_arrow.png");
+        background-repeat: no-repeat;
+        background-position: 98% 50%, 0 0;
+      }
+
+      font-family: 'Roboto Slab', serif;
+      padding: .2em .5em;
+      margin-bottom: .3em;
+      &:hover { cursor: pointer; }
+    }
+
+    .info-open {
+      color: black;
+      padding: .4em 0;
+      border-bottom: 1px solid gray;
+      background: none;
+      &:hover {
+        background: none;
+      }
+    }
+
+    .info-section {
+      margin-bottom: 1.5em;
+
+      ul {
+        padding-left: 2em;
+        li {
+          margin-bottom: .5em;
+        }
+      }
+
+      h4 {
+        font-weight: bold;
+        margin: .1em 0 .5em;
+      }
     }
   }
 }

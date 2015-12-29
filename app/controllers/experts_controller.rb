@@ -10,5 +10,6 @@ class ExpertsController < ApplicationController
 
   def show
     @expert = Expert.find(params[:id])
+    @category = Expert::CATEGORIES[@expert.category.to_sym]
   end
 end

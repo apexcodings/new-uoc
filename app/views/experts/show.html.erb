@@ -1,10 +1,26 @@
-<ul>
-  <li><%= @expert.name %></li>
-  <li><%= @expert.phone %></li>
-  <li><%= @expert.location %></li>
-  <li><%= @expert.specialty %></li>
-  <li><%= @expert.procedures %></li>
-  <li><%= @expert.education %></li>
-</ul>
+<div class="side-navigation">
+  <h2 class="roboto">Our Experts</h2>
+    <%= side_links_for_experts %>
+</div>
 
-<%= @expert.body.html_safe %>
+<div class="experts-content">
+  <h1 class="roboto"><%= @category %></h1>
+
+  <div class="expert-box">
+    <div class="group">
+      <%= image_tag @expert.image_url %>
+      <ul>
+        <li class="expert-name roboto blue"><%= @expert.name %></li>
+        <li class="expert-phone roboto blue"><%= @expert.phone %></li>
+        <li><%= @expert.location %></li>
+        <li><%= @expert.specialty %></li>
+        <li><%= @expert.procedures %></li>
+        <li><%= @expert.education %></li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="expert-details">
+    <%= @expert.body.html_safe %>
+  </section>
+</div>
