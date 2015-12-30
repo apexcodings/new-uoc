@@ -1,8 +1,13 @@
 class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
-    redirect_to page_path("thank-you")
+    if @contact.save
+      redirect_to page_path("thank-you")
+    else
+      flash[:alert] = "There was an error with this form."
+      @page = Page.find_by(slug: "contact-us")
+      render template: "pages/show"
+    end
   end
 
   private

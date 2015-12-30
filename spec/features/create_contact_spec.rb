@@ -2,10 +2,13 @@ require 'rails_helper'
 require 'support/attributes'
 
 RSpec.describe "Creating a contact" do
-  it "saves the contact details to the database" do
-    contact_page = Page.create!(page_attributes(title: "Contact Us"))
-    thanks_page = Page.create!(page_attributes(title: "Thank You"))
-    visit page_path(contact_page)
+  before do
+    @contact_page = Page.create!(page_attributes(title: "Contact Us"))
+    @thanks_page = Page.create!(page_attributes(title: "Thank You"))
+  end
+
+  it "saves the details when contact is valid" do
+    visit page_path(@contact_page)
 
     fill_in "First Name", with: "Cesare"
     fill_in "Last Name", with: "Ferrari"
@@ -24,7 +27,17 @@ RSpec.describe "Creating a contact" do
     expect(contact.phone).to eq("933 445-4466")
     expect(contact.message).to eq("This is a test")
 
-    expect(current_path).to eq(page_path(thanks_page))
+    expect(current_path).to eq(page_path(@thanks_page))
     expect(page).to have_text("Thank You")
+  end
+
+  it "doesn't save the contact when it's invalid" do
+    visit page_path(@contact_page.slug)
+
+    expect {
+      click_button "Submit"
+    }.not_to change(Contact, :count)
+
+    expect(page).to have_text("error")
   end
 end

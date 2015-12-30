@@ -1,4 +1,7 @@
 <%= form_for @contact do |f| %>
+
+<%= render "shared/errors", object: @contact %>
+
   <p>
   <%= f.label :first_name, "First Name" %>
   <%= f.text_field :first_name %>
