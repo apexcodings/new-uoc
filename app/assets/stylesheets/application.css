@@ -15,5 +15,6 @@
  *= require layout
  *= require pages
  *= require users
+ *= require forms
  *= require_self
  */

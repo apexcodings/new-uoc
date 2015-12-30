@@ -1,0 +1,63 @@
+@import 'colors';
+
+form {
+  margin: 1.5em 0;
+}
+
+.form-row {
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.half-row {
+  width: 50%;
+  float: left;
+  &:first-child { padding-right: 1em; }
+}
+
+label {
+  display: block;
+  margin-bottom: .3em;
+}
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  font-size: 1.2em;
+  padding: .2em;
+  border: 1px solid gray;
+}
+
+textarea {
+  height: 10em;
+}
+
+div.field_with_errors {
+  display: inline;
+  label {
+    color: $errors-text-color;
+  }
+  input, textarea, select {
+    background: $errors-background-color;
+  }
+}
+
+/* ERRORS */
+
+section#errors {
+  margin: 1em 0;
+  padding: 1em;
+  background: $errors-background-color;
+
+  h2 {
+    color: $errors-text-color;
+    font-size: 1.25em;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin: .5em 0;
+    font-weight: bold;
+  }
+
+  ul { list-style: none; }
+}
