@@ -295,6 +295,29 @@
   }
 }
 
+
+.contact-address {
+  margin: 1.5em 0;
+
+  .address {
+    width: 50%;
+    float: left;
+  }
+  .phone {
+    width: 50%;
+    float: left;
+  }
+}
+
+#googleMap {
+  width: 600px;
+  height: 300px;
+  margin-bottom: 1.5em;
+
+  // to avoid distorted controls
+  img { max-width: none; }
+}
+
 .experts-content {
   width: 70%;
   float: left;
