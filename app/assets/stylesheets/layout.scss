@@ -283,7 +283,7 @@
 }
 
 .main-content {
-  max-width: 71.276595744681%;
+  width: 71.276595744681%;
   float: right;
   margin-right: 1.5em;
 
@@ -292,6 +292,15 @@
     font-size: 2em;
     background-color: $dark-blue;
     padding: .1em .5em;
+  }
+
+  .map-page {
+    background: none;
+    color: $dark-blue;
+    padding-bottom: .4em;
+    padding-left: 0;
+    border-bottom: 1px solid gray;
+    margin-bottom: .5em;
   }
 }
 
@@ -308,6 +317,7 @@
     float: left;
   }
 }
+
 
 #googleMap {
   width: 600px;

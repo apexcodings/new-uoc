@@ -5,9 +5,12 @@
 
 <div class="main-content">
 
-  <%= image_tag "service_photo.jpg" %>
-
-  <h1 class="roboto"><%= @page.title %></h1>
+  <% if @page.with_map? %>
+    <h1 class="map-page roboto"><%= @page.title %></h1>
+  <% else %>
+    <%= image_tag "service_photo.jpg" %>
+    <h1 class="roboto"><%= @page.title %></h1>
+  <% end %>
 
   <%= @page.body.html_safe unless @page.body.nil? %>
 

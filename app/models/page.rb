@@ -21,4 +21,8 @@ class Page < ActiveRecord::Base
   def experts?
     slug == "our-experts"
   end
+
+  def with_map?
+    parent == Page.find_by(slug: "contact-us")
+  end
 end
