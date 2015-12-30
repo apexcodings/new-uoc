@@ -32,3 +32,13 @@ def expert_attributes(overrides = {})
     body: "Lorem iusto nisi delectus exercitationem exercitationem architecto! Impedit placeat commodi odit nesciunt laudantium. Laboriosam temporibus omnis nesciunt debitis nihil. Pariatur possimus possimus adipisicing doloremque odio. Voluptates ipsam sunt sapiente modi."
   }.merge(overrides)
 end
+
+def contact_attributes(overrides = {})
+  {
+    first_name: "John",
+    last_name: "Dillon",
+    email: "contact@example.com",
+    phone: "914 744-3366",
+    message: "Sample message"
+  }.merge(overrides)
+end
