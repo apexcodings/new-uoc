@@ -42,3 +42,45 @@ def contact_attributes(overrides = {})
     message: "Sample message"
   }.merge(overrides)
 end
+
+def appointment_attributes(overrides = {})
+  {
+    requestor_first_name: "John",
+    requestor_mi: "J.",
+    requestor_last_name: "Dillon",
+    requestor_phone_prefix: "914",
+    requestor_phone: "744-3366",
+    requestor_email: "appointment@example.com",
+    requestor_time_to_reach: "10:00 am",
+    patient_first_name: "Mark",
+    patient_mi: "D.",
+    patient_last_name: "Stritto",
+    patient_phone_prefix: "914",
+    patient_phone: "744-3366",
+    address1: "308 Green Ridge Drive",
+    address2: "Apt. 1",
+    city: "State College",
+    us_state: "PA",
+    zip: "16901",
+    dob: "12-3-1962",
+    gender: "M",
+    injury_location: "Arm",
+    injury_location_other: "Spine",
+    injury_date: "12-3-2015",
+    prior_treatment: false,
+    x_ray: false,
+    insurance: true,
+    insurance_plan_name: "Bill me",
+    insurance_policy_number: "xxx12355",
+    preferred_location: "Altoona",
+    preferred_day_mo: true,
+    preferred_day_tu: false,
+    preferred_day_we: true,
+    preferred_day_th: true,
+    preferred_day_fr: false,
+    preferred_time_am: false,
+    preferred_time_pm: true,
+    appointment_type: "Orthopedics",
+    questions: "Sample message"
+  }.merge(overrides)
+end

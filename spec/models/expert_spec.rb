@@ -61,8 +61,6 @@ RSpec.describe Expert do
   end
 
   it "is valid when the category name is in the approved list" do
-    #categories = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Comp Rep", "Athletic Trainers", "Management"]
-
     categories = { physicians: "Physicians", 
                  physicians_assistants: "Physicians Assistants", 
                  physical_therapists: "Physical Therapists", 
