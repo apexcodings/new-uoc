@@ -71,6 +71,7 @@ contact.children.create!(title: "Dubois", position: 6)
 contact.children.create!(title: "Huntingdon", position: 7)
 contact.children.create!(title: "Roaring Springs", position: 8)
 contact.children.create!(title: "Ebensburg - 2016", position: 9)
+Page.create!(title: "Thank You")
 
 
 # PATIENT RESOURCES

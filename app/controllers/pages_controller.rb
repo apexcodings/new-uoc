@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def show
+    @contact = Contact.new if @page.slug == "contact-us"
   end
 
   private

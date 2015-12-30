@@ -49,4 +49,10 @@ module PagesHelper
     end
   end
 
+  def page_partial(page)
+    if FileTest.exist?(Rails.root.join('app', 'views', 'pages', "_#{page.slug.gsub(/-/, "_")}.html.erb"))
+      render "pages/#{page.slug.gsub(/-/, "_")}"
+    end
+  end
+
 end
