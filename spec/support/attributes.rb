@@ -69,7 +69,7 @@ def appointment_attributes(overrides = {})
     injury_date: "12-3-2015",
     prior_treatment: false,
     x_ray: false,
-    insurance: true,
+    no_insurance: false,
     insurance_plan_name: "Bill me",
     insurance_policy_number: "xxx12355",
     preferred_location: "Altoona",
