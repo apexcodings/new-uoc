@@ -7,17 +7,23 @@ class Appointment < ActiveRecord::Base
             :patient_last_name,
             :patient_phone_prefix,
             :patient_phone,
-            :insurance,
             presence: true
 
   INJURY_LOCATIONS = %w(Arm Foot Hand Hip Knee Shoulder Spine) 
-  validates :injury_location, inclusion: { in: INJURY_LOCATIONS }
+  validates :injury_location, 
+            inclusion: { in: INJURY_LOCATIONS }, 
+            allow_blank: true
 
   PREFERRED_LOCATIONS = ["State College", "Altoona", "Lewistown", "Tyrone", "Huntingdon", "DuBois", "Bedford"]
-  validates :preferred_location, inclusion: { in: PREFERRED_LOCATIONS }
+  validates :preferred_location, 
+            inclusion: { in: PREFERRED_LOCATIONS }, 
+            allow_blank: true
 
   APPOINTMENT_TYPES = ["Orthopedics", "Workers Compensation", "Chiropractics", "Physical Therapy", "Pain Management"]
-  validates :appointment_type, inclusion: { in: APPOINTMENT_TYPES }
+  validates :appointment_type, 
+            inclusion: { in: APPOINTMENT_TYPES }, 
+            allow_blank: true
+
 end
 
 

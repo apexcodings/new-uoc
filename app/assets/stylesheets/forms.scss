@@ -6,40 +6,71 @@ form {
 
 .form-row {
   width: 100%;
-  margin-bottom: .5em;
+  margin-bottom: .8em;
+  overflow: hidden;
 }
 
 .half-row {
   width: 50%;
   float: left;
-  &:first-child { padding-right: 1em; }
 }
+
+.quarter-row {
+  width: 25%;
+  float: left;
+  padding-right: 1em;
+  &:last-child { padding-right: 0; }
+}
+
+.small-row {
+  width: 16%;
+  float: left;
+  padding-right: 1em;
+  &:last-child { padding-right: 0; }
+}
+
+.double-small-row {
+  width: 34%;
+  float: left;
+  padding-right: 1em;
+  &:last-child { padding-right: 0; }
+}
+
+.with-gutter {
+  padding-left: 1em;
+}
+
 
 label {
   display: block;
   margin-bottom: .3em;
 }
 
+label.inline { 
+  display: inline-block;
+  margin: 0 1.5em 0 .2em;
+}
+
 input[type="text"], input[type="email"], textarea {
   width: 100%;
-  font-size: 1.2em;
+  font-size: 1em;
   padding: .2em;
   border: 1px solid gray;
+  margin-bottom: .2em;
 }
 
 textarea {
   height: 10em;
 }
 
-div.field_with_errors {
-  display: inline;
-  label {
-    color: $errors-text-color;
-  }
-  input, textarea, select {
-    background: $errors-background-color;
-  }
+select {
+  background-color: #f3f3f3;
+  border: 1px solid gray;
+  font-size: 1.2em;
+  padding: .4em;
+  width: 100%;
 }
+
 
 /* ERRORS */
 
@@ -60,4 +91,14 @@ section#errors {
   }
 
   ul { list-style: none; }
+}
+
+div.field_with_errors {
+  display: inline;
+  label {
+    color: $errors-text-color;
+  }
+  input, textarea, select {
+    background: $errors-background-color;
+  }
 }

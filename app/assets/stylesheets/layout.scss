@@ -292,6 +292,17 @@
     font-size: 2em;
     background-color: $dark-blue;
     padding: .1em .5em;
+    margin-bottom: .8em;
+  }
+
+  h2 {
+    color: $dark-blue;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: .1em 0;
+    margin: 1em 0 .8em;
+    border-bottom: 1px solid gray;
   }
 
   .map-page {

@@ -55,13 +55,6 @@ RSpec.describe Appointment do
     expect(appointment.errors[:patient_phone].any?).to eq(true)
   end
 
-  it "requires an insurance choice" do
-    #not sure if this will work since it should be a boolean type
-    appointment = Appointment.new(insurance: nil)
-    appointment.valid?
-    expect(appointment.errors[:insurance].any?).to eq(true)
-  end
-
   it "is valid when the injury location is in the approved list" do
     locations = %w(Arm Foot Hand Hip Knee Shoulder Spine) 
 
