@@ -1,0 +1,61 @@
+.feature {
+  position: relative;
+}
+
+.slide {
+  position: relative;
+
+  div.slide-image {
+    position: relative;
+    width: 940px;
+    height: 356px;
+  }
+
+  div.slide-copy {
+    position: absolute;
+    width: 411px;
+    height: 356px;
+    left: 0;
+    top: 0;
+    background-image: image-url("slide_arrow.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-top: 100px;
+    padding-left: 25px;
+    padding-right: 55px;
+
+    h2 {
+      font-size: 3.75em;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 100;
+      color: white;
+    }
+
+    p {
+      color: white;
+      font-size: .9em;
+    }
+  }
+}
+
+.cycle-pager {
+  position: absolute;
+  left: 140px;
+  bottom: 10px;
+  z-index: 200;
+
+  a {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    margin: 0 .2em;
+    text-decoration: none;
+    background-image: image-url("circle.png");
+    background-repeate: no-repeat;
+    background-position: 0 0;
+
+    &.cycle-pager-active, &:hover {
+      background-position: 0 -13px;
+    }
+  }
+}

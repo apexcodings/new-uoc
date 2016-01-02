@@ -53,3 +53,7 @@ end
 
 gem 'rails_12factor', group: :production
 gem 'ancestry', '2.1.0'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery-cycle2'
+end

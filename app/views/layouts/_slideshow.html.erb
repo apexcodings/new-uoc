@@ -1,3 +1,74 @@
 <div class="feature">
-  <%= image_tag "slide_fp.jpg" %>
+  <div class="cycle-slideshow"
+        data-cycle-fx="fadeout" 
+        data-cycle-pause-on-hover="true" 
+        data-cycle-speed="500"
+        data-cycle-timeout="6000"
+        data-cycle-slides="> div"
+        data-cycle-pager-template="<a href='#'></a>"
+        >
+
+    <span class="cycle-pager"></span>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "slide1.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Welcome</h2>
+        <p>
+          Ipsum deleniti quo aut consectetur mollitia facere. Sit consequuntur
+          beatae possimus dolorem accusantium tempora. 
+        </p>
+        <%= link_to "Call to Action", "#", class: "green-link" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "slide2.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Our Experts</h2>
+        <p>
+          Dolor mollitia praesentium perspiciatis alias cumque rem, itaque
+          tempore optio beatae voluptatem? 
+        </p>
+        <%= link_to "Call to Action", "#", class: "green-link" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "slide3.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Specialties</h2>
+        <p>
+          Lorem ut laboriosam quasi nisi ipsam! Voluptatibus sint dolores
+          obcaecati accusamus repellendus quos fugit, eos?
+        </p>
+        <%= link_to "Call to Action", "#", class: "green-link" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "slide4.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Services</h2>
+        <p>
+          Sit maiores officiis dolor quae consectetur. Quam enim perspiciatis
+          nisi doloribus sapiente.
+        </p>
+        <%= link_to "Call to Action", "#", class: "green-link" %>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
 </div>

@@ -16,5 +16,6 @@
  *= require pages
  *= require users
  *= require forms
+ *= require slideshow
  *= require_self
  */
