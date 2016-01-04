@@ -9,8 +9,6 @@ module PagesHelper
     end
   end
 
-
-
   def links_for_page(page)
     page.side_nav.each do |p|
       concat(content_tag(:li, link(p)))
