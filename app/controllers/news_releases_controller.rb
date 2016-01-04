@@ -1,5 +1,5 @@
 class NewsReleasesController < ApplicationController
   def index
-    @news = NewsRelease.all
+    @news = NewsRelease.order(created_at: :desc)
   end
 end
