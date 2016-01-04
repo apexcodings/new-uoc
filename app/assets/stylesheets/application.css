@@ -14,6 +14,7 @@
  *= require typography
  *= require layout
  *= require pages
+ *= require news_releases
  *= require users
  *= require forms
  *= require slideshow
