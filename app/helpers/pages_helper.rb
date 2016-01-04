@@ -33,7 +33,7 @@ module PagesHelper
   def links_for_page(page)
     page.side_nav.each do |sibling|
       concat(content_tag(:li, link(sibling)))
-      if sibling == page && sibling.has_children?
+      if (sibling == page || sibling == page.parent) && sibling.has_children?
         sibling.children.each do |c|
           concat(content_tag(:li, sublink(c)))
         end
