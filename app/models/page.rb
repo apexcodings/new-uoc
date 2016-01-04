@@ -14,6 +14,26 @@ class Page < ActiveRecord::Base
     slug
   end
 
+#  def side_nav
+#    #root.children.order(:position)
+#
+#    returned_pages = []
+#
+#    root.children.order(:position).each do |page|
+#      if page.has_children?
+#        subpages = []
+#        page.children.each do |c|
+#          subpages << c
+#        end
+#        returned_pages << { page => subpages }
+#      else
+#        returned_pages << page
+#      end
+#    end
+#
+#    returned_pages
+#  end
+
   def side_nav
     root.children.order(:position)
   end

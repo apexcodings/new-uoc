@@ -9,15 +9,48 @@ module PagesHelper
     end
   end
 
+# Original
+#  def links_for_page(page)
+#    page.side_nav.each do |p|
+#      concat(content_tag(:li, link(p)))
+#    end
+#  end
+
+# First try
+#  def links_for_page(page)
+#    page.side_nav.each do |p|
+#      if p.is_a?(Hash)
+#        concat(content_tag(:li, link(p.keys.first)))
+#        p[p.keys.first].each do |c|
+#          concat(content_tag(:li, sublink(c)))
+#        end
+#      else
+#        concat(content_tag(:li, link(p)))
+#      end
+#    end
+#  end
+
   def links_for_page(page)
-    page.side_nav.each do |p|
-      concat(content_tag(:li, link(p)))
+    page.side_nav.each do |sibling|
+      concat(content_tag(:li, link(sibling)))
+      if sibling == page && sibling.has_children?
+        sibling.children.each do |c|
+          concat(content_tag(:li, sublink(c)))
+        end
+      end
     end
   end
+
 
   def link(page)
     link_to_unless_current page.title, page_path(page.slug) do
       link_to page.title, "#", class: "side-active"
+    end
+  end
+
+  def sublink(page)
+    link_to_unless_current page.title, page_path(page.slug), class: "sub-page" do
+      link_to page.title, "#", class: "sub-page-active"
     end
   end
 

@@ -300,6 +300,19 @@
         font-size: .80em;
         &:hover { background-color: $light-blue; }
         &.side-active { background-color: $light-blue; }
+
+        &.sub-page {
+          background-color: $light-blue;
+          text-indent: 1em;
+          &:hover { background-color: $gold; }
+          &:before { content: "• "; }
+        }
+
+        &.sub-page-active {
+          background-color: $gold;
+          text-indent: 1em;
+          &:before { content: "• "; }
+        }
       }
     }
   }
