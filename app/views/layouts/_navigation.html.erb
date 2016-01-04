@@ -4,9 +4,9 @@
     <li><%= top_link_for("Services", @page) %></li>
     <li><%= top_link_for("Our Experts", @page) %></li>
     <li>
-    <%= link_to_unless_current "News", "#" do
-      link_to "News", "#", class: "top-active"
-    end %>
+      <%= link_to_unless_current "News", news_releases_path do
+        link_to "News", "#", class: "top-active"
+      end %>
     </li>
     <li><%= top_link_for("Contact Us", @page) %></li>
     <li>&nbsp;&nbsp;<%= link_to "Patient Portal", "", id: "portal" %></li>
