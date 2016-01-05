@@ -11,6 +11,9 @@ class PagesController < ApplicationController
     @contact = Contact.new if @page.slug == "contact-us"
   end
 
+  def search
+  end
+
   private
 
   def set_page

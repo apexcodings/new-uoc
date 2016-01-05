@@ -1,0 +1,30 @@
+<nav class="side-navigation">
+  <h2 class="roboto">Search</h2>
+</nav>
+
+<div class="main-content">
+
+<%= image_tag "service_photo.jpg" %>
+<h1 class="roboto">Search</h1>
+
+<p>
+  Enter the term you are looking for in the box below.
+</p>
+
+<div id="search-div">
+  <script>
+  (function() {
+    var cx = '006084191273836075856:9tzzzsdpkgi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+    })();
+  </script>
+  <gcse:search></gcse:search>
+</div>
+
+</div>
