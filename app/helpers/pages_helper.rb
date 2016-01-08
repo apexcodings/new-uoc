@@ -93,6 +93,6 @@ module PagesHelper
   end
 
   def sports_background
-    "<div class='site' style='background-image: url(/assets/soccerGirl.png), url(/assets/baseballPitcher.png), linear-gradient(white, gray);'>"
+    "<div class='site' style='background-image: url(https://s3.amazonaws.com/com.uocproduction/images/soccerGirl.png), url(https://s3.amazonaws.com/com.uocproduction/images/baseballPitcher.png), linear-gradient(white, gray);'>"
   end
 end
