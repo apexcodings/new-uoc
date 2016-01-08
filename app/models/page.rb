@@ -42,6 +42,16 @@ class Page < ActiveRecord::Base
     slug == "our-experts"
   end
 
+  def sports_medicine?
+    if parent && parent.slug == 'sports-medicine-services'
+      true
+    elsif slug == "sports-medicine-services"
+      true
+    else
+      false
+    end
+  end
+
   def with_map?
     parent == Page.find_by(slug: "contact-us")
   end

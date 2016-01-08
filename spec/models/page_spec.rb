@@ -63,4 +63,16 @@ describe Page do
 
     expect(about.experts?).to eq(false)
   end
+
+  it "knows when it's the Sports Medicine page (in Services)" do
+    sports = Page.create!(page_attributes(title: "Sports Medicine", slug: "sports-medicine-services"))
+
+    expect(sports.sports_medicine?).to eq(true)
+  end
+
+  it "knows when it's not the Sports Medicine page (in Services)" do
+    about = Page.create!(page_attributes(title: "About Us"))
+
+    expect(about.sports_medicine?).to eq(false)
+  end
 end

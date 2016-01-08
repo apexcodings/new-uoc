@@ -72,7 +72,8 @@ module PagesHelper
 
   def heading_for(page)
     case
-    when current_page?(page_path("sports-medicine-services"))
+    #when current_page?(page_path("sports-medicine-services"))
+    when page.sports_medicine?
       content_tag(:h1, page.title, class: "map-page roboto")
     when page.with_map?
       content_tag(:h1, page.title, class: "map-page roboto")
@@ -85,7 +86,7 @@ module PagesHelper
   end
 
   def background_for(page)
-    if current_page?(page_path("sports-medicine-services"))
+    if page.sports_medicine?
       sports_background.html_safe
     else
       "<div class='site'>".html_safe
@@ -93,6 +94,6 @@ module PagesHelper
   end
 
   def sports_background
-    "<div class='site' style='background-image: url(https://s3.amazonaws.com/com.uocproduction/images/soccerGirl.png), url(https://s3.amazonaws.com/com.uocproduction/images/baseballPitcher.png), linear-gradient(white, gray);'>"
+    "<div class='site' style='background-image: url(https://s3.amazonaws.com/com.uocproduction/images/soccerGirl2.png), url(https://s3.amazonaws.com/com.uocproduction/images/baseballPitcher2.png), linear-gradient(white, gray);'>"
   end
 end
