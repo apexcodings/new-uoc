@@ -83,4 +83,16 @@ module PagesHelper
       end
     end
   end
+
+  def background_for(page)
+    if current_page?(page_path("sports-medicine-services"))
+      sports_background.html_safe
+    else
+      "<div class='site'>".html_safe
+    end
+  end
+
+  def sports_background
+    "<div class='site' style='background-image: url(/assets/soccerGirl.png), url(/assets/baseballPitcher.png), linear-gradient(white, gray);'>"
+  end
 end
