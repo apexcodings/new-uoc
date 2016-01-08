@@ -16,15 +16,20 @@
 }
 
 .site {
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -webkit-linear-gradient(white, $site-gradient-gray);
+  background-image: -webkit-linear-gradient(white, $site-gradient-gray);
 
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -o-linear-gradient(white, $site-gradient-gray);
+  //background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -webkit-linear-gradient(white, $site-gradient-gray);
 
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -moz-linear-gradient(white, $site-gradient-gray);
+  //background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -o-linear-gradient(white, $site-gradient-gray);
 
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), linear-gradient(white, $site-gradient-gray);
+  //background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -moz-linear-gradient(white, $site-gradient-gray);
 
-  background-position: 0% 100px, 100% 100px, 0 0;
+  //background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), linear-gradient(white, $site-gradient-gray);
+
+  //background-position: 0% 100px, 100% 100px, 0 0;
+
+  background-position: 0 0;
+
   background-repeat: no-repeat;
 }
 
@@ -48,6 +53,14 @@
       }
     }
   }
+}
+
+.bg-images {
+  width: 1450px;
+  margin: 0 auto;
+  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png");
+  background-position: -30px 100px, 100% 100px;
+  background-repeat: no-repeat;
 }
 
 .site-header {

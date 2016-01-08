@@ -14,12 +14,17 @@
 <div class="site">
  <%= render "layouts/flashes" %>
  <%= render "layouts/top_links" %>
+
+ <div class="bg-images">
+
  <%= render "layouts/header" %>
  <%= render "layouts/navigation" %>
 
 <section class="site-content group">
   <%= yield %>
 </section>
+
+ </div>
 
 <%= render "layouts/footer" %>
 
