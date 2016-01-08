@@ -344,6 +344,18 @@
     border-bottom: 1px solid gray;
   }
 
+  p {
+    img {
+      display: inline-block;
+      margin-left: 1em;
+      margin-bottom: 1em;
+    }
+  }
+
+  ul {
+    margin-left: 1.5em;
+  }
+
   .map-page {
     background: none;
     color: $dark-blue;
