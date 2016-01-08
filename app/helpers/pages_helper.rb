@@ -70,4 +70,17 @@ module PagesHelper
     end
   end
 
+  def heading_for(page)
+    case
+    when current_page?(page_path("sports-medicine-services"))
+      content_tag(:h1, page.title, class: "map-page roboto")
+    when page.with_map?
+      content_tag(:h1, page.title, class: "map-page roboto")
+    else
+      content_tag :div do
+        concat(image_tag "service_photo.jpg")
+        concat(content_tag(:h1, page.title, class: "roboto"))
+      end
+    end
+  end
 end

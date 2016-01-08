@@ -4,18 +4,7 @@
 </nav>
 
 <div class="main-content">
-
-  <% if @page.with_map? %>
-    <h1 class="map-page roboto"><%= @page.title %></h1>
-  <% else %>
-    <%= image_tag "service_photo.jpg" %>
-    <h1 class="roboto"><%= @page.title %></h1>
-  <% end %>
-
+  <%= heading_for(@page) %>
   <%= @page.body.html_safe unless @page.body.nil? %>
-
   <%= page_partial(@page) %>
-
 </div>
-
-

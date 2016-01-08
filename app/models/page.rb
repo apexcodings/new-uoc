@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true
   validates :slug, presence: true, uniqueness: true
 
   before_validation :generate_slug

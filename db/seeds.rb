@@ -45,7 +45,7 @@ outpatient.children.create!(title: "Adv Center for Surgery", position: 2)
 services.children.create!(title: "Urgent Ortho Care", position: 2)
 services.children.create!(title: "Physical/Occupational Therapy", position: 3) #p
 
-sports = services.children.create!(title: "Sports Medicine Services", position: 4)
+sports = services.children.create!(title: "Sports Medicine", slug: "sports-medicine-services", position: 4)
 sports.children.create!(title: "Athletic Trainers", position: 1)
 sports.children.create!(title: "Concussion Care", position: 2)
 sports.children.create!(title: "Saturday Sports Clinic", position: 3)
