@@ -58,6 +58,10 @@ class Page < ActiveRecord::Base
     slug.in? PORTAL_PAGES
   end
 
+  def self.portal_pages
+    where(slug: PORTAL_PAGES).order(:position)
+  end
+
   def with_map?
     parent == Page.find_by(slug: "contact-us")
   end

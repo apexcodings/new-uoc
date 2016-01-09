@@ -1,34 +1,30 @@
 module PagesHelper
   def side_links_for(page)
     content_tag :ul do
-      if page.experts?
+      case
+      when page.experts?
         links_for_experts
+      when page.in_portal?
+        portal_links_in_list
       else
         links_for_page(page)
       end
     end
   end
 
-# Original
-#  def links_for_page(page)
-#    page.side_nav.each do |p|
-#      concat(content_tag(:li, link(p)))
-#    end
-#  end
+  def portal_links
+    Page.portal_pages.map do |p|
+      link_to_unless_current p.title, page_path(p) do
+        link_to p.title, page_path(p), class: "side-active"
+      end
+    end
+  end
 
-# First try
-#  def links_for_page(page)
-#    page.side_nav.each do |p|
-#      if p.is_a?(Hash)
-#        concat(content_tag(:li, link(p.keys.first)))
-#        p[p.keys.first].each do |c|
-#          concat(content_tag(:li, sublink(c)))
-#        end
-#      else
-#        concat(content_tag(:li, link(p)))
-#      end
-#    end
-#  end
+  def portal_links_in_list
+    portal_links.each do |link|
+      concat(content_tag(:li, link))
+    end
+  end
 
   def links_for_page(page)
     page.side_nav.each do |sibling|
@@ -72,8 +68,9 @@ module PagesHelper
 
   def heading_for(page)
     case
-    #when current_page?(page_path("sports-medicine-services"))
     when page.sports_medicine?
+      content_tag(:h1, page.title, class: "map-page roboto")
+    when page.in_portal?
       content_tag(:h1, page.title, class: "map-page roboto")
     when page.with_map?
       content_tag(:h1, page.title, class: "map-page roboto")

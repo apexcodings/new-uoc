@@ -94,12 +94,12 @@ resources.children.create!(title: "Health Grades", position: 8)
 careers = Page.create!(title: 'Careers')
 
 # PATIENT PORTAL
-Page.create!(title: "What is NextMD?")
-Page.create!(title: "Why NextMD?")
-Page.create!(title: "How NextMD Works")
-Page.create!(title: "Appointments", slug: "portal-appointments")
-Page.create!(title: "Messaging")
-Page.create!(title: "FAQ")
+Page.create!(title: "What is NextMD?", position: 1)
+Page.create!(title: "Why NextMD?", position: 2)
+Page.create!(title: "How NextMD Works", position: 3)
+Page.create!(title: "Appointments", slug: "portal-appointments", position: 4)
+Page.create!(title: "Messaging", position: 5)
+Page.create!(title: "FAQ", position: 6)
 
 # ===========================================================
 # EXPERTS
