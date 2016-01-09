@@ -52,6 +52,12 @@ class Page < ActiveRecord::Base
     end
   end
 
+  PORTAL_PAGES = ["what-is-nextmd", "why-nextmd", "how-nextmd-works", "portal-appointments", "messaging", "faq"]
+
+  def in_portal?
+    slug.in? PORTAL_PAGES
+  end
+
   def with_map?
     parent == Page.find_by(slug: "contact-us")
   end

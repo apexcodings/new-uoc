@@ -75,4 +75,30 @@ describe Page do
 
     expect(about.sports_medicine?).to eq(false)
   end
+
+  it "knows when it belongs to the 'portal' pages" do
+    what = Page.create!(page_attributes(title: "What is NextMD?"))
+    why = Page.create!(page_attributes(title: "Why NextMD?"))
+    how = Page.create!(page_attributes(title: "How NextMD Works"))
+    appointments = Page.create!(page_attributes(title: "Appointments", slug: "portal-appointments"))
+    messaging = Page.create!(page_attributes(title: "Messaging"))
+    faq = Page.create!(page_attributes(title: "FAQ"))
+
+    pages = [what, why, how, appointments, messaging, faq]
+
+    pages.each do |p|
+      expect(p.in_portal?).to eq(true)
+    end
+  end
+
+  it "knows when it does not belong to the 'portal' pages" do
+    sports = Page.create!(page_attributes(title: "Sports Medicine", slug: "sports-medicine-services"))
+    about = Page.create!(page_attributes(title: "About Us"))
+
+    pages = [sports, about]
+
+    pages.each do |p|
+      expect(p.in_portal?).to eq(false)
+    end
+  end
 end
