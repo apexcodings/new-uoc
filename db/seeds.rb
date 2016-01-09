@@ -91,8 +91,15 @@ resources.children.create!(title: "Privacy Policy", position: 7)
 resources.children.create!(title: "Health Grades", position: 8)
 
 # CAREERS
-careers = Page.create!(title: 'Careers') #p
+careers = Page.create!(title: 'Careers')
 
+# PATIENT PORTAL
+Page.create!(title: "What is NextMD?")
+Page.create!(title: "Why NextMD?")
+Page.create!(title: "How NextMD Works")
+Page.create!(title: "Appointments")
+Page.create!(title: "Messaging")
+Page.create!(title: "FAQ")
 
 # ===========================================================
 # EXPERTS
