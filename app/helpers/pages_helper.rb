@@ -86,7 +86,7 @@ module PagesHelper
   end
 
   def background_for(page)
-    if page.sports_medicine?
+    if page && page.sports_medicine?
       sports_background.html_safe
     else
       "<div class='site'>".html_safe

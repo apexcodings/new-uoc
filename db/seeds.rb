@@ -97,7 +97,7 @@ careers = Page.create!(title: 'Careers')
 Page.create!(title: "What is NextMD?")
 Page.create!(title: "Why NextMD?")
 Page.create!(title: "How NextMD Works")
-Page.create!(title: "Appointments")
+Page.create!(title: "Appointments", slug: "portal-appointments")
 Page.create!(title: "Messaging")
 Page.create!(title: "FAQ")
 
