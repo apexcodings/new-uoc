@@ -15,12 +15,14 @@
         <%= image_tag "slide1.jpg" %>
       </div>
       <div class="slide-copy">
-        <h2>Welcome</h2>
+        <h2>Your comeback starts here</h2>
         <p>
-          Ipsum deleniti quo aut consectetur mollitia facere. Sit consequuntur
-          beatae possimus dolorem accusantium tempora. 
+        Whether it’s on the court, the track, the diamond, the field, the rink, 
+        around the house or on the job, everyone loves a comeback story. At 
+        University Orthopedics Center, we’re here to help you write yours.
         </p>
-        <%= link_to "Call to Action", "#", class: "green-link" %>
+        <%= link_to "Start your comeback today", 
+          page_path('contact-us'), class: "green-link" %>
       </div>
     </div>
 
@@ -29,12 +31,15 @@
         <%= image_tag "slide2.jpg" %>
       </div>
       <div class="slide-copy">
-        <h2>Our Experts</h2>
+        <h2>A more complete approach to care</h2>
         <p>
-          Dolor mollitia praesentium perspiciatis alias cumque rem, itaque
-          tempore optio beatae voluptatem? 
+          In January 2016, we joined together with Blair Orthopedics to create
+        Central Pennsylvania’s premier center for orthopedic care featuring the
+        region’s top physicians, physician assistants, physical therapists,
+        athletic trainers and clinical researchers for a better, healthier you.
         </p>
-        <%= link_to "Call to Action", "#", class: "green-link" %>
+        <%= link_to "Meet the experts behind the care", 
+          page_path('our-experts'), class: "green-link" %>
       </div>
     </div>
 
@@ -43,12 +48,14 @@
         <%= image_tag "slide3.jpg" %>
       </div>
       <div class="slide-copy">
-        <h2>Specialties</h2>
+        <h2>Encouraging, supporting and strengthening patients every step of the
+way</h2>
         <p>
-          Lorem ut laboriosam quasi nisi ipsam! Voluptatibus sint dolores
-          obcaecati accusamus repellendus quos fugit, eos?
+        When it comes to getting you back to better, we specialize in all aspects
+of care, including orthopedic care, sports medicine, physical medicine and rehabilitation, pain management, podiatry and chiropractic care.
         </p>
-        <%= link_to "Call to Action", "#", class: "green-link" %>
+        <%= link_to "Take your first steps towards better", 
+                page_path('specialties'), class: "green-link" %>
       </div>
     </div>
 
@@ -57,12 +64,32 @@
         <%= image_tag "slide4.jpg" %>
       </div>
       <div class="slide-copy">
-        <h2>Services</h2>
+        <h2>Not all injuries are created equal</h2>
         <p>
-          Sit maiores officiis dolor quae consectetur. Quam enim perspiciatis
-          nisi doloribus sapiente.
+        Each patient’s journey back from injury is unique. When reaching your
+goals for recovery means additional resources are needed, we provide a
+complete range of surgical and non-surgical services, including
+outpatient surgery, urgent orthopedic care, physical and occupational
+therapy, X-ray and open MRI services, clinical research, and worker’s
+compensation.
         </p>
-        <%= link_to "Call to Action", "#", class: "green-link" %>
+        <%= link_to "Start your journey with us", 
+          page_path('services'), class: "green-link" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "slide2.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Joining together for healthier patients and a healthier region</h2>
+        <p>University Orthopedics Center and Blair Orthopedics patients will work
+together with the same physicians and staff, enjoy the same outstanding
+service, and visit the same locations for care throughout Central
+Pennsylvania.</p>
+        <%= link_to "Read all about it", 
+          news_releases_path, class: "green-link" %>
       </div>
     </div>
 
