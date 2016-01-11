@@ -23,16 +23,22 @@ experts.children.create!(title: "Worker's Comp Rep", position: 5)
 experts.children.create!(title: "Athletic Trainers Experts", position: 6)
 experts.children.create!(title: "Management", position: 7)
 
-# SPECIALTIES
+# SPECIALTIES PAGES
 specialties = Page.create!(title: 'Specialties')
-specialties.children.create!(title: "Spine", position: 1) #p
+specialties.children.create!(title: "Spine", position: 1)
 specialties.children.create!(title: "Pain Management", position: 2)
-specialties.children.create!(title: "Chiropractic", position: 3)
-specialties.children.create!(title: "Joint Replacements", position: 4)
-specialties.children.create!(title: "Sports Medicine", position: 5)
-specialties.children.create!(title: "Foot & Ankle", position: 6)
-specialties.children.create!(title: "Hand", position: 7)
-specialties.children.create!(title: "Gen Ortho", position: 8)
+specialties.children.create!(title: "Joint Replacements", position: 3)
+specialties.children.create!(title: "Sports Medicine", position: 4)
+gen_ortho = specialties.children.create!(title: "General Orthopedics", position: 5)
+# gen ortho pages
+gen_ortho.children.create!(title: "Neck & Back", position: 1)
+gen_ortho.children.create!(title: "Shoulders", position: 2)
+gen_ortho.children.create!(title: "Elbows", position: 3)
+gen_ortho.children.create!(title: "Hands & Wrists", position: 4)
+gen_ortho.children.create!(title: "Hips", position: 5)
+gen_ortho.children.create!(title: "Knees", position: 6)
+gen_ortho.children.create!(title: "Feet & Ankles", position: 7)
+gen_ortho.children.create!(title: "Other", position: 8)
 
 
 # SERVICES
