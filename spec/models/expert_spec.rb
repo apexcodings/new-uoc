@@ -19,11 +19,11 @@ RSpec.describe Expert do
     expect(expert.errors[:last_name].any?).to eq(true)
   end
 
-  it "requires a phone" do
-    expert = Expert.new(phone: "")
-    expert.valid?
-    expect(expert.errors[:phone].any?).to eq(true)
-  end
+#  it "requires a phone" do
+    #expert = Expert.new(phone: "")
+    #expert.valid?
+    #expect(expert.errors[:phone].any?).to eq(true)
+  #end
 
   it "requires a location" do
     expert = Expert.new(location: "")
@@ -31,23 +31,23 @@ RSpec.describe Expert do
     expect(expert.errors[:location].any?).to eq(true)
   end
 
-  it "requires a specialty" do
-    expert = Expert.new(specialty: "")
-    expert.valid?
-    expect(expert.errors[:specialty].any?).to eq(true)
-  end
+  #it "requires a specialty" do
+    #expert = Expert.new(specialty: "")
+    #expert.valid?
+    #expect(expert.errors[:specialty].any?).to eq(true)
+  #end
 
-  it "requires a procedures field" do
-    expert = Expert.new(procedures: "")
-    expert.valid?
-    expect(expert.errors[:procedures].any?).to eq(true)
-  end
+  #it "requires a procedures field" do
+    #expert = Expert.new(procedures: "")
+    #expert.valid?
+    #expect(expert.errors[:procedures].any?).to eq(true)
+  #end
 
-  it "requires an education" do
-    expert = Expert.new(education: "")
-    expert.valid?
-    expect(expert.errors[:education].any?).to eq(true)
-  end
+  #it "requires an education" do
+    #expert = Expert.new(education: "")
+    #expert.valid?
+    #expect(expert.errors[:education].any?).to eq(true)
+  #end
 
   it "requires a category" do
     expert = Expert.new(category: "")
