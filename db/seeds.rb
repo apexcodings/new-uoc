@@ -353,6 +353,7 @@ Expert.create!([
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physicians_assistants",
+    image_url: "BrettBeech.jpg",
     body: File.read("db/experts/beech.html")
   },
   {
@@ -365,6 +366,7 @@ Expert.create!([
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physicians_assistants",
+    image_url: "ToddBrunermer.jpg",
     body: File.read("db/experts/brunermer.html")
   },
   {
