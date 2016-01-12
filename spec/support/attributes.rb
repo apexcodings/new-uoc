@@ -50,7 +50,7 @@ def appointment_attributes(overrides = {})
     requestor_last_name: "Dillon",
     requestor_phone_prefix: "914",
     requestor_phone: "744-3366",
-    requestor_email: "appointment@example.com",
+    requestor_email: "cesare@maryandferrari.com",
     requestor_time_to_reach: "10:00 am",
     patient_first_name: "Mark",
     patient_mi: "D.",

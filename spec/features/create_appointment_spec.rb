@@ -22,6 +22,7 @@ RSpec.describe "Creating an appointment" do
 
     fill_in "Requestor First Name", with: "Janet"
     fill_in "Requestor Last Name", with: "Doe"
+    fill_in "Email", with: "cesare@maryandferrari.com"
     fill_in "appointment_requestor_phone_prefix", with: "814"
     fill_in "appointment_requestor_phone", with: "814-4455"
     fill_in "Patient First Name", with: "Jim"

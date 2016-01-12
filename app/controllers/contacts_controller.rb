@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      Emailer.contact_email(@contact).deliver
+      Emailer.contact_email(@contact).deliver_now
       redirect_to page_path("thank-you")
     else
       flash[:alert] = "There was an error while submitting this form. Please, see below."

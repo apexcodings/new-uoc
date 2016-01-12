@@ -1,0 +1,11 @@
+<h1>Appointment</h1>
+
+<p>
+  Date: <%= @appointment.created_at %>
+</p>
+
+<p>
+First Name: <%= @appointment.requestor_first_name %><br>
+Last Name: <%= @appointment.requestor_last_name %><br>
+Email: <%= mail_to @appointment.requestor_email  %>
+</p>

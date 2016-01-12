@@ -76,7 +76,7 @@ RSpec.describe "Listing Experts" do
 
     visit experts_url(category: :physicians)
 
-    category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Comp Rep", "Athletic Trainers", "Management"]
+    category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Compensation Representative", "Athletic Trainers", "Management"]
 
     within(".side-navigation ul") do
       category_names.each do |name|

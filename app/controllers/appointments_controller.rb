@@ -1,4 +1,12 @@
 class AppointmentsController < ApplicationController
+  def index
+    @appointments = Appointment.all
+  end
+
+  def show
+    @appointment = Appointment.find(params[:id])
+  end
+
   def new
     @appointment = Appointment.new
   end
@@ -6,7 +14,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     if @appointment.save
-      Emailer.appointment_email(@appointment).deliver
+      Emailer.appointment_email(@appointment).deliver_now
       flash[:notice] = "Thank you for your submission!"
       redirect_to page_path("thank-you")
     else

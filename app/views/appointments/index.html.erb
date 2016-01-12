@@ -1,0 +1,13 @@
+<% @appointments.each do |appointment| %>
+  <div class="appointment-list">
+    <p>
+      Date: <%= appointment.created_at %>
+    </p>
+    <p>
+      First Name: <%= appointment.requestor_first_name %><br>
+      Last Name: <%= appointment.requestor_last_name %><br>
+      Email: <%= mail_to appointment.requestor_email, appointment.requestor_email %>
+    </p>
+    <%= link_to "View Appointments Details", appointment %>
+  </div>
+<% end %>

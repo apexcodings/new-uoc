@@ -17,6 +17,7 @@
  *= require news_releases
  *= require users
  *= require forms
+ *= require appointments
  *= require slideshow
  *= require_self
  */
