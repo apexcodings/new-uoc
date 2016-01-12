@@ -1,3 +1,11 @@
-Emailer#appointment_email
+New Appointment Request from UOC website
 
-<%= @greeting %>, find me in app/views/emailer/appointment_email.text.erb
+A new appointment request has been saved on the UOC site.
+
+Please click on the following link to review. You must log into the UOC site with an administrator account to view the Appointment Request.
+
+<%= appointment_url(@appointment) %>
+
+
+
+

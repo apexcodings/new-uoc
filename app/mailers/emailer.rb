@@ -7,10 +7,10 @@ class Emailer < ApplicationMailer
           subject:  "Contact form submission from UOC website")
   end
 
-  # to do
-  def appointment_email
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
+  def appointment_email(appointment)
+    @appointment = appointment
+    mail( from:     appointment.requestor_email,
+          to:       "cesare@maryandferrari.com",
+          subject:  "New Appointment Request from UOC website")
   end
 end

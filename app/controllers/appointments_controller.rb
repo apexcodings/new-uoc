@@ -6,6 +6,7 @@ class AppointmentsController < ApplicationController
   def create
     @appointment = Appointment.new(appointment_params)
     if @appointment.save
+      Emailer.appointment_email(@appointment).deliver
       flash[:notice] = "Thank you for your submission!"
       redirect_to page_path("thank-you")
     else
