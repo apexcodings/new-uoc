@@ -52,6 +52,14 @@ class Page < ActiveRecord::Base
     end
   end
 
+  def sports_medicine_subpage?
+    if parent && parent.slug == 'sports-medicine-services'
+      true
+    else
+      false
+    end
+  end
+
   PORTAL_PAGES = ["what-is-nextmd", "why-nextmd", "how-nextmd-works", "portal-appointments", "messaging", "faq"]
 
   def in_portal?

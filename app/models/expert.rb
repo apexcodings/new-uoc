@@ -5,7 +5,7 @@ class Expert < ActiveRecord::Base
                  physicians_assistants: "Physicians Assistants", 
                  physical_therapists: "Physical Therapists", 
                  clinical_researchers: "Clinical Researchers", 
-                 workers_comp: "Worker's Comp Rep", 
+                 workers_comp: "Worker's Compensation Representative", 
                  athletic_trainers: "Athletic Trainers", 
                  management: "Management"}
 

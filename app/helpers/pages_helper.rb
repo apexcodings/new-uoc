@@ -68,7 +68,7 @@ module PagesHelper
 
   def heading_for(page)
     case
-    when page.sports_medicine?
+    when page.sports_medicine_subpage?
       content_tag(:h1, page.title, class: "map-page roboto")
     when page.in_portal?
       content_tag(:h1, page.title, class: "map-page roboto")
