@@ -273,6 +273,15 @@
   &:hover { background-color: $dark-blue; }
 }
 
+.white-link {
+  display: block;
+  padding-bottom: 1em;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  &:hover { color: $gold; }
+}
+
 
 
 

@@ -27,20 +27,17 @@
 
   <div class="home-col box-empty">
     <div class="home-box">
-      <h2 class="roboto">Patient Portal</h2>
-      <%= form_tag "" do %>
-        <fieldset>
-          <%= text_field_tag :username, nil, placeholder: "Username or Email Address" %>
-          <%= password_field_tag :password, nil, placeholder: "Password" %>
-          <%= submit_tag "Login", class: "green-link" %>
-        </fieldset>
-      <% end %>
+      <h2 class="roboto">Access your<br>patient records<br>and information 24/7.</h2>
+      <%= link_to "Login to Patient Portal or create<br>an account".html_safe, 
+        "https://www.nextmd.com/Login/Login.aspx", class: "white-link" %>
     </div>
 
     <div class="home-box">
-      <h2 class="roboto">Patient Experience</h2>
+      <h2 class="roboto">Share your<br>comeback story.</h2>
       <p>
-        Elit at voluptates ullam minima quam autem, corporis deleniti vel facere, placeat veniam ullam minima quam autem.
+          Comebacks change history. They change lives. They get you back in the
+          game to fight or run or walk or just be back to being you another day.
+          Share your story and amaze absolutely everyone.
       </p>
     </div>
   </div>
