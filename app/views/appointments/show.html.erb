@@ -1,11 +1,35 @@
-<h1>Appointment</h1>
+<div class="main-content-wide">
+<h1>Appointment Request</h1>
 
 <p>
   Date: <%= @appointment.created_at %>
 </p>
 
+<h2>Requestor Information</h2>
+
 <p>
-First Name: <%= @appointment.requestor_first_name %><br>
-Last Name: <%= @appointment.requestor_last_name %><br>
-Email: <%= mail_to @appointment.requestor_email  %>
+Name: <%= @appointment.requestor_name %><br>
+Daytime Phone: <%= @appointment.requestor_phone_number %><br>
+Email: <%= mail_to @appointment.requestor_email  %><br>
+Best time to reach: <%= @appointment.requestor_time_to_reach %>
+</p>
+
+<h2>Patient Information</h2>
+
+<p>
+Name: <%= @appointment.patient_name %><br>
+Patient Phone Number: <%= @appointment.patient_phone_number %><br>
+Address: <%= @appointment.address1 %><br>
+ <%= @appointment.address2 %><br>
+City: <%= @appointment.city %><br>
+State: <%= @appointment.us_state %><br>
+ZIP: <%= @appointment.zip %><br>
+
+</p>
+
+
+</div>
+
+<p>
+  <%= link_to "All Appointments", appointments_path, class: "green-link" %>
 </p>

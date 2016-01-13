@@ -342,6 +342,7 @@
 
 }
 
+
 .main-content {
   width: 71.276595744681%;
   float: right;
@@ -385,6 +386,32 @@
     padding-left: 0;
     border-bottom: 1px solid gray;
     margin-bottom: .5em;
+  }
+}
+
+.main-content-wide {
+  width: 100%;
+  padding: 1em;
+
+  h1 {
+    font-family: 'Roboto Slab', serif;
+    color: $dark-blue;
+    padding-bottom: .4em;
+    padding-left: 0;
+    border-bottom: 1px solid gray;
+    margin-bottom: .5em;
+  }
+
+  h2 {
+    color: $dark-blue;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 1em 0 .2em;
+  }
+
+  p {
+    margin-bottom: 1em;
+    line-height: 1.3;
   }
 }
 

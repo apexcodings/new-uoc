@@ -17,7 +17,7 @@ RSpec.describe "Listing Appointments" do
 
     visit appointments_url
 
-    click_link("View Appointments Details")
+    click_link("View Details")
 
     expect(current_path).to eq(appointment_path(appointment))
 

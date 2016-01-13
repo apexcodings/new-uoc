@@ -1,5 +1,10 @@
+<div class="main-content-wide">
+
+  <h1>Appointment Requests</h1>
+
 <% @appointments.each do |appointment| %>
   <div class="appointment-list">
+      <%= link_to "View Details", appointment, class: "green-link", style: "float:right" %>
     <p>
       Date: <%= appointment.created_at %>
     </p>
@@ -8,6 +13,6 @@
       Last Name: <%= appointment.requestor_last_name %><br>
       Email: <%= mail_to appointment.requestor_email, appointment.requestor_email %>
     </p>
-    <%= link_to "View Appointments Details", appointment %>
   </div>
 <% end %>
+</div>

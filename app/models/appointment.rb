@@ -24,6 +24,23 @@ class Appointment < ActiveRecord::Base
             inclusion: { in: APPOINTMENT_TYPES }, 
             allow_blank: true
 
+
+  def requestor_name
+    "#{requestor_first_name} #{requestor_mi unless requestor_mi.nil?} #{requestor_last_name}"
+  end
+
+  def requestor_phone_number
+    "(#{requestor_phone_prefix}) #{requestor_phone}"
+  end
+
+  def patient_name
+    "#{patient_first_name} #{patient_mi unless patient_mi.nil?} #{patient_last_name}"
+  end
+
+  def patient_phone_number
+    "(#{patient_phone_prefix}) #{patient_phone}"
+  end
+
 end
 
 
