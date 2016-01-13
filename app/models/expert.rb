@@ -11,6 +11,8 @@ class Expert < ActiveRecord::Base
 
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
+  scope :by_category, ->(category) { where(category: category).order(:last_name) }
+
   def name
     "#{first_name} #{last_name}"
   end
