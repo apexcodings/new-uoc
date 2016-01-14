@@ -71,6 +71,8 @@ class Page < ActiveRecord::Base
   end
 
   def with_map?
-    parent == Page.find_by(slug: "contact-us")
+    if parent
+      parent.slug == "contact-us" || root.slug == "contact-us"
+    end
   end
 end
