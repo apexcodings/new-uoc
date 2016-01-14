@@ -1,4 +1,7 @@
 class AppointmentsController < ApplicationController
+
+  before_action :require_signin, except: [:new, :create]
+
   def index
     @appointments = Appointment.all
   end
