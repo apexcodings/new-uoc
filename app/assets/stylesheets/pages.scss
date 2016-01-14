@@ -1,3 +1,18 @@
+@import 'colors';
+
 ul.why-nextmd {
   li { margin-bottom: 1em; }
+}
+
+.history-table {
+  border-collapse: collapse;
+  margin-bottom: 2em;
+
+  td { 
+    padding: 1em; 
+    border: 1px solid $dark-blue;
+  }
+  .year {
+    font-weight: bold;
+  }
 }

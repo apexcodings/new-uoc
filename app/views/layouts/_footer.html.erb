@@ -29,7 +29,7 @@
 
     <ul>
       <li class="header">Other Locations</li>
-      <li><%= link_to "View Other Locations", "" %></li>
+      <li><%= link_to "View Other Locations", page_path('contact-us') %></li>
     </ul>
   </div>
 
@@ -54,17 +54,17 @@
     <ul>
       <li class="header">Connect with us</li>
       <li>
-        <%= link_to(image_tag("fb_icon.png"), "http://facebook.com", target: "_blank") %>
-        <%= link_to(image_tag("twitter_icon.png"), "http://twitter.com", target: "_blank") %>
+        <%= link_to(image_tag("fb_icon.png"), "https://www.facebook.com/UOCcares/", target: "_blank") %>
+        <%= link_to(image_tag("twitter_icon.png"), "https://twitter.com/researchuoc", target: "_blank") %>
       </li>
     </ul>
 
     <ul>
       <li class="header">Online Tools</li>
-      <li><%= link_to "Patient Portal", "" %></li>
-      <li><%= link_to "Pay Bill Online", "" %></li>
-      <li><%= link_to "Request an Appointment", "" %></li>
-      <li><%= link_to "Refer a Patient", "" %></li>
+      <li><%= link_to "Patient Portal", "https://www.nextmd.com/ud2/Login/Login.aspx", target: "_blank" %></li>
+      <li><%= link_to "Pay Bill Online", "https://www.nextmd.com/ud2/Login/Login.aspx", target: "_blank" %></li>
+      <li><%= link_to "Request an Appointment", new_appointment_path %></li>
+      <li><%= link_to "Refer a Patient", page_path("refer-a-patient") %></li>
     </ul>
   </div>
 

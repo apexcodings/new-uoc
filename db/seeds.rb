@@ -10,8 +10,8 @@ about.children.create!(title: "History", position: 1) #p
 about.children.create!(title: "Refer a Patient", position: 2)
 about.children.create!(title: "Mission/Vision/Values", position: 3) #p
 about.children.create!(title: "Patient Reviews", position: 4)
-about.children.create!(title: "Hospital Affiliations", position: 5)
-about.children.create!(title: "Community Involvement", position: 6)
+#about.children.create!(title: "Hospital Affiliations", position: 5)
+#about.children.create!(title: "Community Involvement", position: 6)
 
 # EXPERTS
 experts = Page.create!(title: 'Our Experts')
@@ -66,17 +66,20 @@ services.children.create!(title: "Uni-Dose Pharmacy", position: 9)
 
 # CONTACT US
 contact = Page.create!(title: 'Contact Us')
-state_college = contact.children.create!(title: "State College", position: 1)
+
+contact.children.create!(title: "Altoona", position: 1)
+contact.children.create!(title: "Bedford", position: 2)
+contact.children.create!(title: "Dubois", position: 3)
+contact.children.create!(title: "Ebensburg - 2016", position: 4)
+contact.children.create!(title: "Huntingdon", position: 5)
+contact.children.create!(title: "Lewistown", position: 6)
+contact.children.create!(title: "Roaring Springs", position: 7)
+
+state_college = contact.children.create!(title: "State College", position: 8)
 state_college.children.create!(title: "Grays Woods", position: 1)
 
-contact.children.create!(title: "Altoona", position: 2)
-contact.children.create!(title: "Lewistown", position: 3)
-contact.children.create!(title: "Tyrone", position: 4)
-contact.children.create!(title: "Bedford", position: 5)
-contact.children.create!(title: "Dubois", position: 6)
-contact.children.create!(title: "Huntingdon", position: 7)
-contact.children.create!(title: "Roaring Springs", position: 8)
-contact.children.create!(title: "Ebensburg - 2016", position: 9)
+contact.children.create!(title: "Tyrone", position: 9)
+
 Page.create!(title: "Thank You")
 
 

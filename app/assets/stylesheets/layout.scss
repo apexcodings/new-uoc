@@ -15,20 +15,29 @@
   margin: auto;
 }
 
+//.site {
+//  background-image: -webkit-linear-gradient(white, $site-gradient-gray);
+//
+//  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -webkit-linear-gradient(white, $site-gradient-gray);
+//
+//  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -o-linear-gradient(white, $site-gradient-gray);
+//
+//  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -moz-linear-gradient(white, $site-gradient-gray);
+//
+//  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), linear-gradient(white, $site-gradient-gray);
+//
+//  background-position: 0% 100px, 100% 100px, 0 0;
+//  background-repeat: no-repeat;
+//}
+
+
 .site {
-  background-image: -webkit-linear-gradient(white, $site-gradient-gray);
-
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -webkit-linear-gradient(white, $site-gradient-gray);
-
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -o-linear-gradient(white, $site-gradient-gray);
-
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), -moz-linear-gradient(white, $site-gradient-gray);
-
-  background-image: image-url("man_cutout.png"), image-url("woman_cutout.png"), linear-gradient(white, $site-gradient-gray);
-
-  background-position: 0% 100px, 100% 100px, 0 0;
-  background-repeat: no-repeat;
+  background-image: image-url("UOC_bg_people.jpg"), image-url("UOC_bg_gradient_tile.jpg");
+  background-position: 50% 0;
+  background-repeat: no-repeat, repeat-x;
+  background-color: #aeafb3;
 }
+
 
 .top-links-outer {
   background-color: $dark-blue;
