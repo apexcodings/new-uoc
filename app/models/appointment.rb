@@ -53,37 +53,26 @@ class Appointment < ActiveRecord::Base
     no_insurance ? "No Insurance" : "Yes"
   end
 
+  def preferred_list(preferred)
+    list = []
+    preferred.each { |k, v| list << k if v }
+    list
+  end
+
   def preferred_days
-    preferred = { "Monday" => preferred_day_mo,
-      "Tuesday" => preferred_day_tu, 
-      "Wednesday" => preferred_day_we, 
-      "Thursday" => preferred_day_th, 
-      "Friday" => preferred_day_fr }
+    days = {  "Monday" => preferred_day_mo,
+              "Tuesday" => preferred_day_tu,
+              "Wednesday" => preferred_day_we,
+              "Thursday" => preferred_day_th,
+              "Friday" => preferred_day_fr }
 
-    preferred_list = []
-
-    preferred.each do |k, v|
-      if v == true
-        preferred_list << k
-      end
-    end
-
-    preferred_list
+    preferred_list(days)
   end
 
   def preferred_times
-    preferred = { "AM" => preferred_time_am, "PM" => preferred_time_pm}
-    preferred_list = []
-
-    preferred.each do |k, v|
-      if v == true
-        preferred_list << k
-      end
-    end
-
-    preferred_list
+    times = { "AM" => preferred_time_am, "PM" => preferred_time_pm}
+    preferred_list(times)
   end
-
 
 end
 
