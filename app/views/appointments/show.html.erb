@@ -7,26 +7,159 @@
 
 <h2>Requestor Information</h2>
 
-<p>
-Name: <%= @appointment.requestor_name %><br>
-Daytime Phone: <%= @appointment.requestor_phone_number %><br>
-Email: <%= mail_to @appointment.requestor_email  %><br>
-Best time to reach: <%= @appointment.requestor_time_to_reach %>
-</p>
+<table class="appointment-data">
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+       <%= @appointment.requestor_name %><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Daytime Phone
+    </td>
+    <td>
+      <%= @appointment.requestor_phone_number %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Email
+    </td>
+    <td>
+       <%= mail_to @appointment.requestor_email  %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Best time to reach 
+    </td>
+    <td>
+      <%= @appointment.requestor_time_to_reach %>
+    </td>
+  </tr>
+</table>
+
 
 <h2>Patient Information</h2>
 
-<p>
-Name: <%= @appointment.patient_name %><br>
-Patient Phone Number: <%= @appointment.patient_phone_number %><br>
-Address: <%= @appointment.address1 %><br>
- <%= @appointment.address2 %><br>
-City: <%= @appointment.city %><br>
-State: <%= @appointment.us_state %><br>
-ZIP: <%= @appointment.zip %><br>
+<table class="appointment-data">
+  <tr>
+    <td>Name</td>
+    <td><%= @appointment.patient_name %></td>
+  </tr>
+  <tr>
+    <td>Patient Phone Number</td>
+    <td><%= @appointment.patient_phone_number %></td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td>
+      <%= @appointment.address1 %><br>
+        <%= @appointment.address2 %>
+  </td>
+  </tr>
+  <tr>
+    <td>City</td>
+    <td><%= @appointment.city %></td>
+  </tr>
+  <tr>
+    <td>State</td>
+    <td><%= @appointment.us_state %></td>
+  </tr>
+  <tr>
+    <td>ZIP</td>
+    <td><%= @appointment.zip %></td>
+  </tr>
+  <tr>
+    <td>Date of Birth</td>
+    <td><%= @appointment.dob %></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td><%= @appointment.gender %></td>
+  </tr>
+</table>
 
-</p>
 
+<h2>Injury Information</h2>
+
+<table class="appointment-data">
+  <tr>
+    <td>Injury Location</td>
+    <td><%= @appointment.injury_location %></td>
+  </tr>
+  <tr>
+    <td>Other</td>
+    <td><%= @appointment.injury_location_other %></td>
+  </tr>
+  <tr>
+    <td>Date of Injury</td>
+    <td><%= @appointment.injury_date %></td>
+  </tr>
+  <tr>
+    <td>Prior treatment to the injured area</td>
+    <td><%= @appointment.prior_treatment_response %></td>
+  </tr>
+  <tr>
+    <td>X-rays taken of the injured area</td>
+    <td><%= @appointment.x_ray_response %></td>
+  </tr>
+</table>
+
+<h2>Insurance Information</h2>
+
+<table class="appointment-data">
+  <tr>
+    <td>Insurance</td>
+    <td><%= @appointment.insurance %></td>
+  </tr>
+  <tr>
+    <td>Insurance Plan Name</td>
+    <td><%= @appointment.insurance_plan_name %></td>
+  </tr>
+  <tr>
+    <td>Insurance Policy Number</td>
+    <td><%= @appointment.insurance_policy_number %></td>
+  </tr>
+</table>
+
+
+<h2>Appointment Information</h2>
+
+<table class="appointment-data">
+  <tr>
+    <td>Preferred Location</td>
+    <td><%= @appointment.preferred_location %></td>
+  </tr>
+  <tr>
+    <td>Preferred Day of Week</td>
+    <td>
+      <%= @appointment.preferred_days.join(" - ") %>
+    </td>
+  </tr>
+  <tr>
+    <td>Preferred Time</td>
+    <td>
+      <%= @appointment.preferred_times.join(" - ") %>
+    </td>
+  </tr>
+  <tr>
+    <td>Appointment Type</td>
+    <td><%= @appointment.appointment_type %></td>
+  </tr>
+</table>
+
+<h2>Additional Information</h2>
+<table class="appointment-data">
+  <tr>
+    <td>
+      <%= @appointment.questions %>
+    </td>
+  </tr>
+</table>
 
 </div>
 

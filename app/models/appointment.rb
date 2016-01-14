@@ -41,6 +41,50 @@ class Appointment < ActiveRecord::Base
     "(#{patient_phone_prefix}) #{patient_phone}"
   end
 
+  def prior_treatment_response
+    prior_treatment ? "Yes" : "No"
+  end
+
+  def x_ray_response
+    x_ray ? "Yes" : "No"
+  end
+
+  def insurance
+    no_insurance ? "No Insurance" : "Yes"
+  end
+
+  def preferred_days
+    preferred = { "Monday" => preferred_day_mo,
+      "Tuesday" => preferred_day_tu, 
+      "Wednesday" => preferred_day_we, 
+      "Thursday" => preferred_day_th, 
+      "Friday" => preferred_day_fr }
+
+    preferred_list = []
+
+    preferred.each do |k, v|
+      if v == true
+        preferred_list << k
+      end
+    end
+
+    preferred_list
+  end
+
+  def preferred_times
+    preferred = { "AM" => preferred_time_am, "PM" => preferred_time_pm}
+    preferred_list = []
+
+    preferred.each do |k, v|
+      if v == true
+        preferred_list << k
+      end
+    end
+
+    preferred_list
+  end
+
+
 end
 
 

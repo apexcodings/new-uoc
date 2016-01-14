@@ -114,4 +114,51 @@ RSpec.describe Appointment do
       expect(appointment.errors[:appointment_type].any?).to eq(true)
     end
   end
+
+  it "returns the preferred days" do
+    appointment1 = Appointment.new(preferred_day_mo: true, preferred_day_we: true)
+    appointment2 = Appointment.new(preferred_day_tu: true, preferred_day_fr: true)
+
+    appointment1_days = ["Monday", "Wednesday"]
+    appointment2_days = ["Tuesday", "Friday"]
+
+    appointment1_days.each do |day|
+      expect(appointment1.preferred_days).to include(day)
+    end
+
+    appointment2_days.each do |day|
+      expect(appointment2.preferred_days).to include(day)
+    end
+  end
+
+  it "doesn't return the wrong preferred days" do
+    appointment = Appointment.new(preferred_day_mo: true, preferred_day_we: true)
+
+    correct_days = ["Monday", "Wednesday"]
+    wrong_days = ["Tuesday", "Thursday", "Friday"]
+
+    correct_days.each do |day|
+      expect(appointment.preferred_days).to include(day)
+    end
+
+    wrong_days.each do |day|
+      expect(appointment.preferred_days).not_to include(day)
+    end
+  end
+
+  it "returns the preferred time of day" do
+    appointment = Appointment.new(preferred_time_am: true)
+
+    right_time = ["AM"]
+    wrong_time = ["PM"]
+
+    right_time.each do |time|
+      expect(appointment.preferred_times).to include(time)
+    end
+
+    wrong_time.each do |time|
+      expect(appointment.preferred_times).not_to include(time)
+    end
+  end
+
 end
