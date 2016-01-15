@@ -101,4 +101,62 @@ describe Page do
       expect(p.in_portal?).to eq(false)
     end
   end
+
+  it "knows when it belongs to the Sports pages" do
+    sports = Page.create!(title: "Sports Medicine", slug: "sports-medicine-services")
+    athletic = sports.children.create!(title: "Athletic Trainers")
+    concussion = sports.children.create!(title: "Concussion Care")
+    saturday = sports.children.create!(title: "Saturday")
+    fellowship = sports.children.create!(title: "Fellowship")
+
+    sports_pages = [sports, athletic, concussion, saturday, fellowship]
+    
+    sports_pages.each do |sport_page|
+      expect(sport_page.in_sports?).to eq(true)
+    end
+  end
+
+  it "knows when it doesn't belong to the Sports pages" do
+    sports = Page.create!(title: "Sports Medicine", slug: "sports-medicine-services")
+    about = Page.create!(title: "About")
+    history = about.children.create!(title: "History")
+
+    non_sports_pages = [about, history]
+
+    non_sports_pages.each do |non_sport_page|
+      expect(non_sport_page.in_sports?).to eq(false)
+    end
+  end
+
+  it "knows when it belongs to the Services pages" do
+    services = Page.create!(title: "Services")
+    outpatient = services.children.create!(title: "Outpatient")
+    uocss = outpatient.children.create!(title: "UOCSS")
+    mri = services.children.create!(title: "MRI")
+
+    services_pages = [services, outpatient, mri, uocss]
+
+    services_pages.each do |service_page|
+      expect(service_page.in_services?).to eq(true)
+    end
+  end
+
+  it "knows when it doesn't belong to the Services pages" do
+    services = Page.create!(title: "Services")
+    about = Page.create!(title: "About")
+    history = about.children.create!(title: "History")
+
+    # although Sports Medicine pages are part of services they 
+    # have a different background, so they shouldn't be returned by
+    # in_services?
+    sports = services.children.create!(title: "Sports", slug: "sports-medicine-services")
+    athletic = sports.children.create!(title: "Athletic Trainers")
+
+    non_services_pages = [about, history, sports, athletic]
+
+    non_services_pages.each do |non_service_page|
+      expect(non_service_page.in_services?).to eq(false)
+    end
+  end
+
 end

@@ -15,6 +15,8 @@
   margin: auto;
 }
 
+// old background with 2 images
+
 //.site {
 //  background-image: -webkit-linear-gradient(white, $site-gradient-gray);
 //
@@ -32,10 +34,23 @@
 
 
 .site {
-  background-image: image-url("bg_people.jpg"), image-url("bg_gradient_tile.jpg");
+//  background-image: image-url("bg_people.jpg"), image-url("bg_gradient_tile.jpg");
   background-position: 50% 0;
   background-repeat: no-repeat, repeat-x;
   background-color: #aeafb3;
+}
+
+.bg_default {
+  background-image: image-url("bg_default.jpg"), image-url("bg_gradient_tile.jpg");
+}
+.bg_sports {
+  background-image: image-url("bg_sports.jpg"), image-url("bg_gradient_tile.jpg");
+}
+.bg_services {
+  background-image: image-url("bg_services.jpg"), image-url("bg_gradient_tile.jpg");
+}
+.bg_experts {
+  background-image: image-url("bg_experts.jpg"), image-url("bg_gradient_tile.jpg");
 }
 
 

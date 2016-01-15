@@ -14,26 +14,6 @@ class Page < ActiveRecord::Base
     slug
   end
 
-#  def side_nav
-#    #root.children.order(:position)
-#
-#    returned_pages = []
-#
-#    root.children.order(:position).each do |page|
-#      if page.has_children?
-#        subpages = []
-#        page.children.each do |c|
-#          subpages << c
-#        end
-#        returned_pages << { page => subpages }
-#      else
-#        returned_pages << page
-#      end
-#    end
-#
-#    returned_pages
-#  end
-
   def side_nav
     root.children.order(:position)
   end
@@ -73,6 +53,33 @@ class Page < ActiveRecord::Base
   def with_map?
     if parent
       parent.slug == "contact-us" || root.slug == "contact-us"
+    end
+  end
+
+  def self.sports
+    Page.find_by(slug: "sports-medicine-services")
+  end
+
+  def in_sports?
+    sports_page = Page.sports
+    if self == sports_page || sports_page.children.include?(self)
+      true
+    else
+      false
+    end
+  end
+
+  def self.services
+    Page.find_by(slug: "services")
+  end
+
+  def in_services?
+    services_page = Page.services
+    services_descendants = services_page.descendants.reject { |p| p == Page.sports }
+    if self == services_page || services_descendants.include?(self)
+      true
+    else
+      false
     end
   end
 end

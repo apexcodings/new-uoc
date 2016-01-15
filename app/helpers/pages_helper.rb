@@ -82,15 +82,26 @@ module PagesHelper
     end
   end
 
-  def background_for(page)
-    if page && page.sports_medicine?
-      sports_background.html_safe
+  def start_background_for(page)
+    if page
+      case
+      when page.in_sports?
+        return "<div class='site bg_sports'>".html_safe
+      when page.in_services?
+        return "<div class='site bg_services'>".html_safe
+      when page.slug == "our-experts"
+        return "<div class='site bg_experts'>".html_safe
+      end
     else
-      "<div class='site'>".html_safe
+      if controller_name == "experts"
+        return "<div class='site bg_experts'>".html_safe
+      end
     end
+
+    "<div class='site bg_default'>".html_safe
   end
 
-  def sports_background
-    "<div class='site' style='background-image: url(https://s3.amazonaws.com/com.uocproduction/images/soccerGirl2.png), url(https://s3.amazonaws.com/com.uocproduction/images/baseballPitcher2.png), linear-gradient(white, gray);'>"
-  end
+  #def sports_background
+  #  "<div class='site' style='background-image: url(https://s3.amazonaws.com/com.uocproduction/images/soccerGirl2.png), url(https://s3.amazonaws.com/com.uocproduction/images/baseballPitcher2.png), linear-gradient(white, gray);'>"
+  #end
 end
