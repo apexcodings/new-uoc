@@ -1,8 +1,10 @@
 require 'rails_helper'
 require 'support/attributes'
+require 'support/pages'
 
 RSpec.describe "Creating a contact" do
   before do
+    create_required_pages
     @contact_page = Page.create!(page_attributes(title: "Contact Us"))
     @thanks_page = Page.create!(page_attributes(title: "Thank You"))
   end

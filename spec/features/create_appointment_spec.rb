@@ -1,5 +1,6 @@
 require "rails_helper"
 require "support/attributes"
+require "support/pages"
 
 RSpec.describe "Creating an appointment" do
   it "shows the appointment form" do
@@ -17,6 +18,8 @@ RSpec.describe "Creating an appointment" do
   end
 
   it "saves the appointment when valid" do
+    create_required_pages
+
     thanks_page = Page.create!(page_attributes(title: "Thank You"))
     visit new_appointment_path
 

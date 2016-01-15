@@ -1,8 +1,11 @@
 require 'rails_helper'
 require 'support/attributes'
+require 'support/pages'
 
 RSpec.describe "Show portal pages" do
   it "shows all the portal pages in the sidebar" do
+    create_required_pages
+
     what = Page.create!(page_attributes(title: "What is NextMD?"))
     why = Page.create!(page_attributes(title: "Why NextMD?"))
     how = Page.create!(page_attributes(title: "How NextMD Works"))

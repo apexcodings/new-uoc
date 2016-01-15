@@ -1,8 +1,11 @@
 require 'rails_helper'
 require 'support/attributes'
+require 'support/pages'
 
 RSpec.describe "Showing the contact page" do
   it "shows the contact form" do
+    create_required_pages
+
     contact_page = Page.create!(page_attributes(title: "Contact Us"))
 
     visit root_url

@@ -129,6 +129,7 @@ describe Page do
   end
 
   it "knows when it belongs to the Services pages" do
+    sports = Page.create!(title: "Sports", slug: "sports-medicine-services")
     services = Page.create!(title: "Services")
     outpatient = services.children.create!(title: "Outpatient")
     uocss = outpatient.children.create!(title: "UOCSS")

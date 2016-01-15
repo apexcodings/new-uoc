@@ -75,7 +75,7 @@ class Page < ActiveRecord::Base
 
   def in_services?
     services_page = Page.services
-    services_descendants = services_page.descendants.reject { |p| p == Page.sports }
+    services_descendants = services_page.descendants.reject { |p| p.in_sports? }
     if self == services_page || services_descendants.include?(self)
       true
     else
