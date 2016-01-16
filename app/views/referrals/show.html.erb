@@ -8,7 +8,7 @@
 <h2>Referring Office Contact Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Practice
     </td>
@@ -16,7 +16,7 @@
        <%= @referral.practice %><br>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Referring Physician
     </td>
@@ -24,7 +24,7 @@
        <%= @referral.physician %><br>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Name
     </td>
@@ -32,7 +32,7 @@
       <%= @referral.name %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Phone Number
     </td>
@@ -40,7 +40,7 @@
       <%= @referral.phone %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Email
     </td>
@@ -48,7 +48,7 @@
        <%= mail_to @referral.email  %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Fax
     </td>
@@ -62,85 +62,85 @@
 <h2>Patient Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Patient Name</td>
     <td><%= @referral.patient_name %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Date of Birth</td>
     <td><%= @referral.dob %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Patient Phone Number</td>
     <td><%= @referral.patient_phone %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Patient Alternate Phone Number</td>
     <td><%= @referral.patient_phone_alt %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Patient Email</td>
     <td><%= @referral.patient_email %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Employer</td>
     <td><%= @referral.employer %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Patient Insurance</td>
     <td><%= @referral.insurance %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Symptoms & Diagnosis</td>
     <td><%= @referral.diagnosis %></td>
   </tr>
 </table>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Has the patient had a prior surgery (to the same body part)?</td>
     <td><%= @referral.prior_surgery.yesno if @referral.prior_surgery %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Was this injury/condition related to Workers' Compensation?</td>
     <td><%= @referral.workers_comp.yesno if @referral.workers_comp %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Bone Scan</td>
     <td>
       <%= @referral.bone_scan.yesno if @referral.bone_scan %><br>
       <%= @referral.bone_scan_where %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>CT Scan</td>
     <td>
       <%= @referral.ct_scan.yesno if @referral.ct_scan %><br>
       <%= @referral.ct_scan_where %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>MRI</td>
     <td>
       <%= @referral.mri.yesno if @referral.mri %><br>
       <%= @referral.mri_where %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>EMG</td>
     <td>
       <%= @referral.emg.yesno if @referral.emg %><br>
       <%= @referral.emg_where %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>X-Rays</td>
     <td>
       <%= @referral.x_rays.yesno if @referral.x_rays %><br>
       <%= @referral.x_rays_where %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Cast/Splint Applied</td>
     <td>
       <%= @referral.cast.yesno if @referral.cast %><br>
@@ -151,15 +151,15 @@
 
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Preferred Physician</td>
     <td><%= @referral.preferred_physician %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Office Preference</td>
     <td><%= @referral.preferred_office %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Requested time to be seen</td>
     <td><%= @referral.time_seen %></td>
   </tr>

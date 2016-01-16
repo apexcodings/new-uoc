@@ -8,7 +8,7 @@
 <h2>Requestor Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Name
     </td>
@@ -16,7 +16,7 @@
        <%= @appointment.requestor_name %><br>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Daytime Phone
     </td>
@@ -24,7 +24,7 @@
       <%= @appointment.requestor_phone_number %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Email
     </td>
@@ -32,7 +32,7 @@
        <%= mail_to @appointment.requestor_email  %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       Best time to reach 
     </td>
@@ -46,38 +46,38 @@
 <h2>Patient Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Name</td>
     <td><%= @appointment.patient_name %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Patient Phone Number</td>
     <td><%= @appointment.patient_phone_number %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Address</td>
     <td>
       <%= @appointment.address1 %><br>
         <%= @appointment.address2 %>
   </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>City</td>
     <td><%= @appointment.city %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>State</td>
     <td><%= @appointment.us_state %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>ZIP</td>
     <td><%= @appointment.zip %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Date of Birth</td>
     <td><%= @appointment.dob %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Gender</td>
     <td><%= @appointment.gender %></td>
   </tr>
@@ -87,23 +87,23 @@
 <h2>Injury Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Injury Location</td>
     <td><%= @appointment.injury_location %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Other</td>
     <td><%= @appointment.injury_location_other %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Date of Injury</td>
     <td><%= @appointment.injury_date %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Prior treatment to the injured area</td>
     <td><%= @appointment.prior_treatment.yesno if @appointment.prior_treatment %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>X-rays taken of the injured area</td>
     <td><%= @appointment.x_ray.yesno if @appointment.x_ray %></td>
   </tr>
@@ -112,15 +112,15 @@
 <h2>Insurance Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Insurance</td>
     <td><%= @appointment.insurance %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Insurance Plan Name</td>
     <td><%= @appointment.insurance_plan_name %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Insurance Policy Number</td>
     <td><%= @appointment.insurance_policy_number %></td>
   </tr>
@@ -130,23 +130,23 @@
 <h2>Appointment Information</h2>
 
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Preferred Location</td>
     <td><%= @appointment.preferred_location %></td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Preferred Day of Week</td>
     <td>
       <%= @appointment.preferred_days.join(" - ") %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Preferred Time</td>
     <td>
       <%= @appointment.preferred_times.join(" - ") %>
     </td>
   </tr>
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>Appointment Type</td>
     <td><%= @appointment.appointment_type %></td>
   </tr>
@@ -154,7 +154,7 @@
 
 <h2>Additional Information</h2>
 <table class="appointment-data">
-  <tr>
+  <tr class="<%= cycle("odd", "even") -%>">
     <td>
       <%= @appointment.questions %>
     </td>
