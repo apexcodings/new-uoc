@@ -1,17 +1,13 @@
 class AppointmentsController < ApplicationController
 
-  before_action :require_signin, except: [:new, :create]
+  before_action :require_signin, except: [:create]
 
   def index
-    @appointments = Appointment.all
+    @appointments = Appointment.order(created_at: :desc)
   end
 
   def show
     @appointment = Appointment.find(params[:id])
-  end
-
-  def new
-    @appointment = Appointment.new
   end
 
   def create
@@ -22,7 +18,8 @@ class AppointmentsController < ApplicationController
       redirect_to page_path("thank-you")
     else
       flash[:alert] = "There was an error while submitting this form. Please, see below."
-      render :new
+      @page = Page.find_by(slug: "appointments")
+      render template: "pages/show"
     end
   end
 

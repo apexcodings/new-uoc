@@ -307,14 +307,13 @@
 }
 
 
-
-
 .site-content {
   margin-top: 10px;
-  background: -webkit-linear-gradient(white, $main-content-gradient-gray);
-  background: -o-linear-gradient(white, $main-content-gradient-gray);
-  background: -moz-linear-gradient(white, $main-content-gradient-gray);
-  background: linear-gradient(white, $main-content-gradient-gray);
+  background-color: white;
+  //background: -webkit-linear-gradient(white, $main-content-gradient-gray);
+  //background: -o-linear-gradient(white, $main-content-gradient-gray);
+  //background: -moz-linear-gradient(white, $main-content-gradient-gray);
+  //background: linear-gradient(white, $main-content-gradient-gray);
 }
 
 .side-navigation {
@@ -385,6 +384,16 @@
     color: $dark-blue;
     font-family: 'Roboto Slab', serif;
     font-size: 1.5em;
+    font-weight: bold;
+    padding: .1em 0;
+    margin: 1em 0 .8em;
+    border-bottom: 1px solid gray;
+  }
+
+  h3 {
+    color: $dark-blue;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.2em;
     font-weight: bold;
     padding: .1em 0;
     margin: 1em 0 .8em;

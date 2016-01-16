@@ -3,6 +3,11 @@ require "support/attributes"
 require "support/pages"
 
 RSpec.describe "Creating an appointment" do
+  before do
+    create_required_pages
+    appt_page = Page.create!(title: "Appointments")
+  end
+
   it "shows the appointment form" do
     visit root_path
 
@@ -10,7 +15,8 @@ RSpec.describe "Creating an appointment" do
       click_link "Make an appointment"
     end
 
-    expect(current_path).to eq(new_appointment_path)
+    expect(current_path).to eq(page_path('appointments'))
+
     expect(page).to have_field("Requestor First Name")
     expect(page).to have_field("Requestor Last Name")
     expect(page).to have_field("Patient First Name")
@@ -18,10 +24,9 @@ RSpec.describe "Creating an appointment" do
   end
 
   it "saves the appointment when valid" do
-    create_required_pages
-
     thanks_page = Page.create!(page_attributes(title: "Thank You"))
-    visit new_appointment_path
+
+    visit page_url('appointments')
 
     fill_in "Requestor First Name", with: "Janet"
     fill_in "Requestor Last Name", with: "Doe"

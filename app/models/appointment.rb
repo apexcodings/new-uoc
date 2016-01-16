@@ -41,14 +41,6 @@ class Appointment < ActiveRecord::Base
     "(#{patient_phone_prefix}) #{patient_phone}"
   end
 
-  def prior_treatment_response
-    prior_treatment ? "Yes" : "No"
-  end
-
-  def x_ray_response
-    x_ray ? "Yes" : "No"
-  end
-
   def insurance
     no_insurance ? "No Insurance" : "Yes"
   end

@@ -101,11 +101,11 @@
   </tr>
   <tr>
     <td>Prior treatment to the injured area</td>
-    <td><%= @appointment.prior_treatment_response %></td>
+    <td><%= @appointment.prior_treatment.yesno if @appointment.prior_treatment %></td>
   </tr>
   <tr>
     <td>X-rays taken of the injured area</td>
-    <td><%= @appointment.x_ray_response %></td>
+    <td><%= @appointment.x_ray.yesno if @appointment.x_ray %></td>
   </tr>
 </table>
 

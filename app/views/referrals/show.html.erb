@@ -1,0 +1,172 @@
+<div class="main-content-wide">
+<h1>Referral</h1>
+
+<p>
+  Date: <%= @referral.created_at %>
+</p>
+
+<h2>Referring Office Contact Information</h2>
+
+<table class="appointment-data">
+  <tr>
+    <td>
+      Practice
+    </td>
+    <td>
+       <%= @referral.practice %><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Referring Physician
+    </td>
+    <td>
+       <%= @referral.physician %><br>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Name
+    </td>
+    <td>
+      <%= @referral.name %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Phone Number
+    </td>
+    <td>
+      <%= @referral.phone %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Email
+    </td>
+    <td>
+       <%= mail_to @referral.email  %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Fax
+    </td>
+    <td>
+      <%= @referral.fax %>
+    </td>
+  </tr>
+</table>
+
+
+<h2>Patient Information</h2>
+
+<table class="appointment-data">
+  <tr>
+    <td>Patient Name</td>
+    <td><%= @referral.patient_name %></td>
+  </tr>
+  <tr>
+    <td>Date of Birth</td>
+    <td><%= @referral.dob %></td>
+  </tr>
+  <tr>
+    <td>Patient Phone Number</td>
+    <td><%= @referral.patient_phone %></td>
+  </tr>
+  <tr>
+    <td>Patient Alternate Phone Number</td>
+    <td><%= @referral.patient_phone_alt %></td>
+  </tr>
+  <tr>
+    <td>Patient Email</td>
+    <td><%= @referral.patient_email %></td>
+  </tr>
+  <tr>
+    <td>Employer</td>
+    <td><%= @referral.employer %></td>
+  </tr>
+  <tr>
+    <td>Patient Insurance</td>
+    <td><%= @referral.insurance %></td>
+  </tr>
+  <tr>
+    <td>Symptoms & Diagnosis</td>
+    <td><%= @referral.diagnosis %></td>
+  </tr>
+</table>
+
+<table class="appointment-data">
+  <tr>
+    <td>Has the patient had a prior surgery (to the same body part)?</td>
+    <td><%= @referral.prior_surgery.yesno if @referral.prior_surgery %></td>
+  </tr>
+  <tr>
+    <td>Was this injury/condition related to Workers' Compensation?</td>
+    <td><%= @referral.workers_comp.yesno if @referral.workers_comp %></td>
+  </tr>
+  <tr>
+    <td>Bone Scan</td>
+    <td>
+      <%= @referral.bone_scan.yesno if @referral.bone_scan %><br>
+      <%= @referral.bone_scan_where %>
+    </td>
+  </tr>
+  <tr>
+    <td>CT Scan</td>
+    <td>
+      <%= @referral.ct_scan.yesno if @referral.ct_scan %><br>
+      <%= @referral.ct_scan_where %>
+    </td>
+  </tr>
+  <tr>
+    <td>MRI</td>
+    <td>
+      <%= @referral.mri.yesno if @referral.mri %><br>
+      <%= @referral.mri_where %>
+    </td>
+  </tr>
+  <tr>
+    <td>EMG</td>
+    <td>
+      <%= @referral.emg.yesno if @referral.emg %><br>
+      <%= @referral.emg_where %>
+    </td>
+  </tr>
+  <tr>
+    <td>X-Rays</td>
+    <td>
+      <%= @referral.x_rays.yesno if @referral.x_rays %><br>
+      <%= @referral.x_rays_where %>
+    </td>
+  </tr>
+  <tr>
+    <td>Cast/Splint Applied</td>
+    <td>
+      <%= @referral.cast.yesno if @referral.cast %><br>
+      <%= @referral.cast_where %>
+    </td>
+  </tr>
+</table>
+
+
+<table class="appointment-data">
+  <tr>
+    <td>Preferred Physician</td>
+    <td><%= @referral.preferred_physician %></td>
+  </tr>
+  <tr>
+    <td>Office Preference</td>
+    <td><%= @referral.preferred_office %></td>
+  </tr>
+  <tr>
+    <td>Requested time to be seen</td>
+    <td><%= @referral.time_seen %></td>
+  </tr>
+</table>
+
+</div>
+
+<p>
+  <%= link_to "All Referrals", referrals_path, class: "green-link" %>
+</p>

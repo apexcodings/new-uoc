@@ -94,3 +94,42 @@ def news_attributes(overrides = {})
             Modi aut libero dicta quibusdam illum. }.squish
   }.merge(overrides)
 end
+
+def referral_attributes(overrides = {})
+  {
+    practice: "Ortho plus",
+    physician: "John Waine",
+    name: "Jane Vaine",
+    phone: "999 9990000",
+    email: "physician@example.com",
+    fax: "999 9990000",
+    patient_name: "Billy Willy",
+    dob: "8/7/28",
+    patient_phone: "666 888 0000",
+    patient_phone_alt: "666 888 0000",
+    patient_email: "billy@example.com",
+    employer: "Timothy Tim",
+    insurance: "We save you",
+    diagnosis: "I think he's dead",
+    prior_surgery: false,
+    workers_comp: false,
+    bone_scan: true,
+    bone_scan_where: "Hospital",
+    ct_scan: false,
+    ct_scan_where: "",
+    mri: true,
+    mri_where: "Hospital",
+    emg: false,
+    emg_where: "Doctor",
+    x_rays: false,
+    x_rays_where: "",
+    cast: true,
+    cast_where: "At the doctor",
+    preferred_physician: "Dr. Sport",
+    preferred_office: "Altoona",
+    time_to_be_seen: "1-2 days"
+  }.merge(overrides)
+end
+
+
+

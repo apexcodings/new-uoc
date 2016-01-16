@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160104145329) do
+ActiveRecord::Schema.define(version: 20160116123759) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -102,6 +102,42 @@ ActiveRecord::Schema.define(version: 20160104145329) do
   end
 
   add_index "pages", ["ancestry"], name: "index_pages_on_ancestry", using: :btree
+
+  create_table "referrals", force: :cascade do |t|
+    t.string   "practice"
+    t.string   "physician"
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "fax"
+    t.string   "patient_name"
+    t.string   "dob"
+    t.string   "patient_phone"
+    t.string   "patient_phone_alt"
+    t.string   "patient_email"
+    t.string   "employer"
+    t.string   "insurance"
+    t.text     "diagnosis"
+    t.boolean  "prior_surgery"
+    t.boolean  "workers_comp"
+    t.boolean  "bone_scan"
+    t.string   "bone_scan_where"
+    t.boolean  "ct_scan"
+    t.string   "ct_scan_where"
+    t.boolean  "mri"
+    t.string   "mri_where"
+    t.boolean  "emg"
+    t.string   "emg_where"
+    t.boolean  "x_rays"
+    t.string   "x_rays_where"
+    t.boolean  "cast"
+    t.string   "cast_where"
+    t.string   "preferred_physician"
+    t.string   "preferred_office"
+    t.string   "time_to_be_seen"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

@@ -15,10 +15,12 @@
   border: 1px solid $dark-blue;
   background-color: white;
   width: 80%;
+  margin-bottom: .5em;
 
   td {
     padding: .2em 1em;
     width: 30%;
+    vertical-align: top;
     &:first-child { 
       font-style: italic; 
     }

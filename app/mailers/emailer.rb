@@ -13,4 +13,11 @@ class Emailer < ApplicationMailer
           to:       "cesare@maryandferrari.com",
           subject:  "New Appointment Request from UOC website")
   end
+
+  def referral_email(referral)
+    @referral = referral
+    mail( from:     referral.email,
+          to:       "cesare@maryandferrari.com",
+          subject:  "New Referral from UOC website")
+  end
 end

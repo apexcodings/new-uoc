@@ -1,17 +1,3 @@
-<nav class="side-navigation">
-  <h2 class="roboto">Appointments</h2>
-</nav>
-
-
-<div class="main-content">
-
-<%= image_tag "service_photo.jpg" %>
-<h1 class="roboto">Request an Appointment</h1>
-
-<p>
-  As a convenience for our patients, we are pleased to offer online appointment requests. This form is secure to ensure the privacy of your personal information. Please complete the form below to request an appointment with University Orthopedics Center. Once we receive your request, a member of our staff will contact you to confirm a date and time.
-</p>
-
 <%= form_for @appointment do |f| %>
 <%= render "shared/errors", object: @appointment %>
 
@@ -152,18 +138,18 @@
   <div class="form-row group">
     <div class="half-row">
       <label>Have you had any prior treatment to the injured area?</label>
-      <%= f.radio_button :prior_treatment, "no" %>
+      <%= f.radio_button :prior_treatment, false %>
       <%= f.label :prior_treatment, "No", class: "inline" %>
     
-      <%= f.radio_button :prior_treatment, "yes" %>
+      <%= f.radio_button :prior_treatment, true %>
       <%= f.label :prior_treatment, "Yes", class: "inline" %>
     </div>
     <div class="half-row with-gutter">
       <label>Have you had any x-rays taken of the injured area?</label>
-      <%= f.radio_button :x_ray, "no" %>
+      <%= f.radio_button :x_ray, false %>
       <%= f.label :x_ray, "No", class: "inline" %>
     
-      <%= f.radio_button :x_ray, "yes" %>
+      <%= f.radio_button :x_ray, true %>
       <%= f.label :x_ray, "Yes", class: "inline" %>
     </div>
   </div>
@@ -243,4 +229,3 @@
 
 <% end %>
 
-</div>

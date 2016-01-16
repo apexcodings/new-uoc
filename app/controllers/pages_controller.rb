@@ -9,6 +9,8 @@ class PagesController < ApplicationController
 
   def show
     @contact = Contact.new if @page.slug == "contact-us"
+    @appointment = Appointment.new if @page.slug == "appointments"
+    @referral = Referral.new if @page.slug == "refer-a-patient"
   end
 
   def search

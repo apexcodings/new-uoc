@@ -1,0 +1,20 @@
+<div class="main-content-wide">
+
+  <h1>Referrals</h1>
+
+<% @referrals.each do |referral| %>
+  <div class="appointment-list">
+      <%= link_to "View Details", referral, class: "green-link", style: "float:right" %>
+    <p>
+      Date: <%= referral.created_at %>
+    </p>
+    <p>
+      Practice: <%= referral.practice %><br>
+      Referring Physician: <%= referral.physician %><br>
+      Name: <%= referral.name %><br>
+      Phone: <%= referral.phone %><br>
+      Email: <%= mail_to referral.email, referral.email %>
+    </p>
+  </div>
+<% end %>
+</div>

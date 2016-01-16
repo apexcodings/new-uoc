@@ -1,0 +1,205 @@
+<%= form_for @referral do |f| %>
+<%= render "shared/errors", object: @referral %>
+
+<h2>Referring Office Contact Information</h2>
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :practice, "Practice" %>
+      <%= f.text_field :practice %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :physician, "Referring Physician" %>
+      <%= f.text_field :physician %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :name, "Your Name" %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :phone, "Phone Number" %>
+      <%= f.text_field :phone %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :email, "Email Address" %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :fax, "Fax Number <span class='opt'>(optional)</span>".html_safe %>
+      <%= f.text_field :fax %>
+      <p class="opt">
+        If you would like a confirmation of your patient’s appointment, please provide a fax number.
+      </p>
+    </div>
+  </div>
+
+  <h2>Patient Information</h2>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :patient_name, "Patient Name" %>
+      <%= f.text_field :patient_name %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :dob, "Date of Birth" %>
+      <%= f.text_field :dob %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :patient_phone, "Patient Phone Number" %>
+      <%= f.text_field :patient_phone %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :patient_phone_alt,
+        "Patient Alternate Phone Number <span class='opt'>(optional)</span>".html_safe %>
+      <%= f.text_field :patient_phone_alt %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :patient_email, "Patient Email Address" %>
+      <%= f.text_field :patient_email %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :employer, "Employer" %>
+      <%= f.text_field :employer %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :insurance, "Patient Insurance" %>
+      <%= f.text_field :insurance %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <%= f.label :diagnosis, "Symptoms & Diagnosis" %>
+    <%= f.text_area :diagnosis %>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <label>Has the patient had a prior surgery (to the same body part)?</label>
+      <%= f.radio_button :prior_surgery, true %>
+      <%= f.label :prior_surgery, "Yes", class: "inline" %>
+
+      <%= f.radio_button :prior_surgery, false %>
+      <%= f.label :prior_surgery, "No", class: "inline" %>
+    </div>
+    <div class="half-row with-gutter">
+      <label>Was this injury/condition related to Workers' Compensation?</label>
+      <%= f.radio_button :workers_comp, true %>
+      <%= f.label :workers_comp, "Yes", class: "inline" %>
+
+      <%= f.radio_button :workers_comp, false %>
+      <%= f.label :workers_comp, "No", class: "inline" %>
+    </div>
+  </div>
+
+
+
+<h3>Patient Has Completed</h3>
+
+  <div class="form-row group">
+    <div class="half-row with-top-padding">
+      <%= f.check_box :bone_scan %>
+      <%= f.label :bone_scan, "Bone Scan", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :bone_scan_where, "Where/When?" %>
+      <%= f.text_field :bone_scan_where %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row with-top-padding">
+      <%= f.check_box :ct_scan %>
+      <%= f.label :ct_scan, "CT Scan", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :ct_scan_where, "Where/When?" %>
+      <%= f.text_field :ct_scan_where %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row with-top-padding">
+      <%= f.check_box :mri %>
+      <%= f.label :mri, "MRI", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :mri_where, "Where/When?" %>
+      <%= f.text_field :mri_where %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row with-top-padding">
+      <%= f.check_box :emg %>
+      <%= f.label :emg, "EMG", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :emg_where, "Where/When?" %>
+      <%= f.text_field :emg_where %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row with-top-padding">
+      <%= f.check_box :x_rays %>
+      <%= f.label :x_rays, "X-Rays", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :x_rays_where, "Where/When?" %>
+      <%= f.text_field :x_rays_where %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row with-top-padding">
+      <%= f.check_box :cast %>
+      <%= f.label :cast, "Cast/Splint Applied", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :cast_where, "Where/When?" %>
+      <%= f.text_field :cast_where %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :preferred_physician, "Preferred Physician" %>
+      <%= f.select :preferred_physician, Referral::PHYSICIANS, {include_blank: "None"}   %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :preferred_office, "Office Preference" %>
+      <%= f.select :preferred_office, Referral::OFFICES, {include_blank: "No Preference"}   %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <label> Requested time to be seen </label>
+    <div class="half-row">
+      <%= f.radio_button :time_to_be_seen, "1_day" %>
+      <%= f.label :time_to_be_seen, "1-2 days", class: "inline" %>
+
+      <%= f.radio_button :time_to_be_seen, "3_days" %>
+      <%= f.label :time_to_be_seen, "3-5 days", class: "inline" %>
+    </div>
+  </div>
+
+  <div class="form-row group with-top-padding">
+    <%= f.submit "Submit", class: "green-link" %>
+  </div>
+
+<% end %>
+
