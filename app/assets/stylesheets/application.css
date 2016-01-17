@@ -18,6 +18,7 @@
  *= require users
  *= require forms
  *= require appointments
+ *= require experts
  *= require slideshow
  *= require_self
  */
