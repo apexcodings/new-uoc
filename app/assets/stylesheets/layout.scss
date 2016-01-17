@@ -549,10 +549,18 @@
       color: white;
       //@include gradient-background;
 
-      background: image-url("down_arrow.png"), -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      background: image-url("down_arrow.png"), -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      background: image-url("down_arrow.png"), -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      background: image-url("down_arrow.png"), linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      // Original with Orange gradient
+      //background: image-url("down_arrow.png"), -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      //background: image-url("down_arrow.png"), -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      //background: image-url("down_arrow.png"), -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      //background: image-url("down_arrow.png"), linear-gradient($nav-gradient-light, $nav-gradient-dark);
+
+      // Gray gradient
+      background: image-url("down_arrow.png"), -webkit-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("down_arrow.png"), -o-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("down_arrow.png"), -moz-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("down_arrow.png"), linear-gradient($expert-drop-light, $expert-drop-dark);
+
 
       background-repeat: no-repeat;
       background-position: 98% 50%, 0 0;
@@ -570,15 +578,33 @@
       &:hover { cursor: pointer; }
     }
 
-    .info-open {
-      color: black;
-      padding: .4em 0;
-      border-bottom: 1px solid gray;
-      background: none;
-      &:hover {
-        background: none;
-      }
-    }
+    // Previous code
+    //.info-open {
+      //color: black;
+      //padding: .4em 0;
+      //border-bottom: 1px solid gray;
+      //background: none;
+      //&:hover {
+      //  background: none;
+     // }
+    //}
+
+     .info-open {
+        background: image-url("up_arrow.png"), -webkit-linear-gradient($expert-drop-light, $expert-drop-dark);
+        background: image-url("up_arrow.png"), -o-linear-gradient($expert-drop-light, $expert-drop-dark);
+        background: image-url("up_arrow.png"), -moz-linear-gradient($expert-drop-light, $expert-drop-dark);
+        background: image-url("up_arrow.png"), linear-gradient($expert-drop-light, $expert-drop-dark);
+
+        background-repeat: no-repeat;
+        background-position: 98% 50%, 0 0;
+
+        &:hover { 
+          background-color: $active-link;
+          background-image: image-url("up_arrow.png");
+          background-repeat: no-repeat;
+          background-position: 98% 50%, 0 0;
+        }
+     }
 
     .info-section {
       margin-bottom: 1.5em;
