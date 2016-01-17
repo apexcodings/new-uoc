@@ -25,20 +25,25 @@ experts.children.create!(title: "Management", position: 7)
 
 # SPECIALTIES PAGES
 specialties = Page.create!(title: 'Specialties')
-specialties.children.create!(title: "Spine", position: 1)
+specialties.children.create!(title: "Spine Institute", position: 1)
 specialties.children.create!(title: "Pain Management", position: 2)
 specialties.children.create!(title: "Joint Replacements", position: 3)
-specialties.children.create!(title: "Sports Medicine", position: 4)
-gen_ortho = specialties.children.create!(title: "General Orthopedics", position: 5)
-# gen ortho pages
-gen_ortho.children.create!(title: "Neck & Back", position: 1)
-gen_ortho.children.create!(title: "Shoulders", position: 2)
-gen_ortho.children.create!(title: "Elbows", position: 3)
-gen_ortho.children.create!(title: "Hands & Wrists", position: 4)
-gen_ortho.children.create!(title: "Hips", position: 5)
-gen_ortho.children.create!(title: "Knees", position: 6)
-gen_ortho.children.create!(title: "Feet & Ankles", position: 7)
-gen_ortho.children.create!(title: "Other", position: 8)
+
+# sports sub-pages
+sports = specialties.children.create!(title: "Sports Medicine", slug: "sports-medicine-services", position: 4)
+sports.children.create!(title: "Athletic Trainers", position: 1)
+sports.children.create!(title: "Concussion Care", position: 2)
+sports.children.create!(title: "Saturday Sports Clinic", position: 3)
+sports.children.create!(title: "Fellowships", position: 4)
+
+specialties.children.create!(title: "Neck & Back", position: 5)
+specialties.children.create!(title: "Shoulders", position: 6)
+specialties.children.create!(title: "Elbows", position: 7)
+specialties.children.create!(title: "Hands & Wrists", position: 8)
+specialties.children.create!(title: "Hips", position: 9)
+specialties.children.create!(title: "Knees", position: 10)
+specialties.children.create!(title: "Feet & Ankles", position: 11)
+specialties.children.create!(title: "Other", position: 12)
 
 
 # SERVICES
@@ -51,11 +56,6 @@ outpatient.children.create!(title: "Adv Center for Surgery", position: 2)
 services.children.create!(title: "Urgent Orthopedic Care", position: 2)
 services.children.create!(title: "Physical/Occupational Therapy", position: 3) #p
 
-sports = services.children.create!(title: "Sports Medicine", slug: "sports-medicine-services", position: 4)
-sports.children.create!(title: "Athletic Trainers", position: 1)
-sports.children.create!(title: "Concussion Care", position: 2)
-sports.children.create!(title: "Saturday Sports Clinic", position: 3)
-sports.children.create!(title: "Fellowships", position: 4)
 
 services.children.create!(title: "Clinical Research", position: 5)
 services.children.create!(title: "Worker’s Compensation", position: 6) #p
