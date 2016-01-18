@@ -77,7 +77,7 @@ module PagesHelper
     else
       content_tag :div do
         concat(image_tag "service_photo.jpg")
-        concat(content_tag(:h1, page.title, class: "roboto"))
+        concat(content_tag(:h1, page.title, class: "map-page roboto"))
       end
     end
   end

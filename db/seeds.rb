@@ -892,29 +892,22 @@ Expert.create!([
 
 # NEWS
 
+NewsRelease.delete_all
+
 NewsRelease.create!([
   {
-  title: "News 1", 
-  created_at: 2.months.ago,
-  body: "Consectetur est tempora tenetur maiores velit labore eos. Officiis
-  illo ut in quibusdam nihil. Repudiandae cumque itaque delectus et quidem
-  voluptatibus omnis laudantium vitae dolorum dolores quo et. Blanditiis
-  officiis.".squish
+  title: "Dr. Angela Rowe selected for osteopathic organization board of directors",
+  created_at: DateTime.strptime('09/21/2015', '%m/%d/%Y'),
+  body: File.read("db/news/1.html")
   },
   {
-  title: "News 2", 
-  created_at: 1.day.ago,
-  body: "Ipsum perferendis autem unde deleniti quisquam repudiandae. Qui cumque sed
-  ducimus nisi nesciunt delectus nam quo. Facilis impedit praesentium quaerat
-  delectus deserunt. Dicta dignissimos saepe temporibus sint accusamus ullam
-  optio.".squish
+  title: "Local surgeons attend National Surgical Association’s Scientific Conference", 
+  created_at: DateTime.strptime('06/12/2015', '%m/%d/%Y'),
+  body: File.read("db/news/2.html")
   },
   {
-  title: "News 3", 
-  created_at: 3.weeks.ago,
-  body: "Elit doloribus iste necessitatibus placeat deserunt quidem quis esse ex.
-  Sunt pariatur repellendus quae repellendus et. Ipsam reiciendis atque nobis
-  temporibus nobis. Voluptatem saepe minima numquam beatae voluptate! Nesciunt
-  laborum.".squish
+  title: "Power mowers pose danger to feet", 
+  created_at: DateTime.strptime('06/03/2015', '%m/%d/%Y'),
+  body: File.read("db/news/3.html")
   }
 ])
