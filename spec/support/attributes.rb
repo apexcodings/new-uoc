@@ -1,6 +1,7 @@
 def page_attributes(overrides = {})
   {
     title: "Page title",
+    label: "Navigation label",
     body: %{ Adipisicing perferendis optio recusandae quas quam ipsam harum
             tempora quos fugiat obcaecati asperiores, vero ipsum iste
             perspiciatis ipsa laborum a officiis repudiandae ullam voluptatibus. 

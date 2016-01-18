@@ -39,14 +39,14 @@ module PagesHelper
 
 
   def link(page)
-    link_to_unless_current page.title, page_path(page.slug) do
-      link_to page.title, "#", class: "side-active"
+    link_to_unless_current page.label, page_path(page.slug) do
+      link_to page.label, "#", class: "side-active"
     end
   end
 
   def sublink(page)
-    link_to_unless_current page.title, page_path(page.slug), class: "sub-page" do
-      link_to page.title, "#", class: "sub-page-active"
+    link_to_unless_current page.label, page_path(page.slug), class: "sub-page" do
+      link_to page.label, "#", class: "sub-page-active"
     end
   end
 
@@ -101,7 +101,4 @@ module PagesHelper
     "<div class='site bg_default'>".html_safe
   end
 
-  #def sports_background
-  #  "<div class='site' style='background-image: url(https://s3.amazonaws.com/com.uocproduction/images/soccerGirl2.png), url(https://s3.amazonaws.com/com.uocproduction/images/baseballPitcher2.png), linear-gradient(white, gray);'>"
-  #end
 end

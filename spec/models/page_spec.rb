@@ -18,6 +18,11 @@ describe Page do
     expect(page.slug).to eq("welcome-to-uoc")
   end
 
+  it "generates a navigation label from the title if one is not specified" do
+    page = Page.create!(title: "Spine Institute")
+    expect(page.label).to eq("Spine Institute")
+  end
+
   it "requires a unique slug" do
     page1 = Page.create!(title: "Welcome to UOC")
     page2 = Page.new(slug: page1.slug)
