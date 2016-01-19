@@ -54,14 +54,14 @@ outpatient.children.create!(title: "UOCSS", position: 1)
 outpatient.children.create!(title: "Adv Center for Surgery", position: 2)
 
 services.children.create!(title: "Urgent Orthopedic Care", position: 2)
-services.children.create!(title: "Physical/Occupational Therapy", position: 3) #p
+services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", position: 3)
 
 
-services.children.create!(title: "Clinical Research", position: 5)
-services.children.create!(title: "Worker’s Compensation", position: 6) #p
-services.children.create!(title: "MRI", position: 7)  #p
+services.children.create!(title: "Advancing care through a deeper understanding.", label: "Clinical Research", slug: "clinical-research", position: 5)
+services.children.create!(title: "Helping employees get back to health and back to work.", label: "Worker’s Compensation", slug: "worker-s-compensation", position: 6) #p
+services.children.create!(title: "A more effective way to a clearer diagnosis.", slug: "mri", label: "MRI", position: 7)  #p
 services.children.create!(title: "Durable Medical Equipment", position: 8)
-services.children.create!(title: "Uni-Dose Pharmacy", position: 9)
+services.children.create!(title: "Adding convenience to care.", label: "Uni-Dose Pharmacy", slug: "uni-dose-pharmacy", position: 9)
 
 
 # CONTACT US
