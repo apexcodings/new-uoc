@@ -2,20 +2,39 @@
 
 .news-block {
   margin-bottom: 1.5em;
+  border-bottom: 1px solid gray;
+  &:last-child { border-bottom: none; }
 
   h2 {
-    color: $dark-blue;
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal;
+    color: black;
     padding-bottom: .4em;
     padding-left: 0;
-    border-bottom: 1px solid gray;
-    margin-bottom: .1em;
+    margin: .1em 0;
+    border-bottom: none;
+    a {
+      &:hover { color: $active-link; }
+    }
   }
 
   h3 {
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
-    font-style: italic;
     font-size: .9em;
     color: gray;
     margin-bottom: .5em;
+    border-bottom: none;
+  }
+
+  p {
+    margin-bottom: .6em;
+  }
+
+  .more {
+    display: block;
+    margin-bottom: .6em;
+    &:hover { color: $active-link; }
   }
 }
+

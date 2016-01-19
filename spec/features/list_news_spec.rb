@@ -21,4 +21,16 @@ RSpec.describe "Listing the News" do
     expect(page).to have_text(@news2.title)
     expect(page).to have_text(@news3.title)
   end
+
+  it "allows navigating to the individual news page" do
+    visit news_releases_path
+
+    click_link @news1.title
+
+    expect(current_path).to eq(news_release_path(@news1))
+
+    expect(page).to have_text(@news1.created_at)
+    expect(page).to have_text(@news1.title)
+    expect(page).to have_text(@news1.body)
+  end
 end

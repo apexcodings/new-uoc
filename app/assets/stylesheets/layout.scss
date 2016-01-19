@@ -363,6 +363,22 @@
     }
   }
 
+  .news-side-list {
+    margin-top: .5em;
+    li {
+      margin-bottom: .5em;
+
+      a { padding-left: 2em; }
+    }
+  }
+
+  .recent-news-title {
+    color: white;
+    margin: 0;
+    text-indent: 1em;
+    font-size: .9em;
+  }
+
 }
 
 

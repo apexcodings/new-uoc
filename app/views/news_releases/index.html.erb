@@ -1,5 +1,9 @@
 <nav class="side-navigation">
   <h2 class="roboto">News</h2>
+  <p class="recent-news-title">
+    Recent News
+  </p>
+  <%= recent_news %>
 </nav>
 
 
@@ -7,9 +11,9 @@
 <% @news.each do |news| %>
   <div class="news-block">
   <h3><%= news.created_at %></h3>
-  <h2><%= news.title %></h2>
-  <%#= news.body.html_safe unless news.body.nil? %>
+  <h2><%= link_to news.title, news %></h2>
   <%= news.tease %>
+  <%= link_to "Read More", news, class: "more" %>
   </div>
 
 <% end %>

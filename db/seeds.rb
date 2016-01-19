@@ -909,5 +909,15 @@ NewsRelease.create!([
   title: "Power mowers pose danger to feet", 
   created_at: DateTime.strptime('06/03/2015', '%m/%d/%Y'),
   body: File.read("db/news/3.html")
-  }
+  },
+  {
+  title: "Blair Orthopedics named official Team Physicians for Penn State Altoona", 
+  created_at: DateTime.strptime('05/22/2015', '%m/%d/%Y'),
+  body: File.read("db/news/4.html")
+  },
+  {
+  title: "Dr. Budny/Ley coauthored article published in The Journal of Foot and Ankle Surgery", 
+  created_at: DateTime.strptime('05/01/2015', '%m/%d/%Y'),
+  body: File.read("db/news/5.html")
+  },
 ])

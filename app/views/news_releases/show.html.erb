@@ -1,0 +1,23 @@
+<nav class="side-navigation">
+  <h2 class="roboto">News</h2>
+  <p class="recent-news-title">
+    Recent News
+  </p>
+  <%= recent_news %>
+</nav>
+
+
+<div class="main-content">
+  <div class="news-block">
+    <h3><%= @news_release.created_at %></h3>
+    <h2><%= @news_release.title %></h2>
+
+    <hr size="1" noshade>
+    <br>
+
+    <%= @news_release.body.html_safe %>
+
+    <%= link_to "Back to News", news_releases_path, class: "more" %>
+  </div>
+
+</div>
