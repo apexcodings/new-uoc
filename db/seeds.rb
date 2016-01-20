@@ -191,8 +191,8 @@ Expert.create!([
     phone: "(814) 231-2101",
     location: "State College",
     specialty: "Orthopedic Spine Care",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
+    procedures: "",
+    education: "",
     category: "physicians",
     image_url: "GregoryBailey.jpg",
     body: File.read("db/experts/bailey.html")

@@ -506,9 +506,13 @@
   .expert-box {
     margin: .5em 0 1.5em;
 
-    img { float: left; }
+    img { 
+      float: left; 
+      width: 175px;
+    }
 
     ul {
+      width: 56%;
       float: left;
       list-style: none;
       margin-left: 1.5em;
