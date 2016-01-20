@@ -15,8 +15,8 @@
           <span class="expert-suffix"><%= @expert.suffix %></span>
         </li>
         <li class="expert-phone roboto blue"><%= @expert.phone %></li>
-        <li>Location: <%= @expert.location %></li>
-        <li>Specialty: <%= @expert.specialty %></li>
+        <li>Location: <%= @expert.location.html_safe %></li>
+        <li>Specialty: <%= @expert.specialty.html_safe %></li>
         <li>Procedures: <%= @expert.procedures %></li>
         <li>Education: <%= @expert.education %></li>
       </ul>
