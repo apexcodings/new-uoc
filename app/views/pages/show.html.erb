@@ -2,7 +2,7 @@
   <% if @page.in_portal? %>
     <h2 class="roboto">Patient Portal</h2>
   <% else %>
-    <h2 class="roboto"><%= @page.root.title %></h2>
+    <h2 class="roboto"><%= @page.root.label %></h2>
   <% end %>
   <%= side_links_for @page %>
 </nav>
