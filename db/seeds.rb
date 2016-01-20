@@ -47,21 +47,20 @@ specialties.children.create!(title: "Other", position: 12)
 
 
 # SERVICES
-services = Page.create!(title: 'Services')
+services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services")
 
-outpatient = services.children.create!(title: "Building a better solution for care.", label: "Surgical Services", slug: "surgical-services", position: 1)
+outpatient = services.children.create!(title: "Building a better solution for recovery.", label: "Surgical Services", slug: "surgical-services", position: 1)
 outpatient.children.create!(title: "UOCSS", position: 1)
-outpatient.children.create!(title: "Advancing care and convenience.", label: "Adv Center for Surgery", slug: "adv-center-for-surgery", position: 2)
+outpatient.children.create!(title: "Providing better surgery solutions.", label: "Adv Center for Surgery", slug: "adv-center-for-surgery", position: 2)
 
-services.children.create!(title: "Bringing more convenience to care.", label: "Urgent Care", slug: "urgent-care", position: 2)
+services.children.create!(title: "Ensuring greater accessibility to care.", label: "Urgent Care", slug: "urgent-care", position: 2)
 services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", position: 3)
 
-
-services.children.create!(title: "Advancing care through a deeper understanding.", label: "Clinical Trials", slug: "clinical-trials", position: 5)
+services.children.create!(title: "Advancing treatment through a deeper understanding.", label: "Clinical Trials", slug: "clinical-trials", position: 5)
 services.children.create!(title: "Helping employees get back to health and back to work.", label: "Worker’s Compensation", slug: "worker-s-compensation", position: 6) #p
-services.children.create!(title: "A more effective way to a clearer diagnosis.", slug: "mri", label: "MRI", position: 7)  #p
-services.children.create!(title: "Providing everything patients need for recovery.", label: "Durable Medical Equipment", slug: "durable-medical-equipment", position: 8)
-services.children.create!(title: "Adding convenience to care.", label: "Uni-Dose Pharmacy", slug: "uni-dose-pharmacy", position: 9)
+services.children.create!(title: "Using technology to ensure a safer, more effective diagnosis.", slug: "mri", label: "MRI", position: 7)  #p
+services.children.create!(title: "Supplying everything patients need for recovery.", label: "Durable Medical Equipment", slug: "durable-medical-equipment", position: 8)
+services.children.create!(title: "Adding new standards of convenience for patients.", label: "Uni-Dose Pharmacy", slug: "uni-dose-pharmacy", position: 9)
 
 
 # CONTACT US

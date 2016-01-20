@@ -2,6 +2,10 @@
 <div style="margin-bottom: 2em; overflow: hidden;">
   <div class="home-col">
     <h2 class="roboto">Where does it hurt?</h2>
+    <p>
+      Amet quaerat ullam excepturi quisquam fugiat enim.
+    </p> 
+
     <ul class="hurts">
       <li><%= link_to "Neck", page_path("neck-back") %></li>
       <li><%= link_to "Back", page_path("neck-back") %></li>
@@ -21,9 +25,14 @@
 
   <div class="home-col box-with-photo">
     <h2 class="roboto">Sports Medicine</h2>
-    <%= link_to "Read More", page_path("sports-medicine"), class: "green-link" %>
-  </div>
 
+    <div class="box-within">
+    <p>
+      Amet porro provident cumque explicabo pariatur quam a!
+    </p> 
+    <%= link_to "Read More", page_path("sports-medicine") %>
+    </div>
+  </div>
 
   <div class="home-col box-empty">
     <div class="home-box">

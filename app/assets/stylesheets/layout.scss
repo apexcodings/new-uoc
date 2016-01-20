@@ -217,6 +217,15 @@
     margin-bottom: 30px;
   }
 
+  p {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+
   ul.hurts {
     list-style: none;
     float: left;
@@ -241,17 +250,29 @@
 }
 
 .box-with-photo {
-  height: 332px;
+  height: 432px;
   position: relative;
   background-image: image-url("pentagon_large.png"), image-url("sports_med_home.jpg") ;
   background-repeat: no-repeat;
   background-position: 0 0, 0 30px;
 
-  a {
+
+  .box-within {
+    width: 100%;
+    height: 150px;
+    background-color: $dark-blue;
+    overflow: hidden;
     position: absolute;
-    right: 1em;
-    bottom: 1em;
-    display: inline-block;
+    bottom: 0;
+    left: 0;
+
+    a {
+      display: block;
+      text-align: center;
+      margin: auto;
+      color: white;
+      &:hover { color: $light-blue; }
+    }
   }
 }
 
