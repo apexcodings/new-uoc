@@ -49,18 +49,18 @@ specialties.children.create!(title: "Other", position: 12)
 # SERVICES
 services = Page.create!(title: 'Services')
 
-outpatient = services.children.create!(title: "Outpatient Surgical Centers", position: 1)
+outpatient = services.children.create!(title: "Building a better solution for care.", label: "Surgical Services", slug: "surgical-services", position: 1)
 outpatient.children.create!(title: "UOCSS", position: 1)
-outpatient.children.create!(title: "Adv Center for Surgery", position: 2)
+outpatient.children.create!(title: "Advancing care and convenience.", label: "Adv Center for Surgery", slug: "adv-center-for-surgery", position: 2)
 
-services.children.create!(title: "Urgent Orthopedic Care", position: 2)
+services.children.create!(title: "Bringing more convenience to care.", label: "Urgent Care", slug: "urgent-care", position: 2)
 services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", position: 3)
 
 
-services.children.create!(title: "Advancing care through a deeper understanding.", label: "Clinical Research", slug: "clinical-research", position: 5)
+services.children.create!(title: "Advancing care through a deeper understanding.", label: "Clinical Trials", slug: "clinical-trials", position: 5)
 services.children.create!(title: "Helping employees get back to health and back to work.", label: "Worker’s Compensation", slug: "worker-s-compensation", position: 6) #p
 services.children.create!(title: "A more effective way to a clearer diagnosis.", slug: "mri", label: "MRI", position: 7)  #p
-services.children.create!(title: "Durable Medical Equipment", position: 8)
+services.children.create!(title: "Providing everything patients need for recovery.", label: "Durable Medical Equipment", slug: "durable-medical-equipment", position: 8)
 services.children.create!(title: "Adding convenience to care.", label: "Uni-Dose Pharmacy", slug: "uni-dose-pharmacy", position: 9)
 
 
@@ -121,11 +121,11 @@ Expert.create!([
     first_name: "Kenneth L.",
     last_name: "Cherry",
     suffix: "MD",
-    phone: "1-800-505-2101",
-    location: "State College and Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
+    phone: "(814) 231-2101",
+    location: "State College & Altoona, PA",
+    specialty: "Total Joint Replacements, Hip & Knee",
+    procedures: "",
+    education: "",
     category: "physicians",
     image_url: "KennethCherry.jpg",
     body: File.read("db/experts/cherry.html")
@@ -186,9 +186,9 @@ Expert.create!([
     first_name: "Gregory M.",
     last_name: "Bailey",
     suffix: "DO",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
+    phone: "(814) 231-2101",
+    location: "State College",
+    specialty: "Orthopedic Spine Care",
     procedures: "Foot and Ankle Surgery",
     education: "University of California San Diego",
     category: "physicians",
@@ -199,11 +199,11 @@ Expert.create!([
     first_name: "Bradley A.",
     last_name: "Barter",
     suffix: "DO",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
+    phone: "(814) 231-2101",
+    location: "State College, Tyrone, and DuBois, PA",
+    specialty: "Joint Replacement Surgery<br>Foot, Ankle, Knee, Hand, Trauma, and Pediatrics",
+    procedures: "",
+    education: "",
     category: "physicians",
     image_url: "BradleyBarter.jpg",
     body: File.read("db/experts/barter.html")
@@ -290,11 +290,11 @@ Expert.create!([
     first_name: "Todd B.",
     last_name: "Cousins",
     suffix: "DO",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
+    phone: "(814) 231-2101",
+    location: "Geisinger Gray’s Woods, Port Matilda, PA",
+    specialty: "Interventional Pain Management Specialist",
+    procedures: "",
+    education: "",
     category: "physicians",
     image_url: "ToddCousins.jpg",
     body: File.read("db/experts/cousins.html")
@@ -355,11 +355,13 @@ Expert.create!([
     first_name: "David J.",
     last_name: "Bozak",
     suffix: "DO",
-    phone: "814-942-1166",
+    phone: "(814) 949-4050",
     location: "Altoona",
-    specialty: "Physical Medicine and Rehabilitation (Physiatry)",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
+    specialty: "Physical Medicine and Rehabilitation<br>
+                Electrodiagnostic Testing<br>
+                Ultrasound Guided Injections",
+    procedures: "",
+    education: "",
     category: "physicians",
     image_url: "david-j-bozak-do_0.jpg",
     body: File.read("db/experts/bozak.html")
@@ -368,11 +370,12 @@ Expert.create!([
     first_name: "Adam M.",
     last_name: "Budny",
     suffix: "DPM",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
+    phone: "(814) 949-4050",
+    location: "Altoona & Roaring Spring, PA",
+    specialty: "Foot and Ankle<br>
+                Total Ankle Replacement",
+    procedures: "",
+    education: "",
     category: "physicians",
     image_url: "adam-m-budny-dpm.jpg",
     body: File.read("db/experts/budny.html")
