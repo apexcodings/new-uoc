@@ -26,18 +26,19 @@
       </div>
     </div>
 
-
     <div class="slide">
       <div class="slide-image">
         <%= image_tag "slide2.jpg" %>
       </div>
       <div class="slide-copy">
-        <h2>The right hands for your care.</h2>
-        <p>University Orthopedics Center is home to the region’s top physicians,
-        physician assistants, physical therapists, athletic trainers and clinical
-        researchers dedicated to helping you live your best life.</p>
-        <%= link_to "Meet the experts behind the care", 
-          page_path('our-experts'), class: "green-link" %>
+        <h2>A more complete approach to care.</h2>
+        <p>
+         In January of 2016, we joined together with Blair Orthopedics to create
+         Central Pennsylvania’s premier orthopedic care center for a better,
+         healthier you. 
+        </p>
+        <%= link_to "Read all about it", 
+          news_releases_path, class: "green-link" %>
       </div>
     </div>
 
@@ -58,7 +59,6 @@
       </div>
     </div>
 
-
     <div class="slide">
       <div class="slide-image">
         <%= image_tag "slide4.jpg" %>
@@ -77,22 +77,6 @@
 
     <div class="slide">
       <div class="slide-image">
-        <%= image_tag "slide2.jpg" %>
-      </div>
-      <div class="slide-copy">
-        <h2>A more complete approach to care.</h2>
-        <p>
-         In January of 2016, we joined together with Blair Orthopedics to create
-         Central Pennsylvania’s premier orthopedic care center for a better,
-         healthier you. 
-        </p>
-        <%= link_to "Read all about it", 
-          news_releases_path, class: "green-link" %>
-      </div>
-    </div>
-
-    <div class="slide">
-      <div class="slide-image">
         <%= image_tag "https://s3.amazonaws.com/com.uocproduction/images/sportsCarouselSlide.jpg" %>
       </div>
       <div class="slide-copy">
@@ -105,6 +89,20 @@
       </div>
     </div>
 
-  </div>
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "slide2.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>The right hands for your care.</h2>
+        <p>University Orthopedics Center is home to the region’s top physicians,
+        physician assistants, physical therapists, athletic trainers and clinical
+        researchers dedicated to helping you live your best life.</p>
+        <%= link_to "Meet the experts behind the care", 
+          page_path('our-experts'), class: "green-link" %>
+      </div>
+    </div>
 
+
+  </div>
 </div>

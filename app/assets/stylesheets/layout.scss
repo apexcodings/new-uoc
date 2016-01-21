@@ -350,8 +350,14 @@
     color: white;
     font-size: 1.625em;
     text-align: center;
-    margin-top: 12px;
+    margin-top: 6px;
     margin-bottom: 35px;
+    line-height: 1em;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 
   ul {
@@ -399,7 +405,10 @@
     text-indent: 1em;
     font-size: .9em;
   }
+}
 
+.two-line {
+  background-image: image-url("side_2_line.png");
 }
 
 

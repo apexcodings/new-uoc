@@ -488,7 +488,7 @@ Expert.create!([
     procedures: "",
     education: "",
     category: "physicians",
-    image_url: "",
+    image_url: "Varacallo.jpg",
     body: File.read("db/experts/varacallo.html")
   },
   # PHYSICIAN ASSISTANTS

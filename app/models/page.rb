@@ -55,6 +55,17 @@ class Page < ActiveRecord::Base
     where(slug: PORTAL_PAGES).order(:position)
   end
 
+  def in_patient_resources?
+    case
+    when parent
+      parent.slug == "patient-resources" || root.slug == "patient-resources"
+    when slug == "patient-resources"
+      true
+    else
+      false
+    end
+  end
+
   def with_map?
     if parent
       parent.slug == "contact-us" || root.slug == "contact-us"

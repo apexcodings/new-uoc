@@ -37,7 +37,6 @@ module PagesHelper
     end
   end
 
-
   def link(page)
     link_to_unless_current page.label, page_path(page.slug) do
       link_to page.label, "#", class: "side-active"
