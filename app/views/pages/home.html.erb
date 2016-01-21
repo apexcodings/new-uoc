@@ -3,7 +3,7 @@
   <div class="home-col">
     <h2 class="roboto">Where does it hurt?</h2>
     <p>
-      Amet quaerat ullam excepturi quisquam fugiat enim.
+    What’s keeping you<br>from being your best?
     </p> 
 
     <ul class="hurts">
@@ -28,26 +28,27 @@
 
     <div class="box-within">
     <p>
-      Amet porro provident cumque explicabo pariatur quam a!
+      It’s a long season. Stay in the game first pitch to last out.  
     </p> 
-    <%= link_to "Read More", page_path("sports-medicine") %>
+    <%= link_to "Read More", page_path("sports-medicine"), class: "white-link" %>
     </div>
   </div>
 
   <div class="home-col box-empty">
-    <div class="home-box">
-      <h2 class="roboto">Access your<br>patient records<br>and information 24/7.</h2>
-      <%= link_to "Login to Patient Portal or create<br>an account".html_safe, 
+    <div class="home-box with-header">
+      <h2 class="roboto">Patient Portal</h2>
+      <p>
+      Access your patient records<br>and information 24/7.
+      </p>
+      <%= link_to "Login or create an account", 
         "https://www.nextmd.com/Login/Login.aspx", class: "white-link" %>
     </div>
 
-    <div class="home-box">
-      <h2 class="roboto">Share your<br>comeback story.</h2>
-      <p>
-          Comebacks change history. They change lives. They get you back in the
-          game to fight or run or walk or just be back to being you another day.
-          Share your story and amaze absolutely everyone.
-      </p>
+    <div class="home-box with-header">
+      <h2 class="roboto">Testimonials</h2>
+      <p>Share your comeback story<br>and amaze absolutely everyone.</p>
+      <%= link_to "Login or create an account", 
+        "https://www.nextmd.com/Login/Login.aspx", class: "white-link" %>
     </div>
   </div>
 
