@@ -74,8 +74,6 @@
 <div class="credits">
   &copy; 2016 University Orthopedics Center 
 
-  <%= link_to "- Site by Loaded Creative", "http://weareloaded.com", target: "_blank" %> 
-
   <% if current_user %>
     <%= link_to '- Sign Out', session_path, method: :delete %>
   <% else %>
@@ -84,4 +82,5 @@
 
   <%= link_to "- Email Login", "https://mail.uoc.com/owa/auth/logon.aspx?url=https://mail.uoc.com/owa/&reason=0",  target: "_blank" %> 
 
+  <%= link_to "- Site by Loaded Creative", "http://weareloaded.com", target: "_blank" %> 
 </div>

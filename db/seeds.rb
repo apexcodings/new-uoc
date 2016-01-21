@@ -9,22 +9,14 @@ about = Page.create!(title: 'About') #p
 about.children.create!(title: "History", position: 1) #p
 about.children.create!(title: "Refer a Patient", position: 2)
 about.children.create!(title: "Mission/Vision/Values", position: 3) #p
-about.children.create!(title: "Patient Reviews", position: 4)
-#about.children.create!(title: "Hospital Affiliations", position: 5)
-#about.children.create!(title: "Community Involvement", position: 6)
+reviews = about.children.create!(title: "Patient Reviews", position: 4)
+reviews.children.create!(title: "Submit a Testimonial", slug: "submit-testimonial")
 
 # EXPERTS
 experts = Page.create!(title: 'Our Experts')
-#experts.children.create!(title: "Physicians", position: 1)
-#experts.children.create!(title: "Physicians Assistants", position: 2)
-#experts.children.create!(title: "Physical Therapists", position: 3)
-#experts.children.create!(title: "Clinical Researchers", position: 4)
-#experts.children.create!(title: "Worker's Comp Rep", position: 5)
-#experts.children.create!(title: "Athletic Trainers Experts", position: 6)
-#experts.children.create!(title: "Management", position: 7)
 
 # SPECIALTIES PAGES
-specialties = Page.create!(title: 'Specialties')
+specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties")
 specialties.children.create!(title: "One team, one goal.", label: "Spine Institute", slug: "spine-institute", position: 1)
 specialties.children.create!(title: "Pain Management", position: 2)
 specialties.children.create!(title: "A patient-centric approach to care", label: "Joint Replacements", slug: "joint-replacements", position: 3)
@@ -36,22 +28,24 @@ sports.children.create!(title: "Advancing the care and treatment of concussions.
 sports.children.create!(title: "Keeping athletes in the game they love.", label: "Saturday Sports Clinic", slug: "saturday-sports-clinic", position: 3)
 sports.children.create!(title: "Primary care sports medicine Fellowship.", label: "Fellowships", slug: "fellowships", position: 4)
 
-specialties.children.create!(title: "Neck & Back", position: 5)
-specialties.children.create!(title: "Shoulders", position: 6)
-specialties.children.create!(title: "Elbows", position: 7)
-specialties.children.create!(title: "Hands & Wrists", position: 8)
-specialties.children.create!(title: "Hips", position: 9)
-specialties.children.create!(title: "Knees", position: 10)
-specialties.children.create!(title: "Feet & Ankles", position: 11)
-specialties.children.create!(title: "Other", position: 12)
+specialties.children.create!(title: "Relieving symptoms. Restoring health.", label: "Chiropractic Care", slug: "chiropractic-care", position: 5)
+
+specialties.children.create!(title: "Neck & Back", position: 6)
+specialties.children.create!(title: "Shoulders", position: 7)
+specialties.children.create!(title: "Elbows", position: 8)
+specialties.children.create!(title: "Hands & Wrists", position: 9)
+specialties.children.create!(title: "Hips", position: 10)
+specialties.children.create!(title: "Knees", position: 11)
+specialties.children.create!(title: "Feet & Ankles", position: 12)
+specialties.children.create!(title: "Other", position: 13)
 
 
 # SERVICES
 services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services")
 
 outpatient = services.children.create!(title: "Building a better solution for recovery.", label: "Surgical Services", slug: "surgical-services", position: 1)
-outpatient.children.create!(title: "UOCSS", position: 1)
-outpatient.children.create!(title: "Providing better surgery solutions.", label: "Adv Center for Surgery", slug: "adv-center-for-surgery", position: 2)
+outpatient.children.create!(title: "Leading the way in total joint replacement.", label: "UOC Surgery Center", slug: "uocss", position: 1)
+outpatient.children.create!(title: "Providing better surgery solutions.", label: "Advanced Center for Surgery", slug: "adv-center-for-surgery", position: 2)
 
 services.children.create!(title: "Ensuring greater accessibility to care.", label: "Urgent Care", slug: "urgent-care", position: 2)
 services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", position: 3)
@@ -263,32 +257,6 @@ Expert.create!([
     category: "physicians",
     image_url: "PaulSensiba.jpg",
     body: File.read("db/experts/sensiba.html")
-  },
-  {
-    first_name: "Dennis M.",
-    last_name: "Devita",
-    suffix: "MD",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
-    category: "physicians",
-    image_url: "DennisDevita.jpg",
-    body: File.read("db/experts/devita.html")
-  },
-  {
-    first_name: "Harry H.",
-    last_name: "Dinsmore",
-    suffix: "MD",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
-    category: "physicians",
-    image_url: "HarryDinsmore.jpg",
-    body: File.read("db/experts/dinsmore.html")
   },
   {
     first_name: "Todd B.",

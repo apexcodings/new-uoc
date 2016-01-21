@@ -17,7 +17,11 @@
  <%= render "layouts/header" %>
  <%= render "layouts/navigation" %>
 
-<section class="site-content group">
+ <% if controller_name == "pages" && action_name == "home" %>
+    <section class="site-content for-home group">
+ <% else %>
+    <section class="site-content group">
+ <% end %>
   <%= yield %>
 </section>
 
