@@ -75,9 +75,18 @@ module PagesHelper
       content_tag(:h1, page.title, class: "map-page roboto")
     else
       content_tag :div do
-        concat(image_tag "service_photo.jpg")
+        #concat(image_tag "service_photo.jpg")
+        concat(image_for page)
         concat(content_tag(:h1, page.title, class: "map-page roboto"))
       end
+    end
+  end
+
+  def image_for(page)
+    if page.image_url.nil?
+      image_tag "service_photo.jpg"
+    else
+      image_tag page.image_url
     end
   end
 

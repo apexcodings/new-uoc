@@ -16,13 +16,13 @@ reviews.children.create!(title: "Submit a Testimonial", slug: "submit-testimonia
 experts = Page.create!(title: 'Our Experts')
 
 # SPECIALTIES PAGES
-specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties")
-specialties.children.create!(title: "One team, one goal.", label: "Spine Institute", slug: "spine-institute", position: 1)
-specialties.children.create!(title: "Pain Management", position: 2)
-specialties.children.create!(title: "A patient-centric approach to care", label: "Joint Replacements", slug: "joint-replacements", position: 3)
+specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "specialties.jpg")
+specialties.children.create!(title: "One team, one goal.", label: "Spine Institute", slug: "spine-institute", image_url: "Spec_SpineInstitute.jpg", position: 1)
+specialties.children.create!(title: "Pain Management", image_url: "Spec_PainManagement.jpg", position: 2)
+specialties.children.create!(title: "A patient-centric approach to care", label: "Joint Replacements", slug: "joint-replacements", image_url: "Spec_JointReplacement.jpg", position: 3)
 
 # sports sub-pages
-sports = specialties.children.create!(title: "Helping the best athletes get better.", label: "Sports Medicine", slug: "sports-medicine-services", position: 4)
+sports = specialties.children.create!(title: "Helping the best athletes get better.", label: "Sports Medicine", slug: "sports-medicine-services", image_url: "Spec_SportsMedicine.jpg", position: 4)
 sports.children.create!(title: "Strengthening athletes at every level.", label: "Athletic Trainers", slug: "athletic-trainers", position: 1)
 sports.children.create!(title: "Advancing the care and treatment of concussions.", label: "Concussion Care", slug: "concussion-care", position: 2)
 sports.children.create!(title: "Keeping athletes in the game they love.", label: "Saturday Sports Clinic", slug: "saturday-sports-clinic", position: 3)
@@ -41,20 +41,20 @@ specialties.children.create!(title: "Other", position: 13)
 
 
 # SERVICES
-services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services")
+services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services", image_url: "services.jpg")
 
 outpatient = services.children.create!(title: "Building a better solution for recovery.", label: "Surgical Services", slug: "surgical-services", position: 1)
 outpatient.children.create!(title: "Leading the way in total joint replacement.", label: "UOC Surgery Center", slug: "uocss", position: 1)
 outpatient.children.create!(title: "Providing better surgery solutions.", label: "Advanced Center for Surgery", slug: "adv-center-for-surgery", position: 2)
 
-services.children.create!(title: "Ensuring greater accessibility to care.", label: "Urgent Care", slug: "urgent-care", position: 2)
-services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", position: 3)
+services.children.create!(title: "Ensuring greater accessibility to care.", label: "Urgent Care", slug: "urgent-care", image_url: "Serv_UrgentCare.jpg", position: 2)
+services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", image_url: "Serv_PhysOccTherapy.jpg", position: 3)
 
-services.children.create!(title: "Advancing treatment through a deeper understanding.", label: "Clinical Trials", slug: "clinical-trials", position: 5)
-services.children.create!(title: "Helping employees get back to health and back to work.", label: "Worker’s Compensation", slug: "worker-s-compensation", position: 6) #p
-services.children.create!(title: "Using technology to ensure a safer, more effective diagnosis.", slug: "mri", label: "MRI", position: 7)  #p
-services.children.create!(title: "Supplying everything patients need for recovery.", label: "Durable Medical Equipment", slug: "durable-medical-equipment", position: 8)
-services.children.create!(title: "Adding new standards of convenience for patients.", label: "Uni-Dose Pharmacy", slug: "uni-dose-pharmacy", position: 9)
+services.children.create!(title: "Advancing treatment through a deeper understanding.", label: "Clinical Trials", image_url: "Serv_ClinicalTrials.jpg", slug: "clinical-trials", position: 5)
+services.children.create!(title: "Helping employees get back to health and back to work.", label: "Worker’s Compensation", slug: "worker-s-compensation", image_url: "Serv_WorkersComp.jpg", position: 6)
+services.children.create!(title: "Using technology to ensure a safer, more effective diagnosis.", slug: "mri", label: "MRI", image_url: "Serv_MRI.jpg", position: 7)
+services.children.create!(title: "Supplying everything patients need for recovery.", label: "Durable Medical Equipment", slug: "durable-medical-equipment", image_url: "Serv_DurableMedEquip.jpg", position: 8)
+services.children.create!(title: "Adding new standards of convenience for patients.", label: "Uni-Dose Pharmacy", slug: "uni-dose-pharmacy", image_url: "Serv_UniDosePharmacy.jpg", position: 9)
 
 
 # CONTACT US
