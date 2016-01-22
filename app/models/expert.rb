@@ -1,5 +1,5 @@
 class Expert < ActiveRecord::Base
-  validates :first_name, :last_name, :location, :category, presence: true
+  validates :first_name, :last_name, :category, presence: true
 
   CATEGORIES = { physicians: "Physicians", 
                  physicians_assistants: "Physicians Assistants", 
