@@ -6,8 +6,9 @@ class Expert < ActiveRecord::Base
                  physical_therapists: "Physical Therapists", 
                  clinical_researchers: "Clinical Researchers", 
                  workers_comp: "Worker's Compensation Representative", 
-                 athletic_trainers: "Athletic Trainers", 
-                 management: "Management"}
+                 athletic_trainers: "Athletic Trainers"
+                 }
+                  #management: "Management"
 
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
