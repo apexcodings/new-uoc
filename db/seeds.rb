@@ -5,15 +5,15 @@
 Page.delete_all
 
 # ABOUT
-about = Page.create!(title: 'About') #p
+about = Page.create!(title: "Get to know us.", label: 'About', slug: "about") 
 about.children.create!(title: "History", position: 1) #p
 about.children.create!(title: "Refer a Patient", position: 2)
 about.children.create!(title: "Mission/Vision/Values", position: 3) #p
 reviews = about.children.create!(title: "Patient Reviews", position: 4)
-reviews.children.create!(title: "Submit a Testimonial", slug: "submit-testimonial")
+reviews.children.create!(title: "Submit a Review", slug: "submit-review")
 
 # EXPERTS
-experts = Page.create!(title: 'Our Experts')
+experts = Page.create!(title: "The right care for your care.", label: 'Our Experts', slug: "our-experts")
 
 # SPECIALTIES PAGES
 specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "specialties.jpg")
