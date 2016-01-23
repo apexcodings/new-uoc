@@ -79,20 +79,24 @@ Page.create!(title: "Thank You")
 # PATIENT RESOURCES
 resources = Page.create!(title: 'Patient Resources')
 resources.children.create!(title: "Appointments", position: 1)
-resources.children.create!(title: "Billing & Insurance", position: 2)
+
+billing = resources.children.create!(title: "Billing & Insurance", position: 2)
+billing.children.create!(title: "Understanding Your Insurance", position: 1)
+billing.children.create!(title: "Co-Pays", position: 2)
+
 resources.children.create!(title: "Joint Replacement Classes", position: 3)
-resources.children.create!(title: "Patient Newsletter", position: 4)
+# resources.children.create!(title: "Patient Newsletter", position: 4)
 resources.children.create!(title: "Patient Forms", position: 5)
 
 resources.children.create!(title: "News", position: 6)
 
-preparing = resources.children.create!(title: "Preparing For...", position: 6)
+preparing = resources.children.create!(title: "Preparing for your Appointment", position: 6)
 preparing.children.create!(title: "Appointment", position: 1)
-preparing.children.create!(title: "Surgery", position: 2)
-preparing.children.create!(title: "Post-Op", position: 3)
+#preparing.children.create!(title: "Surgery", position: 2)
+#preparing.children.create!(title: "Post-Op", position: 3)
 
 resources.children.create!(title: "Privacy Policy", position: 7)
-resources.children.create!(title: "Health Grades", position: 8)
+resources.children.create!(title: "FAQs", slug: "patient-faqs", position: 8)
 
 # CAREERS
 careers = Page.create!(title: 'Careers', image_url: "UOC_Careers.jpg")
