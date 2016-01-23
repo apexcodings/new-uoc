@@ -1108,4 +1108,19 @@ NewsRelease.create!([
   created_at: DateTime.strptime('05/01/2015', '%m/%d/%Y'),
   body: File.read("db/news/5.html")
   },
+  {
+  title: "WTAJ, Doctors form New Partnership", 
+  created_at: DateTime.strptime('01/15/2016', '%m/%d/%Y'),
+  body: File.read("db/news/6.html")
+  },
+  {
+  title: "Altoona Mirror, Orthopedic Practices to Merge", 
+  created_at: DateTime.strptime('12/20/2015', '%m/%d/%Y'),
+  body: File.read("db/news/7.html")
+  },
+  {
+  title: "WTAJ, Same-day total joint surgery for Ecuador patient", 
+  created_at: DateTime.strptime('10/31/2014', '%m/%d/%Y'),
+  body: File.read("db/news/8.html")
+  },
 ])
