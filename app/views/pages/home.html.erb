@@ -40,12 +40,13 @@
       <p class="tight">
       Access your patient records<br>and information 24/7.
       </p>
-      <%= link_to "Login or create an account", 
-        "https://www.nextmd.com/Login/Login.aspx", class: "green-link green-link-centered" %>
+      <%= link_to "Learn more and create an account",  
+        page_path('what-is-nextmd'),
+        class: "green-link green-link-centered" %>
     </div>
 
     <div class="home-box with-header" style="padding-bottom: 1em">
-      <h2 class="roboto" style="font-size: 1.4em;">Reviews and Testimonials</h2>
+      <h2 class="roboto">Reviews &amp; Testimonials</h2>
       <p class="tight">Read our patient’s comeback stories or write your own review.</p>
       <%= link_to "Get started", page_path("submit-testimonial"), class: "green-link green-link-centered" %>
     </div>

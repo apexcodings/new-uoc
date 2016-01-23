@@ -7,10 +7,12 @@ Page.delete_all
 # ABOUT
 about = Page.create!(title: "Get to know us.", label: 'About', slug: "about") 
 about.children.create!(title: "History", position: 1) #p
-about.children.create!(title: "Refer a Patient", position: 2)
-about.children.create!(title: "Mission/Vision/Values", position: 3) #p
-reviews = about.children.create!(title: "Patient Reviews", position: 4)
+about.children.create!(title: "Mission/Vision/Values", position: 2) #p
+
+reviews = about.children.create!(title: "Patient Reviews", position: 3)
 reviews.children.create!(title: "Submit a Review", slug: "submit-review")
+
+about.children.create!(title: "Referring Physicians", position: 4)
 
 # EXPERTS
 experts = Page.create!(title: "The right care for your care.", label: 'Our Experts', slug: "our-experts", image_url: "UOC_ourExperts.jpg")
@@ -18,7 +20,7 @@ experts = Page.create!(title: "The right care for your care.", label: 'Our Exper
 # SPECIALTIES PAGES
 specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "specialties.jpg")
 specialties.children.create!(title: "One team, one goal.", label: "Spine Institute", slug: "spine-institute", image_url: "Spec_SpineInstitute.jpg", position: 1)
-specialties.children.create!(title: "Pain Management", image_url: "Spec_PainManagement.jpg", position: 2)
+specialties.children.create!(title: "Making pain-free possible.", label: "Pain Management", slug: "pain-management", image_url: "Spec_PainManagement.jpg", position: 2)
 specialties.children.create!(title: "A patient-centric approach to care", label: "Joint Replacements", slug: "joint-replacements", image_url: "Spec_JointReplacement.jpg", position: 3)
 
 # sports sub-pages
@@ -37,7 +39,6 @@ specialties.children.create!(title: "Hands & Wrists", position: 9)
 specialties.children.create!(title: "Hips", position: 10)
 specialties.children.create!(title: "Knees", position: 11)
 specialties.children.create!(title: "Feet & Ankles", position: 12)
-specialties.children.create!(title: "Other", position: 13)
 
 
 # SERVICES

@@ -1,0 +1,7 @@
+10) Under About, change "Refer a Patient" to "Referring Physicians" and put it last on the list? Have that be a link to the Contact Page since that's where we want the main Referring Physicians page/form to live. It would be under Tyrone. This change would also need to be reflected in the footer. I also need her to let us know what doctors and locations to add to the drop down lists. See attached image for reference.
+
+
+9) Remove all emails from each locations contact info. 
+
+
+14) Submit a Review's form is missing. 
