@@ -12,6 +12,13 @@ Rails.application.routes.draw do
   get 'dashboard' => 'pages#dashboard'
   get 'search' => 'pages#search'
 
+
+#  match "/Staff/Employee.aspx?id=1" => "/experts/1826"
+#  get "/Staff/Employee.aspx?id=1" => redirect("/experts/1826", status: 301)
+  
+  
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
