@@ -13,7 +13,7 @@ reviews = about.children.create!(title: "Patient Reviews", position: 4)
 reviews.children.create!(title: "Submit a Review", slug: "submit-review")
 
 # EXPERTS
-experts = Page.create!(title: "The right care for your care.", label: 'Our Experts', slug: "our-experts")
+experts = Page.create!(title: "The right care for your care.", label: 'Our Experts', slug: "our-experts", image_url: "UOC_ourExperts.jpg")
 
 # SPECIALTIES PAGES
 specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "specialties.jpg")
@@ -28,7 +28,7 @@ sports.children.create!(title: "Advancing the care and treatment of concussions.
 sports.children.create!(title: "Keeping athletes in the game they love.", label: "Saturday Sports Clinic", slug: "saturday-sports-clinic", position: 3)
 sports.children.create!(title: "Primary care sports medicine Fellowship.", label: "Fellowships", slug: "fellowships", position: 4)
 
-specialties.children.create!(title: "Relieving symptoms. Restoring health.", label: "Chiropractic Care", slug: "chiropractic-care", position: 5)
+specialties.children.create!(title: "Relieving symptoms. Restoring health.", label: "Chiropractic Care", slug: "chiropractic-care", image_url: "Spec_Chiropractic.jpg", position: 5)
 
 specialties.children.create!(title: "Neck & Back", position: 6)
 specialties.children.create!(title: "Shoulders", position: 7)
@@ -43,7 +43,7 @@ specialties.children.create!(title: "Other", position: 13)
 # SERVICES
 services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services", image_url: "services.jpg")
 
-outpatient = services.children.create!(title: "Building a better solution for recovery.", label: "Surgical Services", slug: "surgical-services", position: 1)
+outpatient = services.children.create!(title: "Building a better solution for recovery.", label: "Surgical Services", slug: "surgical-services", image_url: "Serv_SurgicalServices.jpg", position: 1)
 outpatient.children.create!(title: "Leading the way in total joint replacement.", label: "UOC Surgery Center", slug: "uocss", position: 1)
 outpatient.children.create!(title: "Providing better surgery solutions.", label: "Advanced Center for Surgery", slug: "adv-center-for-surgery", position: 2)
 
@@ -95,7 +95,7 @@ resources.children.create!(title: "Privacy Policy", position: 7)
 resources.children.create!(title: "Health Grades", position: 8)
 
 # CAREERS
-careers = Page.create!(title: 'Careers')
+careers = Page.create!(title: 'Careers', image_url: "UOC_Careers.jpg")
 
 # PATIENT PORTAL
 Page.create!(title: "What is NextMD?", position: 1)
