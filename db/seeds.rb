@@ -84,6 +84,8 @@ resources.children.create!(title: "Joint Replacement Classes", position: 3)
 resources.children.create!(title: "Patient Newsletter", position: 4)
 resources.children.create!(title: "Patient Forms", position: 5)
 
+resources.children.create!(title: "News", position: 6)
+
 preparing = resources.children.create!(title: "Preparing For...", position: 6)
 preparing.children.create!(title: "Appointment", position: 1)
 preparing.children.create!(title: "Surgery", position: 2)

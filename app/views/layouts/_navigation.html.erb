@@ -3,8 +3,8 @@
     <li><%= top_link_for("Specialties", @page) %></li>
     <li><%= top_link_for("Services", @page) %></li>
     <li><%= top_link_for("Our Experts", @page) %></li>
-    <li>
-      <%= link_to_unless_current "News", news_releases_path do
+    <li><%= top_link_for("Patient Resources", @page) %>
+      <%#= link_to_unless_current "News", news_releases_path do
         link_to "News", "#", class: "top-active"
       end %>
     </li>

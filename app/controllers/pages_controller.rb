@@ -11,6 +11,7 @@ class PagesController < ApplicationController
     @contact = Contact.new if @page.slug == "contact-us"
     @appointment = Appointment.new if @page.slug == "appointments"
     @referral = Referral.new if @page.slug == "refer-a-patient"
+    @news = NewsRelease.order(created_at: :desc) if @page.slug == "news"
   end
 
   def search

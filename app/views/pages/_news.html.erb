@@ -1,0 +1,8 @@
+<% @news.each do |news| %>
+  <div class="news-block">
+  <h3><%= news.created_at %></h3>
+  <h2><%= link_to news.title, news %></h2>
+  <%= news.tease %>
+  <%= link_to "Read More", news, class: "more" %>
+  </div>
+<% end %>
