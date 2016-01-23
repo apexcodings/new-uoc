@@ -5,7 +5,7 @@
 Page.delete_all
 
 # ABOUT
-about = Page.create!(title: "Get to know us.", label: 'About', slug: "about") 
+about = Page.create!(title: "Get to know us.", label: 'About', slug: "about", image_url: "UOC_About.jpg") 
 about.children.create!(title: "History", position: 1) #p
 about.children.create!(title: "Mission/Vision/Values", position: 2) #p
 
@@ -59,7 +59,7 @@ services.children.create!(title: "Adding new standards of convenience for patien
 
 
 # CONTACT US
-contact = Page.create!(title: 'Contact Us')
+contact = Page.create!(title: 'Contact Us', image_url: "UOC_ContactUs.jpg")
 
 contact.children.create!(title: "Altoona", position: 1)
 # contact.children.create!(title: "Bedford", position: 2)
@@ -78,7 +78,7 @@ Page.create!(title: "Thank You")
 
 
 # PATIENT RESOURCES
-resources = Page.create!(title: 'Patient Resources')
+resources = Page.create!(title: 'Patient Resources', image_url: "UOC_PatientResources.jpg")
 resources.children.create!(title: "Appointments", position: 1)
 
 billing = resources.children.create!(title: "Billing & Insurance", position: 2)
