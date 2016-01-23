@@ -49,12 +49,22 @@ module PagesHelper
     end
   end
 
-  def top_link_for(title, page)
-    if page && page.root.slug == title.parameterize
-      link_to title, page_path(title.parameterize), class: "top-active"
+#  def top_link_for(title, page)
+#    if page && page.root.slug == title.parameterize
+#      link_to title, page_path(title.parameterize), class: "top-active"
+#    else
+#      link_to_unless_current title, page_path(title.parameterize) do
+#        link_to title, "#", class: "top-active"
+#      end
+#    end
+#  end
+
+  def top_link_for(label, page)
+    if page && page.root.slug == label.parameterize
+      link_to label, page_path(label.parameterize), class: "top-active"
     else
-      link_to_unless_current title, page_path(title.parameterize) do
-        link_to title, "#", class: "top-active"
+      link_to_unless_current label, page_path(label.parameterize) do
+        link_to label, "#", class: "top-active"
       end
     end
   end
