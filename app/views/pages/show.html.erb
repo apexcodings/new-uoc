@@ -8,7 +8,9 @@
 </nav>
 
 <div class="main-content">
-  <%= heading_for(@page) %>
-  <%= @page.body.html_safe unless @page.body.nil? %>
-  <%= page_partial(@page) %>
+    <%= heading_for(@page) %>
+  <div class="page-container">
+    <%= @page.body.html_safe unless @page.body.nil? %>
+    <%= page_partial(@page) %>
+  </div>
 </div>
