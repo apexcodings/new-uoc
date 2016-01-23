@@ -198,6 +198,7 @@
 .home-col {
   width: 301px;
   float: left;
+  text-align: center;
   margin-right: 18px;
   background-color: $dark-blue;
   background-image: image-url("pentagon_large.png");
@@ -251,24 +252,26 @@
 }
 
 .box-with-photo {
-  height: 412px;
+  height: 410px;
   position: relative;
-  background-image: image-url("pentagon_large.png"), image-url("sports_med_home.jpg") ;
+  background-image: image-url("pentagon_large.png"), image-url("sportsMedBox.jpg") ;
   background-repeat: no-repeat;
-  background-position: 0 0, 0 30px;
+  background-position: 0 0, 0 0;
 
 
   .box-within {
     width: 100%;
     height: 120px;
-    background-color: $dark-blue;
     overflow: hidden;
     position: absolute;
     bottom: 0;
     left: 0;
 
+
     p {
       margin-top: 0;
+      padding-top: .5em;
+      padding-bottom: .5em;
     }
   }
 }
@@ -304,6 +307,11 @@
     font-size: 1.1em;
     padding: 1.95em 1em 1em;
   }
+  .tight {
+    margin-top: 0;
+    padding-top: 1.8em;
+    font-size: .95em;
+  }
 }
 
 .with-header {
@@ -319,6 +327,13 @@
   background-color: $green-link;
   border: 1px solid white;
   &:hover { background-color: $dark-blue; }
+}
+
+.green-link-centered {
+  margin: .3em auto 1em;
+  text-align: center;
+  display: inline-block;
+  font-size: .9em;
 }
 
 .white-link {
@@ -531,6 +546,7 @@
   width: 70%;
   float: left;
   margin-left: 1.5em;
+  min-height: 800px;
 
   h1 {
     font-size: 2em;

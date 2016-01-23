@@ -214,6 +214,14 @@
     </div>
   </div>
 
+  <div class="form-row group">
+      <label>Would you like your token to sign-up for your patient portal?</label>
+      <%= f.radio_button :portal_token, true %>
+      <%= f.label :x_ray, "Yes", class: "inline" %>
+
+      <%= f.radio_button :portal_token, false %>
+      <%= f.label :x_ray, "No", class: "inline" %>
+  </div>
 
   <h2>Additional Information</h2>
 
@@ -221,6 +229,7 @@
     <%= f.label :questions, "Additional Information / Questions / Comments" %>
     <%= f.text_area :questions %>
   </div>
+
 
 
   <div class="form-row group">

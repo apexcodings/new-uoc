@@ -150,6 +150,10 @@
     <td>Appointment Type</td>
     <td><%= @appointment.appointment_type %></td>
   </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Portal Token?</td>
+    <td><%= @appointment.portal_token.yesno if @appointment.portal_token %></td>
+  </tr>
 </table>
 
 <h2>Additional Information</h2>

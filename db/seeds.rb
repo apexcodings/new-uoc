@@ -438,7 +438,7 @@ Expert.create!([
     last_name: "Van Kleunen",
     suffix: "MD",
     phone: "(814) 949-4050",
-    location: "Altoona",
+    location: "Altoona, Roaring Springs & Tyrone",
     specialty: "Hip Surgery, Joint Replacement Surgery, Sports Medicine",
     procedures: "",
     education: "",
@@ -905,19 +905,6 @@ Expert.create!([
   },
   # ATHLETIC TRAINERS
   {
-    first_name: "Carley",
-    last_name: "Casado",
-    suffix: "MA, LAT, ATC",
-    phone: "",
-    location: "Altoona",
-    specialty: "",
-    procedures: "",
-    education: "",
-    category: "athletic_trainers",
-    image_url: "CarleyCasado.jpg",
-    body: File.read("db/experts/casado.html")
-  },
-  {
     first_name: "Samantha",
     last_name: "Debias",
     suffix: "MS, LAT, ATC",
@@ -929,19 +916,6 @@ Expert.create!([
     category: "athletic_trainers",
     image_url: "SamanthaDebias.jpg",
     body: File.read("db/experts/debias.html")
-  },
-  {
-    first_name: "Jihan",
-    last_name: "Dodson",
-    suffix: "LAT, ATC",
-    phone: "",
-    location: "Altoona",
-    specialty: "",
-    procedures: "",
-    education: "",
-    category: "athletic_trainers",
-    image_url: "JihanDodson.jpg",
-    body: File.read("db/experts/dodson.html")
   },
   {
     first_name: "Margaret",
@@ -996,44 +970,72 @@ Expert.create!([
     body: File.read("db/experts/krajewski.html")
   },
   {
-    first_name: "John A.",
-    last_name: "Smaniotto",
-    suffix: "MS, LAT, ATC, OTC, CSCS",
-    phone: "1-800-505-2101",
-    location: "Altoona",
-    specialty: "Orthopedic Surgery, Emergency Surgery",
-    procedures: "Foot and Ankle Surgery",
-    education: "University of California San Diego",
-    category: "athletic_trainers",
-    image_url: "JohnSmaniotto.jpg",
-    body: File.read("db/experts/smaniotto.html")
-  },
-  {
-    first_name: "Kelsey",
-    last_name: "Ulrich",
-    suffix: "LAT, ATC",
+    first_name: "Lauren",
+    last_name: "Stout",
+    suffix: "",
     phone: "",
-    location: "Altoona",
+    location: "Mifflin County",
     specialty: "",
     procedures: "",
     education: "",
     category: "athletic_trainers",
-    image_url: "KelseyUlrich.jpg",
-    body: File.read("db/experts/ulrich.html")
+    image_url: "",
+    body: " " #File.read("db/experts/krajewski.html")
   },
   {
-    first_name: "Regis",
-    last_name: "Visconti Jr.",
-    suffix: "LAT, ATC, EMT-B, PES, ROT",
+    first_name: "Dylan",
+    last_name: "Bowersox",
+    suffix: "",
     phone: "",
-    location: "Altoona",
+    location: "Mifflin County",
     specialty: "",
     procedures: "",
     education: "",
     category: "athletic_trainers",
-    image_url: "RegisVisconti.jpg",
-    body: File.read("db/experts/visconti.html")
+    image_url: "",
+    body: " " #File.read("db/experts/krajewski.html")
   },
+  {
+    first_name: "Corbin",
+    last_name: "Bird",
+    suffix: "",
+    phone: "",
+    location: "Penn Valley",
+    specialty: "",
+    procedures: "",
+    education: "",
+    category: "athletic_trainers",
+    image_url: "",
+    body: " " #File.read("db/experts/krajewski.html")
+  },
+  {
+    first_name: "Steven",
+    last_name: "Murray",
+    suffix: "",
+    phone: "",
+    location: "State College",
+    specialty: "",
+    procedures: "",
+    education: "",
+    category: "athletic_trainers",
+    image_url: "",
+    body: " " #File.read("db/experts/krajewski.html")
+  },
+  {
+    first_name: "Sarah",
+    last_name: "Shoaf",
+    suffix: "",
+    phone: "",
+    location: "State College",
+    specialty: "",
+    procedures: "",
+    education: "",
+    category: "athletic_trainers",
+    image_url: "",
+    body: " " #File.read("db/experts/krajewski.html")
+  },
+
+  # CLINICAL RESEARCHERS
   {
     first_name: "Sue",
     last_name: "Jepson",
@@ -1059,7 +1061,20 @@ Expert.create!([
     category: "clinical_researchers",
     image_url: "RobinStern.jpg",
     body: File.read("db/experts/stern.html")
-  }
+  },
+  {
+    first_name: "Connie",
+    last_name: "Edsall",
+    suffix: "",
+    phone: "1-800-505-2101",
+    location: "",
+    specialty: "",
+    procedures: "",
+    education: "",
+    category: "workers_comp",
+    image_url: "ConnieEdsall.jpg",
+    body: File.read("db/experts/edsall.html")
+  },
 ])
 
 

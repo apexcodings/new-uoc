@@ -1,9 +1,9 @@
 <%= render "layouts/slideshow" %>
 <div style="margin-bottom: 2em; overflow: hidden;">
-  <div class="home-col">
-    <h2 class="roboto">Where does it hurt?</h2>
+  <div class="home-col" style="padding-bottom: 1.4em">
+    <h2 class="roboto">Pain Information Center</h2>
     <p>
-    What’s keeping you<br>from being your best?
+    Where does it hurt?
     </p> 
 
     <ul class="hurts">
@@ -28,26 +28,26 @@
 
     <div class="box-within">
     <p>
-      It’s a long season. Stay in the game first pitch to last out.  
+    It’s a long season. Stay in the game face-off to playoff.
     </p> 
-    <%= link_to "Read More", page_path("sports-medicine-services"), class: "white-link" %>
+    <%= link_to "Find out how", page_path("sports-medicine-services"), class: "green-link green-link-centered" %>
     </div>
   </div>
 
   <div class="home-col box-empty">
-    <div class="home-box with-header">
+    <div class="home-box with-header" style="padding-bottom: .8em">
       <h2 class="roboto">Patient Portal</h2>
-      <p>
+      <p class="tight">
       Access your patient records<br>and information 24/7.
       </p>
       <%= link_to "Login or create an account", 
-        "https://www.nextmd.com/Login/Login.aspx", class: "white-link" %>
+        "https://www.nextmd.com/Login/Login.aspx", class: "green-link green-link-centered" %>
     </div>
 
-    <div class="home-box with-header">
-      <h2 class="roboto">Testimonials</h2>
-      <p>Share your comeback story<br>and amaze absolutely everyone.</p>
-      <%= link_to "Submit a testimonial", page_path("submit-testimonial"), class: "white-link" %>
+    <div class="home-box with-header" style="padding-bottom: 1em">
+      <h2 class="roboto" style="font-size: 1.4em;">Reviews and Testimonials</h2>
+      <p class="tight">Read our patient’s comeback stories or write your own review.</p>
+      <%= link_to "Get started", page_path("submit-testimonial"), class: "green-link green-link-centered" %>
     </div>
   </div>
 
