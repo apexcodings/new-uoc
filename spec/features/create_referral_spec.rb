@@ -5,11 +5,11 @@ require 'support/pages'
 RSpec.describe "Creating a Referral" do
   before do
     create_required_pages
-    refer = Page.create!(title: "Refer a Patient")
+    refer = Page.create!(title: "Referring Physicians")
   end
 
   it "shows the referral form" do
-    visit page_url('refer-a-patient')
+    visit page_url('referring-physicians')
 
     expect(page).to have_field("Practice")
     expect(page).to have_field("Referring Physician")
@@ -29,7 +29,7 @@ RSpec.describe "Creating a Referral" do
 
   it "saves the referral when valid" do
     thanks_page = Page.create!(page_attributes(title: "Thank You"))
-    visit page_url('refer-a-patient')
+    visit page_url('referring-physicians')
 
     fill_in "Practice", with: "Save a lot"
     fill_in "Email Address", with: "email@example.com"
