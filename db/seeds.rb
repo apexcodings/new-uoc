@@ -6,11 +6,13 @@ Page.delete_all
 
 # ABOUT
 about = Page.create!(title: "Get to know us.", label: 'About', slug: "about", image_url: "UOC_About.jpg") 
-about.children.create!(title: "History", position: 1) #p
-about.children.create!(title: "Mission/Vision/Values", position: 2) #p
+about.children.create!(title: "History", position: 1)
+about.children.create!(title: "Mission/Vision/Values", position: 2)
 
 reviews = about.children.create!(title: "Patient Reviews", position: 3)
 reviews.children.create!(title: "Submit a Review", slug: "submit-review")
+
+about.children.create!(redirect_url: "/pages/referring-physicians", title: "Referring Physicians", label: "Referring Physicians", slug: "about-referring-physicians", position: 4)
 
 
 # EXPERTS

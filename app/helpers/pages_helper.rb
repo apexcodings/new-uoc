@@ -38,8 +38,12 @@ module PagesHelper
   end
 
   def link(page)
-    link_to_unless_current page.label, page_path(page.slug) do
-      link_to page.label, "#", class: "side-active"
+    if page.redirect_url?
+      link_to page.label, page.redirect_url
+    else
+      link_to_unless_current page.label, page_path(page.slug) do
+        link_to page.label, "#", class: "side-active"
+      end
     end
   end
 

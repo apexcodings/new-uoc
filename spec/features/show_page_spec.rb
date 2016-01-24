@@ -65,6 +65,39 @@ describe "Showing a page" do
         expect(page).to have_link(outpatient.label)
       end
     end
+
+    it "displays redirect pages as links in the side navigation" do
+      page1 = Page.create!(title: "Page 1")
+      child1 = page1.children.create!(title: "Page 1 child")
+      child2 = page1.children.create!(title: "redirects to Page 2", 
+                                      redirect_url: "/pages/page-2")
+   #   page2 = Page.create!(title: "Page 2")
+
+      visit page_url(page1)
+
+      within(".side-navigation") do
+        expect(page).to have_link(child1.label)
+        expect(page).to have_link(child2.label)
+      end
+    end
+
+    it "redirects to the final destination when it has a redirect page child" do
+      page1 = Page.create!(title: "Page 1")
+      child1 = page1.children.create!(title: "Page 1 child")
+      child2 = page1.children.create!(title: "redirects to Page 2", 
+                                      redirect_url: "/pages/page-2")
+      page2 = Page.create!(title: "Page 2")
+
+      visit page_url(page1)
+
+      within(".side-navigation")do
+        click_link(child2.label)
+      end
+
+      expect(current_path).to eq(page_path(page2))
+      expect(page).to have_text(page2.title)
+    end
+
   end
 
   context "when it's the 'Our Experts' page" do

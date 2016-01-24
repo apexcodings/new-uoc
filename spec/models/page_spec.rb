@@ -165,4 +165,14 @@ describe Page do
     end
   end
 
+  it "may redirect to another page" do
+    page = Page.new(redirect_url: "/pages/contact-us")
+    expect(page.redirect_url?).to be_truthy
+  end
+
+  it "if it doesn't redirect to another page it returns false" do
+    page = Page.new(redirect_url: "")
+    expect(page.redirect_url?).to be_falsey
+  end
+
 end
