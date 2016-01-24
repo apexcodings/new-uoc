@@ -9,10 +9,7 @@ class PagesController < ApplicationController
 
   def show
     @contact = Contact.new if @page.slug == "contact-us"
-
-    # temporary
-    @contact = Contact.new if @page.slug == "submit-review"
-
+    @review = Review.new if @page.slug == "submit-review"
     @appointment = Appointment.new if @page.slug == "appointments"
     @referral = Referral.new if @page.slug == "referring-physicians"
     @news = NewsRelease.order(created_at: :desc) if @page.slug == "news"

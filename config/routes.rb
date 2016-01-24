@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :reviews
   resources :referrals
   resources :news_releases
   resources :appointments

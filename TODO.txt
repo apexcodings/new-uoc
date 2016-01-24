@@ -1,10 +1,12 @@
-10) Under About, change "Refer a Patient" to "Referring Physicians" and put it last on the list? Have that be a link to the Contact Page since that's where we want the main Referring Physicians page/form to live. It would be under Tyrone. This change would also need to be reflected in the footer. I also need her to let us know what doctors and locations to add to the drop down lists. See attached image for reference.
+Referring Physicians drop down list update with actual doctor names
 
-
-
-
-14) Submit a Review's form is missing. (still to do the resource)
+Submit a Review's form: still to do the resource (and fix in pages
+controller)
 
 
 1) Can you line up the bottoms of the Pain Information Center and Review & Testimonial boxes so that it aligns with Sports Medicine's box? You can reduce the spacing of the PIC box and can also reduce the sizes of both the Patient Portal and Reviews & Testimonials boxes to make that happen. When you reduce the sizes of the two boxes on the right, can you see if you can create a little more vertical space between those two boxes?
+
+
+Patient portal pages
+One potential problem I foresee is that people will think these are live elements, and they will be trying to click into the Login fields. Would it be possible to create a rollover state that greys out the image and says something like "Screenshots for reference only, go to Patient Portal to login or sign up"? 
 

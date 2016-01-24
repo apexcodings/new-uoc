@@ -44,6 +44,16 @@ def contact_attributes(overrides = {})
   }.merge(overrides)
 end
 
+def review_attributes(overrides = {})
+  {
+    first_name: "John",
+    last_name: "Dillon",
+    email: "contact@example.com",
+    phone: "914 744-3366",
+    message: "This is may Review"
+  }.merge(overrides)
+end
+
 def appointment_attributes(overrides = {})
   {
     requestor_first_name: "John",
