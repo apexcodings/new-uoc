@@ -18,7 +18,7 @@ about.children.create!(title: "Referring Physicians", position: 4)
 experts = Page.create!(title: "The right care for your care.", label: 'Our Experts', slug: "our-experts", image_url: "UOC_ourExperts.jpg")
 
 # SPECIALTIES PAGES
-specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "specialties.jpg")
+specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "Spec_landingPage.jpg")
 specialties.children.create!(title: "One team, one goal.", label: "Spine Institute", slug: "spine-institute", image_url: "Spec_SpineInstitute.jpg", position: 1)
 specialties.children.create!(title: "Making pain-free possible.", label: "Pain Management", slug: "pain-management", image_url: "Spec_PainManagement.jpg", position: 2)
 specialties.children.create!(title: "A patient-centric approach to care", label: "Joint Replacements", slug: "joint-replacements", image_url: "Spec_JointReplacement.jpg", position: 3)
