@@ -43,7 +43,7 @@ specialties.children.create!(title: "Feet & Ankles", position: 12)
 
 
 # SERVICES
-services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services", image_url: "Serv_LandingPage.jpg")
+services = Page.create!(title: 'Not all injuries are created equal.', label: "Services", slug: "services", image_url: "services2.jpg")
 
 outpatient = services.children.create!(title: "Building a better solution for recovery.", label: "Surgical Services", slug: "surgical-services", image_url: "Serv_SurgicalServices.jpg", position: 1)
 outpatient.children.create!(title: "Leading the way in total joint replacement.", label: "UOC Surgery Center", slug: "uocss", position: 1)
