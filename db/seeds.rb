@@ -12,7 +12,6 @@ about.children.create!(title: "Mission/Vision/Values", position: 2) #p
 reviews = about.children.create!(title: "Patient Reviews", position: 3)
 reviews.children.create!(title: "Submit a Review", slug: "submit-review")
 
-about.children.create!(title: "Referring Physicians", position: 4)
 
 # EXPERTS
 experts = Page.create!(title: "The right care for your care.", label: 'Our Experts', slug: "our-experts", image_url: "UOC_ourExperts.jpg")
@@ -62,9 +61,7 @@ services.children.create!(title: "Adding new standards of convenience for patien
 contact = Page.create!(title: 'Contact Us', image_url: "UOC_ContactUs.jpg")
 
 contact.children.create!(title: "Altoona", position: 1)
-# contact.children.create!(title: "Bedford", position: 2)
 contact.children.create!(title: "Dubois", position: 3)
-# contact.children.create!(title: "Ebensburg - 2016", position: 4)
 contact.children.create!(title: "Huntingdon", position: 5)
 contact.children.create!(title: "Lewistown", position: 6)
 contact.children.create!(title: "Roaring Springs", position: 7)
@@ -73,6 +70,7 @@ state_college = contact.children.create!(title: "State College", position: 8)
 state_college.children.create!(title: "Grays Woods", position: 1)
 
 contact.children.create!(title: "Tyrone", position: 9)
+contact.children.create!(title: "Referring Physicians", position: 10)
 
 Page.create!(title: "Thank You")
 
@@ -86,15 +84,11 @@ billing.children.create!(title: "Understanding Your Insurance", position: 1)
 billing.children.create!(title: "Co-Pays", position: 2)
 
 resources.children.create!(title: "Joint Replacement Classes", position: 3)
-# resources.children.create!(title: "Patient Newsletter", position: 4)
 resources.children.create!(title: "Patient Forms", position: 5)
 
 resources.children.create!(title: "News", position: 6)
 
 preparing = resources.children.create!(title: "Preparing for your Appointment", position: 6)
-preparing.children.create!(title: "Appointment", position: 1)
-#preparing.children.create!(title: "Surgery", position: 2)
-#preparing.children.create!(title: "Post-Op", position: 3)
 
 resources.children.create!(title: "Privacy Policy", position: 7)
 resources.children.create!(title: "FAQs", slug: "patient-faqs", position: 8)
