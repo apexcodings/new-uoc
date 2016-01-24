@@ -73,7 +73,7 @@ describe "Showing a page" do
 
       visit page_url(our_experts.slug)
 
-      category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Compensation Representative", "Athletic Trainers", "Management"]
+      category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Compensation Representative", "Athletic Trainers"]
 
       within(".side-navigation ul") do
         category_names.each do |name|

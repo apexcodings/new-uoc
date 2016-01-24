@@ -19,36 +19,6 @@ RSpec.describe Expert do
     expect(expert.errors[:last_name].any?).to eq(true)
   end
 
-#  it "requires a phone" do
-    #expert = Expert.new(phone: "")
-    #expert.valid?
-    #expect(expert.errors[:phone].any?).to eq(true)
-  #end
-
-  it "requires a location" do
-    expert = Expert.new(location: "")
-    expert.valid?
-    expect(expert.errors[:location].any?).to eq(true)
-  end
-
-  #it "requires a specialty" do
-    #expert = Expert.new(specialty: "")
-    #expert.valid?
-    #expect(expert.errors[:specialty].any?).to eq(true)
-  #end
-
-  #it "requires a procedures field" do
-    #expert = Expert.new(procedures: "")
-    #expert.valid?
-    #expect(expert.errors[:procedures].any?).to eq(true)
-  #end
-
-  #it "requires an education" do
-    #expert = Expert.new(education: "")
-    #expert.valid?
-    #expect(expert.errors[:education].any?).to eq(true)
-  #end
-
   it "requires a category" do
     expert = Expert.new(category: "")
     expert.valid?
@@ -66,8 +36,7 @@ RSpec.describe Expert do
                  physical_therapists: "Physical Therapists", 
                  clinical_researchers: "Clinical Researchers", 
                  workers_comp: "Worker's Comp Rep", 
-                 athletic_trainers: "Athletic Trainers", 
-                 management: "Management"}
+                 athletic_trainers: "Athletic Trainers" }
 
     categories.each_key do |key|
       expert = Expert.new(category: key)

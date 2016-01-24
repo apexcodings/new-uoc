@@ -11,7 +11,7 @@ RSpec.describe "Listing the News" do
   it "shows all the news" do
     visit root_url
 
-    within(".site-navigation") do
+    within(".top-links") do
       click_link "News"
     end
 
@@ -25,7 +25,9 @@ RSpec.describe "Listing the News" do
   it "allows navigating to the individual news page" do
     visit news_releases_path
 
-    click_link @news1.title
+    within(".main-content") do
+      click_link @news1.title
+    end
 
     expect(current_path).to eq(news_release_path(@news1))
 

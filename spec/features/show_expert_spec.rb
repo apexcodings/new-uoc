@@ -16,8 +16,6 @@ RSpec.describe "Showing an expert" do
     expect(page).to have_text(@expert.phone)
     expect(page).to have_text(@expert.location)
     expect(page).to have_text(@expert.specialty)
-    expect(page).to have_text(@expert.procedures)
-    expect(page).to have_text(@expert.education)
     expect(page).to have_text(@expert.body)
   end
 

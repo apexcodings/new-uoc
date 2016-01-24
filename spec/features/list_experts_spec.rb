@@ -20,15 +20,11 @@ RSpec.describe "Listing Experts" do
     expect(page).to have_text(@physician1.phone)
     expect(page).to have_text(@physician1.location)
     expect(page).to have_text(@physician1.specialty)
-    expect(page).to have_text(@physician1.procedures)
-    expect(page).to have_text(@physician1.education)
 
     expect(page).to have_link(@physician2.name)
     expect(page).to have_text(@physician2.phone)
     expect(page).to have_text(@physician2.location)
     expect(page).to have_text(@physician2.specialty)
-    expect(page).to have_text(@physician2.procedures)
-    expect(page).to have_text(@physician2.education)
   end
 
   it "shows a list of Physicians when the category selected is physicians" do
@@ -76,7 +72,7 @@ RSpec.describe "Listing Experts" do
 
     visit experts_url(category: :physicians)
 
-    category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Compensation Representative", "Athletic Trainers", "Management"]
+    category_names = ["Physicians", "Physicians Assistants", "Physical Therapists", "Clinical Researchers", "Worker's Compensation Representative", "Athletic Trainers"]
 
     within(".side-navigation ul") do
       category_names.each do |name|
