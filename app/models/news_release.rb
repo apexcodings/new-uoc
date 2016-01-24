@@ -6,4 +6,6 @@ class NewsRelease < ActiveRecord::Base
   def tease
     Nokogiri::HTML.parse(body).css('p').first.to_s.html_safe #.text
   end
+
+  self.per_page = 5
 end

@@ -15,6 +15,9 @@
   <%= news.tease %>
   <%= link_to "Read More", news, class: "more" %>
   </div>
-
 <% end %>
+
+<div class="apple-pagination">
+<%= will_paginate @news %>
+</div
 </div>

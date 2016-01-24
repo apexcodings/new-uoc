@@ -1,6 +1,6 @@
 class NewsReleasesController < ApplicationController
   def index
-    @news = NewsRelease.order(created_at: :desc)
+    @news = NewsRelease.order(created_at: :desc).paginate(page: params[:page])
   end
 
   def show
