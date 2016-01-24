@@ -372,8 +372,8 @@
     color: white;
     font-size: 1.625em;
     text-align: center;
-    margin-top: 6px;
-    margin-bottom: 35px;
+    margin-top: 10px;
+    margin-bottom: 31px;
     line-height: 1em;
 
     a {
@@ -431,6 +431,10 @@
 
 .two-line {
   background-image: image-url("side_2_line.png");
+  h2 { 
+    margin-top: 6px;
+    margin-bottom: 35px;
+  }
 }
 
 

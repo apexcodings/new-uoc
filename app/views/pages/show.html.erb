@@ -1,9 +1,5 @@
 <nav class="side-navigation <%= "two-line" if @page.in_patient_resources? %>">
-  <% if @page.in_portal? %>
-    <h2 class="roboto">Patient Portal</h2>
-  <% else %>
-    <h2 class="roboto"><%= link_to @page.root.label, @page.root %></h2>
-  <% end %>
+  <%= side_header_for @page %>
   <%= side_links_for @page %>
 </nav>
 

@@ -122,4 +122,13 @@ module PagesHelper
     "<div class='site bg_default'>".html_safe
   end
 
+  def side_header_for(page)
+    case
+    when page.in_portal?
+      content_tag(:h2, "Patient Portal", class: "roboto")
+    else
+      content_tag(:h2, link_to(page.root.label, page.root, class: "roboto"))
+    end
+  end
+
 end
