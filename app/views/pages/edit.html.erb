@@ -3,13 +3,14 @@
   <h2><%= @page.title %></h2>
 
   <%= form_for @page do |f| %>
+    <%= render "shared/errors", object: @page %>
     <p>
     <%= f.label :title %>
     <%= f.text_field :title %>
     </p>
 
     <p>
-      <%= f.submit "Update Page" %>
+      <%= f.submit "Update Page", class: "green-link" %>
     </p>
   <% end %>
 </div>
