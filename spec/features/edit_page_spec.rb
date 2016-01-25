@@ -1,8 +1,11 @@
 require "rails_helper"
 require "support/attributes"
+require 'support/pages'
+require 'support/authentication'
 
 RSpec.describe "Editing a Page" do
   before do
+    create_required_pages
     @page1 = Page.create!(page_attributes(title: "Athletic Trainers"))
     @user = User.create!(user_attributes)
   end
@@ -18,13 +21,34 @@ RSpec.describe "Editing a Page" do
     expect(page).to have_link("Edit")
   end
 
-  it "saves the edited page" do
+  it "updates the page and shows the edited page" do
     sign_in(@user)
     visit page_path(@page1)
 
     click_link("Edit")
 
-    # change the title
+    expect(current_path).to eq(edit_page_path(@page1))
+    expect(find_field("Title").value).to eq(@page1.title)
 
+    fill_in "Title", with: "Services Page"
+
+    click_button "Update Page"
+
+    expect(current_path).to eq(page_path(@page1))
+
+    expect(page).to have_text("Services Page")
+    expect(page).to have_text('Page successfully updated!')
   end
+
+  it "doesn't update the page if edit is not valid" do
+    sign_in(@user)
+    visit edit_page_path(@page1)
+
+    fill_in "Title", with: ""
+
+    click_button "Update Page"
+
+    expect(page).to have_text('error')
+  end
+
 end

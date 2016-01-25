@@ -8,4 +8,8 @@ email: admin@example.com
 password: secret
 
 
+Production site:
+
+email: admin@example.com
+password: secret
 

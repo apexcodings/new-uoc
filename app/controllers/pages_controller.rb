@@ -14,6 +14,19 @@ class PagesController < ApplicationController
     @referral = Referral.new if @page.slug == "referring-physicians"
     @news = NewsRelease.order(created_at: :desc) if @page.slug == "news"
   end
+  
+  def edit
+  end
+
+  def update
+    if @page.update_attributes(page_params)
+      flash[:notice] = "Page successfully updated!"
+      redirect_to @page
+    else
+      flash[:alert] = "There were some errors, see below"
+      render :edit
+    end
+  end
 
   def search
   end
@@ -22,6 +35,10 @@ class PagesController < ApplicationController
 
   def set_page
     @page = Page.find_by!(slug: params[:id])
+  end
+
+  def page_params
+    params.require(:page).permit(:title, :body, :position, :label, :image_url, :redirect_url, :slug)
   end
 
 end

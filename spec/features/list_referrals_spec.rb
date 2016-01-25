@@ -8,7 +8,7 @@ RSpec.describe "Listing Referrals" do
     @referral = Referral.create!(referral_attributes)
   end
 
-  it "allows only signed in users to list the referrals" do
+  it "allows only logged in users to list the referrals" do
     visit referrals_url
 
     expect(current_path).to eq(new_session_path)
@@ -16,19 +16,19 @@ RSpec.describe "Listing Referrals" do
     fill_in "Email", with: @user.email
     fill_in "Password", with: @user.password
 
-    click_button "Sign In"
+    click_button "Log In"
 
     expect(current_path).to eq(referrals_path)
     expect(page).to have_text(@referral.name)
   end
 
-  it "prevents non signed in user to list the referrals" do
+  it "prevents non logged in user to list the referrals" do
     visit referrals_url
 
     fill_in "Email", with: "wrong_email@example.com"
     fill_in "Password", with: "wrong_pass"
 
-    click_button "Sign In"
+    click_button "Log In"
 
     expect(page).to have_text("Invalid")
   end

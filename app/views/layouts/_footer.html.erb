@@ -70,6 +70,7 @@
   &copy; 2016 University Orthopedics Center 
 
   <% if current_user %>
+    - <%= link_to 'Dashboard', dashboard_path %>
     - <%= link_to 'Log Out', session_path, method: :delete %>
   <% else %>
     - <%= link_to 'Log In', new_session_path %>

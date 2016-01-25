@@ -9,4 +9,7 @@
     <%= @page.body.html_safe unless @page.body.nil? %>
     <%= page_partial(@page) %>
   </div>
+
+<%= link_to "Edit", edit_page_path(@page), class: "green-link edit-link" %>
+
 </div>

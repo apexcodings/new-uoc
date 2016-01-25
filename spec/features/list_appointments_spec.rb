@@ -14,7 +14,7 @@ RSpec.describe "Listing Appointments" do
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
 
-    click_button "Sign In"
+    click_button "Log In"
 
     expect(current_path).to eq(appointments_path)
     expect(page).to have_text(appointment.requestor_first_name)
@@ -28,7 +28,7 @@ RSpec.describe "Listing Appointments" do
     fill_in "Email", with: "wrong_email@example.com"
     fill_in "Password", with: "wrong_pass"
 
-    click_button "Sign In"
+    click_button "Log In"
 
     expect(page).to have_text("Invalid")
   end

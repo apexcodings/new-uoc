@@ -18,13 +18,13 @@ RSpec.describe "Listing Experts" do
 
     expect(page).to have_link(@physician1.name)
     expect(page).to have_text(@physician1.phone)
-    expect(page).to have_text(@physician1.location)
-    expect(page).to have_text(@physician1.specialty)
+    #expect(page).to have_text(@physician1.location)
+    #expect(page).to have_text(@physician1.specialty)
 
     expect(page).to have_link(@physician2.name)
     expect(page).to have_text(@physician2.phone)
-    expect(page).to have_text(@physician2.location)
-    expect(page).to have_text(@physician2.specialty)
+    #expect(page).to have_text(@physician2.location)
+    #expect(page).to have_text(@physician2.specialty)
   end
 
   it "shows a list of Physicians when the category selected is physicians" do
