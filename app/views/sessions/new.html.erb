@@ -1,17 +1,15 @@
+<div class="login-box">
 <%= form_tag(session_path) do %>
-  <fieldset>
-    <ol>
-      <li class="required">
-        <%= label_tag :email %>
-        <%= email_field_tag :email, nil, autofocus: true, size: 40 %>
-      </li>
-      <li class="required">
-        <%= label_tag :password %>
-        <%= password_field_tag :password, nil, size: 40 %>
-      </li>
-    </ol>
-    <p>
-      <%= submit_tag 'Sign In' %>
-    </p>
-  </fieldset>
+  <div class="form-row">
+    <%= label_tag :email %>
+    <%= email_field_tag :email, nil, autofocus: true, size: 40 %>
+  </div>
+  <div class="form-row">
+    <%= label_tag :password %>
+    <%= password_field_tag :password, nil, size: 40 %>
+  </div>
+  <div class="form-row">
+    <%= submit_tag 'Log In', class: "green-link" %>
+  </div>
 <% end %>
+</div>

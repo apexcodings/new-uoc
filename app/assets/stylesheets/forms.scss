@@ -60,7 +60,7 @@ label.inline {
   margin: 0 1.5em 0 .2em;
 }
 
-input[type="text"], input[type="email"], textarea {
+input[type="text"], input[type="email"], input[type="password"], textarea {
   width: 100%;
   font-size: 1em;
   padding: .2em;
@@ -109,5 +109,18 @@ div.field_with_errors {
   }
   input, textarea, select {
     background: $errors-background-color;
+  }
+}
+
+.login-box {
+  width: 50%;
+  margin: 4em auto;
+  border: 1px solid $dark-blue;
+  background-color: $light-gray;
+  padding: 2em;
+
+  form {
+    width: 90%;
+    margin: auto;
   }
 }
