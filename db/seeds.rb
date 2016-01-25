@@ -128,7 +128,7 @@ Expert.create!([
     body: File.read("db/experts/cherry.html")
   },
   {
-    first_name: "Douglas E.R.",
+    first_name: "Douglas E.",
     last_name: "Roeshot",
     suffix: "MD",
     phone: "(814) 231-2101",

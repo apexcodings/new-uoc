@@ -2,16 +2,45 @@ class Referral < ActiveRecord::Base
   validates :email, :patient_name, :dob, :insurance, presence: true
 
   PHYSICIANS = [
-    "David J. Bozak, D.O.",
-    "Adam M. Budny, D.P.M.",
-    "Eric M. Kephart, D.O.",
-    "Joshua Port, M.D., President",
-    "Shawn C. Saylor, D.O.",
-    "Robert J. Singer, D.O.",
-    "Jonathan P. Van Kleunen, M.D."
-  ]
+    "Gregory M. Bailey",
+    "Bradley A. Barter",
+    "David J. Boak",
+    "Adam M. Budny",
+    "Kenneth L. Cherry",
+    "Todd B. Cousins",
+    "Michael Doss",
+    "Thomas J. Ellis",
+    "Eric M. Kephart",
+    "Fred K. Khalouf",
+    "Paul D. Lamb",
+    "Alexis N. Ley",
+    "Christopher J. Lincoski",
+    "Christopher McClellan",
+    "Joshua Port",
+    "Douglas E. Roeshot",
+    "Edwin J. Rogusky",
+    "Angela W. Rowe",
+    "Shawn C. Saylor",
+    "Paul R. Sensiba",
+    "Robert J. Singer",
+    "Joel A. Torretti",
+    "William A. Tyndall",
+    "Jonathan P. Van Kleunen",
+    "Christopher Varacallo",
+    "Keith M. Zora" ]
 
-  OFFICES = ["Altoona", "Roaring Spring"]
+
+
+  OFFICES = [
+    "State College",
+    "Altoona",
+    "Roaring Springs",
+    "Bedford",
+    "Huntingdon",
+    "Tyrone",
+    "Dubois",
+    "Lewistown" ]
+
 
   def time_seen
     if time_to_be_seen == "1_day"
