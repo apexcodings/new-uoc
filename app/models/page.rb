@@ -47,6 +47,12 @@ class Page < ActiveRecord::Base
 
   PORTAL_PAGES = ["what-is-nextmd", "why-nextmd", "how-nextmd-works", "portal-appointments", "messaging", "faq"]
 
+  SURGICAL_PAGES = ["uocss", "adv-center-for-surgery"]
+
+  def in_surgical?
+    slug.in? SURGICAL_PAGES
+  end
+
   def in_portal?
     slug.in? PORTAL_PAGES
   end

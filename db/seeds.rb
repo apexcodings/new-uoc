@@ -22,7 +22,7 @@ experts = Page.create!(title: "The right care for your care.", label: 'Our Exper
 specialties = Page.create!(title: "Supporting patients every step of the way.", label: 'Specialties', slug: "specialties", image_url: "Spec_landingPage.jpg")
 specialties.children.create!(title: "One team, one goal.", label: "Spine Institute", slug: "spine-institute", image_url: "Spec_SpineInstitute.jpg", position: 1)
 specialties.children.create!(title: "Making pain-free possible.", label: "Pain Management", slug: "pain-management", image_url: "Spec_PainManagement.jpg", position: 2)
-specialties.children.create!(title: "A patient-centric approach to care", label: "Joint Replacements", slug: "joint-replacements", image_url: "Spec_JointReplacement.jpg", position: 3)
+specialties.children.create!(title: "A patient-centric approach to care.", label: "Joint Replacements", slug: "joint-replacements", image_url: "Spec_JointReplacement.jpg", position: 3)
 
 # sports sub-pages
 sports = specialties.children.create!(title: "Helping the best athletes get better.", label: "Sports Medicine", slug: "sports-medicine-services", image_url: "Spec_SportsMedicine.jpg", position: 4)

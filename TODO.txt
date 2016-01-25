@@ -10,3 +10,18 @@ controller)
 Patient portal pages
 One potential problem I foresee is that people will think these are live elements, and they will be trying to click into the Login fields. Would it be possible to create a rollover state that greys out the image and says something like "Screenshots for reference only, go to Patient Portal to login or sign up"? 
 
+
+
+
+
+Mon Jan 25 05:29:29 EST 2016
+
+Added domain to heroku app:
+
+heroku domains:add www.uoc.com
+Adding www.uoc.com to uoc... done
+ ▸    WARNING: Configure your app's DNS provider to point to the DNS Target 
+ ▸    uoc.herokuapp.com.
+ ▸    For help, see https://devcenter.heroku.com/articles/custom-domains
+Mini:uoc cesareferrari$ 
+

@@ -85,6 +85,8 @@ module PagesHelper
       content_tag(:h1, page.title, class: "map-page roboto")
     when page.in_portal?
       content_tag(:h1, page.title, class: "map-page roboto")
+    when page.in_surgical?
+      content_tag(:h1, page.title, class: "map-page roboto")
     when page.with_map?
       content_tag(:h1, page.title, class: "map-page roboto")
     else
