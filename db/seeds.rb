@@ -88,12 +88,13 @@ billing.children.create!(title: "Co-Pays", position: 2)
 resources.children.create!(title: "Joint Replacement Classes", position: 3)
 resources.children.create!(title: "Patient Forms", position: 5)
 
-resources.children.create!(title: "News", position: 6)
 
 preparing = resources.children.create!(title: "Preparing for your Appointment", position: 6)
 
 resources.children.create!(title: "Privacy Policy", position: 7)
 resources.children.create!(title: "FAQs", slug: "patient-faqs", position: 8)
+
+resources.children.create!(title: "News", redirect_url: "/news_releases", position: 9)
 
 # CAREERS
 careers = Page.create!(title: 'Careers', image_url: "UOC_Careers.jpg")
