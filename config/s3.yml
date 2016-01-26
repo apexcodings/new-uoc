@@ -1,0 +1,12 @@
+development:
+  bucket: 'com.uocdevelopment'
+  access_key_id: 'AKIAIL6CALBPHTN2VJYA'
+  secret_access_key: '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'
+test:
+  bucket: 'com.uoctest'
+  access_key_id: 'AKIAIL6CALBPHTN2VJYA'
+  secret_access_key: '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'
+production:
+  bucket: 'com.uocproduction'
+  access_key_id: 'AKIAIL6CALBPHTN2VJYA'
+  secret_access_key: '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'

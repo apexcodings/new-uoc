@@ -6,7 +6,7 @@ require 'support/authentication'
 RSpec.describe "Editing a Page" do
   before do
     create_required_pages
-    @page1 = Page.create!(page_attributes(title: "Athletic Trainers"))
+    @page1 = Page.create!(page_attributes(title: "Athletic Trainers", body: "Text in the page"))
     @user = User.create!(user_attributes)
   end
 
@@ -29,14 +29,17 @@ RSpec.describe "Editing a Page" do
 
     expect(current_path).to eq(edit_page_path(@page1))
     expect(find_field("Title").value).to eq(@page1.title)
+    expect(find_field("Body").value).to eq(@page1.body)
 
     fill_in "Title", with: "Services Page"
+    fill_in "Body", with: "This is the new content"
 
     click_button "Update Page"
 
     expect(current_path).to eq(page_path(@page1))
 
     expect(page).to have_text("Services Page")
+    expect(page).to have_text("This is the new content")
     expect(page).to have_text('Page successfully updated!')
   end
 
