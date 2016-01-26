@@ -23,9 +23,13 @@ class Expert < ActiveRecord::Base
   end
 
   def formatted_location
-    main_location = location.split(/&|,/).first
-    other_locations = location.gsub(main_location, '')
-    "<b>#{main_location}</b> #{other_locations}"
+    if location.empty?
+      ""
+    else
+      main_location = location.split(/&|,/).first
+      other_locations = location.gsub(main_location, '')
+      "<b>#{main_location}</b> #{other_locations}"
+    end
   end
 
 end
