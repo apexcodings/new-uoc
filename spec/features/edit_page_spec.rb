@@ -33,6 +33,8 @@ RSpec.describe "Editing a Page" do
 
     fill_in "Title", with: "Services Page"
     fill_in "Body", with: "This is the new content"
+    fill_in "Label", with: "Services"
+
     fill_in "SEO Title", with: "Page title for SEO"
     fill_in "SEO Keywords", with: "tag1, tag2, tag3"
     fill_in "SEO Description", with: "UOC central pennsylvania"
@@ -55,6 +57,18 @@ RSpec.describe "Editing a Page" do
     click_button "Update Page"
 
     expect(page).to have_text('error')
+  end
+
+  it "allows uploading of a main image" do
+    sign_in(@user)
+    visit edit_page_path(@page1)
+
+    attach_file "Main Image", "#{Rails.root}/app/assets/images/UOC_About.jpg"
+    click_button "Update Page"
+
+    expect(current_path).to eq(page_path(@page1))
+
+    expect(page).to have_selector("img[src$='#{@page1.main_image.url}']")
   end
 
 end
