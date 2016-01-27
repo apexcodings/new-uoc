@@ -1,3 +1,5 @@
+<% content_for :title, @expert.name %>
+
 <div class="side-navigation">
   <h2 class="roboto"><%= link_to "Our Experts", page_path('our-experts') %></h2>
     <%= side_links_for_experts(@category) %>

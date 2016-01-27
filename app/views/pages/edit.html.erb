@@ -15,7 +15,26 @@
     </p>
 
     <p>
+    <%= f.label :seo_title, "SEO Title" %>
+    <%= f.text_field :seo_title %>
+    </p>
+    <p>
+    <%= f.label :seo_description, "SEO Description" %>
+    <%= f.text_area :seo_description %>
+    </p>
+    <p>
+    <%= f.label :seo_keywords, "SEO Keywords" %>
+    <%= f.text_field :seo_keywords %>
+    </p>
+
+
+
+
+
+
+    <p>
       <%= f.submit "Update Page", class: "green-link" %>
     </p>
+
   <% end %>
 </div>

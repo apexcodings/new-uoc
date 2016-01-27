@@ -1,3 +1,7 @@
+<% content_for(:title, @page.seo_title) %>
+<% content_for(:description, @page.seo_description) %>
+<% content_for(:keywords, @page.seo_keywords) %>
+
 <nav class="side-navigation <%= "two-line" if @page.in_patient_resources? %>">
   <%= side_header_for @page %>
   <%= side_links_for @page %>

@@ -33,6 +33,9 @@ RSpec.describe "Editing a Page" do
 
     fill_in "Title", with: "Services Page"
     fill_in "Body", with: "This is the new content"
+    fill_in "SEO Title", with: "Page title for SEO"
+    fill_in "SEO Keywords", with: "tag1, tag2, tag3"
+    fill_in "SEO Description", with: "UOC central pennsylvania"
 
     click_button "Update Page"
 

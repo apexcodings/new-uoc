@@ -37,6 +37,62 @@ describe "Showing a page" do
     #end
   end
 
+  it "displays the page SEO title in the page title tag" do
+    spine = Page.create!(title: "One team, one goal.", slug: "spine-institute", seo_title: "Spine Institute page")
+
+    visit page_url('spine-institute')
+
+    expect(page).to have_title("UOC: #{spine.seo_title}")
+  end
+
+  it "displays a default SEO title if the page SEO title is empty" do
+    spine = Page.create!(title: "One team, one goal.", slug: "spine-institute", seo_title: "")
+
+    visit page_url(spine)
+
+    expect(page).to have_title("UOC: Central Pennsylvania Experts in General Orthopedics, Sports Medicine, Chiropractic Care, Pain Management and Joint Replacement Care")
+  end
+
+  it "contains a meta description tag when we have content in SEO description" do
+    spine = Page.create!(title: "Spine Institute", seo_description: "This is the spine institute page")
+
+    visit page_url(spine)
+
+    desc_text = spine.seo_description
+    desc_tag = "meta[name=\"description\"][content=\"#{desc_text}\"]"
+    expect(page).to have_css(desc_tag, visible: false)
+  end
+
+  it "doesn't contain meta description tag when there's no SEO description" do
+    spine = Page.create!(title: "Spine Institute", seo_description: "")
+
+    visit page_url(spine)
+
+    desc_text = spine.seo_description
+    desc_tag = "meta[name=\"description\"][content=\"#{desc_text}\"]"
+    expect(page).not_to have_css(desc_tag, visible: false)
+  end
+
+  it "contains a meta keywords tag when we have content in SEO keywords" do
+    spine = Page.create!(title: "Spine Institute", seo_keywords: "spine, institute")
+
+    visit page_url(spine)
+
+    keywords = spine.seo_keywords
+    keywords_tag = "meta[name=\"keywords\"][content=\"#{keywords}\"]"
+    expect(page).to have_css(keywords_tag, visible: false)
+  end
+
+  it "doesn't contain meta description tag when there's no SEO description" do
+    spine = Page.create!(title: "Spine Institute", seo_keywords: "")
+
+    visit page_url(spine)
+
+    keywords = spine.seo_keywords
+    keywords_tag = "meta[name=\"keywords\"][content=\"#{keywords}\"]"
+    expect(page).not_to have_css(keywords_tag, visible: false)
+  end
+
   context "when it's a sub-page" do
     it "displays its parent root page at the top of the side navigation" do
       #services = Page.create!(page_attributes(title: "Services"))

@@ -49,7 +49,7 @@ outpatient = services.children.create!(title: "Building a better solution for re
 outpatient.children.create!(title: "Leading the way in total joint replacement.", label: "UOC Surgery Center", slug: "uocss", position: 1)
 outpatient.children.create!(title: "Providing better surgery solutions.", label: "Advanced Center for Surgery", slug: "adv-center-for-surgery", position: 2)
 
-services.children.create!(title: "Ensuring greater accessibility to care.", label: "Urgent Care", slug: "urgent-care", image_url: "Serv_UrgentCare.jpg", position: 2)
+services.children.create!(title: "Ensuring greater accessibility to care.", label: "Extended Hours Clinic", slug: "urgent-care", image_url: "Serv_UrgentCare.jpg", position: 2)
 services.children.create!(title: "Improving mobility, function and life.", label: "Physical/Occupational Therapy", slug: "physical-occupational-therapy", image_url: "Serv_PhysOccTherapy.jpg", position: 3)
 
 services.children.create!(title: "Advancing treatment through a deeper understanding.", label: "Clinical Trials", image_url: "Serv_ClinicalTrials.jpg", slug: "clinical-trials", position: 5)

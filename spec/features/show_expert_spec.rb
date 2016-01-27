@@ -25,4 +25,9 @@ RSpec.describe "Showing an expert" do
       expect(page).to have_text("Physicians")
     end
   end
+
+  it "shows the expert's name in the page title" do
+    visit expert_url(@expert)
+    expect(page).to have_title("UOC: #{@expert.name}")
+  end
 end
