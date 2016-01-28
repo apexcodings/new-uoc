@@ -31,6 +31,15 @@
       <%= image_tag @page.main_image.url, style: "float: right;width:50%;" %>
     </div>
 
+    <div class="edit-form-row">
+        <label>Publish page?</label>
+        <%= f.radio_button :publish, true %>
+        <%= f.label :publish, "Yes", class: "inline" %>
+
+        <%= f.radio_button :publish, false %>
+        <%= f.label :publish, "No", class: "inline" %>
+    </div>
+
     <p>
     <%= f.label :seo_title, "SEO Title" %>
     <%= f.text_field :seo_title %>

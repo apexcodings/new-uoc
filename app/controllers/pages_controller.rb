@@ -39,7 +39,7 @@ class PagesController < ApplicationController
   end
 
   def page_params
-    params.require(:page).permit(:title, :body, :position, :label, :image_url, :redirect_url, :slug, :seo_title, :seo_description, :seo_keywords, :main_image)
+    params.require(:page).permit(:title, :body, :position, :label, :image_url, :redirect_url, :slug, :seo_title, :seo_description, :seo_keywords, :main_image, :publish)
   end
 
 end
