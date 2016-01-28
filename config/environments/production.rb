@@ -77,6 +77,18 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
+  # Paperclip settings for production
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :url => ':s3_domain_url',
+    :path => '/:class/:attachment/:id_partition/:style/:filename',
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
