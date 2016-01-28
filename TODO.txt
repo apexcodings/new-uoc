@@ -25,3 +25,73 @@ Adding www.uoc.com to uoc... done
  ▸    For help, see https://devcenter.heroku.com/articles/custom-domains
 Mini:uoc cesareferrari$ 
 
+
+
+
+========================
+Images
+
+altoona - 
+how-nextmd-works - 
+faq - 
+messaging - 
+neck-back - 
+pain-management - Spec_PainManagement.jpg
+patient-forms - 
+patient-resources - UOC_PatientResources.jpg
+portal-appointments - 
+why-nextmd - 
+concussion-care - 
+physical-occupational-therapy - Serv_PhysOccTherapy.jpg
+urgent-care - Serv_UrgentCare.jpg
+services - services2.jpg
+mri - Serv_MRI.jpg
+privacy-policy - 
+saturday-sports-clinic - 
+specialties - Spec_landingPage.jpg
+about-referring-physicians - 
+referring-physicians - 
+thank-you - 
+news - 
+billing-insurance - 
+clinical-trials - Serv_ClinicalTrials.jpg
+contact-us - UOC_ContactUs.jpg
+elbows - 
+hips - 
+history - 
+knees - 
+our-experts - UOC_ourExperts.jpg
+patient-faqs - 
+patient-reviews - 
+submit-review - 
+uni-dose-pharmacy - Serv_UniDosePharmacy.jpg
+athletic-trainers - 
+about - UOC_About.jpg
+adv-center-for-surgery - 
+appointments - 
+careers - UOC_Careers.jpg
+chiropractic-care - Spec_Chiropractic.jpg
+co-pays - 
+dubois - 
+durable-medical-equipment - Serv_DurableMedEquip.jpg
+feet-ankles - 
+fellowships - 
+mission-vision-values - 
+grays-woods - 
+hands-wrists - 
+huntingdon - 
+joint-replacement-classes - 
+joint-replacements - Spec_JointReplacement.jpg
+lewistown - 
+preparing-for-your-appointment - 
+roaring-springs - 
+shoulders - 
+spine-institute - Spec_SpineInstitute.jpg
+sports-medicine-services - Spec_SportsMedicine.jpg
+state-college - 
+surgical-services - Serv_SurgicalServices.jpg
+tyrone - 
+understanding-your-insurance - 
+uocss - 
+what-is-nextmd - 
+worker-s-compensation - Serv_WorkersComp.jpg

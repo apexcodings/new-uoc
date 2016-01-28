@@ -2,7 +2,7 @@
   <h1>Editing</h1>
   <h2><%= @page.title %></h2>
 
-  <%= form_for @page do |f| %>
+  <%= form_for @page, multipart: true do |f| %>
     <%= render "shared/errors", object: @page %>
     <p>
     <%= f.label :title %>
@@ -19,6 +19,17 @@
     <%= f.text_field :label %>
     <em>Label that appears in the navigation links</em>
     </p>
+
+    <div class="group">
+      <div style="float: left;">
+        <%= f.label :main_image, "Main Image" %>
+        <%= f.file_field :main_image %>
+          <p>
+            <em>Image at top of the page</em>
+          </p>
+      </div>
+      <%= image_tag @page.main_image.url, style: "float: right;width:50%;" %>
+    </div>
 
     <p>
     <%= f.label :seo_title, "SEO Title" %>

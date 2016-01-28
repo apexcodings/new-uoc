@@ -107,6 +107,14 @@ module PagesHelper
     end
   end
 
+#  def image_for(page)
+#    if page.main_image.exists?
+#      image_tag page.main_image.url
+#    else
+#      image_tag page.root.main_image.url
+#    end
+#  end
+
   def start_background_for(page)
     if page
       case

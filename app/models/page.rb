@@ -2,10 +2,28 @@ class Page < ActiveRecord::Base
   validates :title, presence: true
   validates :slug, presence: true, uniqueness: true
 
+
   before_validation :generate_slug
   before_validation :generate_label
 
   has_ancestry
+
+  has_attached_file :main_image,
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml", 
+    :path => ":attachment/:id/:style.:extension",
+    :url => ":s3_domain_url"
+
+  validates_attachment :main_image,
+    :content_type => { :content_type => ['image/jpeg', 'image/png'] },
+    :size => { :less_than => 1.megabyte }
+
+  # used in Ckeditor model, should be the same as above
+  #validates_attachment_presence :data
+  #validates_attachment_size :data, :less_than => 2.megabytes
+  #validates_attachment_content_type :data, :content_type => /\Aimage/
+
+
 
   def generate_slug
     self.slug ||= title.parameterize if title
