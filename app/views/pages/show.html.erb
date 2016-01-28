@@ -15,7 +15,9 @@
   </div>
 
 <% if current_user %>
-  <%= link_to "Edit", edit_page_path(@page), class: "green-link edit-link" %>
+  <p>
+    <%= link_to "Edit", edit_page_path(@page), class: "green-link edit-link" %>
+  </p>
 <% end %>
 
 </div>

@@ -10,6 +10,26 @@ form {
   overflow: hidden;
 }
 
+.edit-form-row {
+  width: 90%;
+  margin: 0 auto .8em;
+  overflow: hidden;
+}
+
+.form-col {
+  float: left;
+  margin-left: 1em;
+  box-sizing: border-box;
+}
+
+.col-30 {
+  width: 31%;
+}
+
+.col-50 {
+  width: 48%;
+}
+
 .half-row {
   width: 50%;
   float: left;

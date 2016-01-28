@@ -1,0 +1,54 @@
+<%= form_for @expert do |f| %>
+<%= render "shared/errors", object: @expert %>
+  <div class="edit-form-row group">
+    <div class="form-col col-30">
+      <%= f.label :first_name, "First Name" %>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="form-col col-30">
+      <%= f.label :last_name, "Last Name" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="form-col col-30">
+      <%= f.label :suffix, "Suffix" %>
+      <%= f.text_field :suffix %>
+    </div>
+  </div>
+
+  <div class="edit-form-row group">
+    <div class="form-col col-50">
+      <%= f.label :phone, "Phone" %>
+      <%= f.text_field :phone %>
+    </div>
+    <div class="form-col col-50">
+      <%= f.label :location, "Location" %>
+      <%= f.text_field :location %>
+    </div>
+  </div>
+
+  <div class="edit-form-row group">
+    <div class="form-col col-30">
+      <%= f.label :specialty, "Specialty" %>
+      <%= f.text_field :specialty %>
+    </div>
+    <div class="form-col col-30">
+      <%= f.label :category, "Category" %>
+      <%= f.text_field :category %>
+    </div>
+    <div class="form-col col-30">
+      <%= f.label :image_url, "Image Url" %>
+      <%= f.text_field :image_url %>
+    </div>
+  </div>
+
+  <div class="edit-form-row group">
+    <%= f.label :body, "Body" %>
+    <%= f.cktext_area :body %>
+  </div>
+
+  <div class="edit-form-row group">
+    <%= f.submit "Update Expert", class: "green-link" %>
+  </div>
+
+
+<% end %>
