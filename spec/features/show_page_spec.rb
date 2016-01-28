@@ -93,6 +93,20 @@ describe "Showing a page" do
     expect(page).not_to have_css(keywords_tag, visible: false)
   end
 
+  it "doesn't show unpublished pages in the side navigation" do
+    # services page is created before all tests
+    services = Page.find_by(slug: "services")
+    published = services.children.create!(page_attributes(title: "Published page", label: "Published"))
+    unpublished = services.children.create!(page_attributes(title: "Unpublished page", publish: false, label: "Unpublished"))
+
+    visit page_url(services)
+
+    within(".side-navigation") do
+      expect(page).to have_link(published.label)
+      expect(page).not_to have_link(unpublished.label)
+    end
+  end
+
   context "when it's a sub-page" do
     it "displays its parent root page at the top of the side navigation" do
       #services = Page.create!(page_attributes(title: "Services"))

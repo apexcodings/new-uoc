@@ -24,6 +24,8 @@ class Page < ActiveRecord::Base
   #validates_attachment_content_type :data, :content_type => /\Aimage/
 
 
+  scope :published, -> { where(publish: true) }
+
 
   def generate_slug
     self.slug ||= title.parameterize if title
@@ -38,7 +40,7 @@ class Page < ActiveRecord::Base
   end
 
   def side_nav
-    root.children.order(:position)
+    root.children.published.order(:position)
   end
 
   def experts?
