@@ -29,4 +29,10 @@ module ExpertsHelper
       image_tag "expert_default.png", class: "expert-thumb"
     end
   end
+
+  def image_for_expert(expert)
+    if expert.image_url.present?
+      link_to(image_tag(expert.image_url), expert)
+    end
+  end
 end
