@@ -21,4 +21,12 @@ module ExpertsHelper
       concat(content_tag(:li, link_to(value, experts_path(category: key.to_s))))
     end
   end
+
+  def admin_image_for_expert(expert)
+    if expert.image_url.present?
+      link_to(image_tag(expert.image_url, class: "expert-thumb"), expert)
+    else
+      image_tag "expert_default.png", class: "expert-thumb"
+    end
+  end
 end

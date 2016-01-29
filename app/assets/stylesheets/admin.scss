@@ -1,0 +1,78 @@
+@import "colors";
+
+.results {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid gray;
+  width: 100%;
+
+  tr {
+    background-color: $odd;
+
+    td {
+      padding: .5em;
+      border-bottom: 2px solid white;
+    }
+  }
+}
+
+.expert-thumb { width: 60px; }
+
+
+.dashboard-list {
+  list-style: none;
+  width: 70%;
+
+  li {
+    margin-bottom: 1em;
+
+    a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      background-color: $light-blue;
+      border-radius: 4px;
+      padding: .5em;
+      font-weight: bold;
+      font-size: 1.2em;
+      &:hover { background-color: $dark-blue; }
+    }
+  }
+}
+
+.admin-navigation {
+  max-width: 58.75em;  // 940/16
+  margin: auto;
+  background-color: $light-blue;
+
+  ul {
+    float: left;
+    list-style: none;
+    overflow: hidden;
+    border-top: 1px solid white;
+
+    li {
+      float: left;
+
+      a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        background-color: $light-blue;
+        padding: .4em 1em;
+        border-right: 1px solid white;
+        &:hover { background-color: $dark-blue; }
+      }
+    }
+  }
+
+  p {
+    color: white;
+    float: right;
+    margin: 0;
+    padding: .5em .5em 0 0;
+    font-size: .9em;
+
+    a { color: white; }
+  }
+}

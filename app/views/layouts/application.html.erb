@@ -19,6 +19,7 @@
  <%= render "layouts/top_links" %>
  <%= render "layouts/header" %>
  <%= render "layouts/navigation" %>
+ <%= render "layouts/admin_navigation" if current_user %>
 
  <% if controller_name == "pages" && action_name == "home" %>
     <section class="site-content for-home group">

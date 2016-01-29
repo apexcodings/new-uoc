@@ -28,70 +28,68 @@ Mini:uoc cesareferrari$
 
 
 
-========================
-Images
+=============
+SSL Certificate
 
-altoona - 
-how-nextmd-works - 
-faq - 
-messaging - 
-neck-back - 
-pain-management - Spec_PainManagement.jpg
-patient-forms - 
-patient-resources - UOC_PatientResources.jpg
-portal-appointments - 
-why-nextmd - 
-concussion-care - 
-physical-occupational-therapy - Serv_PhysOccTherapy.jpg
-urgent-care - Serv_UrgentCare.jpg
-services - services2.jpg
-mri - Serv_MRI.jpg
-privacy-policy - 
-saturday-sports-clinic - 
-specialties - Spec_landingPage.jpg
-about-referring-physicians - 
-referring-physicians - 
-thank-you - 
-news - 
-billing-insurance - 
-clinical-trials - Serv_ClinicalTrials.jpg
-contact-us - UOC_ContactUs.jpg
-elbows - 
-hips - 
-history - 
-knees - 
-our-experts - UOC_ourExperts.jpg
-patient-faqs - 
-patient-reviews - 
-submit-review - 
-uni-dose-pharmacy - Serv_UniDosePharmacy.jpg
-athletic-trainers - 
-about - UOC_About.jpg
-adv-center-for-surgery - 
-appointments - 
-careers - UOC_Careers.jpg
-chiropractic-care - Spec_Chiropractic.jpg
-co-pays - 
-dubois - 
-durable-medical-equipment - Serv_DurableMedEquip.jpg
-feet-ankles - 
-fellowships - 
-mission-vision-values - 
-grays-woods - 
-hands-wrists - 
-huntingdon - 
-joint-replacement-classes - 
-joint-replacements - Spec_JointReplacement.jpg
-lewistown - 
-preparing-for-your-appointment - 
-roaring-springs - 
-shoulders - 
-spine-institute - Spec_SpineInstitute.jpg
-sports-medicine-services - Spec_SportsMedicine.jpg
-state-college - 
-surgical-services - Serv_SurgicalServices.jpg
-tyrone - 
-understanding-your-insurance - 
-uocss - 
-what-is-nextmd - 
-worker-s-compensation - Serv_WorkersComp.jpg
+
+
+1.
+Use openssl to generate a new private key.
+
+$ openssl genrsa -des3 -out server.pass.key 2048
+Generating RSA private key, 2048 bit long modulus
+......................................................................................+++
+......+++
+e is 65537 (0x10001)
+Enter pass phrase for server.pass.key:
+Verifying - Enter pass phrase for server.pass.key:
+
+
+[The password is ariberto]
+
+
+2.
+The private key needs to be stripped of its password so it can be loaded without manually entering the password.
+
+$ openssl rsa -in server.pass.key -out server.key
+Enter pass phrase for server.pass.key:
+writing RSA key
+
+
+[The password I entered is the same: ariberto]
+
+You now have a server.key private key file in your current working directory.
+
+
+
+3.
+Generate CSR
+
+--------------------------------------------------------------------------------
+$ openssl req -nodes -new -key server.key -out server.csr
+
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:Pennsylvania
+Locality Name (eg, city) []:
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:University Orthopedics Center, Ltd.
+Organizational Unit Name (eg, section) []:Healthcare
+Common Name (e.g. server FQDN or YOUR name) []:www.uoc.com
+Email Address []:Lschreffler@uoc.com
+
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:ariberto
+An optional company name []:
+--------------------------------------------------------------------------------
+
+
+
+
+

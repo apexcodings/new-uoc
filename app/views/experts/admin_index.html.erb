@@ -1,0 +1,61 @@
+<div class="main-content-wide">
+
+<h1>All Experts</h1>
+
+<p>
+</p>
+<div class="form-row group">
+  <div class="half-row">
+    <%= label_tag :search, "Search Expert" %>
+    <%= text_field_tag :search %>
+  </div>
+</div>
+
+<table id="expert-list" class="results">
+  <% @experts.each do |expert| %>
+  <tr>
+    <td><%= admin_image_for_expert(expert) %></td>
+    <td><%= link_to expert.name, expert %></td>
+    <td><%= expert.phone %></td>
+    <td><%= expert.location %></td>
+    <td><%= link_to "Edit", edit_expert_path(expert) %></td>
+    <td><%= link_to "Remove", expert, method: :delete %></td>
+  </tr>
+  <% end %>
+</table>
+
+</div>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $('#search').keyup(function()
+    {
+      searchTable($(this).val());
+    });
+  });
+  function searchTable(inputVal)
+  {
+    var table = $('#expert-list');
+    table.find('tr').each(function(index, row)
+    {
+      var allCells = $(row).find('td');
+      if(allCells.length > 0)
+      {
+        var found = false;
+        allCells.each(function(index, td)
+        {
+          var regExp = new RegExp(inputVal, 'i');
+          if(regExp.test($(td).text()))
+          {
+            found = true;
+            return false;
+          }
+        });
+        if(found == true)$(row).show();else $(row).hide();
+      }
+    });
+  }
+</script>

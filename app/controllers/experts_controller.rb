@@ -6,6 +6,8 @@ class ExpertsController < ApplicationController
     else
       @experts = Expert.all
     end
+
+    render template: "experts/admin_index" if current_user
   end
 
   def show

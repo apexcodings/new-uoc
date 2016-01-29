@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :news_releases
   resources :appointments
   resources :contacts
+
+#  get "experts/admin_index" => "experts#admin_index"
+
+
   resources :experts
   resource :session
   resources :users

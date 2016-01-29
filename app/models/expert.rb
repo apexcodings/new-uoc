@@ -14,6 +14,10 @@ class Expert < ActiveRecord::Base
 
   scope :by_category, ->(category) { where(category: category).order(:last_name) }
 
+  def <=>(other)
+    self.last_name <=> other.last_name
+  end
+
   def name
     "#{first_name} #{last_name}"
   end
