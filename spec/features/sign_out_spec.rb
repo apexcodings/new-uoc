@@ -8,7 +8,9 @@ describe "Logging out" do
 
     sign_in(user)
 
-    click_link 'Log Out'
+    within(".admin-navigation") do
+      click_link 'Log Out'
+    end
 
     expect(page).to have_text("logged out")
     expect(page).not_to have_link('Log Out')
