@@ -12,10 +12,14 @@ class Expert < ActiveRecord::Base
 
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
-  scope :by_category, ->(category) { where(category: category).order(:last_name) }
+  #scope :by_category, ->(category) { where(category: category).order(:position) }
 
-  def <=>(other)
-    self.last_name <=> other.last_name
+  scope :by_category, ->(category) do 
+    if category.in? ["clinical_researchers", "workers_comp", "management"]
+      where(category: category).order(:position) 
+    else
+      where(category: category).order(:last_name) 
+    end
   end
 
   def name
