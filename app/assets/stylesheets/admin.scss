@@ -44,12 +44,12 @@
   max-width: 58.75em;  // 940/16
   margin: auto;
   background-color: $light-blue;
+  border-top: 1px solid white;
 
   ul {
     float: left;
     list-style: none;
     overflow: hidden;
-    border-top: 1px solid white;
 
     li {
       float: left;

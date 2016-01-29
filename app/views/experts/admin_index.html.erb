@@ -1,13 +1,17 @@
 <div class="main-content-wide">
 
-<h1>All Experts</h1>
+  <% if @category %>
+    <h1><%= @category %></h1>
+  <% else %>
+    <h1>All Experts</h1>
+  <% end %>
 
 <p>
 </p>
 <div class="form-row group">
   <div class="half-row">
-    <%= label_tag :search, "Search Expert" %>
-    <%= text_field_tag :search %>
+    <%= label_tag :search, "Limit results by:" %>
+    <%= text_field_tag :search, nil, placeholder: "Text you want to search for (ex.: Altoona)" %>
   </div>
 </div>
 
