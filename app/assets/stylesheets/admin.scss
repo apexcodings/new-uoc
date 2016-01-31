@@ -37,6 +37,22 @@
       font-size: 1.2em;
       &:hover { background-color: $dark-blue; }
     }
+
+    ul {
+      margin: .4em 0 1em 1em;
+      list-style: none;
+
+      li {
+        margin-bottom: .2em;
+        padding-left: 1em;
+        a {
+          font-size: 1em;
+          font-weight: normal;
+          padding: .3em .5em;
+          background-color: lighten($light-blue, 15%);
+        }
+      }
+    }
   }
 }
 

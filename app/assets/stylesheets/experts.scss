@@ -4,3 +4,14 @@
   border-bottom: 1px solid $dark-blue;
   margin-bottom: 1em;
 }
+
+#experts {
+  tr.moving-row {
+    background-color: lighten(yellow, 40%);
+    width: 100%;
+    td {
+      border-top: 1px solid orange;
+      border-bottom: 1px solid orange;
+    }
+  }
+}

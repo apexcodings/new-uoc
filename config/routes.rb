@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   resources :appointments
   resources :contacts
 
-#  get "experts/admin_index" => "experts#admin_index"
-
+  post "experts/sort" => "experts#sort"
 
   resources :experts
   resource :session

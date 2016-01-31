@@ -10,6 +10,15 @@ class ExpertsController < ApplicationController
     render template: "experts/admin_index" if current_user
   end
 
+  def sort
+    Expert.all.each do |expert|
+      if position = params[:experts].index(expert.id.to_s)
+        expert.update_attribute(:position, position + 1) unless expert.position ==  position + 1
+      end
+    end
+    render :nothing => true, :status => 200
+  end
+
   def show
     @expert = Expert.find(params[:id])
     @category = Expert::CATEGORIES[@expert.category.to_sym]

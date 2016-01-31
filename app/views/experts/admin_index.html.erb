@@ -15,9 +15,9 @@
   </div>
 </div>
 
-<table id="expert-list" class="results">
+<table id="experts" class="results">
   <% @experts.each do |expert| %>
-  <tr>
+  <tr id="exp-<%= expert.id %>" >
     <td><%= admin_image_for_expert(expert) %></td>
     <td><%= link_to expert.name, expert %></td>
     <td><%= expert.phone %></td>
@@ -42,7 +42,7 @@
   });
   function searchTable(inputVal)
   {
-    var table = $('#expert-list');
+    var table = $('#experts');
     table.find('tr').each(function(index, row)
     {
       var allCells = $(row).find('td');
@@ -63,3 +63,26 @@
     });
   }
 </script>
+
+
+<script>
+  $(document).ready(function() {
+
+    $('#experts').tableDnD({
+      onDragClass: "moving-row",
+      onDrop: function(table, row) {
+        $.ajax({
+          type: "POST",
+          url: "<%=j url_for(:action => 'sort') %>",
+          processData: false,
+          data: $.tableDnD.serialize() + '&authenticity_token=' + encodeURIComponent("<%=j form_authenticity_token if protect_against_forgery? %>"),
+          success: function(msg) {
+          }
+        });
+      }
+    })
+
+  })
+</script>
+
+
