@@ -101,4 +101,20 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+#  config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+#    r301 %r{.*}, 'http://www.uoc.com$&',
+#        :if => Proc.new { |rack_env| rack_env['SERVER_NAME'] != 'www.uoc.com' }
+#  end
+
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+    r301 %r{.*}, 'http://www.uoc.com$&', :if => Proc.new {|rack_env|
+      rack_env['SERVER_NAME'] != 'www.uoc.com'
+    }
+  end
+
+
+
+
 end
