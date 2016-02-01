@@ -36,5 +36,11 @@ module Uoc
     config.generators do |g|
       g.test_framework false
     end
+
+    config.middleware.insert_before(Rack::Lock, Rack::Rewrite) do
+      r301 %r{.*}, 'http://www.uoc.com$&',
+          :if => Proc.new { |rack_env| rack_env['SERVER_NAME'] != 'www.uoc.com' }
+    end
+
   end
 end

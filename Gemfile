@@ -62,3 +62,5 @@ gem 'will_paginate', '~> 3.0.6'
 gem 'ckeditor', '4.1.6'
 gem 'paperclip', '4.3.2'
 gem 'aws-sdk', '< 2.0'
+
+gem 'rack-rewrite', group: :production
