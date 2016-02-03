@@ -18,6 +18,13 @@
     <%= @news_release.body.html_safe %>
 
     <%= link_to "Back to News", news_releases_path, class: "more" %>
+
+    <% if current_user %>
+    <p>
+      <%= link_to "Edit", edit_news_release_path(@news_release), class: "green-link edit-link" %>
+    </p>
+    <% end %>
+
   </div>
 
 </div>

@@ -1,20 +1,5 @@
 <div class="main-content-wide">
   <h1>Create News Release</h1>
-  <%= form_for @news_release do |f| %>
-    <%= render "shared/errors", object: @news_release %>
+  <%= render "form" %>
 
-    <p>
-      <%= f.label :title %>
-      <%= f.text_field :title %>
-    </p>
-
-    <p>
-      <%= f.label :body %>
-      <%= f.cktext_area :body %>
-    </p>
-
-    <p>
-      <%= f.submit "Create News Release", class: "green-link" %>
-    </p>
-  <% end %>
 </div>

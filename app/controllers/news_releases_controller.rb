@@ -16,11 +16,25 @@ class NewsReleasesController < ApplicationController
   def create
     @news_release = NewsRelease.new(news_release_params)
     if @news_release.save
-      flash[:notice] = "News Release saved correctly!"
+      flash[:notice] = "News Release created correctly!"
       redirect_to @news_release
     else
       flash[:alert] = "There were some errors, see below"
       render :new
+    end
+  end
+
+  def edit
+    @news_release = NewsRelease.find(params[:id])
+  end
+
+  def update
+    @news_release = NewsRelease.find(params[:id])
+    if @news_release.update_attributes(news_release_params)
+      redirect_to @news_release, notice: "News Release updated correctly!"
+    else
+      flash[:alert] = "There were some errors, see below"
+      render :edit
     end
   end
 
