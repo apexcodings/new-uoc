@@ -23,7 +23,9 @@ module ExpertsHelper
   end
 
   def admin_image_for_expert(expert)
-    if expert.image_url.present?
+    if expert.photo.exists?
+      link_to(image_tag(expert.photo, class: "expert-thumb"), expert)
+    elsif expert.image_url.present?
       link_to(image_tag(expert.image_url, class: "expert-thumb"), expert)
     else
       image_tag "expert_default.png", class: "expert-thumb"
@@ -31,7 +33,9 @@ module ExpertsHelper
   end
 
   def image_for_expert(expert)
-    if expert.image_url.present?
+    if expert.photo.exists?
+      link_to(image_tag(expert.photo.url), expert)
+    elsif expert.image_url.present?
       link_to(image_tag(expert.image_url), expert)
     end
   end

@@ -42,6 +42,6 @@ class ExpertsController < ApplicationController
   private
 
   def expert_params
-    params.require(:expert).permit(:first_name, :last_name, :suffix, :phone, :location, :specialty, :procedures, :education, :category, :body, :image_url )
+    params.require(:expert).permit(:first_name, :last_name, :suffix, :phone, :location, :specialty, :procedures, :education, :category, :body, :image_url, :photo )
   end
 end

@@ -12,8 +12,17 @@ class Expert < ActiveRecord::Base
 
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
-  #scope :by_category, ->(category) { where(category: category).order(:position) }
+  has_attached_file :photo,
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml", 
+    :path => ":attachment/:id/:style.:extension",
+    :url => ":s3_domain_url"
 
+  validates_attachment :photo,
+    :content_type => { :content_type => ['image/jpeg', 'image/png'] },
+    :size => { :less_than => 1.megabyte }
+
+  #scope :by_category, ->(category) { where(category: category).order(:position) }
   scope :by_category, ->(category) do 
     if category.in? ["clinical_researchers", "workers_comp", "management"]
       where(category: category).order(:position) 

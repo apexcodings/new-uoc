@@ -33,6 +33,7 @@ def expert_attributes(overrides = {})
     education: "University of California San Diego",
     category: "physicians",
     image_url: "expert_default.png",
+    photo: open("#{Rails.root}/app/assets/images/DennisDevita.jpg"),
     body: "Lorem iusto nisi delectus exercitationem exercitationem architecto! Impedit placeat commodi odit nesciunt laudantium. Laboriosam temporibus omnis nesciunt debitis nihil. Pariatur possimus possimus adipisicing doloremque odio. Voluptates ipsam sunt sapiente modi."
   }.merge(overrides)
 end

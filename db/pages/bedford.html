@@ -1,0 +1,47 @@
+<div class="contact-address group">
+  <div class="address">
+    125 Willow Grove Commons<br>
+    Everett, PA 15537
+  </div>
+  <div class="phone">
+    Phone: (814) 231-2101 or (800) 505-2101<br>
+    Fax: (814) 940-2026<br>
+  </div>
+</div>
+
+<div id="googleMap">
+  <!-- <img src="https://s3.amazonaws.com/com.uocproduction/images/map_dubois.png" alt=""> -->
+</div>
+
+<p>
+  <a href="https://www.google.com/maps/place/125+Everett+Ave,+Willow+Grove,+PA+19090/@40.1428686,-75.1102643,17z/data=!3m1!4b1!4m2!3m1!1s0x89c6b02d5b4c12a5:0xf30dca23fbadb908" class="green-link" target="_blank">Get directions</a>
+</p>
+
+<div style="height: 200px;"></div>
+
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAauBIWzDKhi1pbfoENgdk2FedWRr3HzwM&sensor=false">
+</script>
+
+<script type="text/javascript">
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(40.1428686,-75.1102643);
+
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 14
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),
+        mapOptions);
+
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:"Map Title"
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
