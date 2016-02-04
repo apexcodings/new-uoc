@@ -5,6 +5,11 @@
   <%= page_description %>
   <%= page_keywords %>
 
+  <meta name="viewport" content="width=device-width">
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag "respond.min" %>
+	<![endif]-->
+
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet'>
   <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -34,6 +39,17 @@
 </div>
 
 <%= render "layouts/analytics" %>
+
+
+<% if mobile_device? %>
+<script>
+  var nav = responsiveNav("#nav", { 
+    label: "Site Menu"
+  });
+</script>
+<% end %>
+
+
 
 </body>
 </html>

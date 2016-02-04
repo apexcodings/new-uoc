@@ -21,5 +21,7 @@
  *= require experts
  *= require slideshow
  *= require admin
+ *= require narrow
+ *= require responsive-nav
  *= require_self
  */

@@ -484,6 +484,7 @@
       display: inline-block;
       margin-left: 1em;
       margin-bottom: 1em;
+      max-width: 100%;
     }
   }
 
@@ -575,6 +576,7 @@
       float: left; 
       width: 175px;
       margin-right: 1.5em;
+      max-width: 100%;
     }
 
     ul {
@@ -748,7 +750,10 @@
         &:hover { text-decoration: underline; }
       }
 
-      img { margin-right: .70em; }
+      img { 
+        margin-right: .70em; 
+        max-width: 100%;
+      }
     }
   }
 }
