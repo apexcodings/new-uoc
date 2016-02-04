@@ -37,7 +37,8 @@ RSpec.describe "Editing an Expert" do
     expect(find_field("Specialty").value).to eq(@expert.specialty)
     expect(find_field("Body").value).to eq(@expert.body)
     #expect(find_field("Image Url").value).to eq(@expert.image_url)
-    expect(find_field("Category").value).to eq(@expert.category)
+    #expect(find_field("Category").value).to eq(@expert.category)
+    expect(find_field('Category').find('option[selected]').value).to eq(@expert.category)
   end
 
   it "updates the expert details and saves the updates" do
