@@ -1,4 +1,6 @@
 class ExpertsController < ApplicationController
+  before_action :require_signin, except: [:index, :show]
+
   def index
     if params[:category]
       @experts = Expert.by_category(params[:category])
@@ -17,6 +19,21 @@ class ExpertsController < ApplicationController
       end
     end
     render :nothing => true, :status => 200
+  end
+
+  def new
+    @expert = Expert.new
+  end
+
+  def create
+    @expert = Expert.new(expert_params)
+    if @expert.save
+      flash[:notice] = "Expert successfully created!"
+      redirect_to @expert
+    else
+      flash[:alert] = "There was an error, see below."
+      render :new
+    end
   end
 
   def show

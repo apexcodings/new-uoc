@@ -11,10 +11,10 @@
       <li><%= link_to "Clinical Researchers", experts_path(category: :clinical_researchers) %></li>
       <li><%= link_to "Worker's Comp", experts_path(category: :workers_comp) %></li>
       <li><%= link_to "Athletic Trainers", experts_path(category: :athletic_trainers) %></li>
+      <li><%= link_to "Create New Expert", new_expert_path %></li>
     </ul>
   </li>
-  <li><%= link_to "Appointment Requests", appointments_path %></li>
-  <li><%= link_to "Referrals", referrals_path %></li>
+
   <li>
     <%= link_to "News", news_releases_path %>
     <ul>
@@ -22,6 +22,10 @@
     </ul>
 
   </li>
+
+  <li><%= link_to "Appointment Requests", appointments_path %></li>
+
+  <li><%= link_to "Referrals", referrals_path %></li>
 </ul>
 
 </div>
