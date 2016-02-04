@@ -23,7 +23,10 @@
     <td><%= expert.phone %></td>
     <td><%= expert.location %></td>
     <td><%= link_to "Edit", edit_expert_path(expert) %></td>
-    <td><%= link_to "Remove", expert, method: :delete %></td>
+    <td><%= link_to "Remove", expert, 
+      method: :delete,
+      data: {confirm: "Are you sure you want to permanently delete #{expert.name} ?"} %>
+    </td>
   </tr>
   <% end %>
 </table>

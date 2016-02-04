@@ -56,6 +56,13 @@ class ExpertsController < ApplicationController
     end
   end
 
+  def destroy
+    @expert = Expert.find(params[:id])
+    @expert.destroy
+    flash[:notice] = "Expert successfully deleted!"
+    redirect_to experts_path
+  end
+
   private
 
   def expert_params
