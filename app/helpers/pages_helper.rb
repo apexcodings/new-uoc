@@ -144,7 +144,7 @@ module PagesHelper
   end
 
   def mobile_device?
-    request.user_agent =~ /Mobile|webOS/
+    request.user_agent =~ /Mobile|webOS|Silk/
   end
 
 #  def mobile_navigation_links
