@@ -18,10 +18,18 @@ class Emailer < ApplicationMailer
 
   def appointment_email(appointment)
     @appointment = appointment
-    mail( from:     appointment.requestor_email,
-          #to:       "cesare@maryandferrari.com",
-          to:       "appts@uoc.com",
-          subject:  "New Appointment Request from UOC website")
+
+    if @appointment.appointment_type == "Workers Compensation"
+      mail( from:     appointment.requestor_email,
+            to:       "cesareferrar@gmail.com",
+            subject:  "New Workers Comp Appointment Request from UOC website")
+    else
+      mail( from:     appointment.requestor_email,
+            to:       "cesare@maryandferrari.com",
+#            to:       "appts@uoc.com",
+            subject:  "New Appointment Request from UOC website")
+    end
+
   end
 
   def referral_email(referral)
