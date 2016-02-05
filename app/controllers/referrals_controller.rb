@@ -1,6 +1,7 @@
 class ReferralsController < ApplicationController
 
   before_action :require_signin, except: [:create]
+  before_action :require_admin, except: [:create]
 
   def index
     @referrals = Referral.order(created_at: :desc)

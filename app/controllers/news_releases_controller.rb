@@ -1,5 +1,6 @@
 class NewsReleasesController < ApplicationController
   before_action :require_signin, except: [:index, :show]
+  before_action :require_admin, except: [:index, :show]
 
   def index
     @news = NewsRelease.order(created_at: :desc).paginate(page: params[:page])

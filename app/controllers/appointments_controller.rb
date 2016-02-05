@@ -1,9 +1,14 @@
 class AppointmentsController < ApplicationController
 
   before_action :require_signin, except: [:create]
+  #before_action :require_admin, except: [:create]
 
   def index
-    @appointments = Appointment.order(created_at: :desc)
+    if current_user.workers_comp?
+      @appointments = Appointment.workers_comp
+    else
+      @appointments = Appointment.order(created_at: :desc)
+    end
   end
 
   def show

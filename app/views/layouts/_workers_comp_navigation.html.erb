@@ -1,0 +1,10 @@
+<div class="admin-navigation group">
+  <ul>
+    <li><%= link_to "Workers Compensation Appointment Requests", appointments_path %></li>
+  </ul>
+
+  <p>
+    <%= current_user.email %> | 
+    <%= link_to 'Log Out', session_path, method: :delete %>
+  </p>
+</div>

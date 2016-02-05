@@ -24,6 +24,7 @@ class Appointment < ActiveRecord::Base
             inclusion: { in: APPOINTMENT_TYPES }, 
             allow_blank: true
 
+  scope :workers_comp, -> { Appointment.where(appointment_type: "Workers Compensation").order(created_at: :desc) }
 
   def requestor_name
     "#{requestor_first_name} #{requestor_mi unless requestor_mi.nil?} #{requestor_last_name}"

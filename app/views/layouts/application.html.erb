@@ -32,7 +32,8 @@
  <% end %>
 
 
- <%= render "layouts/admin_navigation" if current_user %>
+ <%= render "layouts/admin_navigation" if current_user_admin? %>
+ <%= render "layouts/workers_comp_navigation" if current_user_workers_comp? %>
 
  <% if controller_name == "pages" && action_name == "home" %>
     <section class="site-content for-home group">
