@@ -147,4 +147,61 @@ module PagesHelper
     request.user_agent =~ /Mobile|webOS/
   end
 
+#  def mobile_navigation_links
+#    links = []
+#    page_slugs = %w{specialties services our-experts patient-resources contact-us}
+#
+#    page_slugs.each do |slug|
+#      page = Page.find_by(slug: slug)
+#      links << link_to(page.label, page)
+#
+#      if page.has_children?
+#        links << { page => children }
+#        sub_pages = page.children.map {|c| link_to(c.label, c)}
+#        links << sub_pages
+#      end
+#    end
+#
+#    links
+#  end
+
+#  def mobile_navigation
+#    content_tag :ul, id: "mobile-nav" do
+#      mobile_navigation_links.each do |link|
+#        concat(content_tag(:li, link))
+#      end
+#    end
+#  end
+
+  def pages_for_nav
+    page_slugs = %w{specialties services our-experts patient-resources contact-us}
+    pages = []
+
+    page_slugs.each do |slug|
+      page = Page.find_by(slug: slug)
+      pages << { page => page.subpages }
+    end
+
+    pages
+  end
+
+  def mobile_navigation
+    content_tag :ul, id: "mobile-nav" do
+      pages_for_nav.each do |h|
+        h.each do |key, value|
+
+          if value.nil?
+            concat(content_tag(:li, link_to(key.label, key)))
+          else
+            content_tag :ul do
+              value.each do |subpage|
+                concat(content_tag(:li, link_to(subpage.label, subpage)))
+              end
+            end
+          end
+          
+        end
+      end
+    end
+  end
 end

@@ -1,0 +1,26 @@
+<nav class="mobile-navigation"> 
+  <div class="group">
+    <p>
+      <%= link_to "Site Navigation", "#", id: "mobile-trigger" %>
+    </p>
+
+    <%= link_to "Patient Portal", 
+      "https://www.nextmd.com/Login/Login.aspx", 
+      id: "mobile-portal", 
+      target: "_blank" %>
+  </div>
+
+    <%= mobile_navigation %>
+
+</nav>
+
+
+
+<script>
+$(function() {
+  $("#mobile-trigger").click(function() {
+    $("#mobile-nav").slideToggle();
+    //$(this).toggleClass('info-open');
+  });
+});
+</script>

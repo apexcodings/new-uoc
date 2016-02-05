@@ -131,4 +131,12 @@ class Page < ActiveRecord::Base
       false
     end
   end
+
+  def subpages
+    if self.has_children?
+      self.children.sort_by(&:position).map {|c| c }
+    else
+      nil
+    end
+  end
 end
