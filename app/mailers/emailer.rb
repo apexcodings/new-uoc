@@ -21,8 +21,7 @@ class Emailer < ApplicationMailer
 
     if @appointment.appointment_type == "Workers Compensation"
       mail( from:     appointment.requestor_email,
-            #to:       "cesareferrar@gmail.com",
-            to:       "appts@uoc.com",
+            to:       "cedsall@uoc.com",
             subject:  "New Workers Comp Appointment Request from UOC website")
     else
       mail( from:     appointment.requestor_email,
