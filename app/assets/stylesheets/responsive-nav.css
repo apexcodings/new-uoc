@@ -3,8 +3,17 @@
 	display: block;
 	padding: .8em .8em .8em 50px;
 	color: #fff;
-	background-color: #DB7427;
-	background-image: url(responsive-nav.png);
+/*	background-color: #DB7427; */
+
+
+  background-image: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background-image: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background-image: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  background-image: linear-gradient($nav-gradient-light, $nav-gradient-dark);
+
+
+
+	background-image: url(responsive-nav.png); 
 	background-repeat: no-repeat;
 	background-position: 20px 50%;
 	border-bottom: 1px solid #fff;

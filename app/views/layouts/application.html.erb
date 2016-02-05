@@ -22,8 +22,16 @@
 <%= start_background_for(@page) %>
  <%= render "layouts/flashes" %>
  <%= render "layouts/top_links" %>
- <%= render "layouts/header" %>
- <%= render "layouts/navigation" %>
+
+ <% if mobile_device? %>
+   <%= render "layouts/navigation" %>
+   <%= render "layouts/header" %>
+ <% else %>
+   <%= render "layouts/header" %>
+   <%= render "layouts/navigation" %>
+ <% end %>
+
+
  <%= render "layouts/admin_navigation" if current_user %>
 
  <% if controller_name == "pages" && action_name == "home" %>
@@ -34,7 +42,11 @@
   <%= yield %>
 </section>
 
-<%= render "layouts/footer" %>
+<% if mobile_device? %>
+  <%= render "layouts/mobile_footer" %>
+<% else %>
+  <%= render "layouts/footer" %>
+<% end %>
 
 </div>
 

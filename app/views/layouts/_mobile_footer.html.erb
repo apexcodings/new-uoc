@@ -1,0 +1,43 @@
+<div class="footer-outer">
+  <footer class="mobile-footer">
+    <ul>
+      <li class="header">Connect with us</li>
+      <li>
+        <%= link_to(image_tag("fb_icon.png"), "https://www.facebook.com/UOCcares/", target: "_blank") %>
+        <%= link_to(image_tag("twitter_icon.png"), "https://twitter.com/UOCcares", target: "_blank") %>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="header">Main Office</li>
+      <li>
+        University Orthopedics Center<br>
+        101 Regent Court<br>
+        State College, PA 16801<br>
+      </li>
+      <li>
+      Phone: (814) 231-2101<br>or 1-800-505-2101<br>
+        Fax: (814) 231-8569
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="credits">
+  &copy; 2016 University Orthopedics Center 
+  <br>
+  <% if current_user %>
+    <%= link_to 'Dashboard', dashboard_path %>
+    - <%= link_to 'Log Out', session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'Log In', new_session_path %>
+  <% end %>
+
+  - <%= link_to "Email Login", "https://mail.uoc.com/owa/auth/logon.aspx?url=https://mail.uoc.com/owa/&reason=0",  target: "_blank" %> 
+
+  - <%= link_to "FWD-PACS", "https://pacs.blairortho.com/ids7/",  target: "_blank" %> 
+
+  <br>
+  <%= link_to "Site by Loaded Creative", "http://weareloaded.com", target: "_blank", class: "by-loaded" %> 
+</div>
