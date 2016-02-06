@@ -33,6 +33,34 @@
     ul#mobile-nav {
       display: none;
       list-style: none;
+
+      li {
+        background-color: $gold;
+        display: block;
+        border-bottom: 1px solid white;
+        position: relative;
+        a {
+          display: inline-block;
+          color: white;
+          text-decoration: none;
+          padding: .3em 1em;
+        }
+
+        a.show-navlist { 
+          position: absolute;
+          right: 5px;
+          font-style: italic;
+        }
+
+        ul.navlist {
+          display: none;
+          li {
+            background-color: darken($gold, 10%);
+            padding-left: 1em;
+          }
+        }
+      }
+
     }
   }
 

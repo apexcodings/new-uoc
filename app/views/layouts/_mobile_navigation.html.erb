@@ -13,22 +13,27 @@
     <ul id="mobile-nav">
       <li>
         <%= link_to "Specialties", page_path("specialties") %>
+        <%= link_to "(open)", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "specialties" %>
       </li>
       <li>
         <%= link_to "Services", page_path("services") %>
+        <%= link_to "(open)", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "services" %>
       </li>
       <li>
       <%= link_to "Our Experts", page_path("our-experts") %>
+        <%= link_to "(open)", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "our-experts" %>
       </li>
       <li>
       <%= link_to "Patient Resources", page_path("patient-resources") %>
+        <%= link_to "(open)", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "patient-resources" %>
       </li>
       <li>
       <%= link_to "Contact Us", page_path("contact-us") %>
+        <%= link_to "(open)", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "contact-us" %>
       </li>
     </ul>
@@ -42,6 +47,20 @@ $(function() {
   $("#mobile-trigger").click(function() {
     $("#mobile-nav").slideToggle();
     //$(this).toggleClass('info-open');
+    return false;
   });
+
+  $(".show-navlist").click(function() {
+    // open the sublists
+    $(this).next('ul').slideToggle();
+
+    // close already opened ones
+    $(this).parent().siblings().children().next("ul").slideUp();
+    return false;
+  });
+
+
+
+
 });
 </script>
