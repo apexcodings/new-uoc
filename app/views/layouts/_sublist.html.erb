@@ -1,0 +1,10 @@
+<% page = Page.find_by(slug: slug) %>
+
+<% if page.nav_list %>
+  <ul style="margin-left: 1em; border: 1px solid green">
+    <% page.nav_list.each do |i| %>
+      <li><%= link_to i.label, page_path(i.slug) %></li>
+    <% end %>
+  </ul>
+<% end %>
+

@@ -10,7 +10,28 @@
       target: "_blank" %>
   </div>
 
-    <%= mobile_navigation %>
+    <ul id="mobile-nav">
+      <li>
+        <%= link_to "Specialties", page_path("specialties") %>
+          <%= render "layouts/sublist", slug: "specialties" %>
+      </li>
+      <li>
+        <%= link_to "Services", page_path("services") %>
+          <%= render "layouts/sublist", slug: "services" %>
+      </li>
+      <li>
+      <%= link_to "Our Experts", page_path("our-experts") %>
+          <%= render "layouts/sublist", slug: "our-experts" %>
+      </li>
+      <li>
+      <%= link_to "Patient Resources", page_path("patient-resources") %>
+          <%= render "layouts/sublist", slug: "patient-resources" %>
+      </li>
+      <li>
+      <%= link_to "Contact Us", page_path("contact-us") %>
+          <%= render "layouts/sublist", slug: "contact-us" %>
+      </li>
+    </ul>
 
 </nav>
 
