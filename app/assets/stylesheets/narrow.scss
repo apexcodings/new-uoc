@@ -36,7 +36,9 @@
     div {
       padding: .2em;
       background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      // copy the other definitions from layout stylesheet
+      background: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
 
       #mobile-trigger { 
         float: left; 
