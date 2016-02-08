@@ -23,11 +23,24 @@
   .mobile-navigation {
 
     div {
+      padding: .2em;
       background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
       // copy the other definitions from layout stylesheet
 
-      p { float: left; }
-      a { float: right; }
+      #mobile-trigger { 
+        float: left; 
+        text-indent: 2.4em;
+        padding: .5em 0;
+        text-decoration: none;
+        color: white;
+        background-image: image-url("hamburger_blue.png");
+        background-repeat: no-repeat;
+        background-position: 0 5px;
+      }
+
+      #mobile-portal { 
+        float: right; 
+      }
     }
 
     ul#mobile-nav {
@@ -90,7 +103,7 @@
     width: 100%;
     height: initial;
     overflow: hidden;
-    margin-bottom: 0;
+    margin-bottom: .8em;
 
     .slide {
       .slide-image {
@@ -108,6 +121,10 @@
           font-size: 1.6em;
           line-height: 1.2em;
         }
+
+        .green-link { 
+          font-size: .8em;
+        }
       }
     }
   }
@@ -119,11 +136,16 @@
     min-height: initial;
   }
 
+  .home-boxes {
+    margin-bottom: 0;
+  }
+
   .home-col {
     overflow: hidden;
     float: none;
     width: 100%;
     background-size: 100%;
+    margin-bottom: .8em;
   }
 
   .box-with-photo {

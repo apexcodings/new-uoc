@@ -132,19 +132,9 @@ class Page < ActiveRecord::Base
     end
   end
 
-#  def subpages
-#    if self.has_children?
-#      self.children.sort_by(&:position).map {|c| c }
-#    else
-#      nil
-#    end
-#  end
-
   Link = Struct.new(:label, :slug)
 
   def nav_list
-    #a = [Link.new(label, slug)]
-
     if self.has_children?
       a = []
       self.children.sort_by(&:position).each do |c|

@@ -1,8 +1,6 @@
 <nav class="mobile-navigation"> 
   <div class="group">
-    <p>
-      <%= link_to "Site Navigation", "#", id: "mobile-trigger" %>
-    </p>
+    <%= link_to "Site Menu", "#", id: "mobile-trigger" %>
 
     <%= link_to "Patient Portal", 
       "https://www.nextmd.com/Login/Login.aspx", 
@@ -58,9 +56,6 @@ $(function() {
     $(this).parent().siblings().children().next("ul").slideUp();
     return false;
   });
-
-
-
 
 });
 </script>
