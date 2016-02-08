@@ -3,7 +3,7 @@
 <% if page.nav_list %>
   <ul class="navlist">
     <% page.nav_list.each do |i| %>
-      <li><%= link_to i.label, page_path(i.slug) %></li>
+      <li><%= link_to i.label, page_path(i.slug), class: "no-arrow" %></li>
     <% end %>
   </ul>
 <% end %>

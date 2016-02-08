@@ -13,6 +13,15 @@
       margin: auto;
       width: 90%;
       margin-top: 20px;
+      text-align: center;
+
+      .call-us {
+        display: none;
+      }
+
+      a {
+        display: inline-block;
+      }
     }
   }
 
@@ -52,18 +61,30 @@
         display: block;
         border-bottom: 1px solid white;
         position: relative;
+
         a {
-          display: inline-block;
+          display: block;
           color: white;
           text-decoration: none;
           padding: .3em 1em;
+          background-image: image-url("mobile_down_arrow.png");
+          background-repeat: no-repeat;
+          background-position: 95% 10px;
         }
 
-        a.show-navlist { 
-          position: absolute;
-          right: 5px;
-          font-style: italic;
+        a.no-arrow {
+          background-image: none;
         }
+
+//        a.down-arrow { 
+//          display: inline-block;
+//          width: 14px;
+//          height: 10px;
+//          position: absolute;
+//          right: 10px;
+//          top: 10px;
+//          font-style: italic;
+//        }
 
         ul.navlist {
           display: none;

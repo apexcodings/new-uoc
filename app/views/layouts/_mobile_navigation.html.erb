@@ -10,28 +10,23 @@
 
     <ul id="mobile-nav">
       <li>
-        <%= link_to "Specialties", page_path("specialties") %>
-        <%= link_to "(open)", "#", class: "show-navlist" %>
+        <%= link_to "Specialties", "", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "specialties" %>
       </li>
       <li>
-        <%= link_to "Services", page_path("services") %>
-        <%= link_to "(open)", "#", class: "show-navlist" %>
+        <%= link_to "Services", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "services" %>
       </li>
       <li>
-      <%= link_to "Our Experts", page_path("our-experts") %>
-        <%= link_to "(open)", "#", class: "show-navlist" %>
+      <%= link_to "Our Experts", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "our-experts" %>
       </li>
       <li>
-      <%= link_to "Patient Resources", page_path("patient-resources") %>
-        <%= link_to "(open)", "#", class: "show-navlist" %>
+      <%= link_to "Patient Resources", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "patient-resources" %>
       </li>
       <li>
-      <%= link_to "Contact Us", page_path("contact-us") %>
-        <%= link_to "(open)", "#", class: "show-navlist" %>
+      <%= link_to "Contact Us", "#", class: "show-navlist" %>
           <%= render "layouts/sublist", slug: "contact-us" %>
       </li>
     </ul>
