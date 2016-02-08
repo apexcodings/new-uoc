@@ -1,0 +1,7 @@
+<ul class="navlist">
+  <% Expert::CATEGORIES.each do |key, value| %>
+    <li>
+      <%= link_to value, experts_path(category: key.to_s), class: "no-arrow" %>
+    </li>
+  <% end %>
+</ul>

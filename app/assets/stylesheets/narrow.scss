@@ -76,26 +76,18 @@
           background-image: none;
         }
 
-//        a.down-arrow { 
-//          display: inline-block;
-//          width: 14px;
-//          height: 10px;
-//          position: absolute;
-//          right: 10px;
-//          top: 10px;
-//          font-style: italic;
-//        }
-
         ul.navlist {
           display: none;
           li {
             background-color: darken($gold, 10%);
-            text-indent: 1em;
+            //text-indent: 1em;
+            a { padding-left: 1em; }
 
             .sub-navlist {
               li {
                 background-color: lighten($gold, 7%);
-                text-indent: 2em;
+                //text-indent: 2em;
+                a { padding-left: 2em; }
               }
             }
 
@@ -184,6 +176,34 @@
 
   .with-header {
     background-size: 100%;
+  }
+
+
+  // Experts
+
+  .experts-content {
+    float: none;
+    width: 95%;
+    margin: 0 auto;
+
+    .expert-box {
+      margin: 0 0 1.5em 0;
+
+      img { 
+        display: block;
+        margin-bottom: .5em;
+        float: none;
+      }
+
+      ul {
+        width: 100%;
+        float: none;
+      }
+
+      .to-profile {
+        margin: .6em auto 0;
+      }
+    }
   }
 
 
