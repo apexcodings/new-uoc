@@ -204,8 +204,27 @@
         margin: .6em auto 0;
       }
     }
+
+    // Just a test, ignore for now, see if it's necessary
+//    .navlist {
+//      background-color: yellow;
+//    }
   }
 
+
+
+  // FORMS
+
+  form {
+    .double-small-row, .small-row, .half-row, .quarter-row {
+      width: 100%;
+      padding-right: 0;
+    }
+    
+  }
+
+
+  // FOOTER
 
   .mobile-footer {
     color: $footer-font;
