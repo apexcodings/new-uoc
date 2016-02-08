@@ -1,12 +1,10 @@
 <% page = Page.find_by(slug: slug) %>
 
 <% if page.nav_list %>
-  <ul class="navlist">
+  <ul class="sub-navlist">
     <% page.nav_list.each do |i| %>
       <li>
         <%= link_to i.label, page_path(i.slug), class: "no-arrow" %>
-    
-          <%= render "layouts/sub_sublist", slug: i.slug %>
       </li>
     <% end %>
   </ul>

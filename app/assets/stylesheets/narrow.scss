@@ -59,11 +59,11 @@
       li {
         background-color: $gold;
         display: block;
-        border-bottom: 1px solid white;
         position: relative;
 
         a {
           display: block;
+          border-bottom: 1px solid white;
           color: white;
           text-decoration: none;
           padding: .3em 1em;
@@ -90,9 +90,18 @@
           display: none;
           li {
             background-color: darken($gold, 10%);
-            padding-left: 1em;
+            text-indent: 1em;
+
+            .sub-navlist {
+              li {
+                background-color: lighten($gold, 7%);
+                text-indent: 2em;
+              }
+            }
+
           }
         }
+
       }
 
     }
