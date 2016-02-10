@@ -1,17 +1,11 @@
-Referring Physicians drop down list update with actual doctor names
+Geisinger problem, referring physicians form gives an error.
 
-Submit a Review's form: still to do the resource (and fix in pages
-controller)
+Vim search string for line in the log where the request is for the page
+referring-physicians:
 
+GET "\/pages\/referring-physicians"
 
-1) Can you line up the bottoms of the Pain Information Center and Review & Testimonial boxes so that it aligns with Sports Medicine's box? You can reduce the spacing of the PIC box and can also reduce the sizes of both the Patient Portal and Reviews & Testimonials boxes to make that happen. When you reduce the sizes of the two boxes on the right, can you see if you can create a little more vertical space between those two boxes?
-
-
-Patient portal pages
-One potential problem I foresee is that people will think these are live elements, and they will be trying to click into the Login fields. Would it be possible to create a rollover state that greys out the image and says something like "Screenshots for reference only, go to Patient Portal to login or sign up"? 
-
-
-
+-------------------
 
 
 Mon Jan 25 05:29:29 EST 2016
@@ -90,6 +84,122 @@ An optional company name []:
 --------------------------------------------------------------------------------
 
 
+I received the certificate from the client.
+
+I got these files that I copied in the uoc directory:
+
+
+IntermediateCA.crt
+ssl_certificate.crt
+
+
+1. Create the endpoint add-on
+
+$ heroku addons:create ssl:endpoint
+Creating ssl-elliptical-97566... done, ($20.00/month)
+Adding ssl-elliptical-97566 to uoc... done
+Next add your certificate with `heroku certs:add CERT KEY`.
+Use `heroku addons:docs ssl` to view documentation.
+
+
+2. Add certificate and intermediaries
+
+Add your certificate, any intermediate certificates, and private key to the endpoint with the certs:add command.
 
 
 
+$ heroku certs:add ssl_certificate.crt IntermediateCA.crt server.key
+Resolving trust chain... done
+Adding SSL Endpoint to uoc... done
+uoc now served by yamanashi-31301.herokussl.com
+Certificate details:
+Common Name(s): uoc.com
+                www.uoc.com
+
+Expires At:     2018-02-19 23:59 UTC
+Issuer:         /C=US/O=thawte, Inc./CN=thawte EV SSL CA - G3
+Starts At:      2016-02-09 00:00 UTC
+Subject:        /1.3.6.1.4.1.311.60.2.1.3=US/1.3.6.1.4.1.311.60.2.1.2=Pennsylvania/businessCategory=Private Organization/O=University Orthopedics Center, Ltd./serialNumber=2020197/C=US/ST=Pennsylvania/L=State College/OU=Healthcare/CN=www.uoc.com
+SSL certificate is verified by a root authority.
+
+
+---
+
+Verify the details of the SSL configuration with heroku certs.
+
+$ heroku certs
+Endpoint                       Common Name(s)        Expires               Trusted
+-----------------------------  --------------------  --------------------  -------
+yamanashi-31301.herokussl.com  www.uoc.com, uoc.com  2018-02-19 23:59 UTC  True
+
+---
+
+To get the detailed information about a certificate, use certs:info.
+
+$ heroku certs:info
+Fetching SSL Endpoint yamanashi-31301.herokussl.com info for uoc... done
+Certificate details:
+Common Name(s): uoc.com
+                www.uoc.com
+
+Expires At:     2018-02-19 23:59 UTC
+Issuer:         /C=US/O=thawte, Inc./CN=thawte EV SSL CA - G3
+Starts At:      2016-02-09 00:00 UTC
+Subject:        /1.3.6.1.4.1.311.60.2.1.3=US/1.3.6.1.4.1.311.60.2.1.2=Pennsylvania/businessCategory=Private Organization/O=University Orthopedics Center, Ltd./serialNumber=2020197/C=US/ST=Pennsylvania/L=State College/OU=Healthcare/CN=www.uoc.com
+SSL certificate is verified by a root authority.
+
+
+---
+
+Visit the endpoint with https: https://yamanashi-31301.herokussl.com/
+
+This will throw a certificate error:
+
+--------------------------------------
+Your connection is not private
+
+Attackers might be trying to steal your information from yamanashi-31301.herokussl.com (for example, passwords, messages, or credit cards). 
+
+NET::ERR_CERT_COMMON_NAME_INVALID
+--------------------------------------
+
+This means that you are serving up the certificate that you’d expect to serve (just not for the requested herokussl.com domain).
+
+---
+
+DNS and domain configuration
+
+Once the SSL endpoint is provisioned and your certificate is confirmed, you must route requests for your secure domain through the endpoint URL. 
+
+Unless you’ve already done so, add the domain specified when generating the CSR to your app with:
+$ heroku domains:add www.example.com
+
+[I already added www.uoc.com so I am not doing this step]
+
+
+
+-----
+
+If you’re securing a subdomain, for example, www.example.com, modify your DNS settings and create a CNAME record to the endpoint or modify the CNAME target if you already have a CNAME record.
+Record	Name	Target
+CNAME	www	example-2121.herokussl.com.
+
+[
+
+I am asking Lance to modify the CNAME record to the new ssl endpoint
+
+from: 
+
+Record: CNAME
+Name: www
+Target: uoc.herokuapp.com
+
+to:
+
+Record: CNAME
+Name: www
+Target: yamanashi-31301.herokussl.com
+
+]
+
+-----
