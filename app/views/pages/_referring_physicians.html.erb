@@ -1,6 +1,10 @@
 <%= form_for @referral do |f| %>
 <%= render "shared/errors", object: @referral %>
 
+<p class="required-legend">
+(<span class="required"></span> ) Required fields
+</p>
+
 <h2>Referring Office Contact Information</h2>
   <div class="form-row group">
     <div class="half-row">
@@ -26,7 +30,7 @@
 
   <div class="form-row group">
     <div class="half-row">
-      <%= f.label :email, "Email Address" %>
+      <%= f.label :email, "Email Address", class: "required" %>
       <%= f.text_field :email %>
     </div>
     <div class="half-row with-gutter">
@@ -42,11 +46,11 @@
 
   <div class="form-row group">
     <div class="half-row">
-      <%= f.label :patient_name, "Patient Name" %>
+      <%= f.label :patient_name, "Patient Name", class: "required" %>
       <%= f.text_field :patient_name %>
     </div>
     <div class="half-row with-gutter">
-      <%= f.label :dob, "Date of Birth" %>
+      <%= f.label :dob, "Date of Birth", class: "required" %>
       <%= f.text_field :dob %>
     </div>
   </div>
@@ -76,7 +80,7 @@
 
   <div class="form-row group">
     <div class="half-row">
-      <%= f.label :insurance, "Patient Insurance" %>
+      <%= f.label :insurance, "Patient Insurance", class: "required" %>
       <%= f.text_field :insurance %>
     </div>
   </div>
