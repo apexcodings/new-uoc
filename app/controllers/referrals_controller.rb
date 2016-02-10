@@ -19,7 +19,7 @@ class ReferralsController < ApplicationController
       redirect_to page_path("thank-you")
     else
       flash[:alert] = "There was an error while submitting this form. Please, see below."
-      @page = Page.find_by(slug: "refer-a-patient")
+      @page = Page.find_by(slug: "referring-physicians")
       render template: "pages/show"
     end
   end
