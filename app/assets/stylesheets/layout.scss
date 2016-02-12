@@ -639,13 +639,6 @@
     h3 {
       font-size: 1.5em;
       color: white;
-      //@include gradient-background;
-
-      // Original with Orange gradient
-      //background: image-url("down_arrow.png"), -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      //background: image-url("down_arrow.png"), -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      //background: image-url("down_arrow.png"), -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-      //background: image-url("down_arrow.png"), linear-gradient($nav-gradient-light, $nav-gradient-dark);
 
       // Gray gradient
       background: image-url("down_arrow.png"), -webkit-linear-gradient($expert-drop-light, $expert-drop-dark);
@@ -670,17 +663,6 @@
       &:hover { cursor: pointer; }
     }
 
-    // Previous code
-    //.info-open {
-      //color: black;
-      //padding: .4em 0;
-      //border-bottom: 1px solid gray;
-      //background: none;
-      //&:hover {
-      //  background: none;
-     // }
-    //}
-
      .info-open {
         background: image-url("up_arrow.png"), -webkit-linear-gradient($expert-drop-light, $expert-drop-dark);
         background: image-url("up_arrow.png"), -o-linear-gradient($expert-drop-light, $expert-drop-dark);
@@ -698,7 +680,8 @@
         }
      }
 
-    .info-section {
+    //.info-section {
+    div {
       margin-bottom: 1.5em;
       display: none;
 
