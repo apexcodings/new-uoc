@@ -144,7 +144,7 @@ module PagesHelper
   end
 
   def mobile_device?
-    request.user_agent =~ /Mobile|webOS|Silk/
+    request.user_agent =~ /Mobile|webOS|Silk|LG-V400/
   end
 
 end
