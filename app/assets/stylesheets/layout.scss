@@ -507,6 +507,14 @@
     margin-bottom: .5em;
     margin-right: 24px;
   }
+
+  // for when there is a experts section in the main pages.
+  .experts-content {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    min-height: initial;
+  }
 }
 
 .main-content-wide {
