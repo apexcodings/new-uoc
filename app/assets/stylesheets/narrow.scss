@@ -624,4 +624,61 @@ and (max-device-width : 1024px)
   .with-gutter {
     padding-left: 0;
   }
+
+  // Home boxes
+  .mobile-home-box {
+    background-color: $dark-blue;
+    margin-bottom: .5em;
+    overflow: hidden;
+
+    h2 {
+      color: white;
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.5em;
+      padding: .4em 0;
+      margin-bottom: 0;
+      background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+      background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
+    }
+
+    p {
+      color: white;
+      font-size: 1.1em;
+      padding: 1em;
+      margin-top: 0;
+    }
+
+    a {
+      margin-bottom: 1.5em;
+    }
+
+    .hurts {
+      li {
+        a { margin-bottom: 0; }
+      }
+    }
+  }
+
+  .mobile-box-with-photo {
+    background-image: image-url("sportsMedBox.jpg") ;
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+
+    .bottom-box {
+      margin-top: 400px;
+      background-color: $dark-blue;
+      opacity: .9;
+
+      p {
+        color: white;
+        font-size: 1.1em;
+        padding: 1em;
+        opacity: 1;
+      }
+
+      a { opacity: 1; }
+    }
+  }
 }
