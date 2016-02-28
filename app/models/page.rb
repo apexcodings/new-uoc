@@ -69,15 +69,8 @@ class Page < ActiveRecord::Base
 
   SURGICAL_PAGES = ["uocss", "adv-center-for-surgery"]
 
-  SPECIALTIES_PAGES = ["neck-back", "shoulders", "elbows", "hands-wrists", "hips", "knees", "feet-ankles"]
-
   def in_surgical?
     slug.in? SURGICAL_PAGES
-  end
-
-  def in_specialties?
-    # this is a temporary thing, until they have the top images
-    slug.in? SPECIALTIES_PAGES
   end
 
   def in_portal?
