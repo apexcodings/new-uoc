@@ -24,6 +24,13 @@ class ReferralsController < ApplicationController
     end
   end
 
+  def destroy
+    @referral = Referral.find(params[:id])
+    @referral.destroy
+    flash[:notice] = "Referral successfully deleted!"
+    redirect_to referrals_path
+  end
+
   private
 
   def referral_params

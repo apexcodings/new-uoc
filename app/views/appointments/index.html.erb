@@ -1,6 +1,6 @@
 <div class="main-content-wide">
 
-  <h1>Appointment Requests</h1>
+  <h1><%= pluralize(@appointments.count, "Appointment Request") %></h1>
 
 <% @appointments.each do |appointment| %>
   <div class="appointment-list">
