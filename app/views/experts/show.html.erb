@@ -18,7 +18,9 @@
         </li>
         <li class="expert-phone roboto blue"><%= @expert.phone %></li>
         <li><b>Location:</b> <%= @expert.location.html_safe %></li>
+        <% unless @expert.category == "physicians_assistants" %>
         <li><b>Specialty:</b> <%= @expert.specialty.html_safe %></li>
+        <% end %>
       </ul>
     </div>
   </div>

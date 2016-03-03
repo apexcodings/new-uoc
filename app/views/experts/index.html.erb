@@ -7,9 +7,6 @@
 
   <h1 class="roboto"><%= @category %></h1>
 
-    <%#  Just a test, ignore for now, see if it's necessary %>
-  <%#= render "layouts/experts_sublist" if mobile_device? %>
-
 <% @experts.each do |expert| %>
 
   <div class="expert-box">
@@ -22,7 +19,9 @@
         </li>
         <li class="expert-phone"><%= expert.phone %></li>
         <li><b>Location:</b> <%= expert.location.html_safe %></li>
+        <% unless expert.category == "physicians_assistants" %>
         <li><b>Specialty:</b> <%= expert.specialty.html_safe %></li>
+        <% end %>
       </ul>
     </div>
     <%= link_to "View Full Profile", expert, class: "to-profile roboto" %>
