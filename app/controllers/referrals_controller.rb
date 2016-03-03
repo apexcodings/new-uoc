@@ -1,5 +1,7 @@
 class ReferralsController < ApplicationController
 
+  require "csv"
+
   before_action :require_signin, except: [:create]
   before_action :require_admin, except: [:create]
 
@@ -29,6 +31,62 @@ class ReferralsController < ApplicationController
     @referral.destroy
     flash[:notice] = "Referral successfully deleted!"
     redirect_to referrals_path
+  end
+
+  def destroy_all
+    Referral.delete_all
+    flash[:notice] = "All Referrals successfully deleted!"
+    redirect_to referrals_path
+  end
+
+  def download
+    @referrals = Referral.all
+
+    csv_string = CSV.generate do |csv|
+      # header row
+      csv << ["ID",  "Practice",  "Referring Physician",  "Name",  "Phone Number",  "Email",  "Fax", "Patient Name", "Date of Birth", "Patient Phone number", "Patient Alternate Phone Number", "Patient Email", "Employer", "Patient Insurance", "Symptoms", "Prior Surgery", "Workers Comp", "Bone Scan", "Bone Scan where", "CT Scan", "CT Scan where", "MRI", "MRI where", "EMG", "EMG where", "X-rays", "X-rays where", "Cast", "Cast where", "Preferred Physician", "Office Preference", "Requested time" ]
+
+      # data rows
+      @referrals.each do |referral|
+        csv << [referral.id, 
+                referral.practice,
+                referral.physician,
+                referral.name,
+                referral.phone,
+                referral.email,
+                referral.fax,
+                referral.patient_name,
+                referral.dob,
+                referral.patient_phone,
+                referral.patient_phone_alt,
+                referral.patient_email,
+                referral.employer,
+                referral.insurance,
+                referral.diagnosis,
+                referral.prior_surgery,
+                referral.workers_comp,
+                referral.bone_scan,
+                referral.bone_scan_where,
+                referral.ct_scan,
+                referral.ct_scan_where,
+                referral.mri,
+                referral.mri_where,
+                referral.emg,
+                referral.emg_where,
+                referral.x_rays,
+                referral.x_rays_where,
+                referral.cast,
+                referral.cast_where,
+                referral.preferred_physician,
+                referral.preferred_office,
+                referral.time_seen ]
+      end
+    end
+
+    # send it to the browsah
+    send_data csv_string,
+              :type => 'text/csv; charset=iso-8859-1; header=present',
+              :disposition => "attachment; filename=referrals.csv"
   end
 
   private

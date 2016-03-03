@@ -59,4 +59,26 @@ RSpec.describe "Listing Referrals" do
     expect(page).to have_text(@referral.name)
   end
 
+  it "allows download of all referrals as CSV file" do
+
+    sign_in(@user)
+    visit referrals_url
+
+    expect(page).to have_link("Download All")
+  end
+
+  it "allows deleting all referrals" do
+    referral1 = Referral.create!(referral_attributes(name: "referral1@example.com"))
+    referral2 = Referral.create!(referral_attributes(name: "referral2@example.com"))
+
+    sign_in(@user)
+    visit referrals_url
+
+    expect{
+      click_link("delete-all")
+    }.to change(Referral, :count)
+
+    expect(page).not_to have_text(referral1.name)
+    expect(page).not_to have_text(referral2.name)
+  end
 end

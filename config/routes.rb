@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   mount Ckeditor::Engine => '/ckeditor'
   resources :reviews
+
+  get 'referrals/download' => 'referrals#download'
+  delete "referrals" => "referrals#destroy_all"
   resources :referrals
+
   resources :news_releases
 
   get 'appointments/download' => 'appointments#download'
