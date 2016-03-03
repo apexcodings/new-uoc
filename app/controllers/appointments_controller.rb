@@ -3,7 +3,7 @@ class AppointmentsController < ApplicationController
   require "csv"
 
   before_action :require_signin, except: [:create]
-  #before_action :require_admin, except: [:create]
+  before_action :require_admin, except: [:create, :index, :show, :destroy]
 
   def index
     if current_user.workers_comp?
