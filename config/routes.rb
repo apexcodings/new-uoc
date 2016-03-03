@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :reviews
   resources :referrals
   resources :news_releases
+
+  get 'appointments/download' => 'appointments#download'
   resources :appointments
   resources :contacts
 

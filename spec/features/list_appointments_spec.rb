@@ -62,4 +62,14 @@ RSpec.describe "Listing Appointments" do
     expect(page).to have_text(appointment.requestor_first_name)
   end
 
+  it "allows download of all appointments as CSV file" do
+    user = User.create!(user_attributes)
+    appointment = Appointment.create!(appointment_attributes)
+
+    sign_in(user)
+    visit appointments_url
+
+    expect(page).to have_link("Download all appointments")
+  end
+
 end

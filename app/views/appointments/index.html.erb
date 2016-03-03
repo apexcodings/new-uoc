@@ -1,6 +1,7 @@
 <div class="main-content-wide">
 
   <h1><%= pluralize(@appointments.count, "Appointment Request") %></h1>
+  <%= link_to "Download all appointments", "/appointments/download" %>
 
 <% @appointments.each do |appointment| %>
   <div class="appointment-list">

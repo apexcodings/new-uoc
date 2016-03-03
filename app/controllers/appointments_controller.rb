@@ -1,5 +1,7 @@
 class AppointmentsController < ApplicationController
 
+  require "csv"
+
   before_action :require_signin, except: [:create]
   #before_action :require_admin, except: [:create]
 
@@ -33,6 +35,52 @@ class AppointmentsController < ApplicationController
     @appointment.destroy
     flash[:notice] = "Appointment successfully deleted!"
     redirect_to appointments_path
+  end
+
+  def download
+    @appointments = Appointment.all
+
+    csv_string = CSV.generate do |csv|
+      # header row
+      csv << ["ID",  "Requestor Name",  "Requestor Phone",  "Requestor Email",  "Time to reach",  "Patient Name",  "Patient Phone", "Address 1", "Address 2", "City", "State", "ZIP", "DOB", "Gender", "Injury Location", "Injury Location Other", "Injury Date", "Prior Treatment", "X ray", "No Insurance", "Insurance plan name", "Insurance Policy Number", "Preferred Location", "Preferred Days", "Preferred Times", "Appointment Type", "Questions", "Created at"]
+
+      # data rows
+      @appointments.each do |appointment|
+        csv << [appointment.id, 
+            appointment.requestor_name, 
+            appointment.requestor_phone_number, 
+            appointment.requestor_email, 
+            appointment.requestor_time_to_reach, 
+            appointment.patient_name, 
+            appointment.patient_phone_number, 
+            appointment.address1, 
+            appointment.address2, 
+            appointment.city, 
+            appointment.us_state, 
+            appointment.zip, 
+            appointment.dob, 
+            appointment.gender, 
+            appointment.injury_location, 
+            appointment.injury_location_other, 
+            appointment.injury_date, 
+            appointment.prior_treatment, 
+            appointment.x_ray, 
+            appointment.no_insurance, 
+            appointment.insurance_plan_name, 
+            appointment.insurance_policy_number, 
+            appointment.preferred_location, 
+            appointment.preferred_days.join(" - "),
+            appointment.preferred_times.join(" - "),
+            appointment.appointment_type, 
+            appointment.questions, 
+            appointment.created_at]
+      end
+    end
+
+    # send it to the browsah
+    send_data csv_string,
+              :type => 'text/csv; charset=iso-8859-1; header=present',
+              :disposition => "attachment; filename=appointments.csv"
   end
 
   private
