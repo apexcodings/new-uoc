@@ -37,6 +37,12 @@ class AppointmentsController < ApplicationController
     redirect_to appointments_path
   end
 
+  def destroy_all
+    Appointment.delete_all
+    flash[:notice] = "All Appointments successfully deleted!"
+    redirect_to appointments_path
+  end
+
   def download
     @appointments = Appointment.all
 

@@ -69,7 +69,23 @@ RSpec.describe "Listing Appointments" do
     sign_in(user)
     visit appointments_url
 
-    expect(page).to have_link("Download all appointments")
+    expect(page).to have_link("Download All")
+  end
+
+  it "allows deleting all appointments" do
+    user = User.create!(user_attributes)
+    appt1 = Appointment.create!(appointment_attributes(requestor_first_name: "John"))
+    appt2 = Appointment.create!(appointment_attributes(requestor_last_name: "Mary"))
+
+    sign_in(user)
+    visit appointments_url
+
+    expect{
+      click_link("delete-all")
+    }.to change(Appointment, :count)
+
+    expect(page).not_to have_text(appt1.requestor_first_name)
+    expect(page).not_to have_text(appt2.requestor_first_name)
   end
 
 end

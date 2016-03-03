@@ -1,14 +1,22 @@
 <div class="main-content-wide">
 
   <h1><%= pluralize(@appointments.count, "Appointment Request") %></h1>
-  <%= link_to "Download all appointments", "/appointments/download" %>
+
+  <div class="admin-link-group group">
+    <%= link_to "Download All", appointments_download_path, class: "green-link" %>
+
+    <%= link_to "Delete All", appointments_path, 
+        method: :delete,
+        data: {confirm: "Are you sure you want to permanently delete all appointments?"},
+        class: "gray-link", id: "delete-all" %>
+  </div>
 
 <% @appointments.each do |appointment| %>
   <div class="appointment-list">
     <%= link_to "Delete", appointment, 
         method: :delete,
         data: {confirm: "Are you sure you want to permanently delete this appointment?"},
-         class: "orange-link", style: "float:right" %>
+         class: "gray-link", style: "float:right" %>
 
       <%= link_to "View Details", appointment, class: "green-link", style: "float:right" %>
     <p>
@@ -21,4 +29,14 @@
     </p>
   </div>
 <% end %>
+
+  <div class="admin-link-group group">
+    <%= link_to "Download All", appointments_download_path, class: "green-link" %>
+
+    <%= link_to "Delete All", appointments_path, 
+        method: :delete,
+        data: {confirm: "Are you sure you want to permanently delete all appointments?"},
+        class: "gray-link" %>
+  </div>
+
 </div>

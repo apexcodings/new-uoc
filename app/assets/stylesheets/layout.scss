@@ -325,7 +325,7 @@
   background-position: 0 0;
 }
 
-.green-link, .orange-link {
+.green-link, .orange-link, .gray-link {
   color: white;
   text-decoration: none;
   padding: .3em .5em;
@@ -337,6 +337,11 @@
 
 .orange-link {
   background-color: $orange;
+}
+
+.gray-link {
+  background-color: gray;
+  &:hover { background-color: $orange; }
 }
 
 .green-link-centered {

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :news_releases
 
   get 'appointments/download' => 'appointments#download'
+  delete "appointments" => "appointments#destroy_all"
+
   resources :appointments
   resources :contacts
 
