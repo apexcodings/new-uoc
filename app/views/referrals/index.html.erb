@@ -2,6 +2,7 @@
 
   <h1><%= pluralize(@referrals.count, "Referral") %></h1>
 
+  <% if @referrals.size > 0 %>
   <div class="admin-link-group group">
     <%= link_to "Download All", referrals_download_path, class: "green-link" %>
 
@@ -10,6 +11,7 @@
         data: {confirm: "Are you sure you want to permanently delete all Referrals?"},
         class: "gray-link", id: "delete-all" %>
   </div>
+  <% end %>
 
 <% @referrals.each do |referral| %>
   <div class="appointment-list">
@@ -33,6 +35,7 @@
   </div>
 <% end %>
 
+  <% if @referrals.size > 0 %>
   <div class="admin-link-group group">
     <%= link_to "Download All", referrals_download_path, class: "green-link" %>
 
@@ -41,4 +44,5 @@
         data: {confirm: "Are you sure you want to permanently delete all Referrals?"},
         class: "gray-link" %>
   </div>
+  <% end %>
 </div>

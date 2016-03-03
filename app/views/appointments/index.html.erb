@@ -2,6 +2,7 @@
 
   <h1><%= pluralize(@appointments.count, "Appointment Request") %></h1>
 
+  <% if @appointments.size > 0 %>
   <div class="admin-link-group group">
     <%= link_to "Download All", appointments_download_path, class: "green-link" %>
 
@@ -10,6 +11,7 @@
         data: {confirm: "Are you sure you want to permanently delete all appointments?"},
         class: "gray-link", id: "delete-all" %>
   </div>
+  <% end %>
 
 <% @appointments.each do |appointment| %>
   <div class="appointment-list">
@@ -30,6 +32,7 @@
   </div>
 <% end %>
 
+  <% if @appointments.size > 0 %>
   <div class="admin-link-group group">
     <%= link_to "Download All", appointments_download_path, class: "green-link" %>
 
@@ -38,5 +41,6 @@
         data: {confirm: "Are you sure you want to permanently delete all appointments?"},
         class: "gray-link" %>
   </div>
+  <% end %>
 
 </div>
