@@ -1,0 +1,125 @@
+<style>
+#map_wrapper {
+    width: 600px;
+    height: 300px;
+    margin-bottom: 1.5em;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+
+
+<div class="contact-address group">
+  <div class="address">
+    University Orthopedics Center<br>
+    Station Medical Center<br>
+    1505 9th Avenue<br>
+    Altoona, PA 16602
+  </div>
+  <div class="phone">
+    Phone: (814) 949-4050<br>
+    Fax: (814) 940-2026<br>
+  </div>
+</div>
+
+<hr noshade size="1">
+
+<div class="contact-address group">
+  <div class="address">
+    University Orthopedics Center<br>
+    3000 Fairway Drive<br>
+    Altoona, PA 16602
+  </div>
+  <div class="phone">
+    Phone: (814) 942-1166<br>
+    Fax: (814) 942‐6222<br>
+  </div>
+</div>
+
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
+
+
+<p>
+  <a href="http://local.google.com/local?ie=UTF8&q=1505%209th%20Avenue+Altoona,+PA+16602&om=1" class="green-link" target="_blank">Get directions</a>
+</p>
+
+
+
+<script type="text/javascript">
+jQuery(function($) {
+    // Asynchronously Load the map API 
+    var script = document.createElement('script');
+    script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+    document.body.appendChild(script);
+    });
+
+function initialize() {
+  var map;
+  var bounds = new google.maps.LatLngBounds();
+  var mapOptions = {
+    mapTypeId: 'roadmap'
+  };
+
+  // Display a map on the page
+  map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+  map.setTilt(45);
+
+  // Multiple Markers
+  var markers = [
+    ['Station Medical Center, Altoona', 40.51199,-78.4022326,15],
+    ['University Orthopedics Center, Altoona', 40.5559311,-78.4668586]
+      ];
+
+  // Info Window Content
+  var infoWindowContent = [
+    ['<div class="info_content">' +
+    '<h3>Station Medical Center</h3>' +
+    '<p></p>' +        '</div>'],
+    ['<div class="info_content">' +
+      '<h3>University Orthopedics Center</h3>' +
+      '<p></p>' +
+      '</div>']
+      ];
+
+  // Display multiple markers on a map
+  var infoWindow = new google.maps.InfoWindow(), marker, i;
+
+  // Loop through our array of markers & place each one on the map  
+  for( i = 0; i < markers.length; i++ ) {
+    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+    bounds.extend(position);
+    marker = new google.maps.Marker({
+      position: position,
+      map: map,
+      title: markers[i][0]
+      });
+
+// Allow each marker to have an info window    
+google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      return function() {
+      infoWindow.setContent(infoWindowContent[i][0]);
+      infoWindow.open(map, marker);
+      }
+      })(marker, i));
+
+// Automatically center the map fitting all markers on the screen
+map.fitBounds(bounds);
+}
+
+// Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+    this.setZoom(10);
+    google.maps.event.removeListener(boundsListener);
+    });
+
+}
+</script>
+
+
+

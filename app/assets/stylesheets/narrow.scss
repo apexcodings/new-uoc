@@ -343,6 +343,8 @@ and (max-device-width : 1024px)
       a { opacity: 1; }
     }
   }
+
+
 }
 
 
@@ -682,4 +684,15 @@ and (max-device-width : 1024px)
       a { opacity: 1; }
     }
   }
+
+
+// sports logos
+  .sports-logos-row {
+    img {
+      display: block;
+      margin: 1em auto;
+    }
+  }
+  #sl1, #sl2, #sl3, #sl4, #sl5, #sl6, #sl7, #sl8, #sl9, #sl10, #sl11, #sl12 
+    { margin: 1em auto; }
 }
