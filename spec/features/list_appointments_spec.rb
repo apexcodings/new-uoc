@@ -3,6 +3,9 @@ require 'support/attributes'
 require 'support/authentication'
 
 RSpec.describe "Listing Appointments" do
+
+  let(:admin) { User.create!(user_attributes) }
+
   it "allows only signed in users to list the appointments" do
     user = User.create!(user_attributes)
     appointment = Appointment.create!(appointment_attributes)
@@ -86,6 +89,18 @@ RSpec.describe "Listing Appointments" do
 
     expect(page).not_to have_text(appt1.requestor_first_name)
     expect(page).not_to have_text(appt2.requestor_first_name)
+  end
+
+  it "shows only unprocessed appointments" do
+    unprocessed = Appointment.create!(appointment_attributes)
+    processed = Appointment.create!(appointment_attributes(processed: true))
+
+    sign_in(admin)
+
+    visit appointments_path
+
+    expect(page).to have_text(unprocessed.requestor_email)
+    expect(page).not_to have_text(processed.requestor_email)
   end
 
 end

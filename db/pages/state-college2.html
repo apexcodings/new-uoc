@@ -12,46 +12,42 @@
 </style>
 
 
-
 <div class="contact-address group">
-  <div class="address">
-    University Orthopedics Center<br>
-    Station Medical Center<br>
-    1505 9th Avenue<br>
-    Altoona, PA 16602
-  </div>
-  <div class="phone">
-    Phone: (814) 949-4050<br>
-    Fax: (814) 940-2026<br>
-  </div>
+  <div class="address">University Orthopedics Center<br />
+    101 Regent Court<br />
+    State College, PA 16801</div>
+
+  <div class="phone">Phone: (814) 231-2101 or (800) 505-2101<br />
+    Fax: (814) 231-8569</div>
 </div>
 
-<hr noshade size="1">
-
+<hr noshade="noshade" size="1" />
 <div class="contact-address group">
-  <div class="address">
-    University Orthopedics Center<br>
-    3000 Fairway Drive<br>
-    Altoona, PA 16602
-  </div>
-  <div class="phone">
-    Phone: (814) 942-1166<br>
-    Fax: (814) 942‐6222<br>
-  </div>
+  <div class="address">UOC Surgical Services<br />
+    101 Regent Court<br />
+    State College, PA 16801</div>
+
+  <div class="phone">Phone: (814) 231-2101 or (800) 505-2101<br />
+    Fax: (814) 231-3529</div>
+</div>
+
+<hr noshade="noshade" size="1" />
+<div class="contact-address group">
+  <div class="address">University Orthopedics Spine Center<br />
+    476 Rolling Ridge Drive<br />
+    State College, PA 16801</div>
+
+  <div class="phone">Phone: (814) 231-2101 or (800) 505-2101</div>
 </div>
 
 <div id="map_wrapper">
-  <div id="map_canvas" class="mapping">
-    <!-- <img src="https://s3.amazonaws.com/com.uocproduction/images/altoona_map.png" alt=""> -->
-  </div>
+    <div id="map_canvas" class="mapping">
+      <img alt="" src="https://s3.amazonaws.com/com.uocproduction/images/state_college2.png" />
+    </div>
 </div>
 
 
-<p>
-  <a href="http://local.google.com/local?ie=UTF8&q=1505%209th%20Avenue+Altoona,+PA+16602&om=1" class="green-link" target="_blank">Get directions</a>
-</p>
-
-
+<p><a class="green-link" href="http://local.google.com/local?ie=UTF8&amp;q=101%20Regent%20Court+State%20College,+PA+16801&amp;om=1" target="_blank">Get directions</a></p>
 
 <script type="text/javascript">
 jQuery(function($) {
@@ -74,19 +70,14 @@ function initialize() {
 
   // Multiple Markers
   var markers = [
-    ['Station Medical Center, Altoona', 40.51199,-78.4022326,15],
-    ['University Orthopedics Center, Altoona', 40.5559311,-78.4668586]
+    ['University Orthopedics Center, State College', 40.785212,-77.8243992],
+    ['University Orthopedics Spine Center, State College', 40.78553,-77.8263567]
       ];
 
   // Info Window Content
   var infoWindowContent = [
-    ['<div class="info_content">' +
-    '<h3>Station Medical Center</h3>' +
-    '<p></p>' +        '</div>'],
-    ['<div class="info_content">' +
-      '<h3>University Orthopedics Center</h3>' +
-      '<p></p>' +
-      '</div>']
+    ['<div class="info_content">' + '<h3>University Orthopedics Center</h3>' + '</div>'],
+    ['<div class="info_content">' + '<h3>University Orthopedics Spine Center</h3>' + '</div>']
       ];
 
   // Display multiple markers on a map
@@ -116,12 +107,9 @@ map.fitBounds(bounds);
 
 // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
 var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-    this.setZoom(10);
+    this.setZoom(14);
     google.maps.event.removeListener(boundsListener);
     });
 
 }
 </script>
-
-
-

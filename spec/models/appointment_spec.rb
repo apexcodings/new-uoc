@@ -7,6 +7,11 @@ RSpec.describe Appointment do
     expect(appointment.valid?).to eq(true)
   end
 
+  it "is not processed by default" do
+    appointment = Appointment.new(appointment_attributes)
+    expect(appointment.processed?).to eq(false)
+  end
+
   it "requires a requestor first name" do
     appointment = Appointment.new(requestor_first_name: "")
     appointment.valid?
