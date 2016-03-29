@@ -7,10 +7,14 @@ class AppointmentsController < ApplicationController
 
   def index
     if current_user.workers_comp?
-      @appointments = Appointment.workers_comp
+      @appointments = Appointment.unprocessed.workers_comp
     else
-      @appointments = Appointment.order(created_at: :desc)
+      @appointments = Appointment.unprocessed
     end
+  end
+
+  def processed_appointments
+    @appointments = Appointment.processed
   end
 
   def show
@@ -40,6 +44,12 @@ class AppointmentsController < ApplicationController
   def destroy_all
     Appointment.delete_all
     flash[:notice] = "All Appointments successfully deleted!"
+    redirect_to appointments_path
+  end
+
+  def update
+    @appointment = Appointment.find(params[:id])
+    @appointment.update(processed: true)
     redirect_to appointments_path
   end
 

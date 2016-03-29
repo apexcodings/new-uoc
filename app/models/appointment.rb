@@ -26,6 +26,9 @@ class Appointment < ActiveRecord::Base
 
   scope :workers_comp, -> { Appointment.where(appointment_type: "Workers Compensation").order(created_at: :desc) }
 
+  scope :unprocessed, -> { Appointment.where(processed: false).order(created_at: :desc) }
+  scope :processed, -> { Appointment.where(processed: true).order(created_at: :desc) }
+
   def requestor_name
     "#{requestor_first_name} #{requestor_mi unless requestor_mi.nil?} #{requestor_last_name}"
   end

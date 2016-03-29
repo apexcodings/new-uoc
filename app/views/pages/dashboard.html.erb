@@ -20,10 +20,13 @@
     <ul>
       <li><%= link_to "Create News Release", new_news_release_path %></li>
     </ul>
-
   </li>
 
-  <li><%= link_to "Appointment Requests", appointments_path %></li>
+  <li><%= link_to "Appointment Requests", appointments_path %>
+    <ul>
+      <li><%= link_to "Processed Appointments", processed_appointments_path %></li>
+    </ul>
+  </li>
 
   <li><%= link_to "Referrals", referrals_path %></li>
 </ul>

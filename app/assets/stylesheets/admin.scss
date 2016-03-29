@@ -6,8 +6,17 @@
   border: 1px solid gray;
   width: 100%;
 
+  th { 
+    background-color: white;
+    text-align: left;
+    padding: .5em;
+    border-bottom: 1px solid black;
+  }
+
   tr {
     background-color: $odd;
+    &.even { background-color: $even; } 
+    &.odd { background-color: $odd; } 
 
     td {
       padding: .5em;
@@ -15,6 +24,7 @@
     }
   }
 }
+
 
 .expert-thumb { width: 60px; }
 

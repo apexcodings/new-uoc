@@ -1,0 +1,17 @@
+<div class="main-content-wide">
+  <h1>Processed Appointments</h1>
+
+  <table class="results">
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @appointments.each do |appointment| %>
+      <%= render "processed_appointment", appointment: appointment %>
+    <% end %>
+  </table>
+</div>

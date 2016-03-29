@@ -92,8 +92,8 @@ RSpec.describe "Listing Appointments" do
   end
 
   it "shows only unprocessed appointments" do
-    unprocessed = Appointment.create!(appointment_attributes)
-    processed = Appointment.create!(appointment_attributes(processed: true))
+    unprocessed = Appointment.create!(appointment_attributes(requestor_email: "new_appt@example.com"))
+    processed = Appointment.create!(appointment_attributes(processed: true, requestor_email: "processed@example.com"))
 
     sign_in(admin)
 

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :news_releases
 
   get 'appointments/download' => 'appointments#download'
+  get 'appointments/processed' => 'appointments#processed_appointments', as: :processed_appointments
   delete "appointments" => "appointments#destroy_all"
 
   resources :appointments
