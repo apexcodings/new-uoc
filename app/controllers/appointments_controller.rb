@@ -38,12 +38,17 @@ class AppointmentsController < ApplicationController
     @appointment = Appointment.find(params[:id])
     @appointment.destroy
     flash[:notice] = "Appointment successfully deleted!"
-    redirect_to appointments_path
+
+    if @appointment.processed?
+      redirect_to processed_appointments_path
+    else
+      redirect_to appointments_path
+    end
   end
 
   def destroy_all
-    Appointment.delete_all
-    flash[:notice] = "All Appointments successfully deleted!"
+    Appointment.unprocessed.delete_all
+    flash[:notice] = "All unprocessed Appointments successfully deleted!"
     redirect_to appointments_path
   end
 

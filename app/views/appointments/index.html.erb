@@ -4,7 +4,7 @@
 
   <% if @appointments.size > 0 %>
     <% unless current_user.workers_comp? %>
-  <div class="admin-link-group group">
+  <div id="top-utility-links" class="admin-link-group group">
     <%= link_to "Download All", appointments_download_path, class: "green-link" %>
 
     <%= link_to "Delete All", appointments_path, 
@@ -20,11 +20,13 @@
     <%= link_to "Delete", appointment, 
         method: :delete,
         data: {confirm: "Are you sure you want to permanently delete this appointment?"},
-         class: "gray-link", style: "float:right" %>
+        class: "gray-link", style: "float:right",
+        id: "appt-#{appointment.id}" %>
 
-       <%= link_to "Process", appointment_path(appointment), 
+       <%= link_to "Save", appointment_path(appointment), 
          method: :patch,
-         class: "green-link", style: "float:right" %>
+         class: "green-link", style: "float:right",
+         id: "save-appt-#{appointment.id}" %>
 
       <%= link_to "View Details", appointment, class: "green-link", style: "float:right" %>
     <p>
@@ -40,7 +42,7 @@
 
   <% if @appointments.size > 0 %>
     <% unless current_user.workers_comp? %>
-  <div class="admin-link-group group">
+  <div id="bottom-utility-links" class="admin-link-group group">
     <%= link_to "Download All", appointments_download_path, class: "green-link" %>
 
     <%= link_to "Delete All", appointments_path, 

@@ -169,4 +169,8 @@
 
 <p>
   <%= link_to "All Appointments", appointments_path, class: "green-link" %>
+
+  <%= link_to "Save this appointment", appointment_path(@appointment), 
+         method: :patch, class: "green-link" %>
+
 </p>

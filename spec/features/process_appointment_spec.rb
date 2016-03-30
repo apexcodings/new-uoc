@@ -10,12 +10,12 @@ RSpec.describe "Processing an appointment" do
     sign_in(admin)
   end
 
-  it "tags the appointment as processed and hides it from the appointment list" do
+  it "saves the appointment from the index page and hides it from the appointment list" do
     visit appointments_path
     expect(page).to have_text(appointment.requestor_email)
 
     expect {
-      click_link "Process"
+      click_link "Save"
     }.not_to change(Appointment, :count)
 
     expect(current_path).to eq(appointments_path)
@@ -29,9 +29,17 @@ RSpec.describe "Processing an appointment" do
     visit appointments_path
     expect(page).to have_text(appointment.requestor_email)
 
-    click_link "Process"
+    click_link "Save"
 
     visit processed_appointments_path
     expect(page).to have_text(appointment.requestor_email)
+  end
+
+  it "saves the appointment from the appointment show page" do
+    visit appointment_path(appointment)
+
+    click_link "Save this appointment"
+
+    expect(Appointment.processed).to include(appointment)
   end
 end
