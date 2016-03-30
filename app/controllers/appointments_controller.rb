@@ -63,7 +63,7 @@ class AppointmentsController < ApplicationController
 
     csv_string = CSV.generate do |csv|
       # header row
-      csv << ["ID",  "Requestor Name",  "Requestor Phone",  "Requestor Email",  "Time to reach",  "Patient Name",  "Patient Phone", "Address 1", "Address 2", "City", "State", "ZIP", "DOB", "Gender", "Injury Location", "Injury Location Other", "Injury Date", "Prior Treatment", "X ray", "No Insurance", "Insurance plan name", "Insurance Policy Number", "Preferred Location", "Preferred Days", "Preferred Times", "Appointment Type", "Questions", "Created at"]
+      csv << ["ID",  "Requestor Name",  "Requestor Phone",  "Requestor Email",  "Time to reach",  "Patient Name",  "Patient Phone", "Address 1", "Address 2", "City", "State", "ZIP", "DOB", "Gender", "Injury Location", "Injury Location Other", "Injury Date", "Prior Treatment", "X ray", "No Insurance", "Insurance plan name", "Insurance Policy Number", "Preferred Location", "Preferred Days", "Preferred Times", "Appointment Type", "Questions", "Created at", "Processed"]
 
       # data rows
       @appointments.each do |appointment|
@@ -94,7 +94,8 @@ class AppointmentsController < ApplicationController
             appointment.preferred_times.join(" - "),
             appointment.appointment_type, 
             appointment.questions, 
-            appointment.created_at]
+            appointment.created_at,
+            appointment.processed]
       end
     end
 
