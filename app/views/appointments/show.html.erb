@@ -168,9 +168,11 @@
 </div>
 
 <p>
+<% if @appointment.processed? %>
+  <%= link_to "All Saved Appointments", processed_appointments_path, class: "green-link" %>
+<% else %>
   <%= link_to "All Appointments", appointments_path, class: "green-link" %>
-
   <%= link_to "Save this appointment", appointment_path(@appointment), 
          method: :patch, class: "green-link" %>
-
+<% end %>
 </p>

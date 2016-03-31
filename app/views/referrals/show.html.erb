@@ -168,5 +168,11 @@
 </div>
 
 <p>
-  <%= link_to "All Referrals", referrals_path, class: "green-link" %>
+  <% if @referral.processed? %>
+    <%= link_to "All Saved Referrals", processed_referrals_path, class: "green-link" %>
+  <% else %>
+    <%= link_to "All Referrals", referrals_path, class: "green-link" %>
+    <%= link_to "Save this referral", referral_path(@referral), 
+         method: :patch, class: "green-link" %>
+  <% end %>
 </p>

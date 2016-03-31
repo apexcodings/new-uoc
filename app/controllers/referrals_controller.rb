@@ -6,7 +6,12 @@ class ReferralsController < ApplicationController
   before_action :require_admin, except: [:create]
 
   def index
-    @referrals = Referral.order(created_at: :desc)
+    #@referrals = Referral.order(created_at: :desc)
+    @referrals = Referral.unprocessed
+  end
+
+  def processed_referrals
+    @referrals = Referral.processed
   end
 
   def show
@@ -36,6 +41,12 @@ class ReferralsController < ApplicationController
   def destroy_all
     Referral.delete_all
     flash[:notice] = "All Referrals successfully deleted!"
+    redirect_to referrals_path
+  end
+
+  def update
+    @referral = Referral.find(params[:id])
+    @referral.update(processed: true)
     redirect_to referrals_path
   end
 

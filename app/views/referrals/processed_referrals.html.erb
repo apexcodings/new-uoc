@@ -1,0 +1,17 @@
+<div class="main-content-wide">
+  <h1>Saved Referrals</h1>
+
+  <table class="results">
+    <tr>
+      <th>Date</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+    <% @referrals.each do |referral| %>
+      <%= render "processed_referral", referral: referral %>
+    <% end %>
+  </table>
+</div>

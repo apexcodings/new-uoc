@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :reviews
 
   get 'referrals/download' => 'referrals#download'
+  get 'referrals/processed' => 'referrals#processed_referrals', as: :processed_referrals
   delete "referrals" => "referrals#destroy_all"
   resources :referrals
 

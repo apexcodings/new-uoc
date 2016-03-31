@@ -7,6 +7,11 @@ RSpec.describe Referral do
     expect(referral.valid?).to eq(true)
   end
 
+  it "is not processed by default" do
+    referral = Referral.new(referral_attributes)
+    expect(referral.processed?).to eq(false)
+  end
+
   it "requires an email" do
     referral = Referral.new(email: "")
     referral.valid?

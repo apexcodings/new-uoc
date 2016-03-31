@@ -1,6 +1,9 @@
 class Referral < ActiveRecord::Base
   validates :email, :patient_name, :dob, :insurance, presence: true
 
+  scope :unprocessed, -> { Referral.where(processed: false).order(created_at: :desc) }
+  scope :processed, -> { Referral.where(processed: true).order(created_at: :desc) }
+
   PHYSICIANS = [
     "Gregory M. Bailey",
     "Bradley A. Barter",

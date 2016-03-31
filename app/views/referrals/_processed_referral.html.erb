@@ -1,0 +1,12 @@
+<tr class="<%= cycle("odd", "even") -%>">
+  <td><%= referral.created_at %></td>
+  <td><%= referral.name %></td>
+  <td><%= referral.email %></td>
+  <td><%= link_to "View Details", referral %></td>
+  <td>
+    <%= link_to "Delete", referral, 
+        method: :delete,
+        data: {confirm: "Are you sure you want to permanently delete this referral?"}, 
+        id: "delete-appt-#{referral.id}" %>
+  </td>
+</tr>
