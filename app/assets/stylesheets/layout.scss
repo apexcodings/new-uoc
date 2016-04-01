@@ -113,6 +113,7 @@
     h3 {
       font-size: 2em;
       color: $dark-blue;
+      text-align: right;
     }
 
     a {
@@ -130,6 +131,10 @@
     }
     a.pay-bill {
       background-image: image-url("pay.png");
+      margin-left: 1em;
+    }
+    a.referring {
+      background-image: image-url("referring.png");
       margin-left: 1em;
     }
   }
