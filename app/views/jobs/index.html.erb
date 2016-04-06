@@ -1,0 +1,22 @@
+<div class="main-content-wide">
+
+  <h1>Job Listings</h1>
+
+  <table class="results">
+  <% @jobs.each do |job| %>
+      <tr>
+      <td><%= job.name %></td>
+      <td><%= job.description %></td>
+      <td><%= link_to "Edit", edit_job_path(job) %></td>
+      <td><%= link_to "Remove", job, 
+        method: :delete,
+        data: {confirm: "Are you sure you want to permanently delete this job listing?"} %>
+    </td>
+    </tr>
+  <% end %>
+  </table>
+
+  <div style="margin-top: 1em;">
+    <%= link_to "Create New Job", new_job_path, class: "green-link" %>
+  </div>
+</div>

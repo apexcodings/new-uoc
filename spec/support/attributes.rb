@@ -147,5 +147,11 @@ def referral_attributes(overrides = {})
   }.merge(overrides)
 end
 
+def job_attributes(overrides = {})
+  {
+    name: "Full Time LPN",
+    description: "in State College offices for clinical support role"
+  }.merge(overrides)
+end
 
 
