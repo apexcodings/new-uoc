@@ -1,3 +1,4 @@
+<% unless @jobs.empty? %>
 <h2>Job Openings</h2>
 
 <ol style="padding-left: 1.5em;">
@@ -5,3 +6,4 @@
   <li><b><%= job.name %></b> <%= job.description %></li>
 <% end %>
 </ol>
+<% end %>

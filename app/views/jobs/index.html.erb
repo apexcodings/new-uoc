@@ -2,6 +2,12 @@
 
   <h1>Job Listings</h1>
 
+  <% if @jobs.empty? %>
+  <p>
+    No Job Listings
+  </p>
+  <% else %>
+
   <table class="results">
   <% @jobs.each do |job| %>
       <tr>
@@ -15,6 +21,8 @@
     </tr>
   <% end %>
   </table>
+
+  <% end %>
 
   <div style="margin-top: 1em;">
     <%= link_to "Create New Job", new_job_path, class: "green-link" %>
