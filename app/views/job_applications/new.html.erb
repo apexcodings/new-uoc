@@ -6,6 +6,8 @@
 
 <div class="main-content">
 
+  <div class="page-container">
+
 <h1 class="map-page roboto">Application for Employment</h1>
 
 <h2>
@@ -513,10 +515,87 @@
   </div>
 
 
+  <h2>Professional References</h2> 
+
+  <div class="form-row group">
+  <label>List three (3) professional references.</label>
+    <div class="small-row">
+      <%= f.label :last_name, "Name" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :last_name, "Relationship to Applicant" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Address" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Telephone" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <div class="form-row group">
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+<h2>Please read and sign</h2>
+
+<p>
+  I certify that all of the information I have supplied on this application is correct to the best of my knowledge and I understand that omission or deliberate misinformation will disqualify my application and, if hired, would serve as grounds for dismissal.
+</p>
+<p>
+  I consent to have University Orthopedic Center contact the people listed on this application for references and authorize these individuals to provide truthful information regarding my qualifications for employment and previous work. I also agree to wave liability against persons named as references, provided the information they supplied is honest, factual and given without malice.
+</p>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :last_name, "Signature" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row with-gutter">
+      <%= f.label :last_name, "Date" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+
 
   <p>
   <%= f.submit "Submit" %>
   </p>
 <% end %>
 
+  </div>
 </div>
