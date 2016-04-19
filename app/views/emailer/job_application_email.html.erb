@@ -1,0 +1,29 @@
+<h2>New Job Application from UOC website</h2>
+
+<p>
+  Date: <%= @job_application.created_at %>
+</p>
+
+<p>
+A new Job Application has been created on the UOC site.
+</p>
+
+<p>
+  Job: <%= @job_application.job.name %>
+</p>
+
+<p>
+Name: <%= @job_application.first_name %> <%= @job_application.last_name %><br>
+Phone: <%= @job_application.phone %><br>
+Email: <%= @job_application.email %>
+</p>
+
+<p>
+Please click on the link below to view the Job Application details.<br> 
+You will be required to log into the UOC site with an administrator account.
+</p>
+
+<p>
+<%= link_to "Click here to view the Job Application", 
+      "https://www.uoc.com/job_applications/#{@job_application.id}" %>
+</p>

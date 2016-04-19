@@ -1,5 +1,6 @@
 class AddFieldsToJobApplication < ActiveRecord::Migration
   def change
+    add_column :job_applications, :mi, :string
     add_column :job_applications, :nickname, :string
     add_column :job_applications, :address, :string
     add_column :job_applications, :apt, :string

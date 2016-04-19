@@ -39,4 +39,12 @@ class Emailer < ApplicationMailer
           to:       "appts@uoc.com",
           subject:  "New Referral from UOC website")
   end
+
+  def job_application_email(job_application)
+    @job_application = job_application
+    mail( from:     job_application.email,
+          to:       "cesare@maryandferrari.com",
+          #to:       "appts@uoc.com",
+          subject:  "New Job Application from UOC website")
+  end
 end

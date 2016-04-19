@@ -115,6 +115,7 @@ ActiveRecord::Schema.define(version: 20160419130220) do
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
     t.integer  "job_id"
+    t.string   "mi"
     t.string   "nickname"
     t.string   "address"
     t.string   "apt"
