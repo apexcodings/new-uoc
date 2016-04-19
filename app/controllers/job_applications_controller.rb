@@ -31,6 +31,13 @@ class JobApplicationsController < ApplicationController
     end
   end
 
+  def destroy
+    @job_application = JobApplication.find(params[:id])
+    @job_application.destroy
+    flash[:alert] = "Job application removed."
+    redirect_to job_applications_url
+  end
+
   private
 
   def job_application_params
