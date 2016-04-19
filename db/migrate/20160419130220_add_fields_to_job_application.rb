@@ -78,7 +78,7 @@ class AddFieldsToJobApplication < ActiveRecord::Migration
     add_column :job_applications, :learn_employee_explanation, :string
     add_column :job_applications, :learn_other, :boolean
     add_column :job_applications, :learn_other_explanation, :string
-    add_column :job_applications, :previously_worked, :string
+    add_column :job_applications, :previously_worked, :boolean
     add_column :job_applications, :previously_worked_explanation, :string
     add_column :job_applications, :reference1_name, :string
     add_column :job_applications, :reference1_relationship, :string

@@ -84,10 +84,10 @@
   <div class="form-row group">
     <div class="half-row">
       <label>Available for work</label>
-      <%= check_box_tag :full_time, true %>
+      <%= f.check_box :full_time %>
       <%= f.label :full_time, "Full time", class: "inline" %>
     
-      <%= f.radio_button :part_time, true %>
+      <%= f.check_box :part_time %>
       <%= f.label :part_time, "Part time", class: "inline" %>
     </div>
 
@@ -430,10 +430,10 @@
   <div class="form-row group">
     <label>Have you ever been convicted of a crime other than a traffic violation? A conviction of a crime will not necessary be a bar to employment.</label>
     <div class="half-row">
-      <%= f.radio_button :email, true %>
+      <%= f.radio_button :convicted, true %>
       <%= f.label :convicted, "Yes", class: "inline" %>
     
-      <%= f.radio_button :email, false %>
+      <%= f.radio_button :convicted, false %>
       <%= f.label :convicted, "No", class: "inline" %>
     </div>
   </div>
@@ -451,7 +451,7 @@
 <div class="form-row group">
   <div class="double-small-row">
     <label>&nbsp;</label>
-    <%= check_box_tag :learn_ad, true %>
+    <%= f.check_box :learn_ad %>
     <%= f.label :learn_ad, "Job Advertisement", class: "inline" %>
   </div>
   <div class="half-row">
@@ -465,7 +465,7 @@
 <div class="form-row group">
   <div class="double-small-row">
     <label>&nbsp;</label>
-    <%= check_box_tag :learn_employee, true %>
+    <%= f.check_box :learn_employee %>
     <%= f.label :learn_employee, "Employee Referral", class: "inline" %>
   </div>
   <div class="half-row">
@@ -478,7 +478,7 @@
 <div class="form-row group">
   <div class="double-small-row">
     <label>&nbsp;</label>
-    <%= check_box_tag :learn_other, true %>
+    <%= f.check_box :learn_other %>
     <%= f.label :learn_other, "Other", class: "inline" %>
   </div>
   <div class="half-row">

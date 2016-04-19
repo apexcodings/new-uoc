@@ -17,7 +17,7 @@ RSpec.describe "Creating a job application" do
     expect(current_path).to eq(new_job_application_path)
 
     fill_in "Last Name", with: "Pegasus"
-    fill_in "Phone", with: "555-666-7777"
+    fill_in "job_application_phone", with: "555-666-7777"
     fill_in "Email", with: "applicant@example.com"
 
     expect {

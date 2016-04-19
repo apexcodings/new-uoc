@@ -29,4 +29,11 @@
   .odd { background-color: $odd; }
   .even { background-color: $even; }
 
+  th {
+    font-weight: normal;
+    font-style: italic;
+    font-size: .8em;
+    text-align: left;
+  }
+
 }

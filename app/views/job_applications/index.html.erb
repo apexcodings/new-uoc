@@ -1,0 +1,25 @@
+<div class="main-content-wide">
+  <h1><%= pluralize(@job_applications.count, "Job Application") %></h1>
+
+  <% @job_applications.each do |job_application| %>
+    <div class="appointment-list">
+    <%= link_to "Delete", job_application, 
+      method: :delete,
+      data: {confirm: "Are you sure you want to permanently delete this application?"},
+      class: "gray-link", style: "float:right",
+      id: "appl-#{job_application.id}" %>
+
+    <%= link_to "View Details", job_application, 
+      id: "appl-details-#{job_application.id}", class: "green-link", style: "float:right" %>
+      <p>
+      Date: <%= job_application.created_at %><br>
+      Job: <%= job_application.job.name %>
+    </p>
+      <p>
+      First Name: <%= job_application.first_name %><br>
+      Last Name: <%= job_application.last_name %><br>
+      Email: <%= mail_to job_application.email, job_application.email %>
+    </p>
+    </div>
+  <% end %>
+</div>

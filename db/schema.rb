@@ -193,7 +193,7 @@ ActiveRecord::Schema.define(version: 20160419130220) do
     t.string   "learn_employee_explanation"
     t.boolean  "learn_other"
     t.string   "learn_other_explanation"
-    t.string   "previously_worked"
+    t.boolean  "previously_worked"
     t.string   "previously_worked_explanation"
     t.string   "reference1_name"
     t.string   "reference1_relationship"

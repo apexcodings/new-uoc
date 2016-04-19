@@ -1,0 +1,436 @@
+<div class="main-content-wide">
+  <h1>Job Application</h1>
+  <p>
+  <%= @job.name %> - 
+  <%= @job.description %> 
+  </p>
+<p>
+  Date: <%= @job_application.created_at %>
+</p>
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>
+      Last Name
+    </td>
+    <td>
+      <%= @job_application.last_name %>
+    </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>
+      First Name
+    </td>
+    <td>
+      <%= @job_application.first_name %>
+    </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Middle Initial</td>
+    <td>
+      <%= @job_application.mi %>
+    </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Nickname</td>
+    <td>
+      <%= @job_application.nickname %>
+    </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>
+      Daytime Phone
+    </td>
+    <td>
+      <%= @job_application.phone %>
+    </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>
+      Email
+    </td>
+    <td>
+       <%= mail_to @job_application.email  %>
+    </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Address</td>
+    <td>
+      <%= @job_application.address %>
+    </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td> Apt # </td>
+    <td> <%= @job_application.apt %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>City</td>
+    <td> <%= @job_application.city %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>State</td>
+    <td> <%= @job_application.us_state %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Zip</td>
+    <td> <%= @job_application.zip %> </td>
+  </tr>
+</table>
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td colspan="2">Available for work</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Full Time</td>
+    <td> <%= @job_application.full_time %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Part Time</td>
+    <td> <%= @job_application.part_time %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Available for work as of</td>
+    <td> <%= @job_application.available_as_of %> </td>
+  </tr>
+</table>
+
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td colspan="2">In case of emergency, contact</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Name</td>
+    <td> <%= @job_application.emergency_name %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Day Phone</td>
+    <td> <%= @job_application.emergency_day_phone %> </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Night Phone</td>
+    <td> <%= @job_application.emergency_night_phone %> </td>
+  </tr>
+</table>
+
+<h2>Work History</h2>
+
+<table class="appointment-data">
+  <tr>
+    <th>1. Name of Employer</th>
+    <th>Immediate Supervisor</th>
+    <th>Telephone</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.employer1 %></td>
+    <td><%= @job_application.supervisor1 %> </td>
+    <td><%= @job_application.employer1_phone %></td>
+  </tr>
+  <tr>
+    <th>From: Mo/Yr</th>
+    <th>To: Mo/Yr</th>
+    <th>Final Salary</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.from1 %> </td>
+    <td><%= @job_application.to1 %> </td>
+    <td><%= @job_application.salary1 %> </td>
+  </tr>
+  <tr>
+    <th>Address</th>
+    <th>Job Title and Duties</th>
+    <th>Reason for Leaving</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.employer_address1 %></td>
+    <td><%= @job_application.title1 %></td>
+    <td><%= @job_application.reason1 %></td>
+  </tr>
+</table>
+
+
+<table class="appointment-data">
+  <tr>
+    <th>2. Name of Employer</th>
+    <th>Immediate Supervisor</th>
+    <th>Telephone</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.employer2 %></td>
+    <td><%= @job_application.supervisor2 %> </td>
+    <td><%= @job_application.employer2_phone %></td>
+  </tr>
+  <tr>
+    <th>From: Mo/Yr</th>
+    <th>To: Mo/Yr</th>
+    <th>Final Salary</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.from2 %> </td>
+    <td><%= @job_application.to2 %> </td>
+    <td><%= @job_application.salary2 %> </td>
+  </tr>
+  <tr>
+    <th>Address</th>
+    <th>Job Title and Duties</th>
+    <th>Reason for Leaving</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.employer_address2 %></td>
+    <td><%= @job_application.title2 %></td>
+    <td><%= @job_application.reason2 %></td>
+  </tr>
+</table>
+
+
+<table class="appointment-data">
+  <tr>
+    <th>3. Name of Employer</th>
+    <th>Immediate Supervisor</th>
+    <th>Telephone</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.employer3 %></td>
+    <td><%= @job_application.supervisor3 %> </td>
+    <td><%= @job_application.employer3_phone %></td>
+  </tr>
+  <tr>
+    <th>From: Mo/Yr</th>
+    <th>To: Mo/Yr</th>
+    <th>Final Salary</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.from3 %> </td>
+    <td><%= @job_application.to3 %> </td>
+    <td><%= @job_application.salary3 %> </td>
+  </tr>
+  <tr>
+    <th>Address</th>
+    <th>Job Title and Duties</th>
+    <th>Reason for Leaving</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.employer_address3 %></td>
+    <td><%= @job_application.title3 %></td>
+    <td><%= @job_application.reason3 %></td>
+  </tr>
+</table>
+
+
+<h2>Education</h2>
+
+
+<table class="appointment-data">
+  <tr>
+    <th># of Years</th>
+    <th>School</th>
+    <th>Degree/Major</th>
+  </tr>
+  <tr>
+    <td colspan="3">High School</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.high_school_years %></td>
+    <td><%= @job_application.high_school_name %> </td>
+    <td><%= @job_application.high_school_degree %></td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Vo-Tech</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.tech_years %></td>
+    <td><%= @job_application.tech_name %> </td>
+    <td><%= @job_application.tech_degree %></td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Trade School</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.trade_years %></td>
+    <td><%= @job_application.trade_name %> </td>
+    <td><%= @job_application.trade_degree %></td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Business School</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.business_years %></td>
+    <td><%= @job_application.business_name %> </td>
+    <td><%= @job_application.business_degree %></td>
+  </tr>
+
+  <tr>
+    <td colspan="3">College/University</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.college_years %></td>
+    <td><%= @job_application.college_name %> </td>
+    <td><%= @job_application.college_degree %></td>
+  </tr>
+
+  <tr>
+    <td colspan="3">Graduate School</td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.graduate_years %></td>
+    <td><%= @job_application.graduate_name %> </td>
+    <td><%= @job_application.graduate_degree %></td>
+  </tr>
+</table>
+
+
+<h2>Professional Certifications</h2>
+
+<table class="appointment-data">
+  <tr>
+    <th>Area of Certification</th>
+    <th>Issuing State</th>
+    <th>Date Issued</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.cert1 %></td>
+    <td><%= @job_application.cert_state1 %> </td>
+    <td><%= @job_application.cert_date1 %></td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.cert2 %></td>
+    <td><%= @job_application.cert_state2 %> </td>
+    <td><%= @job_application.cert_date2 %></td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.cert3 %></td>
+    <td><%= @job_application.cert_state3 %> </td>
+    <td><%= @job_application.cert_date3 %></td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.cert4 %></td>
+    <td><%= @job_application.cert_state4 %> </td>
+    <td><%= @job_application.cert_date4 %></td>
+  </tr>
+</table>
+
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Convicted of a crime</td>
+    <td> <%= @job_application.convicted %> </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Explanation</td>
+    <td> <%= @job_application.convicted_explanation %> </td>
+  </tr>
+</table>
+
+
+<h2>How did you learn about the position</h2>
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Job Advertisement</td>
+    <td> 
+      <%= @job_application.learn_ad %><br>
+      <%= @job_application.learn_ad_explanation %>
+    </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Employee Referral</td>
+    <td> 
+      <%= @job_application.learn_employee %> <br>
+      <%= @job_application.learn_employee_explanation %> 
+    </td>
+  </tr>
+
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Other</td>
+    <td>
+      <%= @job_application.learn_other %><br>
+      <%= @job_application.learn_other_explanation %>
+    </td>
+  </tr>
+</table>
+
+
+<h2>Previously worked at University Orthopedic Center?</h2>
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Previously worked</td>
+    <td> 
+      <%= @job_application.previously_worked %><br>
+      <%= @job_application.previously_worked_explanation %>
+    </td>
+  </tr>
+</table>
+
+
+
+<h2>Professional References</h2>
+
+<table class="appointment-data">
+  <tr>
+    <th>Name</th>
+    <th>Relationship to Applicant</th>
+    <th>Address</th>
+    <th>Telephone</th>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.reference1_name %></td>
+    <td><%= @job_application.reference1_relationship %> </td>
+    <td><%= @job_application.reference1_address %></td>
+    <td><%= @job_application.reference1_phone %></td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.reference2_name %></td>
+    <td><%= @job_application.reference2_relationship %> </td>
+    <td><%= @job_application.reference2_address %></td>
+    <td><%= @job_application.reference2_phone %></td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td><%= @job_application.reference3_name %></td>
+    <td><%= @job_application.reference3_relationship %> </td>
+    <td><%= @job_application.reference3_address %></td>
+    <td><%= @job_application.reference3_phone %></td>
+  </tr>
+</table>
+
+
+
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Signature</td>
+    <td> 
+      <%= @job_application.signature %>
+    </td>
+  </tr>
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Date</td>
+    <td> 
+      <%= @job_application.sig_date %>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
