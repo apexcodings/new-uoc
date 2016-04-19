@@ -12,4 +12,13 @@ RSpec.describe Job do
     job.valid?
     expect(job.errors[:name].any?).to eq(true)
   end
+
+  it "may have many applications" do
+    job = Job.new(name: "LPT")
+    job_application1 = job.job_applications.new(last_name: "Wayne")
+    job_application2 = job.job_applications.new(last_name: "Pierre")
+
+    expect(job.job_applications).to include(job_application1)
+    expect(job.job_applications).to include(job_application2)
+  end
 end

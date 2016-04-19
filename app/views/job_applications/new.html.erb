@@ -1,0 +1,522 @@
+<nav class="side-navigation">
+  <% @page = Page.find_by(slug: "careers") %>
+  <%= side_header_for @page %>
+</nav>
+
+
+<div class="main-content">
+
+<h1 class="map-page roboto">Application for Employment</h1>
+
+<h2>
+<%= @job.name %> - <%= @job.description %>
+</h2>
+
+<%= form_for @job_application do |f| %>
+<%= render "shared/errors", object: @job_application %>
+
+  <%= hidden_field_tag :job_id, @job.id %>
+
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "Last Name" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :first_name, "First Name" %>
+      <%= f.text_field :first_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Middle Initial" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :last_name, "Nickname" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row with-gutter">
+      <%= f.label :phone, "Daytime Phone" %>
+      <%= f.text_field :phone %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :email, "Email" %>
+      <%= f.text_field :email %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :email, "Address" %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="small-row with-gutter">
+      <%= f.label :last_name, "Apt. #" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :email, "City" %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="small-row with-gutter">
+      <%= f.label :last_name, "State" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Zip" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <div class="form-row group">
+    <div class="half-row">
+      <label>Available for work</label>
+      <%= f.radio_button :email, true %>
+      <%= f.label :prior_treatment, "Full time", class: "inline" %>
+    
+      <%= f.radio_button :email, true %>
+      <%= f.label :prior_treatment, "Part time", class: "inline" %>
+    </div>
+
+    <div class="double-small-row">
+      <%= f.label :last_name, "Available for work as of" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <label>In case of emergency, contact</label>
+    <div class="half-row">
+      <%= f.label :last_name, "Name" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "Day Phone" %>
+      <%= f.text_field :last_name %>
+    </div>
+
+    <div class="double-small-row">
+      <%= f.label :last_name, "Night Phone" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <h2>Work History</h2>
+  <p>
+  List below present and past employment, beginning with your most recent.<br>
+  (Include Military Experience)
+  </p>
+
+  <fieldset class="history">
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "1. Name of Employer" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :last_name, "Immediate Supervisor" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Telephone" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="small-row">
+      <%= f.label :last_name, "From: Mo/Yr" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "To: Mo/Yr" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Final Salary" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "Address" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :last_name, "Job Title and Duties" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :last_name, "Reason for Leaving" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+  </fieldset>
+
+
+
+
+  <fieldset class="history">
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "2. Name of Employer" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :last_name, "Immediate Supervisor" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Telephone" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="small-row">
+      <%= f.label :last_name, "From: Mo/Yr" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "To: Mo/Yr" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Final Salary" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "Address" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :last_name, "Job Title and Duties" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :last_name, "Reason for Leaving" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+  </fieldset>
+
+
+
+
+
+  <fieldset class="history">
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "3. Name of Employer" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :last_name, "Immediate Supervisor" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Telephone" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="small-row">
+      <%= f.label :last_name, "From: Mo/Yr" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "To: Mo/Yr" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Final Salary" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "Address" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="half-row with-gutter">
+      <%= f.label :last_name, "Job Title and Duties" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="half-row">
+      <%= f.label :last_name, "Reason for Leaving" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+  </fieldset>
+
+
+
+  <h2>Education</h2>
+
+  <div class="form-row group">
+    <label>High School</label>
+    <div class="small-row">
+      <%= f.label :last_name, "# of Years" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :last_name, "School" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.label :last_name, "Degree/Major" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <label>Vo-Tech</label>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <div class="form-row group">
+    <label>Trade School</label>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+
+  <div class="form-row group">
+    <label>Business School</label>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <label>College/University</label>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <label>Graduate School</label>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <h2>Professional Certifications</h2>
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.label :last_name, "Area of Certification" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Issuing State" %>
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.label :last_name, "Date Issued" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+  <div class="form-row group">
+    <div class="double-small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+    <div class="small-row">
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+
+
+
+<h2>&nbsp;</h2>
+
+  <div class="form-row group">
+    <label>Have you ever been convicted of a crime other than a traffic violation? A conviction of a crime will not necessary be a bar to employment.</label>
+    <div class="half-row">
+      <%= f.radio_button :email, true %>
+      <%= f.label :prior_treatment, "Yes", class: "inline" %>
+    
+      <%= f.radio_button :email, false %>
+      <%= f.label :prior_treatment, "No", class: "inline" %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <label>If yes, please explain:</label> 
+      <%= f.text_field :last_name %>
+  </div>
+
+
+<h2>&nbsp;</h2>
+<div class="form-row group">
+  <label>How did you learn about University Orthopedic Center and the position?</label>
+</div>
+<div class="form-row group">
+  <div class="double-small-row">
+    <label>&nbsp;</label>
+    <%= check_box_tag :email, true %>
+    <%= f.label :last_name, "Job Advertisement", class: "inline" %>
+  </div>
+  <div class="half-row">
+    <%= f.label :last_name, "Identify publication or other media" %>
+      <%= f.text_field :last_name %>
+  </div>
+</div>
+
+
+ 
+<div class="form-row group">
+  <div class="double-small-row">
+    <label>&nbsp;</label>
+    <%= check_box_tag :email, true %>
+    <%= f.label :last_name, "Employee Referral", class: "inline" %>
+  </div>
+  <div class="half-row">
+    <%= f.label :last_name, "Employee's name" %>
+      <%= f.text_field :last_name %>
+  </div>
+</div>
+
+
+
+ 
+<div class="form-row group">
+  <div class="double-small-row">
+    <label>&nbsp;</label>
+    <%= check_box_tag :email, true %>
+    <%= f.label :last_name, "Other", class: "inline" %>
+  </div>
+  <div class="half-row">
+    <%= f.label :last_name, "Specify" %>
+      <%= f.text_field :last_name %>
+  </div>
+</div>
+
+
+<h2>&nbsp;</h2>
+
+  <div class="form-row group">
+    <label>Have you previously worked at University Orthopedic Center?</label>
+    <div class="small-row">
+      <label>&nbsp;</label>
+      <%= f.radio_button :email, true %>
+      <%= f.label :prior_treatment, "Yes", class: "inline" %>
+    </div>
+    <div class="half-row">
+      <%= f.label :last_name, "Specify dates and position" %>
+      <%= f.text_field :last_name %>
+    </div>
+  </div>
+
+  <div class="form-row group">
+    <div class="small-row">
+      <%= f.radio_button :email, false %>
+      <%= f.label :prior_treatment, "No", class: "inline" %>
+    </div>
+  </div>
+
+
+
+  <p>
+  <%= f.submit "Submit" %>
+  </p>
+<% end %>
+
+</div>

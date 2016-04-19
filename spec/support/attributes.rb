@@ -154,4 +154,12 @@ def job_attributes(overrides = {})
   }.merge(overrides)
 end
 
+def job_application_attributes(overrides = {})
+  {
+    first_name: "John",
+    last_name: "Wayne",
+    phone: "814 375 5569",
+    email: "applicant@example.com"
+  }.merge(overrides)
+end
 
