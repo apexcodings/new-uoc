@@ -44,6 +44,7 @@
 
   <div class="edit-form-row group">
     <%= f.label :photo, "Photo" %>
+    <span class="small">(File should be 175 x 219 pixels at 72dpi)</span>
     <%= f.file_field :photo %>
     <%= admin_image_for_expert(@expert) %>
     <%#= image_tag @expert.photo.url, style: "margin-top:1em;display:block;" %>

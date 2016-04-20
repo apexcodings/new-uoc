@@ -20,7 +20,7 @@ class Expert < ActiveRecord::Base
 
   validates_attachment :photo,
     :content_type => { :content_type => ['image/jpeg', 'image/png'] },
-    :size => { :less_than => 1.megabyte }
+    :size => { :less_than => 0.1.megabytes }
 
   #scope :by_category, ->(category) { where(category: category).order(:position) }
   scope :by_category, ->(category) do 
