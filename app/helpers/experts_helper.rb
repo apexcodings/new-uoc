@@ -39,4 +39,18 @@ module ExpertsHelper
       link_to(image_tag(expert.image_url), expert)
     end
   end
+
+  def appointment_button_for(expert)
+    categories = %w[physicians physical_therapists]
+    if categories.include? expert.category
+      link_to "Make an appointment", page_path("appointments"), class: "green-link for-expert"
+    end
+  end
+
+
+
+
+
+
+
 end

@@ -21,6 +21,10 @@
         <li><b>Location:</b> <%= expert.location.html_safe %></li>
         <% unless expert.category == "physicians_assistants" %>
         <li><b>Specialty:</b> <%= expert.specialty.html_safe %></li>
+
+        <%= appointment_button_for(expert) %>
+
+
         <% end %>
       </ul>
     </div>
