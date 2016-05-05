@@ -11,7 +11,6 @@ CKEDITOR.editorConfig = function( config )
   //
   //
 
-  config.stylesSet = 'my_styles';
 
   /* Filebrowser routes */
   // The location of an external file browser, that should be launched when "Browse Server" button is pressed.
@@ -59,4 +58,16 @@ CKEDITOR.editorConfig = function( config )
     { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
   ];
+
+
+
+  config.stylesSet = [
+    { name: 'H3 Accordion', element: 'h3', attributes: { 'class': 'accordion'} }
+    //{ name: 'My Custom Inline', element: 'span', attributes: {'class': 'mine'} }
+  ];
+
+  //config.stylesSet = 'my_styles';
+
 };
+
+

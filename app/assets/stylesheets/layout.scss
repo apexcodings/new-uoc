@@ -469,6 +469,10 @@
 
   .page-container { 
     width: 97%;
+
+    h3.accordion {
+      cursor: pointer;
+    }
   }
 
   h1 {

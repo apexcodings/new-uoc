@@ -1,11 +1,8 @@
-//$(function() {
-   //$('#search-btn').click(function(event) {
+$(function() {
+  $(".page-container h3.accordion").next().hide();
 
-     //var position = $(this).position();
-     //var searchBox = $('#search-div');
-
-     //searchBox.toggle();
-
-     //event.preventDefault();
-   //});
-//});
+  $(".page-container h3.accordion").click(function() {
+    $(this).next().slideToggle();
+    //$(this).toggleClass('info-open');
+  });
+});
