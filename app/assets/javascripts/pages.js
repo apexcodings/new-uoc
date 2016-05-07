@@ -3,6 +3,6 @@ $(function() {
 
   $(".page-container h3.accordion").click(function() {
     $(this).next().slideToggle();
-    //$(this).toggleClass('info-open');
+    $(this).toggleClass('accordion-open');
   });
 });

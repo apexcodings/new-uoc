@@ -472,7 +472,44 @@
 
     h3.accordion {
       cursor: pointer;
+      text-indent: .5em;
+
+      // Gray gradient
+      background: image-url("down_arrow.png"), -webkit-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("down_arrow.png"), -o-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("down_arrow.png"), -moz-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("down_arrow.png"), linear-gradient($expert-drop-light, $expert-drop-dark);
+
+      background-repeat: no-repeat;
+      background-position: 98% 50%, 0 0;
+
+      &:hover { 
+        color: white;
+        background-color: $light-blue;
+        background-image: image-url("down_arrow.png");
+        background-repeat: no-repeat;
+        background-position: 98% 50%, 0 0;
+      }
     }
+
+    h3.accordion-open {
+      background: image-url("up_arrow.png"), -webkit-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("up_arrow.png"), -o-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("up_arrow.png"), -moz-linear-gradient($expert-drop-light, $expert-drop-dark);
+      background: image-url("up_arrow.png"), linear-gradient($expert-drop-light, $expert-drop-dark);
+      background-repeat: no-repeat;
+      background-position: 98% 50%, 0 0;
+
+      &:hover { 
+        background-color: $light-blue;
+        background-image: image-url("up_arrow.png");
+        background-repeat: no-repeat;
+        background-position: 98% 50%, 0 0;
+      }
+     }
+
+
+
   }
 
   h1 {
