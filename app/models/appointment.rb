@@ -9,6 +9,10 @@ class Appointment < ActiveRecord::Base
             :patient_phone,
             presence: true
 
+# to prevent spam with hidden field
+  attr_accessor :town
+  validates :town, absence: true
+
   INJURY_LOCATIONS = %w(Arm Foot Hand Hip Knee Shoulder Spine) 
   validates :injury_location, 
             inclusion: { in: INJURY_LOCATIONS }, 

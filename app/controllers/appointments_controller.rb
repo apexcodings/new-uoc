@@ -108,6 +108,7 @@ class AppointmentsController < ApplicationController
   private
 
   def appointment_params
+    # hidden field for spam :town
     params.require(:appointment).permit(:requestor_first_name, 
         :requestor_last_name, :requestor_mi, :requestor_phone_prefix, 
         :requestor_phone, :requestor_email, :requestor_time_to_reach,
@@ -118,6 +119,6 @@ class AppointmentsController < ApplicationController
         :x_ray, :no_insurance, :insurance_plan_name, :insurance_policy_number,
         :preferred_location, :preferred_day_mo, :preferred_day_tu, 
         :preferred_day_we, :preferred_day_th, :preferred_day_fr,
-        :preferred_time_am, :preferred_time_pm, :appointment_type, :questions )
+        :preferred_time_am, :preferred_time_pm, :appointment_type, :questions, :town )
   end
 end

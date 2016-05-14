@@ -1,6 +1,10 @@
 class Referral < ActiveRecord::Base
   validates :email, :patient_name, :dob, :insurance, presence: true
 
+# to prevent spam with hidden field
+  attr_accessor :address
+  validates :address, absence: true
+
   scope :unprocessed, -> { Referral.where(processed: false).order(created_at: :desc) }
   scope :processed, -> { Referral.where(processed: true).order(created_at: :desc) }
 

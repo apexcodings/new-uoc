@@ -14,6 +14,7 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :email, :phone, :message)
+   # spam check parameter (:address)
+    params.require(:contact).permit(:first_name, :last_name, :email, :phone, :message, :address)
   end
 end

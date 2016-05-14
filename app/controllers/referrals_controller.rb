@@ -103,11 +103,12 @@ class ReferralsController < ApplicationController
   private
 
   def referral_params
+    # hidden field for spam :address
     params.require(:referral).permit( :practice, :physician, :name, :phone,
       :email, :fax, :patient_name, :dob, :patient_phone, :patient_phone_alt,
       :patient_email, :employer, :insurance, :diagnosis, :prior_surgery,
       :workers_comp, :bone_scan, :bone_scan_where, :ct_scan, :ct_scan_where,
       :mri, :mri_where, :emg, :emg_where, :x_rays, :x_rays_where, :cast,
-      :cast_where, :preferred_physician, :preferred_office, :time_to_be_seen)
+      :cast_where, :preferred_physician, :preferred_office, :time_to_be_seen, :address)
   end
 end
