@@ -102,3 +102,122 @@ rails g migration AddFieldsToJobApplication nickname address apt city us_state z
 :reference3_phone,
 :signature,
 :sig_date
+
+
+
+
+
+
+--------------------
+Appointments page
+
+
+
+Mini:uoc cesareferrari$ curl -kvI https://www.uoc.com/pages/appointments
+* Adding handle: conn: 0x7fc49a804000
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fc49a804000) send_pipe: 1, recv_pipe: 0
+* About to connect() to www.uoc.com port 443 (#0)
+*   Trying 54.243.124.9...
+* Connected to www.uoc.com (54.243.124.9) port 443 (#0)
+* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+* Server certificate: www.uoc.com
+* Server certificate: thawte EV SSL CA - G3
+* Server certificate: thawte Primary Root CA
+> HEAD /pages/appointments HTTP/1.1
+> User-Agent: curl/7.30.0
+> Host: www.uoc.com
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+* Server Cowboy is not blacklisted
+< Server: Cowboy
+Server: Cowboy
+< Connection: keep-alive
+Connection: keep-alive
+< Date: Thu, 12 May 2016 14:15:20 GMT
+Date: Thu, 12 May 2016 14:15:20 GMT
+< X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+< X-Xss-Protection: 1; mode=block
+X-Xss-Protection: 1; mode=block
+< X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+< Content-Type: text/html; charset=utf-8
+Content-Type: text/html; charset=utf-8
+< Etag: W/"1a70dee7788cdcb7eb5bf4addda8ab3a"
+Etag: W/"1a70dee7788cdcb7eb5bf4addda8ab3a"
+< Cache-Control: max-age=0, private, must-revalidate
+Cache-Control: max-age=0, private, must-revalidate
+< Set-Cookie: _uoc_session=VDRWSGlFd3JoMUZ2Y1diTzBadlBySnU3dXg1U3BTZ1F0ZXFCVElibUt5eC9oMkkxV3RWQWtBNVhSY21oSE5OZDZ0TGFDc3ZBZW01MDM0WTYveXNMUmxnZUpaeHcyaVBxb2lBWTdzRGlQeVRCYU0yY3RrUUFna3pONjFNTThGc00wOUpxTlJXMHBhQytUTHk3cHBYUEtBPT0tLWNHTDdad2xUZ205TmRQSEwzZytacWc9PQ%3D%3D--7bf8e1f28cbaa2b2cd612e8d66ef4b85c0c36332; path=/; HttpOnly
+Set-Cookie: _uoc_session=VDRWSGlFd3JoMUZ2Y1diTzBadlBySnU3dXg1U3BTZ1F0ZXFCVElibUt5eC9oMkkxV3RWQWtBNVhSY21oSE5OZDZ0TGFDc3ZBZW01MDM0WTYveXNMUmxnZUpaeHcyaVBxb2lBWTdzRGlQeVRCYU0yY3RrUUFna3pONjFNTThGc00wOUpxTlJXMHBhQytUTHk3cHBYUEtBPT0tLWNHTDdad2xUZ205TmRQSEwzZytacWc9PQ%3D%3D--7bf8e1f28cbaa2b2cd612e8d66ef4b85c0c36332; path=/; HttpOnly
+< X-Request-Id: 3953ebf6-acf0-452d-b498-6aa98c1a5897
+X-Request-Id: 3953ebf6-acf0-452d-b498-6aa98c1a5897
+< X-Runtime: 0.078872
+X-Runtime: 0.078872
+< Via: 1.1 vegur
+Via: 1.1 vegur
+
+< 
+* Connection #0 to host www.uoc.com left intact
+
+
+
+-----------------------------------------------------------
+Referring physicians page
+
+
+Mini:uoc cesareferrari$ curl -kvI https://www.uoc.com/pages/referring-physicians
+* Adding handle: conn: 0x7fc832004000
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* - Conn 0 (0x7fc832004000) send_pipe: 1, recv_pipe: 0
+* About to connect() to www.uoc.com port 443 (#0)
+*   Trying 54.243.93.159...
+* Connected to www.uoc.com (54.243.93.159) port 443 (#0)
+* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+* Server certificate: www.uoc.com
+* Server certificate: thawte EV SSL CA - G3
+* Server certificate: thawte Primary Root CA
+> HEAD /pages/referring-physicians HTTP/1.1
+> User-Agent: curl/7.30.0
+> Host: www.uoc.com
+> Accept: */*
+> 
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+* Server Cowboy is not blacklisted
+< Server: Cowboy
+Server: Cowboy
+< Connection: keep-alive
+Connection: keep-alive
+< Date: Thu, 12 May 2016 14:17:29 GMT
+Date: Thu, 12 May 2016 14:17:29 GMT
+< X-Frame-Options: SAMEORIGIN
+X-Frame-Options: SAMEORIGIN
+< X-Xss-Protection: 1; mode=block
+X-Xss-Protection: 1; mode=block
+< X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+< Content-Type: text/html; charset=utf-8
+Content-Type: text/html; charset=utf-8
+< Etag: W/"804b6e900026413885e192cb36da6a4e"
+Etag: W/"804b6e900026413885e192cb36da6a4e"
+< Cache-Control: max-age=0, private, must-revalidate
+Cache-Control: max-age=0, private, must-revalidate
+< Set-Cookie: _uoc_session=N3FwVUErUW96c3J0Q29HZHVBc3JXeEVVZDJjV0UvK1ZpUjRBb3lBMGJlL2JUZWhqenRlaXBJbG9DZmlSWkhGS2V5S1hESkI3ODZsKzJNQ0pUbHZieWN1a0JCd0orcTRpU1dmY3h1NEpuOXIrL1JndnNBMFNoWDcwMVQ4QjduUDVQZ0VFUzBDdzJGWkFWM2FWN0lxeFd3PT0tLWZQeUc2UlBaamErMjR2dE1NN3Nxbmc9PQ%3D%3D--f50b04eb544f54a5cedb3e7e70d4669c25415220; path=/; HttpOnly
+Set-Cookie: _uoc_session=N3FwVUErUW96c3J0Q29HZHVBc3JXeEVVZDJjV0UvK1ZpUjRBb3lBMGJlL2JUZWhqenRlaXBJbG9DZmlSWkhGS2V5S1hESkI3ODZsKzJNQ0pUbHZieWN1a0JCd0orcTRpU1dmY3h1NEpuOXIrL1JndnNBMFNoWDcwMVQ4QjduUDVQZ0VFUzBDdzJGWkFWM2FWN0lxeFd3PT0tLWZQeUc2UlBaamErMjR2dE1NN3Nxbmc9PQ%3D%3D--f50b04eb544f54a5cedb3e7e70d4669c25415220; path=/; HttpOnly
+< X-Request-Id: 7765a7a0-6754-48d6-a6d0-6273e3805c52
+X-Request-Id: 7765a7a0-6754-48d6-a6d0-6273e3805c52
+< X-Runtime: 0.114576
+X-Runtime: 0.114576
+< Via: 1.1 vegur
+Via: 1.1 vegur
+
+< 
+* Connection #0 to host www.uoc.com left intact
+

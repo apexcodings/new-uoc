@@ -12,7 +12,8 @@ class Page < ActiveRecord::Base
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml", 
     :path => ":attachment/:id/:style.:extension",
-    :url => ":s3_domain_url"
+    :url => ":s3_domain_url",
+    :s3_protocol => :https
 
   validates_attachment :main_image,
     :content_type => { :content_type => ['image/jpeg', 'image/png'] },
