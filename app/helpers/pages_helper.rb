@@ -48,8 +48,12 @@ module PagesHelper
   end
 
   def sublink(page)
-    link_to_unless_current page.label, page_path(page.slug), class: "sub-page" do
-      link_to page.label, "#", class: "sub-page-active"
+    if page.redirect_url?
+      link_to page.label, page.redirect_url, class: 'sub-page'
+    else
+      link_to_unless_current page.label, page_path(page.slug), class: "sub-page" do
+        link_to page.label, "#", class: "sub-page-active"
+      end
     end
   end
 
