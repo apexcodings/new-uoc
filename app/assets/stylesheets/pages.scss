@@ -45,3 +45,18 @@ ul.why-nextmd {
 // hidden fields for spam
 .form_address { display: none }
 .town { display: none }
+
+.with-children {
+  background-image: url('right_menu_arrow.png');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  &:hover {
+    background-image: url('down_menu_arrow.png');
+  }
+}
+
+.with-children-open {
+  background-image: url('down_menu_arrow.png');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+}

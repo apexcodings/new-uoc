@@ -40,6 +40,10 @@ module PagesHelper
   def link(page)
     if page.redirect_url?
       link_to page.label, page.redirect_url
+    elsif page.has_children?
+      link_to_unless_current page.label, page_path(page.slug), class: "with-children" do
+        link_to page.label, "#", class: "side-active with-children-open"
+      end
     else
       link_to_unless_current page.label, page_path(page.slug) do
         link_to page.label, "#", class: "side-active"
