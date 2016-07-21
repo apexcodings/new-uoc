@@ -7,7 +7,8 @@ class Expert < ActiveRecord::Base
                  clinical_researchers: "Clinical Researchers", 
                  workers_comp: "Worker's Compensation Representative", 
                  athletic_trainers: "Athletic Trainers",
-                 joint_replacement: "Joint Replacement Coordinator"
+                 joint_replacement: "Joint Replacement Coordinator",
+                 neuropsychologist: "Neuropsychologist"
                  }
                   #management: "Management"
 
