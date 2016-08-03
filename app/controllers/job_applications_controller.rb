@@ -22,7 +22,7 @@ class JobApplicationsController < ApplicationController
     @job_application = @job.job_applications.new(job_application_params)
 
     if @job_application.save
-      #Emailer.job_application_email(@job_application).deliver_now
+      Emailer.job_application_email(@job_application).deliver_now
       flash[:notice] = "Job Application received correctly!"
       redirect_to page_url("thank-you")
     else
