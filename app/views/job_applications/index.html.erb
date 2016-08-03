@@ -13,7 +13,7 @@
       id: "appl-details-#{job_application.id}", class: "green-link", style: "float:right" %>
       <p>
       Date: <%= job_application.created_at %><br>
-      Job: <%= job_application.job.name %>
+      Job: <%= job_application.job.name if job_application.job %>
     </p>
       <p>
       First Name: <%= job_application.first_name %><br>
