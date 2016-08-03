@@ -18,7 +18,9 @@
 <%= form_for @job_application do |f| %>
 <%= render "shared/errors", object: @job_application %>
 
+<% if @job %>
   <%= hidden_field_tag :job_id, @job.id %>
+<% end %>
 
 
   <div class="form-row group">
@@ -58,6 +60,7 @@
     <div class="half-row">
       <%= f.label :address, "Address" %>
       <%= f.text_field :address %>
+      <%= f.text_field :physical_address, class: "form_address"  %>
     </div>
     <div class="small-row with-gutter">
       <%= f.label :apt, "Apt. #" %>

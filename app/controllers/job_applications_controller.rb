@@ -22,7 +22,7 @@ class JobApplicationsController < ApplicationController
     @job_application = @job.job_applications.new(job_application_params)
 
     if @job_application.save
-      Emailer.job_application_email(@job_application).deliver_now
+      #Emailer.job_application_email(@job_application).deliver_now
       flash[:notice] = "Job Application received correctly!"
       redirect_to page_url("thank-you")
     else
@@ -41,7 +41,7 @@ class JobApplicationsController < ApplicationController
   private
 
   def job_application_params
-    params.require(:job_application).permit(:first_name, :last_name, :phone, :email, 
+    params.require(:job_application).permit(:job_id, :first_name, :last_name, :phone, :email, :physical_address,
             :nickname, :address, :apt, :city, :us_state, :zip, 
             :full_time, :part_time, :available_as_of, :emergency_name, 
             :emergency_day_phone, :emergency_night_phone, :employer1, 
