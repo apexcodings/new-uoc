@@ -1,20 +1,25 @@
 <nav class="site-navigation"> 
-  <ul id="nav" class="roboto">
-    <li><%= top_link_for("Specialties", @page) %></li>
-    <li><%= top_link_for("Services", @page) %></li>
-    <li><%= top_link_for("Our Experts", @page) %></li>
-    <li><%= top_link_for("Patient Resources", @page) %>
-      <%#= link_to_unless_current "News", news_releases_path do
-        link_to "News", "#", class: "top-active"
-      end %>
-    </li>
-    <li><%= top_link_for("Contact Us", @page) %></li>
-    <li>&nbsp;&nbsp;
-    
-    <%= link_to "Patient Portal", "https://www.nextmd.com/Enroll/TermsAndConditions.aspx?enterpriseid=d5b89990-fea1-4bf2-8320-ef7da717cb44", id: "portal", target: "_blank" %>
-    
-    <%#= link_to "Patient Portal", page_path('what-is-nextmd'), id: "portal" %></li>
+  <div class="group">
+  
+    <ul id="nav" class="roboto">
+      <li><%= top_link_for("Specialties", @page) %></li>
+      <li><%= top_link_for("Services", @page) %></li>
+      <li><%= top_link_for("Our Experts", @page) %></li>
+      <li><%= top_link_for("Patient Resources", @page) %></li>
+      <li><%= top_link_for("Contact Us", @page) %></li>
+    </ul>
 
-    <%#= link_to(image_tag("lens.png"), "#", id: "search-btn") %>
-  </ul>
+    <ul id="patient-login" class="roboto">
+      <li><%= link_to "Patient Log In", "#" %></li>
+    </ul>
+
+  </div>
+
+  <%= render 'layouts/login_box' %>
 </nav>
+
+<%#= link_to "Patient Portal", "https://www.nextmd.com/Enroll/TermsAndConditions.aspx?enterpriseid=d5b89990-fea1-4bf2-8320-ef7da717cb44", id: "portal", target: "_blank" %>
+
+<%#= link_to(image_tag("lens.png"), "#", id: "search-btn") %>
+
+

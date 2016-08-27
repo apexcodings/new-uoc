@@ -142,15 +142,13 @@
 
 .site-navigation {
   position: relative;
-  background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-  background: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-  background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
-  background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  z-index: 4000;
   margin-top: 1em;
 
   ul {
     list-style: none;
     text-align: center;
+
     li {
       display: inline-block;
       padding: 0.75em 0;
@@ -189,8 +187,65 @@
 
     }
   }
+
+  ul#nav {
+    float: left;
+    width: 737px;
+    background: -webkit-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+    background: -o-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+    background: -moz-linear-gradient($nav-gradient-light, $nav-gradient-dark);
+    background: linear-gradient($nav-gradient-light, $nav-gradient-dark);
+  }
+
+  ul#patient-login {
+    float: right;
+    background-color: $dark-blue;
+    width: 200px;
+
+    li {
+      padding: 0;
+
+      a {
+        width: 200px;
+        padding: 0.75em 0;
+        display: block;
+        &:hover { background-color: $light-blue; }
+      }
+    }
+  }
 }
 
+
+#login-box {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: $dark-blue;
+  color: white;
+  display: none;
+  position: absolute;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.login-box-col {
+  box-sizing: border-box;
+  width: 33%;
+  border-right: 1px solid white;
+  float: left;
+  margin-right: .5em;
+  padding: 1em 1em 2em;
+  margin: 1em 0;
+
+  &:last-child { border-right: none; }
+
+  h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+
+  p {
+    margin-top: 2em;
+  }
+}
 
 // HOME PAGE
 
