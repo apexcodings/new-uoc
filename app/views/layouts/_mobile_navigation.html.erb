@@ -2,7 +2,9 @@
   <div class="group">
     <%= link_to "Site Menu", "#", id: "mobile-trigger" %>
 
-    <%= link_to "Patient Portal", 
+    <%= link_to "Patient Log In", "#", id: "mobile-portal" %>
+
+    <%#= link_to "Patient Portal", 
       "https://www.nextmd.com/Login/Login.aspx", 
       id: "mobile-portal", 
       target: "_blank" %>
@@ -33,6 +35,8 @@
 
 </nav>
 
+
+<%= render "layouts/mobile_login_box" %>
 
 
 <script>

@@ -209,7 +209,19 @@
         width: 200px;
         padding: 0.75em 0;
         display: block;
-        &:hover { background-color: $light-blue; }
+
+        background: image-url("portal_arrow.png"), -webkit-linear-gradient($portal-gradient-light, $dark-blue);
+        background: image-url("portal_arrow.png"), -moz-linear-gradient($portal-gradient-light, $dark-blue);
+        background: image-url("portal_arrow.png"), linear-gradient($portal-gradient-light, $dark-blue);
+        background-repeat: no-repeat;
+        background-position: 15px 16px, 0 0;
+
+        &:hover { 
+          background: image-url("portal_arrow.png");
+          background-color: $dark-blue;
+          background-repeat: no-repeat;
+          background-position: 15px 16px;
+        }
       }
     }
   }

@@ -1,0 +1,31 @@
+<div id="mobile-login-box">
+  <ul>
+    <li>
+    <div class="group">
+    <span class="role">New Users</span> 
+      <%= link_to "Create an Account", "https://www.nextmd.com/ud2/Enroll/TermsAndConditions.aspx?enterpriseid=d5b89990-fea1-4bf2-8320-ef7da717cb44", target: "_new" %>
+    </div>
+  </li>
+  <li>
+    <div class="group">
+    <span class="role">New Users with Token</span>
+      <%= link_to "Create an Account", "https://www.nextmd.com/ud2/Login/Login.aspx", target: "_new" %>
+    </div>
+  </li>
+  <li>
+    <div class="group">
+  <span class="role">Existing Users</span>
+      <%= link_to "Sign In", "https://www.nextmd.com/ud2/Enroll/TermsAndConditions.aspx?enterpriseid=d5b89990-fea1-4bf2-8320-ef7da717cb44", target: "_new" %>
+    </div>
+  </li>
+  </ul>
+</div>
+
+
+<script>
+$(function() {
+    $('#mobile-portal').click(function() {
+      $('#mobile-login-box').toggle();
+    });
+})
+</script>

@@ -61,6 +61,9 @@ and (max-device-width : 1024px)
       #mobile-portal { 
         float: right; 
       }
+
+
+
     }
 
     ul#mobile-nav {
@@ -696,3 +699,39 @@ and (max-device-width : 1024px)
   #sl1, #sl2, #sl3, #sl4, #sl5, #sl6, #sl7, #sl8, #sl9, #sl10, #sl11, #sl12 
     { margin: 1em auto; }
 }
+
+
+// mobile navigation Patient Portal
+#mobile-login-box {
+  background-color: $dark-blue;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  padding: 1em;
+  display: none;
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: .5em 0;
+      border-bottom: 1px solid white;
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  .role { 
+    float: left; 
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  a {
+    float: right;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+  }
+}
+
