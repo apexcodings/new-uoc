@@ -1,23 +1,30 @@
 <div id="login-box">
   <div class="login-box-col">
     <h3>New Users</h3>
-    <p>
+    <p class="login-text">
+      I don't have a UOC Patient Portal Account.
+    </p>
+    <p class="green-button">
       <%= link_to "Create an Account", "https://www.nextmd.com/ud2/Enroll/TermsAndConditions.aspx?enterpriseid=d5b89990-fea1-4bf2-8320-ef7da717cb44", class: "green-link", target: "_new" %>
     </p>
   </div>
 
-  
-
   <div class="login-box-col">
     <h3>New Users with Token</h3>
-    <p>
+    <p class="login-text">
+      I have been issued an enrollment Token and/or a Temporary Username and Password.
+    </p>
+    <p class="green-button">
       <%= link_to "Create an Account", "https://www.nextmd.com/ud2/Login/Login.aspx", class: "green-link", target: "_new" %>
     </p>
   </div>
 
   <div class="login-box-col">
     <h3>Existing Users</h3>
-    <p>
+    <p class="login-text">
+      I already have a UOC Patient Portal Account.
+    </p>
+    <p class="green-button">
       <%= link_to "Sign In", "https://www.nextmd.com/ud2/Enroll/TermsAndConditions.aspx?enterpriseid=d5b89990-fea1-4bf2-8320-ef7da717cb44", class: "green-link", target: "_new" %>
     </p>
   </div>
