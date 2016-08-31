@@ -289,29 +289,40 @@ p {
   margin-right: .5em;
   padding: 1em 1em 2em;
   margin: 1em 0;
+  position: relative;
+  height: 200px;
 }
-/* line 250, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 252, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .login-box-col:last-child {
   border-right: none;
 }
-/* line 252, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 254, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .login-box-col h3 {
   font-weight: bold;
   font-size: 1.3em;
 }
-/* line 257, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
-.login-box-col p {
-  margin-top: 2em;
+/* line 259, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+.login-box-col p.login-text {
+  font-size: .9em;
+}
+/* line 263, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+.login-box-col p.green-button {
+  position: absolute;
+  bottom: 0;
+}
+/* line 266, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+.login-box-col p.green-button a {
+  margin-left: 0;
 }
 
-/* line 264, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 274, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .feature {
   width: 940px;
   height: 356px;
   margin-bottom: 18px;
 }
 
-/* line 270, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 280, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col {
   width: 301px;
   float: left;
@@ -322,12 +333,12 @@ p {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-/* line 280, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 290, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col:last-child {
   margin-right: 0;
   float: right;
 }
-/* line 285, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 295, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col h2 {
   color: white;
   font-size: 1.5em;
@@ -335,7 +346,7 @@ p {
   padding-top: 10px;
   margin-bottom: 30px;
 }
-/* line 293, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 303, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col p {
   color: white;
   text-align: center;
@@ -344,19 +355,19 @@ p {
   margin-bottom: 0;
   font-size: 1.1em;
 }
-/* line 303, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 313, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col ul.hurts {
   list-style: none;
   float: left;
   width: 50%;
   padding: .2em;
 }
-/* line 309, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 319, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col ul.hurts li {
   display: block;
   padding: .4em;
 }
-/* line 313, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 323, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col ul.hurts li a {
   display: block;
   padding: .5em;
@@ -364,12 +375,12 @@ p {
   text-decoration: none;
   background-color: #495d87;
 }
-/* line 319, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 329, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-col ul.hurts li a:hover {
   background-color: #c79536;
 }
 
-/* line 326, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 336, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .box-with-photo {
   height: 410px;
   position: relative;
@@ -377,7 +388,7 @@ p {
   background-repeat: no-repeat;
   background-position: 0 0, 0 0;
 }
-/* line 334, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 344, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .box-with-photo .box-within {
   width: 100%;
   height: 120px;
@@ -386,70 +397,70 @@ p {
   bottom: 0;
   left: 0;
 }
-/* line 343, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 353, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .box-with-photo .box-within p {
   margin-top: 0;
   padding-top: .5em;
   padding-bottom: .5em;
 }
 
-/* line 351, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 361, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .box-empty {
   background: none;
 }
 
-/* line 355, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 365, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-boxes {
   margin-bottom: 2em;
   overflow: hidden;
 }
 
-/* line 360, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 370, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box {
   background-color: #1c3569;
   margin-bottom: .5em;
 }
-/* line 364, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 374, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box h2 {
   margin-bottom: .5em;
 }
-/* line 368, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 378, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box fieldset {
   width: 90%;
   margin: 0 auto;
 }
-/* line 371, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 381, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box fieldset input[type="text"], .home-box fieldset input[type="password"] {
   width: 100%;
   margin-bottom: .5em;
   display: block;
 }
-/* line 376, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 386, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box fieldset input[type="submit"] {
   display: block;
   margin: 0 auto 1em;
 }
-/* line 382, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 392, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box p {
   color: white;
   font-size: 1.1em;
   padding: 1.95em 1em 1em;
 }
-/* line 387, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 397, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .home-box .tight {
   margin-top: 0;
   padding-top: 1.8em;
   font-size: .95em;
 }
 
-/* line 394, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 404, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .with-header {
   background-image: url(/assets/pentagon_large-ddf98a3caf86e8412e16965f1d8f1ec1ec164428582a18bcb38cd8e113be4038.png);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 
-/* line 400, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 410, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .green-link, .orange-link, .gray-link {
   color: white;
   text-decoration: none;
@@ -458,26 +469,26 @@ p {
   background-color: #2e5e20;
   border: 1px solid white;
 }
-/* line 407, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 417, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .green-link:hover, .orange-link:hover, .gray-link:hover {
   background-color: #1c3569;
 }
 
-/* line 410, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 420, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .orange-link {
   background-color: #f26c4f;
 }
 
-/* line 414, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 424, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .gray-link {
   background-color: gray;
 }
-/* line 416, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 426, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .gray-link:hover {
   background-color: #f26c4f;
 }
 
-/* line 419, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 429, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .green-link-centered {
   margin: .3em auto 1em;
   text-align: center;
@@ -485,12 +496,12 @@ p {
   font-size: .9em;
 }
 
-/* line 426, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 436, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .edit-link {
   background-color: #f26c4f;
 }
 
-/* line 428, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 438, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .white-link {
   display: block;
   padding-bottom: 1em;
@@ -498,23 +509,23 @@ p {
   color: white;
   text-decoration: none;
 }
-/* line 434, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 444, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .white-link:hover {
   color: #c79536;
 }
 
-/* line 438, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 448, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-content {
   margin-top: 10px;
   background-color: white;
 }
 
-/* line 447, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 457, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .for-home {
   background-color: transparent;
 }
 
-/* line 451, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 461, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation {
   width: 220px;
   float: left;
@@ -523,7 +534,7 @@ p {
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-/* line 460, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 470, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation h2 {
   color: white;
   font-size: 1.625em;
@@ -532,17 +543,17 @@ p {
   margin-bottom: 31px;
   line-height: 1em;
 }
-/* line 468, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 478, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation h2 a {
   color: white;
   text-decoration: none;
 }
-/* line 474, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 484, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul {
   list-style: none;
   padding-bottom: 1em;
 }
-/* line 479, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 489, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a {
   display: block;
   padding: .5em .75em;
@@ -550,49 +561,49 @@ p {
   text-decoration: none;
   font-size: .80em;
 }
-/* line 485, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 495, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a:hover {
   background-color: #495d87;
 }
-/* line 486, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 496, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a.side-active {
   background-color: #495d87;
 }
-/* line 488, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 498, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a.sub-page {
   background-color: #495d87;
   text-indent: 1em;
 }
-/* line 491, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 501, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a.sub-page:hover {
   background-color: #c79536;
 }
-/* line 492, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 502, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a.sub-page:before {
   content: "• ";
 }
-/* line 495, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 505, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a.sub-page-active {
   background-color: #c79536;
   text-indent: 1em;
 }
-/* line 498, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 508, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation ul li a.sub-page-active:before {
   content: "• ";
 }
-/* line 504, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 514, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation .news-side-list {
   margin-top: .5em;
 }
-/* line 506, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 516, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation .news-side-list li {
   margin-bottom: .5em;
 }
-/* line 509, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 519, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation .news-side-list li a {
   padding-left: 2em;
 }
-/* line 513, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 523, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .side-navigation .recent-news-title {
   color: white;
   margin: 0;
@@ -600,27 +611,27 @@ p {
   font-size: .9em;
 }
 
-/* line 521, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 531, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .two-line {
   background-image: url(/assets/side_2_line-e4e43aed55f1c204598a4ed2dcbe1babe365b2e316de2116a023fbba7a8273df.png);
 }
-/* line 523, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 533, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .two-line h2 {
   margin-top: 6px;
   margin-bottom: 35px;
 }
 
-/* line 530, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 540, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content {
   width: 700px;
   min-height: 800px;
   float: right;
 }
-/* line 537, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 547, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .page-container {
   width: 97%;
 }
-/* line 540, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 550, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .page-container h3.accordion {
   cursor: pointer;
   text-indent: .5em;
@@ -631,7 +642,7 @@ p {
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 553, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 563, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .page-container h3.accordion:hover {
   color: white;
   background-color: #495d87;
@@ -639,7 +650,7 @@ p {
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 562, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 572, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .page-container h3.accordion-open {
   background: url(/assets/up_arrow-ab3d05bca7b57c529fba47a13d7ae9dff300aeadf6f404e733cd5d31605d5d58.png), -webkit-linear-gradient(#cdcdcd, #a6a6a6);
   background: url(/assets/up_arrow-ab3d05bca7b57c529fba47a13d7ae9dff300aeadf6f404e733cd5d31605d5d58.png), -o-linear-gradient(#cdcdcd, #a6a6a6);
@@ -648,14 +659,14 @@ p {
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 570, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 580, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .page-container h3.accordion-open:hover {
   background-color: #495d87;
   background-image: url(/assets/up_arrow-ab3d05bca7b57c529fba47a13d7ae9dff300aeadf6f404e733cd5d31605d5d58.png);
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 582, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 592, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content h1 {
   color: white;
   font-size: 2em;
@@ -663,7 +674,7 @@ p {
   padding: .1em .5em;
   margin-bottom: .8em;
 }
-/* line 590, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 600, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content h2 {
   color: #1c3569;
   font-family: 'Roboto Slab', serif;
@@ -673,7 +684,7 @@ p {
   margin: 1em 0 .8em;
   border-bottom: 1px solid gray;
 }
-/* line 600, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 610, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content h3 {
   color: #1c3569;
   font-family: 'Roboto Slab', serif;
@@ -683,19 +694,19 @@ p {
   margin: 1em 0 .8em;
   border-bottom: 1px solid gray;
 }
-/* line 611, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 621, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content p img {
   display: inline-block;
   margin-left: 1em;
   margin-bottom: 1em;
   max-width: 100%;
 }
-/* line 619, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 629, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content ul {
   margin-left: 1.5em;
   margin-bottom: 1.5em;
 }
-/* line 624, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 634, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .map-page {
   background: none;
   color: #1c3569;
@@ -705,7 +716,7 @@ p {
   margin-bottom: .5em;
   margin-right: 24px;
 }
-/* line 635, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 645, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content .experts-content {
   width: 100%;
   float: none;
@@ -713,13 +724,13 @@ p {
   min-height: initial;
 }
 
-/* line 643, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 653, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content-wide {
   width: 100%;
   padding: 1em;
   min-height: 800px;
 }
-/* line 648, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 658, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content-wide h1 {
   font-family: 'Roboto Slab', serif;
   color: #1c3569;
@@ -728,53 +739,53 @@ p {
   border-bottom: 1px solid gray;
   margin-bottom: .5em;
 }
-/* line 657, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 667, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content-wide h2 {
   color: #1c3569;
   font-size: 1.2em;
   font-weight: bold;
   margin: 1em 0 .2em;
 }
-/* line 664, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 674, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .main-content-wide p {
   margin-bottom: 1em;
   line-height: 1.3;
 }
 
-/* line 671, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 681, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .contact-address {
   margin: 1.5em 0;
 }
-/* line 674, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 684, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .contact-address .address {
   width: 50%;
   float: left;
 }
-/* line 678, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 688, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .contact-address .phone {
   width: 50%;
   float: left;
 }
 
-/* line 685, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 695, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 #googleMap {
   width: 600px;
   height: 300px;
   margin-bottom: 1.5em;
 }
-/* line 691, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 701, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 #googleMap img {
   max-width: none;
 }
 
-/* line 695, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 705, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content {
   width: 70%;
   float: left;
   margin-left: 1.5em;
   min-height: 800px;
 }
-/* line 701, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 711, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content h1 {
   font-size: 2em;
   color: #1c3569;
@@ -782,57 +793,57 @@ p {
   border-bottom: 1px solid gray;
   margin-bottom: .5em;
 }
-/* line 709, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 719, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box {
   margin: .5em 0 1.5em;
 }
-/* line 712, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 722, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box img {
   float: left;
   width: 175px;
   margin-right: 1.5em;
   max-width: 100%;
 }
-/* line 719, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 729, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul {
   width: 56%;
   float: left;
   list-style: none;
 }
-/* line 724, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 734, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul li {
   margin-bottom: .2em;
 }
-/* line 728, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 738, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul li.expert-name {
   font-size: 2em;
   line-height: 1em;
 }
-/* line 731, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 741, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul li.expert-name a {
   text-decoration: none;
   color: black;
 }
-/* line 734, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 744, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul li.expert-name a:hover {
   color: #495d87;
 }
-/* line 738, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 748, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul .expert-suffix {
   display: block;
   font-size: .6em;
   font-family: "Open Sans", sans-serif;
 }
-/* line 744, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 754, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul li.expert-phone {
   font-size: 1.5em;
   margin-bottom: .3em;
 }
-/* line 749, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 759, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box ul .blue {
   color: #1c3569;
 }
-/* line 752, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 762, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box .to-profile {
   width: 90%;
   color: white;
@@ -846,15 +857,15 @@ p {
   background: -moz-linear-gradient(#ffc259, #8f6712);
   background: linear-gradient(#ffc259, #8f6712);
 }
-/* line 764, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 774, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-box .to-profile:hover {
   background: #7a5810;
 }
-/* line 768, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 778, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details {
   font-size: .9em;
 }
-/* line 771, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 781, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details h3 {
   font-size: 1.5em;
   color: white;
@@ -868,18 +879,18 @@ p {
   padding: .2em .5em;
   margin-bottom: .3em;
 }
-/* line 785, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 795, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details h3:hover {
   background-color: #7a5810;
   background-image: url(/assets/down_arrow-0dcb157bf55b0dc04722792eb6226eab624881b714a6ac8390fb49213dae559c.png);
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 795, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 805, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details h3:hover {
   cursor: pointer;
 }
-/* line 798, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 808, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details .info-open {
   background: url(/assets/up_arrow-ab3d05bca7b57c529fba47a13d7ae9dff300aeadf6f404e733cd5d31605d5d58.png), -webkit-linear-gradient(#cdcdcd, #a6a6a6);
   background: url(/assets/up_arrow-ab3d05bca7b57c529fba47a13d7ae9dff300aeadf6f404e733cd5d31605d5d58.png), -o-linear-gradient(#cdcdcd, #a6a6a6);
@@ -888,85 +899,85 @@ p {
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 807, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 817, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details .info-open:hover {
   background-color: #7a5810;
   background-image: url(/assets/up_arrow-ab3d05bca7b57c529fba47a13d7ae9dff300aeadf6f404e733cd5d31605d5d58.png);
   background-repeat: no-repeat;
   background-position: 98% 50%, 0 0;
 }
-/* line 816, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 826, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details div {
   margin-bottom: 1.5em;
   display: none;
 }
-/* line 820, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 830, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details div ul {
   padding-left: 2em;
 }
-/* line 822, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 832, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details div ul li {
   margin-bottom: .5em;
 }
-/* line 827, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 837, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details div h4 {
   font-weight: bold;
   margin: .1em 0 .5em;
 }
-/* line 833, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 843, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .experts-content .expert-details .background {
   display: block;
 }
 
-/* line 839, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 849, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .footer-outer {
   background-color: #1c3569;
 }
 
-/* line 843, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 853, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer {
   color: #c6dce8;
   overflow: hidden;
   padding-top: 1em;
 }
-/* line 848, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 858, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer .footer-col {
   float: left;
   width: 25%;
   padding-left: 1em;
 }
-/* line 854, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 864, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer ul {
   list-style: none;
   margin-bottom: 1em;
 }
-/* line 858, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 868, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer ul li.header {
   font-size: 1.2em;
   text-transform: uppercase;
   margin-bottom: .5em;
 }
-/* line 864, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 874, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer ul li {
   font-size: .8em;
   margin-bottom: .5em;
 }
-/* line 867, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 877, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer ul li a {
   text-decoration: none;
   color: #c6dce8;
 }
-/* line 870, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 880, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer ul li a:hover {
   text-decoration: underline;
 }
-/* line 873, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 883, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .site-footer ul li img {
   margin-right: .70em;
   max-width: 100%;
 }
 
-/* line 881, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 891, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .credits {
   color: #c6dce8;
   background-color: #15284f;
@@ -974,40 +985,40 @@ p {
   padding: .5em;
   font-size: .8em;
 }
-/* line 888, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 898, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .credits a {
   color: #c6dce8;
   text-decoration: none;
 }
-/* line 891, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 901, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .credits a:hover {
   text-decoration: underline;
 }
-/* line 894, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 904, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .credits .by-loaded {
   font-size: .9em;
   font-style: italic;
   color: #b3b3b3;
 }
 
-/* line 903, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 913, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 #search-btn {
   padding-left: 1.5em;
   padding-right: 1.5em;
 }
 
-/* line 908, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 918, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 #search-div {
   margin-bottom: 100px;
   font-size: 1.5em;
 }
-/* line 912, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 922, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 #search-div .gsc-input {
   padding: .2em;
   border-color: red !important;
 }
 
-/* line 920, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 930, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .flash {
   border-bottom: 1px solid gray;
   padding: 10px;
@@ -1015,27 +1026,27 @@ p {
   text-align: center;
   text-transform: uppercase;
 }
-/* line 927, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 937, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .flash.notice {
   background-color: #DBFFDD;
 }
-/* line 931, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 941, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .flash.alert {
   background-color: #FFE1DE;
 }
 
-/* line 937, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 947, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .group:before, .group:after {
   content: " ";
   display: table;
 }
 
-/* line 941, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 951, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .group:after {
   clear: both;
 }
 
-/* line 943, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
+/* line 953, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/layout.scss */
 .hide-text {
   text-indent: 200%;
   white-space: nowrap;
@@ -1532,15 +1543,19 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   color: white;
   font-size: .9em;
 }
+/* line 41, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+.slide div.slide-copy .in-slide {
+  margin-left: 0;
+}
 
-/* line 43, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+/* line 45, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
 .cycle-pager {
   position: absolute;
   left: 140px;
   bottom: 10px;
   z-index: 200;
 }
-/* line 49, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+/* line 51, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
 .cycle-pager a {
   width: 13px;
   height: 13px;
@@ -1551,7 +1566,7 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   background-repeate: no-repeat;
   background-position: 0 0;
 }
-/* line 59, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+/* line 61, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
 .cycle-pager a.cycle-pager-active, .cycle-pager a:hover {
   background-position: 0 -13px;
 }
