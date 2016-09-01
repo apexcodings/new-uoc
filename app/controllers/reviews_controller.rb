@@ -1,4 +1,12 @@
 class ReviewsController < ApplicationController
+
+  before_action :require_signin, except: [:create]
+  before_action :require_admin, except: [:create]
+
+  def index
+    @reviews = Review.order(created_at: :desc)
+  end
+
   def create
     @review = Review.new(review_params)
     if @review.save
@@ -9,6 +17,12 @@ class ReviewsController < ApplicationController
       @page = Page.find_by(slug: "submit-review")
       render template: "pages/show"
     end
+  end
+
+  def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    redirect_to reviews_url
   end
 
   private
