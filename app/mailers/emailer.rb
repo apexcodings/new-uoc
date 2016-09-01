@@ -11,8 +11,8 @@ class Emailer < ApplicationMailer
   def review_email(review)
     @review = review
     mail( from:     review.email,
-          to:       "cesare@maryandferrari.com",
-          # to:       "info@uoc.com",
+          # to:       "cesare@maryandferrari.com",
+          to:       "info@uoc.com",
           subject:  "Patient Review form submission from UOC website")
   end
 
