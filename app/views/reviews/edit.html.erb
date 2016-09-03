@@ -1,0 +1,35 @@
+<h1>Edit Review</h1>
+
+<%= form_for @review do |f| %>
+<%= render "shared/errors", object: @review %>
+
+  <div class="edit-form-row">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="edit-form-row">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="edit-form-row">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="edit-form-row">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="edit-form-row">
+    <%= f.label :message %>
+    <%= f.text_area :message %>
+  </div>
+
+  <div class="edit-form-row">
+    <%= f.submit %>
+  </div>
+
+<% end %>
