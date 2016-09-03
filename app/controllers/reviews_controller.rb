@@ -42,6 +42,7 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:first_name, :last_name, :phone, :email, :message, :approved)
+   # spam check parameter (:address)
+    params.require(:review).permit(:first_name, :last_name, :phone, :email, :message, :approved, :address)
   end
 end
