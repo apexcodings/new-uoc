@@ -18,6 +18,7 @@
           <i>Phone:</i> <%= review.phone %>
       </td>
       <td><%= review.message %></td>
+      <td><%= approval_status(review) %></td>
       <td style="width: 18%;">
         <%= link_to "Remove", review, 
         method: :delete,

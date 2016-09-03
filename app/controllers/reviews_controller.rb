@@ -23,6 +23,16 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
+  def update
+    @review = Review.find(params[:id])
+    if @review.update(review_params)
+      redirect_to reviews_url, notice: 'Review successfully updated!'
+    else
+      flash[:alert] = 'Review not updated! Please correct the errors below.'
+      render :edit
+    end
+  end
+
   def destroy
     @review = Review.find(params[:id])
     @review.destroy
@@ -32,6 +42,6 @@ class ReviewsController < ApplicationController
   private
 
   def review_params
-    params.require(:review).permit(:first_name, :last_name, :phone, :email, :message)
+    params.require(:review).permit(:first_name, :last_name, :phone, :email, :message, :approved)
   end
 end

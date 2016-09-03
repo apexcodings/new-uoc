@@ -16,6 +16,7 @@ class PagesController < ApplicationController
     @referral = Referral.new if @page.slug == "referring-physicians"
     @news = NewsRelease.order(created_at: :desc) if @page.slug == "news"
     @jobs = Job.all if @page.slug == "careers"
+    @reviews = Review.published if @page.slug == 'patient-reviews'
   end
   
   def edit
