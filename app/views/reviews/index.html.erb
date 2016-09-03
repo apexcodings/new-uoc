@@ -8,16 +8,16 @@
   </p>
   <% else %>
 
-  <table class="results">
+  <table class="results review-list">
   <% @reviews.each do |review| %>
       <tr style="vertical-align: top;">
-        <td style="width: 35%;">
-          <i>Date:</i> <%= review.created_at %><br>
-          <i>Name:</i> <%= review.first_name %> <%= review.last_name %><br>
-          <i>Email:</i> <%= review.email %><br>
-          <i>Phone:</i> <%= review.phone %>
+        <td>
+          <i>Date:</i><br><%= review.created_at %><br>
+          <i>Name:</i><br><%= review.first_name %> <%= review.last_name %><br>
+          <i>Email:</i><br><%= review.email %><br>
+          <i>Phone:</i><br><%= review.phone %>
       </td>
-      <td><%= review.message %></td>
+      <td><%= truncate(strip_tags(review.message), length: 400) %></td>
       <td><%= approval_status(review) %></td>
       <td style="width: 18%;">
         <%= link_to "Remove", review, 

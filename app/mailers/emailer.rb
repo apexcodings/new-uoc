@@ -3,7 +3,7 @@ class Emailer < ApplicationMailer
   def contact_email(contact)
     @contact = contact
     mail( from:     contact.email,
-          #to:       "cesare@maryandferrari.com",
+          # to:       "cesare@maryandferrari.com",
           to:       "info@uoc.com",
           subject:  "Contact form submission from UOC website")
   end
@@ -11,8 +11,8 @@ class Emailer < ApplicationMailer
   def review_email(review)
     @review = review
     mail( from:     review.email,
-          # to:       "cesare@maryandferrari.com",
-          to:       "info@uoc.com",
+          #to:       'cesare@maryandferrari.com',
+          to:       ['info@uoc.com', 'lbubier@uoc.com'],
           subject:  "Patient Review form submission from UOC website")
   end
 

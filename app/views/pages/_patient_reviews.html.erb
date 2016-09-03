@@ -1,8 +1,5 @@
 <% @reviews.each do |review| %>
-  <div class="testimonial">
-  <p>
-    <%= review.message.html_safe %> &mdash; 
-    <%= masked_name_for(review) %>
-  </p>
+  <div class="testimonial review">
+    <%= text_for(review) %>
   </div>
 <% end %>

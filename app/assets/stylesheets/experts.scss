@@ -5,6 +5,14 @@
   margin-bottom: 1em;
 }
 
+.review {
+  padding-bottom: 1em;
+
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+
 #experts {
   tr.moving-row {
     background-color: lighten(yellow, 40%);
