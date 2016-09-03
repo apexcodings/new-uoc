@@ -1,6 +1,6 @@
 module ReviewsHelper
   def approval_status(review)
-    return 'Published' if review.approved
+    return content_tag(:b, 'Published') if review.approved
     'Not Approved'
   end
 
