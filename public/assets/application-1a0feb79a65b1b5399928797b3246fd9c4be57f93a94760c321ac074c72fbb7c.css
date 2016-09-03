@@ -275,6 +275,7 @@ p {
   width: 100%;
   background-color: #1c3569;
   color: white;
+  display: none;
   position: absolute;
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
 }
@@ -1482,18 +1483,27 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   margin-bottom: 1em;
 }
 
-/* line 9, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
+/* line 8, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
+.review {
+  padding-bottom: 1em;
+}
+/* line 11, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
+.review p {
+  margin-bottom: 0.5em;
+}
+
+/* line 17, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
 #experts tr.moving-row {
   background-color: #ffffcc;
   width: 100%;
 }
-/* line 12, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
+/* line 20, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
 #experts tr.moving-row td {
   border-top: 1px solid orange;
   border-bottom: 1px solid orange;
 }
 
-/* line 19, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
+/* line 27, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/experts.scss */
 .for-expert {
   margin-left: 0;
   margin-top: .4em;
@@ -1542,15 +1552,19 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   color: white;
   font-size: .9em;
 }
+/* line 41, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+.slide div.slide-copy .in-slide {
+  margin-left: 0;
+}
 
-/* line 43, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+/* line 45, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
 .cycle-pager {
   position: absolute;
   left: 140px;
   bottom: 10px;
   z-index: 200;
 }
-/* line 49, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+/* line 51, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
 .cycle-pager a {
   width: 13px;
   height: 13px;
@@ -1561,7 +1575,7 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   background-repeate: no-repeat;
   background-position: 0 0;
 }
-/* line 59, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
+/* line 61, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/slideshow.scss */
 .cycle-pager a.cycle-pager-active, .cycle-pager a:hover {
   background-position: 0 -13px;
 }
@@ -1597,21 +1611,26 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   border-bottom: 2px solid white;
 }
 
-/* line 29, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 28, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+.review-list {
+  font-size: .9em;
+}
+
+/* line 33, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .expert-thumb {
   width: 60px;
 }
 
-/* line 32, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 36, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list {
   list-style: none;
   width: 70%;
 }
-/* line 36, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 40, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list li {
   margin-bottom: 1em;
 }
-/* line 39, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 43, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list li a {
   display: block;
   color: white;
@@ -1622,21 +1641,21 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   font-weight: bold;
   font-size: 1.2em;
 }
-/* line 48, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 52, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list li a:hover {
   background-color: #1c3569;
 }
-/* line 51, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 55, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list li ul {
   margin: .4em 0 1em 1em;
   list-style: none;
 }
-/* line 55, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 59, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list li ul li {
   margin-bottom: .2em;
   padding-left: 1em;
 }
-/* line 58, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 62, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .dashboard-list li ul li a {
   font-size: 1em;
   font-weight: normal;
@@ -1644,24 +1663,24 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   background-color: #6d82b0;
 }
 
-/* line 69, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 73, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation {
   max-width: 58.75em;
   margin: auto;
   background-color: #495d87;
   border-top: 1px solid white;
 }
-/* line 75, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 79, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation ul {
   float: left;
   list-style: none;
   overflow: hidden;
 }
-/* line 80, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 84, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation ul li {
   float: left;
 }
-/* line 83, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 87, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation ul li a {
   display: block;
   color: white;
@@ -1670,11 +1689,11 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   padding: .4em 1em;
   border-right: 1px solid white;
 }
-/* line 90, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 94, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation ul li a:hover {
   background-color: #1c3569;
 }
-/* line 95, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 99, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation p {
   color: white;
   float: right;
@@ -1682,16 +1701,16 @@ div.field_with_errors input, div.field_with_errors textarea, div.field_with_erro
   padding: .5em .5em 0 0;
   font-size: .9em;
 }
-/* line 102, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 106, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-navigation p a {
   color: white;
 }
 
-/* line 106, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 110, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-link-group {
   margin-bottom: .5em;
 }
-/* line 109, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
+/* line 113, /Users/cesareferrari/Sites/uoc/app/assets/stylesheets/admin.scss */
 .admin-link-group a {
   display: block;
   float: left;
