@@ -11,7 +11,7 @@ class Referral < ActiveRecord::Base
   PHYSICIANS = [
     "Gregory M. Bailey",
     "Bradley A. Barter",
-    "David J. Boak",
+    "David J. Bozak",
     "Adam M. Budny",
     "Kenneth L. Cherry",
     "Todd B. Cousins",
@@ -41,7 +41,7 @@ class Referral < ActiveRecord::Base
   OFFICES = [
     "State College",
     "Altoona",
-    "Roaring Springs",
+    "Roaring Spring",
     "Bedford",
     "Huntingdon",
     "Tyrone",
