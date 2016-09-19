@@ -10,6 +10,6 @@ password: secret
 
 Production site:
 
-email: admin@example.com
-password: secret
+email: info@uoc.com
+password: Blue101?
 
