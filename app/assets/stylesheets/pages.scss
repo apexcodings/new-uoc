@@ -60,3 +60,10 @@ ul.why-nextmd {
   background-repeat: no-repeat;
   background-position: 90% 50%;
 }
+
+.white-link {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 0;
+  &:hover { color: $dark-blue; }
+}

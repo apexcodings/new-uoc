@@ -1,5 +1,7 @@
 <div class="home-box with-header" style="padding-bottom: 11px">
-  <h2 class="roboto">Reviews &amp; Testimonials</h2>
+  <h2 class="roboto">
+    <%= link_to "Reviews &amp; Testimonials".html_safe, page_path('patient-reviews'), class: 'white-link' %>
+  </h2>
   <p class="tight">Read our patient’s comeback stories or write your own review.</p>
   <%= link_to "Get started", page_path("submit-review"), class: "green-link green-link-centered" %>
 </div>
