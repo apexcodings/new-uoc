@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   resources :pages
   root 'pages#home'
   get 'dashboard' => 'pages#dashboard'
+  get 'clinical_trials_dashboard' => 'pages#clinical_trials_dashboard'
   get 'search' => 'pages#search'
 
 

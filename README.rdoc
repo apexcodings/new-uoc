@@ -4,9 +4,17 @@ Logins:
 
 Development site:
 
-email: admin@example.com
-password: secret
+[regular admin]
+  email: admin@example.com
+  password: secret
 
+[Limited to worker's comp form]
+  email: workers_comp@example.com
+  password: secret
+
+[Limited to Clinical trials page]
+  email: clinical_trials@example.com
+  password: secret
 
 Production site:
 

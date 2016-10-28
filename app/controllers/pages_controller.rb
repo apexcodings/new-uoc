@@ -1,12 +1,15 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
   before_action :require_signin, except: [:home, :show]
-  before_action :require_admin, except: [:home, :show]
+  before_action :require_admin, except: [:home, :show,]
 
   def home
   end
 
   def dashboard
+  end
+
+  def clinical_trials_dashboard
   end
 
   def show

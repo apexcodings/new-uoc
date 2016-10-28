@@ -35,4 +35,10 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user_workers_comp?
+
+  def current_user_clinical_trials?
+    current_user && current_user.clinical_trials?
+  end
+
+  helper_method :current_user_clinical_trials?
 end
