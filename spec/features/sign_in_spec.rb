@@ -48,4 +48,3 @@ describe "Logging in" do
     expect(page).not_to have_link('Log Out')
   end
 end
-

@@ -1,46 +1,10 @@
 <div class="main-content-wide">
 <h1>Dashboard</h1>
 
-<ul class="dashboard-list">
-  <li>
-    <%= link_to "Experts", experts_path %>
-    <ul>
-      <li><%= link_to "Physicians", experts_path(category: :physicians) %></li>
-      <li><%= link_to "Physicians Assistants", experts_path(category: :physicians_assistants) %></li>
-      <li><%= link_to "Physical Therapists", experts_path(category: :physical_therapists) %></li>
-      <li><%= link_to "Clinical Researchers", experts_path(category: :clinical_researchers) %></li>
-      <li><%= link_to "Worker's Comp", experts_path(category: :workers_comp) %></li>
-      <li><%= link_to "Athletic Trainers", experts_path(category: :athletic_trainers) %></li>
-      <li><%= link_to "Joint Replacement Coordinator", experts_path(category: :joint_replacement) %></li>
-      <li><%= link_to "Neuropsychologist", experts_path(category: :neuropsychologist) %></li>
-      <li><%= link_to "Create New Expert", new_expert_path %></li>
-    </ul>
-  </li>
-
-  <li>
-    <%= link_to "News", news_releases_path %>
-    <ul>
-      <li><%= link_to "Create News Release", new_news_release_path %></li>
-    </ul>
-  </li>
-
-  <li><%= link_to "Appointment Requests", appointments_path %>
-    <ul>
-      <li><%= link_to "Saved Appointments", processed_appointments_path %></li>
-    </ul>
-  </li>
-
-  <li><%= link_to "Referrals", referrals_path %>
-    <ul>
-      <li><%= link_to "Saved Referrals", processed_referrals_path %></li>
-    </ul>
-  </li>
-
-  <li><%= link_to "Job Listings", jobs_path %> </li>
-
-  <li><%= link_to "Job Applications", job_applications_path %> </li>
-
-  <li><%= link_to "Patient Reviews", reviews_path %> </li>
-</ul>
+<% if current_user.clinical_trials? %>
+  <%= render 'clinical_trials_links' %>
+<% else %>
+  <%= render 'admin_links' %>
+<% end %>
 
 </div>
