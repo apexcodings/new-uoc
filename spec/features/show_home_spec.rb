@@ -10,7 +10,7 @@ describe "Showing the Home page" do
       expect(page).to have_link("Our Experts")
       expect(page).to have_link("Patient Resources")
       expect(page).to have_link("Contact Us")
-      expect(page).to have_link("Patient Portal")
+      expect(page).to have_link("Patient Log-In")
     end
 
     within(".top-links") do

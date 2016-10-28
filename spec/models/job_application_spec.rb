@@ -3,7 +3,8 @@ require "support/attributes"
 
 RSpec.describe JobApplication do
   it "is valid with default attributes" do
-    application = JobApplication.new(job_application_attributes)
+    job = Job.create!(job_attributes)
+    application = job.job_applications.new(job_application_attributes)
     expect(application.valid?).to eq(true)
   end
 
