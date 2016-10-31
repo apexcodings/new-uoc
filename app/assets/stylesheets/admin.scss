@@ -52,6 +52,7 @@
       &:hover { background-color: $dark-blue; }
     }
 
+
     ul {
       margin: .4em 0 1em 1em;
       list-style: none;
@@ -69,6 +70,26 @@
     }
   }
 }
+
+.clinical-trials {
+  li {
+    a {
+      width: 90%;
+      display: inline-block;
+    }
+
+    a.edit-link {
+      width: 8%;
+      display: inline-block;
+      float: right;
+      background-color: white;
+      color: $dark-blue;
+      font-size: 1em;
+      &:hover { color: $light-blue; }
+    }
+  }
+}
+
 
 .admin-navigation {
   max-width: 58.75em;  // 940/16

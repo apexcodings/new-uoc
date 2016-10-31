@@ -21,8 +21,13 @@ RSpec.describe 'Signing in a Clinical Trials User' do
     expect(page).to have_link('State College')
   end
 
-  it "doesn't show general links" do
+  it "shows editing links for authorized (clinical trials) pages" do
+    within('#clinical-trials-edit') { expect(page).to have_link("Edit") }
+    within('#altoona-edit') { expect(page).to have_link("Edit") }
+    within('#state-college-edit') { expect(page).to have_link("Edit") }
+  end
 
+  it "doesn't show general links" do
     within('.admin-navigation') do
       expect(page).not_to have_link('Experts')
       expect(page).not_to have_link('News')
@@ -41,13 +46,7 @@ RSpec.describe 'Signing in a Clinical Trials User' do
     end
   end
 
-  it "shows editing links for authorized (clinical trials) pages" do
-    visit page_path('clinical-trials')
-    expect(page).to have_text("Clinic trials page")
-    expect(page).to have_link("Edit")
-  end
-
-  it "doesn't show editing links for non authorized pages" do
+  it "doesn't show editing links within pages" do
     visit page_path('services')
     expect(page).not_to have_link("Edit")
   end

@@ -14,7 +14,7 @@
     <%= page_partial(@page) %>
   </div>
 
-<% if current_user %>
+<% if current_user && !current_user.clinical_trials? %>
   <p style="margin-top: 1em;">
     <%= link_to "Edit", edit_page_path(@page), class: "green-link edit-link" %>
   </p>

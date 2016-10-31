@@ -1,11 +1,13 @@
 require 'rails_helper'
 require 'support/attributes'
 require 'support/authentication'
+require 'support/pages'
 
 RSpec.describe 'Signing in a Full Admin User' do
   let(:user) { User.create!(user_attributes) }
 
   before do
+    create_required_pages
     sign_in(user)
   end
 
@@ -24,5 +26,9 @@ RSpec.describe 'Signing in a Full Admin User' do
     expect(page).to have_link('Job Applications')
     expect(page).to have_link('Patient Reviews')
   end
-end
 
+  it "shows editing links for all pages" do
+    visit page_path('services')
+    expect(page).to have_link("Edit")
+  end
+end

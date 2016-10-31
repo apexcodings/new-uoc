@@ -10,7 +10,7 @@ class ExpertsController < ApplicationController
       @experts = Expert.all
     end
 
-    render template: "experts/admin_index" if current_user
+    render template: "experts/admin_index" if current_user.admin? && !current_user.clinical_trials
   end
 
   def sort

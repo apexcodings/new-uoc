@@ -19,7 +19,7 @@
 
     <%= link_to "Back to News", news_releases_path, class: "more" %>
 
-    <% if current_user %>
+    <% if current_user.admin? && !current_user.clinical_trials? %>
     <p>
       <%= link_to "Edit", edit_news_release_path(@news_release), class: "green-link edit-link" %>
     </p>
