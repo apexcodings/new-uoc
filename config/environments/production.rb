@@ -103,10 +103,10 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # URL rewrite
-#  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-#    r301 %r{.*}, 'https://www.uoc.com$&', :if => Proc.new {|rack_env|
-#      rack_env['SERVER_NAME'] != 'www.uoc.com'
-#    }
-#  end
+  config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
+    r301 %r{.*}, 'https://www.uoc.com$&', :if => Proc.new {|rack_env|
+      rack_env['SERVER_NAME'] != 'www.uoc.com'
+    }
+  end
 
 end
