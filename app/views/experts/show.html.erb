@@ -30,10 +30,12 @@
     <%= @expert.body.html_safe %>
   </section>
 
-  <% if current_user.admin? && !current_user.clinical_trials? %>
-  <p>
-    <%= link_to "Edit", edit_expert_path(@expert), class: "green-link edit-link" %>
-  </p>
+  <% if current_user %>
+    <% if current_user.admin? && !current_user.clinical_trials? %>
+    <p>
+      <%= link_to "Edit", edit_expert_path(@expert), class: "green-link edit-link" %>
+    </p>
+    <% end %>
   <% end %>
 
 </div>
