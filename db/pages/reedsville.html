@@ -1,0 +1,37 @@
+<div class="contact-address group">
+<div class="address">
+  96 Kish Road <br>
+   Reedsville, PA 17084
+</div>
+
+<div class="phone">
+  Phone: (814) 231-2101 or (800) 505-2101<br />
+  Fax: (814) 940-2026</div>
+</div>
+
+<div id="googleMap"><!-- <img src="https://s3.amazonaws.com/com.uocproduction/images/map_dubois.png" alt=""> --></div>
+
+<p><a class="green-link" href="https://www.google.com/maps/place/Kish+Rd,+Reedsville,+PA+17084/@40.687523,-77.596353,17z/data=!3m1!4b1!4m5!3m4!1s0x89ceb5d9a0c2c5e9:0x8b824468479e46b!8m2!3d40.687523!4d-77.5941643" target="_blank">Get directions</a></p>
+
+<div style="height: 200px;">&nbsp;</div>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAauBIWzDKhi1pbfoENgdk2FedWRr3HzwM&sensor=false">
+</script><script type="text/javascript">
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(40.687523,-77.596353);
+
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 14
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),
+        mapOptions);
+
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:"Map Title"
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>

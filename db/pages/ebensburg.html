@@ -1,0 +1,37 @@
+<div class="contact-address group">
+<div class="address">
+  1100 West High Street<br>
+  Ebensburg, PA 15931
+</div>
+
+<div class="phone">
+  Phone: (814) 231-2101 or (800) 505-2101<br />
+  Fax: (814) 940-2026</div>
+</div>
+
+<div id="googleMap"><!-- <img src="https://s3.amazonaws.com/com.uocproduction/images/map_dubois.png" alt=""> --></div>
+
+<p><a class="green-link" href="https://www.google.com/maps/place/1100+W+High+St,+Ebensburg,+PA+15931/@40.4805456,-78.7381802,17z/data=!3m1!4b1!4m5!3m4!1s0x89cb741ad4309631:0x6074f0ea143ac2f0!8m2!3d40.4805456!4d-78.7359915" target="_blank">Get directions</a></p>
+
+<div style="height: 200px;">&nbsp;</div>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAauBIWzDKhi1pbfoENgdk2FedWRr3HzwM&sensor=false">
+</script><script type="text/javascript">
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(40.4805456,-78.7381802);
+
+    var mapOptions = {
+      center: myLatlng,
+      zoom: 14
+    };
+    var map = new google.maps.Map(document.getElementById("googleMap"),
+        mapOptions);
+
+    var marker = new google.maps.Marker({
+    position: myLatlng,
+    map: map,
+    title:"Map Title"
+    });
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
