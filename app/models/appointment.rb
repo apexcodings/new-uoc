@@ -18,7 +18,7 @@ class Appointment < ActiveRecord::Base
             inclusion: { in: INJURY_LOCATIONS }, 
             allow_blank: true
 
-  PREFERRED_LOCATIONS = ["State College", "Altoona", "Lewistown", "Tyrone", "Huntingdon", "DuBois", "Bedford"]
+  PREFERRED_LOCATIONS = ["State College", "Altoona", "Reedsville", "Tyrone", "Huntingdon", "DuBois", "Bedford", "Ebensburg"]
   validates :preferred_location, 
             inclusion: { in: PREFERRED_LOCATIONS }, 
             allow_blank: true

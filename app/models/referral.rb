@@ -46,7 +46,8 @@ class Referral < ActiveRecord::Base
     "Huntingdon",
     "Tyrone",
     "Dubois",
-    "Lewistown" ]
+    "Reedsville",
+    "Ebensburg" ]
 
 
   def time_seen
