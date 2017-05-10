@@ -12,3 +12,5 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( ckeditor/* )
 Rails.application.config.assets.precompile += %w( respond.min.js )
 Rails.application.config.assets.precompile += %w( html5shiv.js )
+Rails.application.config.assets.precompile += %w( instagram-icon.png )
+Rails.application.config.assets.precompile += %w( g-plus-icon.png )
