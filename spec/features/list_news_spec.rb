@@ -36,6 +36,14 @@ RSpec.describe "Listing the News" do
 
       expect(current_path).to eq(edit_news_release_path(@news1))
     end
+
+    it 'allows navigation from the Dashboard to the news list' do
+      within ".dashboard-list" do
+        click_link "News"
+      end
+
+      expect(current_path).to eq(admin_news_releases_path)
+    end
   end
 
   it "shows all the news" do
