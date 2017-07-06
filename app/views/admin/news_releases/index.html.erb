@@ -1,10 +1,39 @@
+<div class="main-content-wide">
 <h1>News</h1>
 
+<table class="results">
+  <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th colspan="3"></th>
+  </tr>
+
 <% @news_releases.each do |release| %>
-  <div id="news-<%= release.id %>">
+  <tr id="news-<%= release.id %>">
+    <td><%= release.created_at %></td>
+    <td>
     <%= release.title %><br>
+    </td>
+    <td>
     <%= link_to "Show", release %>
+    </td>
+    <td>
     <%= link_to "Edit", edit_news_release_path(release) %>
-    <%= link_to "Remove", [:admin, release], method: :delete, data: { alert: "Are you sure"} %>
-  </div>
+    </td>
+    <td>
+      <%= link_to "Remove", [:admin, release], method: :delete,
+        data: { confirm: "Are you sure you want to delete this News Release?"} %>
+    </td>
+  </tr>
 <% end %>
+
+</table>
+
+<div class="apple-pagination">
+<%= will_paginate @news %>
+</div
+
+<br>
+<br>
+<p><%= link_to "Create News Release", new_news_release_path, class: "green-link edit-link" %></p>
+</div>

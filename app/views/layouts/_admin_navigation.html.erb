@@ -4,7 +4,7 @@
 
     <% unless current_user.clinical_trials? %>
       <li><%= link_to "Experts", experts_path %></li>
-      <li><%= link_to "News", news_releases_path %></li>
+      <li><%= link_to "News", admin_news_releases_path %></li>
       <li><%= link_to "Appointment Requests", appointments_path %></li>
       <li><%= link_to "Referrals", referrals_path %></li>
     <% end %>
@@ -12,7 +12,7 @@
   </ul>
 
   <p>
-    <%= current_user.email %> | 
+    <%= current_user.email %> |
     <%= link_to 'Log Out', session_path, method: :delete %>
   </p>
 </div>
