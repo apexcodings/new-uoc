@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   get 'search' => 'pages#search'
 
   get 'admin/news_releases' => 'admin/news_releases#index', as: :admin_news_releases
+  delete 'admin/news_release/:id' => 'admin/news_releases#destroy', as: :admin_news_release
 
 
 #  match "/Staff/Employee.aspx?id=1" => "/experts/1826"

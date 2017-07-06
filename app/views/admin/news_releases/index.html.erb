@@ -5,6 +5,6 @@
     <%= release.title %><br>
     <%= link_to "Show", release %>
     <%= link_to "Edit", edit_news_release_path(release) %>
-    <%= link_to "Remove", release, method: :delete, data: { alert: "Are you sure"} %>
+    <%= link_to "Remove", [:admin, release], method: :delete, data: { alert: "Are you sure"} %>
   </div>
 <% end %>
