@@ -23,6 +23,7 @@
       <% if current_user.admin? && !current_user.clinical_trials? %>
       <p>
         <%= link_to "Edit", edit_news_release_path(@news_release), class: "green-link edit-link" %>
+        <%= link_to "Remove", [:admin, @news_release], method: :delete, data: { alert: "Are you sure"}, class: "green-link edit-link" %>
         <%= link_to "Back to News", admin_news_releases_path, class: "green-link edit-link" %>
       </p>
       <% end %>
