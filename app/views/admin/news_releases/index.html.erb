@@ -1,0 +1,10 @@
+<h1>News</h1>
+
+<% @news_releases.each do |release| %>
+  <div id="news-<%= release.id %>">
+    <%= release.title %><br>
+    <%= link_to "Show", release %>
+    <%= link_to "Edit", edit_news_release_path(release) %>
+    <%= link_to "Remove", release, method: :delete, data: { alert: "Are you sure"} %>
+  </div>
+<% end %>

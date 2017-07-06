@@ -1,5 +1,6 @@
 require 'rails_helper'
 require 'support/attributes'
+require 'support/authentication'
 
 RSpec.describe "Listing the News" do
   before do
@@ -11,9 +12,16 @@ RSpec.describe "Listing the News" do
   context 'when Admin is logged in' do
     let(:admin) {User.create!(user_attributes)}
 
-    it 'shows the admin buttons' do
+    it 'shows the admin links' do
       sign_in(admin)
-      visit
+      visit admin_news_releases_url
+
+      within "#news-#{@news1.id}" do
+        expect(page).to have_text(@news1.title)
+        expect(page).to have_link "Show"
+        expect(page).to have_link "Edit"
+        expect(page).to have_link "Remove"
+      end
     end
   end
 
