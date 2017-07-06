@@ -12,8 +12,11 @@ RSpec.describe "Listing the News" do
   context 'when Admin is logged in' do
     let(:admin) {User.create!(user_attributes)}
 
-    it 'shows the admin links' do
+    before do
       sign_in(admin)
+    end
+
+    it 'shows the admin links' do
       visit admin_news_releases_url
 
       within "#news-#{@news1.id}" do
@@ -22,6 +25,16 @@ RSpec.describe "Listing the News" do
         expect(page).to have_link "Edit"
         expect(page).to have_link "Remove"
       end
+    end
+
+    it 'allows navigation to the edit page' do
+      visit admin_news_releases_url
+
+      within "#news-#{@news1.id}" do
+        click_link "Edit"
+      end
+
+      expect(current_path).to eq(edit_news_release_path(@news1))
     end
   end
 
