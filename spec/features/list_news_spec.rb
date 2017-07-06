@@ -8,6 +8,15 @@ RSpec.describe "Listing the News" do
     @news3 = NewsRelease.create!(news_attributes(title: "News 3", created_at: 1.day.ago))
   end
 
+  context 'when Admin is logged in' do
+    let(:admin) {User.create!(user_attributes)}
+
+    it 'shows the admin buttons' do
+      sign_in(admin)
+      visit
+    end
+  end
+
   it "shows all the news" do
     visit root_url
 
