@@ -71,7 +71,7 @@ RSpec.describe Appointment do
   end
 
   it "is not valid when the injury location is not in the approved list" do
-    locations = %w(Head Nose Chest Ear) 
+    locations = %w(Head Nose Chest Ear)
 
     locations.each do |location|
       appointment = Appointment.new(injury_location: location)
@@ -81,7 +81,7 @@ RSpec.describe Appointment do
   end
 
   it "is valid when the preferred location is in the approved list" do
-    preferred_locations = ["State College", "Altoona", "Lewistown", "Tyrone", "Huntingdon", "DuBois", "Bedford"]
+    preferred_locations = ["State College", "Altoona", "Reedsville", "Tyrone", "Huntingdon", "DuBois", "Bedford", "Ebensburg"]
 
     preferred_locations.each do |location|
       appointment = Appointment.new(preferred_location: location)
