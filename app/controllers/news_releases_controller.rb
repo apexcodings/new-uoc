@@ -7,7 +7,15 @@ class NewsReleasesController < ApplicationController
   end
 
   def show
-    @news_release = NewsRelease.find(params[:id])
+    if NewsRelease.find(params[:id]).published?
+      @news_release = NewsRelease.find(params[:id])
+    else
+      if current_user_admin?
+        @news_release = NewsRelease.find(params[:id])
+      else
+        redirect_to news_releases_url
+      end
+    end
   end
 
   def new

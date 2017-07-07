@@ -1,4 +1,7 @@
 class Admin::NewsReleasesController < ApplicationController
+  before_action :require_signin
+  before_action :require_admin
+
   def index
     @news_releases = NewsRelease.order(created_at: :desc).
       paginate(page: params[:page], per_page: 30)
