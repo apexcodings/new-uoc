@@ -13,4 +13,9 @@ RSpec.describe NewsRelease do
     news.valid?
     expect(news.errors[:title].any?).to eq(true)
   end
+
+  it 'defaults to published when created' do
+    news = NewsRelease.new
+    expect(news.published?).to eq(true)
+  end
 end

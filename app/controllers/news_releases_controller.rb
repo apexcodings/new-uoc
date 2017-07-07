@@ -3,7 +3,7 @@ class NewsReleasesController < ApplicationController
   before_action :require_admin, except: [:index, :show]
 
   def index
-    @news = NewsRelease.order(created_at: :desc).paginate(page: params[:page])
+    @news_releases = NewsRelease.published.order(created_at: :desc).paginate(page: params[:page])
   end
 
   def show
@@ -42,6 +42,6 @@ class NewsReleasesController < ApplicationController
   private
 
   def news_release_params
-    params.require(:news_release).permit(:title, :body)
+    params.require(:news_release).permit(:title, :body, :published)
   end
 end

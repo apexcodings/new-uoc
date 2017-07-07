@@ -8,7 +8,7 @@
 
 
 <div class="main-content">
-<% @news.each do |news| %>
+<% @news_releases.each do |news| %>
   <div class="news-block">
   <h3><%= news.created_at %></h3>
   <h2><%= link_to news.title, news %></h2>

@@ -12,6 +12,11 @@
   </p>
 
   <p>
+    <%= f.label :published %>
+    <%= f.check_box :published %>
+  </p>
+
+  <p>
   <% if @news_release.new_record? %>
     <%= f.submit "Create News Release", class: "green-link" %>
   <% else %>

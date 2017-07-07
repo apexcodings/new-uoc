@@ -136,3 +136,19 @@
     float: left;
   }
 }
+
+.admin-label {
+  display: inline-block;
+  padding: .4em 1em;
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: .8em;
+  margin-right: .5em;
+}
+.green {
+  background-color: $green;
+}
+.yellow {
+  background-color: $yellow;
+}
