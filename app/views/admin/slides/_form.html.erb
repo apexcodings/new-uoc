@@ -1,0 +1,48 @@
+<%= form_for [:admin, @slide], multipart: true do |f| %>
+  <%= render "shared/errors", object: @slide %>
+
+  <div class="group">
+    <div style="float: left;">
+      <%= f.label :photo, "Photo" %>
+      <%= f.file_field :photo %>
+        <p>
+          <em>Slide background photo</em>
+        </p>
+    </div>
+    <%= image_tag @slide.photo.url(:thumb), style: "float: right;" %>
+  </div>
+
+  <p>
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+    <em>Max. 45 characters</em>
+  </p>
+
+  <p>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+    <em>Max. 230 characters</em>
+  </p>
+
+  <p>
+  <%= f.label :link_title %>
+  <%= f.text_field :link_title %><br>
+    <em>Title for  the link button. Max. 40 characters</em>
+  </p>
+
+  <p>
+  <%= f.label :link_url %>
+  <%= f.text_field :link_url %><br>
+    <em>Full URL of the linked page (example: http://uoc.com/pages/services)</em>
+  </p>
+
+  <p>
+  <%= f.label :position %>
+  <%= f.text_field :position %><br>
+    <em>Position of the slide in the carousel</em>
+  </p>
+
+    <p>
+      <%= f.submit class: "green-link" %>
+    </p>
+<% end %>

@@ -1,0 +1,125 @@
+<div class="feature">
+  <div class="cycle-slideshow"
+        data-cycle-fx="fadeout" 
+        data-cycle-pause-on-hover="true" 
+        data-cycle-speed="500"
+        data-cycle-timeout="6000"
+        data-cycle-slides="> div"
+        data-cycle-pager-template="<a href='#'></a>"
+        >
+
+    <span class="cycle-pager"></span>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_carousel_01.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Your comeback starts here.</h2>
+        <p>
+          Whether it’s on the court, the track, the diamond, the field, the rink,
+          around the house or on the job, everyone loves a comeback story. At
+          University Orthopedics Center, we’re here to help you write yours.
+        </p>
+        <%= link_to "Start your comeback today", 
+          page_path('contact-us'), class: "green-link in-slide" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_moving_slide.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>We're growing.</h2>
+        <p>University Orthopedics Center is expanding services in Central
+        Pennsylvania. Some UOC locations within Altoona and Huntingdon are moving,
+        but we’re not going far. We’re also excited to announce our new Ebensburg
+        location.</p>
+        <%= link_to "See where we're going", 
+          'https://www.uoc.com/news_releases/233', class: "green-link in-slide" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_carousel_02.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>A more complete approach to care.</h2>
+        <p>
+         In January of 2016, we joined together with Blair Orthopedics to create
+         Central Pennsylvania’s premier orthopedic care center for a better,
+         healthier you. 
+        </p>
+        <%= link_to "Read all about it", 
+          news_releases_path, class: "green-link in-slide" %>
+      </div>
+    </div>
+
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_carousel_03.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Supporting patients every step of the way.</h2>
+        <p>
+          When it comes to getting you back to better, we specialize in all
+        aspects of orthopedic care, including sports medicine, pain management,
+        chiropractic care and joint replacement.
+        </p>
+        <%= link_to "Take your first steps towards better", 
+                page_path('specialties'), class: "green-link in-slide" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_carousel_04.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Not all injuries are created equal.</h2>
+        <p>
+          Each patient’s journey back from injury is unique. When reaching your
+          goals means additional resources are needed, we provide a complete
+          range of surgical and non-surgical services for recovery.
+        </p>
+        <%= link_to "Start your journey with us", 
+          page_path('services'), class: "green-link in-slide" %>
+      </div>
+    </div>
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_carousel_05.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>Helping the best athletes get better.</h2>
+        <p>For athletes of every level, injuries and pain are never part of the game
+plan. We’re here to help you get back to your peak performance and the
+game you love.</p>
+        <%= link_to "Your comeback starts now", 
+          page_path('sports-medicine-services'), class: "green-link in-slide" %>
+      </div>
+    </div>
+
+
+    <div class="slide">
+      <div class="slide-image">
+        <%= image_tag "UOC_carousel_06.jpg" %>
+      </div>
+      <div class="slide-copy">
+        <h2>The right hands for your care.</h2>
+        <p>University Orthopedics Center is home to the region’s top physicians,
+        physician assistants, physical therapists, athletic trainers and clinical
+        researchers dedicated to helping you live your best life.</p>
+        <%= link_to "Meet the experts behind the care", 
+          page_path('our-experts'), class: "green-link in-slide" %>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>

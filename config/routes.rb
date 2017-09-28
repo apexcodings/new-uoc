@@ -33,6 +33,10 @@ Rails.application.routes.draw do
   get 'admin/news_releases' => 'admin/news_releases#index', as: :admin_news_releases
   delete 'admin/news_release/:id' => 'admin/news_releases#destroy', as: :admin_news_release
 
+  namespace :admin do
+    resources :slides
+  end
+
 
 #  match "/Staff/Employee.aspx?id=1" => "/experts/1826"
 #  get "/Staff/Employee.aspx?id=1" => redirect("/experts/1826", status: 301)

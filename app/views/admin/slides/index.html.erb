@@ -1,0 +1,23 @@
+<div class="main-content-wide">
+  <h1><%= pluralize(@slides.count, 'Slide') %></h1>
+
+  <% @slides.each do |slide| %>
+    <div class="appointment-list">
+      <%= link_to "Delete", admin_slide_path(id: slide.id),
+        method: :delete,
+        data: {confirm: "Are you sure you want to permanently delete this slide?"},
+        class: "gray-link", style: "float:right",
+        id: "slide-#{slide.id}" %>
+
+      <%= link_to "Edit", edit_admin_slide_path(id: slide.id), class: "green-link", style: "float:right" %>
+      <%= image_tag slide.photo.url(:thumb) %>
+      <h2><%= slide.title %></h2>
+      <p>
+        <%= slide.description %>
+      </p>
+    </div>
+  <% end %>
+
+  <%= link_to "New Slide", new_admin_slide_path %>
+
+</div>

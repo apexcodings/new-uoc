@@ -21,7 +21,7 @@ class PagesController < ApplicationController
     @jobs = Job.all if @page.slug == "careers"
     @reviews = Review.published if @page.slug == 'patient-reviews'
   end
-  
+
   def edit
   end
 
