@@ -40,8 +40,8 @@ class Emailer < ApplicationMailer
   def job_application_email(job_application)
     @job_application = job_application
     mail( from:     job_application.email,
-          #to:       "kstoudnour@uoc.com",
-          to:       "cesareferrar@gmail.com",
+          to:       "kstoudnour@uoc.com",
+          bcc:       "cesareferrar@gmail.com",
           subject:  "New Job Application from UOC website")
   end
 end
