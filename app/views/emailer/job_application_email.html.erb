@@ -15,15 +15,18 @@ A new Job Application has been created on the UOC site.
 <p>
 Name: <%= @job_application.first_name %> <%= @job_application.last_name %><br>
 Phone: <%= @job_application.phone %><br>
-Email: <%= @job_application.email %>
+Email: <%= @job_application.email %><br>
+<% if @job_application.resume.present? %>
+  <%= link_to "Resume", @job_application.resume.url %>
+<% end %>
 </p>
 
 <p>
-Please click on the link below to view the Job Application details.<br> 
+Please click on the link below to view the Job Application details.<br>
 You will be required to log into the UOC site with an administrator account.
 </p>
 
 <p>
-<%= link_to "Click here to view the Job Application", 
+<%= link_to "Click here to view the Job Application",
       "https://www.uoc.com/job_applications/#{@job_application.id}" %>
 </p>

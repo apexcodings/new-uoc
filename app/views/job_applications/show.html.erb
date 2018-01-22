@@ -404,11 +404,23 @@
 </table>
 
 
+<table class="appointment-data">
+  <tr class="<%= cycle("odd", "even") -%>">
+    <td>Resume</td>
+    <td>
+      <% if @job_application.resume.present? %>
+        <%= link_to @job_application.resume.original_filename, @job_application.resume.url %>
+      <% else %>
+        No resume submitted.
+      <% end %>
+    </td>
+  </tr>
+</table>
 
 <table class="appointment-data">
   <tr class="<%= cycle("odd", "even") -%>">
     <td>Signature</td>
-    <td> 
+    <td>
       <%= @job_application.signature %>
     </td>
   </tr>
@@ -419,18 +431,5 @@
     </td>
   </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>

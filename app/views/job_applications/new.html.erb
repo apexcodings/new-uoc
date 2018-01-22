@@ -15,7 +15,7 @@
   <%= @job.description %>
 </h2>
 
-<%= form_for @job_application do |f| %>
+<%= form_for @job_application, multipart: true do |f| %>
 <%= render "shared/errors", object: @job_application %>
 
 <% if @job %>
@@ -565,6 +565,16 @@
     <div class="small-row">
       <%= f.text_field :reference3_phone %>
     </div>
+  </div>
+
+
+<h2>Upload Resume (optional)</h2>
+<p>
+You may optionally upload your resume. Accepted file formats are: <i>PDF</i> and <i>Microsoft Word</i>.<br>
+Use the button below to attach the resume to this application.
+</p>
+  <div class="form-row group">
+      <%= f.file_field :resume %>
   </div>
 
 

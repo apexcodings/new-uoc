@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170928145150) do
+ActiveRecord::Schema.define(version: 20180122140340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -209,6 +209,10 @@ ActiveRecord::Schema.define(version: 20170928145150) do
     t.string   "reference3_phone"
     t.string   "signature"
     t.string   "sig_date"
+    t.string   "resume_file_name"
+    t.string   "resume_content_type"
+    t.integer  "resume_file_size"
+    t.datetime "resume_updated_at"
   end
 
   create_table "jobs", force: :cascade do |t|

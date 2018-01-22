@@ -64,6 +64,6 @@ class JobApplicationsController < ApplicationController
             :reference1_phone, :reference2_name, :reference2_relationship, 
             :reference2_address, :reference2_phone, :reference3_name, 
             :reference3_relationship, :reference3_address, 
-            :reference3_phone, :signature, :sig_date)
+            :reference3_phone, :signature, :sig_date, :resume)
   end
 end
