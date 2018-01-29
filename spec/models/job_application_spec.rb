@@ -26,6 +26,12 @@ RSpec.describe JobApplication do
     expect(application.errors[:email].any?).to eq(true)
   end
 
+  it "requires a resume" do
+    application = JobApplication.new(resume: nil)
+    application.valid?
+    expect(application.errors[:resume].any?).to eq(true)
+  end
+
   it "belongs to a job" do
     job = Job.new(job_attributes)
     job_application = JobApplication.new(last_name: "Wayne")

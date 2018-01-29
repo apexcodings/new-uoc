@@ -19,6 +19,7 @@ RSpec.describe "Creating a job application" do
     fill_in "Last Name", with: "Pegasus"
     fill_in "job_application_phone", with: "555-666-7777"
     fill_in "Email", with: "applicant@example.com"
+    attach_file "job_application_resume", "#{Rails.root}/db/data/sample_resume.pdf"
 
     expect {
       click_button "Submit"

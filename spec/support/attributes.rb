@@ -7,7 +7,7 @@ def page_attributes(overrides = {})
     seo_keywords: "page, title, performance",
     body: %{ Adipisicing perferendis optio recusandae quas quam ipsam harum
             tempora quos fugiat obcaecati asperiores, vero ipsum iste
-            perspiciatis ipsa laborum a officiis repudiandae ullam voluptatibus. 
+            perspiciatis ipsa laborum a officiis repudiandae ullam voluptatibus.
             Modi aut libero dicta quibusdam illum. }.squish
   }.merge(overrides)
 end
@@ -159,7 +159,8 @@ def job_application_attributes(overrides = {})
     first_name: "John",
     last_name: "Wayne",
     phone: "814 375 5569",
-    email: "applicant@example.com"
+    email: "applicant@example.com",
+    resume: File.open("#{Rails.root}/db/data/sample_resume.pdf")
   }.merge(overrides)
 end
 

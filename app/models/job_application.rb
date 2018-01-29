@@ -1,5 +1,5 @@
 class JobApplication < ActiveRecord::Base
-  validates :last_name, :phone, :email, :job_id, presence: true
+  validates :last_name, :phone, :email, :job_id, :resume, presence: true
 
   # to prevent spam with hidden field
   attr_accessor :physical_address
