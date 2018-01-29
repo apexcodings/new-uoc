@@ -327,7 +327,8 @@ and (max-device-width : 1024px)
   }
 
   .mobile-box-with-photo {
-    background-image: image-url("sportsMedBox.jpg") ;
+    //background-image: image-url("sportsMedBox.jpg") ;
+    background-image: image-url("football.jpg") ;
     background-repeat: no-repeat;
     background-position: 0 -100px;
 
@@ -667,7 +668,8 @@ and (max-device-width : 1024px)
   }
 
   .mobile-box-with-photo {
-    background-image: image-url("sportsMedBox.jpg") ;
+    //background-image: image-url("sportsMedBox.jpg") ;
+    background-image: image-url("football.jpg") ;
     background-repeat: no-repeat;
     //background-position: 0 -100px;
     background-position: 0 -20%;
