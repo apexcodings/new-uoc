@@ -160,7 +160,7 @@ This will throw a certificate error:
 --------------------------------------
 Your connection is not private
 
-Attackers might be trying to steal your information from yamanashi-31301.herokussl.com (for example, passwords, messages, or credit cards). 
+Attackers might be trying to steal your information from yamanashi-31301.herokussl.com (for example, passwords, messages, or credit cards).
 
 NET::ERR_CERT_COMMON_NAME_INVALID
 --------------------------------------
@@ -171,7 +171,7 @@ This means that you are serving up the certificate that you’d expect to serve 
 
 DNS and domain configuration
 
-Once the SSL endpoint is provisioned and your certificate is confirmed, you must route requests for your secure domain through the endpoint URL. 
+Once the SSL endpoint is provisioned and your certificate is confirmed, you must route requests for your secure domain through the endpoint URL.
 
 Unless you’ve already done so, add the domain specified when generating the CSR to your app with:
 $ heroku domains:add www.example.com
@@ -190,7 +190,7 @@ CNAME	www	example-2121.herokussl.com.
 
 I am asking Lance to modify the CNAME record to the new ssl endpoint
 
-from: 
+from:
 
 Record: CNAME
 Name: www
@@ -205,3 +205,77 @@ Target: yamanashi-31301.herokussl.com
 ]
 
 -----
+
+
+RENEWING CERTIFICATE (2-15-2018)
+
+Step 1.
+
+Lance sent me this link for the new certificate. This is the link to the page for downloading the renewed certificate:
+
+https://getcert.thawte.com/process/trust/home?digest=d79723931252e28ba2383e8f7606f8cc&language=en
+
+
+Page says:
+Confirm your server platform before downloading your certificate.
+
+I choose:
+- Apache
+- HTTP server
+
+After making these choices, it tells me:
+Certificate format: X509
+
+Click "Download" button
+
+---
+
+Step 2.
+
+It downloads a zip file that contains a directory with this structure.
+
+USUNIVX5955-2X
+├── IntermediateCA.crt
+├── SSLAssistant
+│   ├── eula.txt
+│   ├── readme_installcert.txt
+│   └── sslassistant_installcert.sh
+├── getting_started.txt
+└── ssl_certificate.crt
+
+I need to use both `ssl_certificate.crt` and `IntermediateCA.crt` files.
+
+---
+
+Step 3.
+
+Copy `ssl_certificate.crt` and `IntermediateCA.crt` to Sites/uoc directory.
+
+---
+
+Step 4.
+
+Update the certificates with the following command.
+The file `server.key` is already in the `uoc` directory and it's the one used originally.
+
+
+$ heroku certs:update ssl_certificate.crt IntermediateCA.crt server.key
+Resolving trust chain... done
+ ▸    Potentially Destructive Action
+ ▸    This command will change the certificate of endpoint yamanashi-31301
+ ▸    (yamanashi-31301.herokussl.com) from ⬢ uoc.
+ ▸    To proceed, type uoc or re-run this command with
+ ▸    --confirm uoc
+
+> uoc
+Updating SSL certificate yamanashi-31301 (yamanashi-31301.herokussl.com) for ⬢ uoc... done
+Updated certificate details:
+Common Name(s): www.uoc.com
+                uoc.com
+Expires At:     2020-02-20 07:00 UTC
+Issuer:         /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=Thawte EV RSA CA 2018
+Starts At:      2018-02-12 19:00 UTC
+Subject:        /businessCategory=Private Organization/jurisdictionC=US/jurisdictionST=Pennsylvania/serialNumber=2020197/C=US/ST=Pennsylvania/L=State College/O=University Orthopedics Center, Ltd./OU=Healthcare/CN=www.uoc.com
+SSL certificate is verified by a root authority.
+
+

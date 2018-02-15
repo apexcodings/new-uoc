@@ -12,3 +12,5 @@
 !/log/.keep
 /tmp
 .DS_Store
+/certificates_original/*
+/certificates_renewal_2018/*
