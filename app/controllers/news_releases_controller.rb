@@ -50,6 +50,6 @@ class NewsReleasesController < ApplicationController
   private
 
   def news_release_params
-    params.require(:news_release).permit(:title, :body, :published)
+    params.require(:news_release).permit(:title, :body, :published, :youtube_id)
   end
 end

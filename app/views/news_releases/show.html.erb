@@ -17,6 +17,11 @@
 
     <%= @news_release.body.html_safe %>
 
+    <% if @news_release.youtube_id.present? %>
+      <iframe width="560" height="315" src='https://www.youtube.com/embed/<%= @news_release.youtube_id %>?rel=0&autoplay=0' frameborder='0' allowfullscreen></iframe>
+    <% end %>
+
+
     <div class="social-media-icons">
       <%= social_share_button_tag(@news_release.title, desc: @news_release.title) %>
     </div>

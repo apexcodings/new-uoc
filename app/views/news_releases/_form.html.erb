@@ -11,6 +11,16 @@
     <%= f.cktext_area :body %>
   </p>
 
+  <div class="youtube-video-box">
+    <p>
+    <%= f.label :youtube_id, 'YouTube ID' %>
+    <%= f.text_field :youtube_id %>
+    <i>You can find the video YouTube ID in the "Share" box, in the YouTube page for the specific video. It would look similar to this:  _GZlUextcAA</i>
+    </p>
+
+    <%= image_tag 'youtube_window.png', class: 'youtube-window' %>
+  </div>
+
   <p>
     <%= f.label :published %>
     <%= f.check_box :published %>

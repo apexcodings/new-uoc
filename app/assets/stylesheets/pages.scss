@@ -71,3 +71,14 @@ ul.why-nextmd {
 .social-media-icons {
   margin: 1em 0;
 }
+
+.youtube-window {
+  float: right;
+  display: inline-block;
+}
+
+.youtube-video-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+}
