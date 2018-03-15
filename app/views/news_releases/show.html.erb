@@ -17,6 +17,7 @@
 
     <%= @news_release.body.html_safe %>
 
+    <%= social_share_button_tag(@news_release.title, desc: @news_release.title) %>
 
     <% if current_user %>
 

@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require jquery-cycle2
 //= require ckeditor/init
+//= require social-share-button
 //= require_tree .
+
