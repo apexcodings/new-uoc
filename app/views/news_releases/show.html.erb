@@ -17,7 +17,9 @@
 
     <%= @news_release.body.html_safe %>
 
-    <%= social_share_button_tag(@news_release.title, desc: @news_release.title) %>
+    <div class="social-media-icons">
+      <%= social_share_button_tag(@news_release.title, desc: @news_release.title) %>
+    </div>
 
     <% if current_user %>
 
