@@ -1,13 +1,13 @@
 services = Page.find_by(slug: 'services')
 
 Page.create!(
-  title: 'Wellness Center',
+  title: 'UOC Healthy Weight & Wellness',
   body: File.read("#{Rails.root}/db/pages/wellness-center.html"),
   slug: 'wellness-center',
   parent: services,
   position: 10,
   label: 'Wellness Center',
-  publish: true
+  publish: false
 )
 
 
