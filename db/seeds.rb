@@ -1,13 +1,19 @@
-services = Page.find_by(slug: 'services')
+# services = Page.find_by(slug: 'services')
+#
+# Page.create!(
+#   title: 'UOC Healthy Weight & Wellness',
+#   body: File.read("#{Rails.root}/db/pages/wellness-center.html"),
+#   slug: 'wellness-center',
+#   parent: services,
+#   position: 10,
+#   label: 'Wellness Center',
+#   publish: false
+# )
 
-Page.create!(
-  title: 'UOC Healthy Weight & Wellness',
+wellness = Page.find_by(slug: 'wellness-center')
+wellness.update(
   body: File.read("#{Rails.root}/db/pages/wellness-center.html"),
-  slug: 'wellness-center',
-  parent: services,
-  position: 10,
-  label: 'Wellness Center',
-  publish: false
+  publish: true
 )
 
 
