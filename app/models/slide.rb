@@ -4,9 +4,13 @@ class Slide < ActiveRecord::Base
 		:storage => :s3,
 		:s3_credentials => "#{Rails.root}/config/s3.yml",
     :s3_protocol => :https,
-    :s3_host_name => 's3.us-east-1.amazonaws.com',
-		:path => ":attachment/:id/:style.:extension",
-		:url => ":s3_domain_url"
+    # :s3_host_name => 's3.us-east-1.amazonaws.com',
+    :path => ":attachment/:id/:style.:extension", # original
+		# :url => ":s3_domain_url" #original
+
+    :s3_host_name => "s3.us-east-1.amazonaws.com", # Added entry
+    :url => ":s3_host_name"                        # Added entry
+
 
 
 

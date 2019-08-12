@@ -10,6 +10,5 @@ module SlidesHelper
 
     https_endpoint = slide.photo.url(:large).gsub(bucket_regexp, '')
     https_endpoint.insert(35, bucket)
-    https_endpoint
   end
 end

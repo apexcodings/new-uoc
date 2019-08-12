@@ -16,8 +16,8 @@
 
       <div class="slide">
         <div class="slide-image">
-          <%#= image_tag slide.photo.url(:large) %>
-          <%= image_tag  https_url_for(slide) %>
+          <%= image_tag slide.photo.url(:large) %> 
+          <%#= image_tag  https_url_for(slide) %>
         </div>
         <div class="slide-copy">
           <h2><%= truncate(slide.title, length: 45, separator: ' ') %></h2>
