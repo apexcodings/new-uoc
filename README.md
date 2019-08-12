@@ -279,3 +279,30 @@ Subject:        /businessCategory=Private Organization/jurisdictionC=US/jurisdic
 SSL certificate is verified by a root authority.
 
 
+
+
+## SSL problem with images
+
+UOC:
+
+US East (N. Virginia)
+us-east-1
+
+UOC slide image served on http
+http://com.uocproduction.s3.amazonaws.com/photos/4/large.jpg?1506620573
+
+Doesn't work if I just add https at the front, but it works with this URL
+https://s3.us-east-1.amazonaws.com/com.uocproduction/photos/4/large.jpg?1506620573
+
+
+BAM: 
+
+US East (Ohio)
+us-east-2
+
+BAM slide image served on https
+https://s3.us-east-2.amazonaws.com/com.bellefonteart-production/store/78172d1dc72b461da0ae27df1c927366.jpg
+
+
+
+
