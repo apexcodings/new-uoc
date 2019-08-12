@@ -304,5 +304,34 @@ BAM slide image served on https
 https://s3.us-east-2.amazonaws.com/com.bellefonteart-production/store/78172d1dc72b461da0ae27df1c927366.jpg
 
 
+old_url = 'http://com.uocdevelopment.s3.amazonaws.com'
+new_url = 'https://s3.us-east-1.amazonaws.com/com.uocdevelopment'
+slide.photo.url.gsub(old_url, new_url)
+
+
+
+https://com.uocdevelopment.s3.us-east-1.amazonaws.com/photos/14/original.jpg?1506544918
+
+needs to be changed to:
+
+https://s3.us-east-1.amazonaws.com/com.uocdevelopment/photos/14/original.jpg?1506544918
+
+
+
+
+bucket = /com\.uocdevelopment\./
+hostname = /https:\/\/s3\.us-east-1\.amazonaws\.com\//
+
+slide.photo.url.gsub(bucket, '').gsub(hostname, bucket.chop)
+
+
+
+bucket = "com.uocdevelopment/"
+bucket_regexp = /com\.uocdevelopment\./
+new_url = slide.photo.url.gsub(bucket_regexp, '')
+
+# https://s3.us-east-1.amazonaws.com/photos/14/original.jpg?1506544918
+
+new_url.insert(35, bucket)
 
 
