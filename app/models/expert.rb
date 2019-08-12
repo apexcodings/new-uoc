@@ -10,7 +10,6 @@ class Expert < ActiveRecord::Base
                  joint_replacement: "Joint Replacement Coordinator",
                  neuropsychologist: "Neuropsychologist"
                  }
-                  #management: "Management"
 
   validates :category, inclusion: { in: CATEGORIES.keys.map { |c| c.to_s } }
 
@@ -18,16 +17,14 @@ class Expert < ActiveRecord::Base
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml", 
     :path => ":attachment/:id/:style.:extension",
-    # :url => ":s3_domain_url"
-    :s3_protocol => :https,                        # Added entry
-    :s3_host_name => "s3.us-east-1.amazonaws.com", # Added entry
-    :url => ":s3_host_name"                        # Changed entry
+    :s3_protocol => :https,
+    :s3_host_name => "s3.us-east-1.amazonaws.com",
+    :url => ":s3_host_name"
 
   validates_attachment :photo,
     :content_type => { :content_type => ['image/jpeg', 'image/png'] },
     :size => { :less_than => 0.1.megabytes }
 
-  #scope :by_category, ->(category) { where(category: category).order(:position) }
   scope :by_category, ->(category) do 
     if category.in? ["clinical_researchers", "workers_comp", "management"]
       where(category: category).order(:position) 
@@ -53,5 +50,4 @@ class Expert < ActiveRecord::Base
       "<b>#{main_location}</b> #{other_locations}"
     end
   end
-
 end
