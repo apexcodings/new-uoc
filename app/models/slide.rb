@@ -3,7 +3,7 @@ class Slide < ActiveRecord::Base
     styles: { large: "940x355>", thumb: "235x90>" },
 		:storage => :s3,
 		:s3_credentials => "#{Rails.root}/config/s3.yml",
-    :s3_protocol => :https,
+    #:s3_protocol => :https,
 		:path => ":attachment/:id/:style.:extension",
 		:url => ":s3_domain_url"
 
