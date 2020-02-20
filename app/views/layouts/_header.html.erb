@@ -4,9 +4,7 @@
   <div class="call roboto">
     <h3><span class="call-us">Call Us </span>(814) 231-2101</h3>
     <%= link_to "Make an appointment", page_path('appointments'), class: "make-appt" %>
-    <%#= link_to "Pay bill online", 
-      "https://www.nextmd.com/ud2/Login/Login.aspx", class: "pay-bill",
-      target: "_blank" %>
+    <%= link_to "Pay My Bill", "https://pay.instamed.com/Form/Payments/New?id=uoc", class: "pay-bill", target: "_blank" %>
     <%= link_to "Referring Physicians", page_path('referring-physicians'), class: "referring" %>
   </div>
 </header>
