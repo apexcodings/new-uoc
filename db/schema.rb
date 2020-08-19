@@ -60,6 +60,12 @@ ActiveRecord::Schema.define(version: 20180315144948) do
     t.boolean  "processed",               default: false
   end
 
+  create_table "ar_internal_metadata", primary_key: "key", force: :cascade do |t|
+    t.string   "value"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
@@ -112,8 +118,8 @@ ActiveRecord::Schema.define(version: 20180315144948) do
     t.string   "last_name"
     t.string   "phone"
     t.string   "email"
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.integer  "job_id"
     t.string   "mi"
     t.string   "nickname"
@@ -211,7 +217,7 @@ ActiveRecord::Schema.define(version: 20180315144948) do
     t.string   "sig_date"
     t.string   "resume_file_name"
     t.string   "resume_content_type"
-    t.integer  "resume_file_size"
+    t.integer  "resume_file_size",              limit: 8
     t.datetime "resume_updated_at"
   end
 
@@ -307,12 +313,12 @@ ActiveRecord::Schema.define(version: 20180315144948) do
     t.text     "description"
     t.string   "link_url"
     t.string   "link_title"
-    t.integer  "position",           default: 0
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.integer  "position",                     default: 0
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
     t.string   "photo_file_name"
     t.string   "photo_content_type"
-    t.integer  "photo_file_size"
+    t.integer  "photo_file_size",    limit: 8
     t.datetime "photo_updated_at"
   end
 
